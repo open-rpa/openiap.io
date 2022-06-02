@@ -1,0 +1,46 @@
+/*
+Theme Name: DSK Codes Theme
+Description: DSK Codes Themes - A Retina Multi Purpose Wordpress Theme
+Author: DSK Codes
+Author URI: https://dsk.codes
+Version: 2.0
+*/
+
+* {
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	background: #d6d6d6;
+	width: 5px;
+}
+
+::-webkit-scrollbar-button {
+	display: none;
+}
+
+::-webkit-scrollbar-track {
+	display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+	display: none;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #35E48D;
+	background-clip: content-box;
+	border-radius: 9px;
+	border: 2px solid #35E48D;
+	transition: all ease .4s
+}
+
+::-webkit-scrollbar-corner {
+	display: none;
+}
+
+::-webkit-resizer {
+	display: none;
+}
