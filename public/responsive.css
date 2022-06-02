@@ -185,6 +185,7 @@
         padding: 0;
         height: 50px;
         line-height: 50px;
+        color: #fff;
     }
 
     #access .menu-header li, div.menu li {
@@ -193,7 +194,10 @@
 
     .writetous .dskbtn-outline {
         margin: 0 0 30px 0;
+        color: #fff;
+        box-shadow: 0 0 0 2px #fff inset;
     }
+
     .page-2-section-1 .top-slider-text2 h1 {
         font-size: 40px;
     }
@@ -245,6 +249,7 @@
     .top-slider-text h3 {
         font-size: 15px;
     }
+
     .top-slider-stats22 ul {
         display: block;
     }
@@ -257,6 +262,9 @@
     .top-slider-stats22 ul li:last-child {
         margin: 0 0 0 0;
     }
+	.dskbtn-outline img {
+		filter: none;
+	}
 }
 
 @media only screen and (max-width: 959px) {
