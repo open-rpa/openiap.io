@@ -55,7 +55,7 @@
 
     .top-links1 {
         position: fixed;
-        background: #6c4cff;
+        background: #039f8c;
         top: 0;
         left: -400px;
         width: 300px;
@@ -131,7 +131,7 @@
 
     span.responsivemenubtn {
         display: block;
-        box-shadow: 0 0 0 2px #6c4cff;
+        box-shadow: 0 0 0 2px #039f8c;
         width: 50px;
         height: 50px;
         border-radius: 100%;
@@ -148,7 +148,7 @@
     }
 
     span.responsivemenubtn i.bar {
-        background: #6c4cff;
+        background: #039f8c;
         width: 30px;
         height: 2px;
         display: block;
@@ -193,6 +193,69 @@
 
     .writetous .dskbtn-outline {
         margin: 0 0 30px 0;
+    }
+    .page-2-section-1 .top-slider-text2 h1 {
+        font-size: 40px;
+    }
+
+    .page-2-section-1 .top-slider-text2 h3 {
+        font-size: 20px;
+    }
+
+    .page-2-section-1 .top-slider-text2 p {
+        font-size: 18px;
+    }
+
+    .page-2-section-1 .top-slider-text2 p br {
+        display: none;
+    }
+
+    .top-sli-image2 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .top-slider-stats ul {
+        display: block;
+    }
+
+    .top-slider-stats ul li {
+        padding: 10px 0;
+    }
+
+    .page-2-section-1 {
+        padding: 150px 0 20px;
+        min-height: auto;
+    }
+
+    .page-2-section-1:before {
+        height: 510px;
+    }
+
+    img, svg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .top-slider-text h2 {
+        font-size: 35px;
+        line-height: 1.4;
+    }
+
+    .top-slider-text h3 {
+        font-size: 15px;
+    }
+    .top-slider-stats22 ul {
+        display: block;
+    }
+
+    .top-slider-stats22 ul li {
+        padding: 0 0 0;
+        margin: 0 0 70px 0;
+    }
+
+    .top-slider-stats22 ul li:last-child {
+        margin: 0 0 0 0;
     }
 }
 
