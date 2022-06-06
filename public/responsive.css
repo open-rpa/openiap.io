@@ -39,6 +39,10 @@
 }
 
 @media only screen and (max-width: 1080px) {
+    .row>* {
+        width: 100%;
+    }
+
     .top-sli-image {
         position: relative;
         right: 48%;
@@ -47,6 +51,11 @@
     .top-sli-image img {
         width: 160%;
         height: auto;
+    }
+
+    .section-1 .top-slider-text {
+        text-align: center;
+        margin-top: 250px;
     }
 
     .top-slider-text {
@@ -193,13 +202,14 @@
     }
 
     .writetous .dskbtn-outline {
-        margin: 0 0 30px 0;
         color: #fff;
+        margin: 0 0 30px 0;
         box-shadow: 0 0 0 2px #fff inset;
     }
 
     .page-2-section-1 .top-slider-text2 h1 {
-        font-size: 40px;
+        font-size: 28px;
+        line-height: 1.2;
     }
 
     .page-2-section-1 .top-slider-text2 h3 {
@@ -233,7 +243,7 @@
     }
 
     .page-2-section-1:before {
-        height: 510px;
+        height: 65vh;
     }
 
     img, svg {
@@ -262,15 +272,36 @@
     .top-slider-stats22 ul li:last-child {
         margin: 0 0 0 0;
     }
-	.dskbtn-outline img {
-		filter: none;
-	}
+
+    .section-5 .top-slider-text {
+        margin-top: 0;
+    }
+
+    .dskbtn-outline img {
+        filter: invert(0);
+    }
+
+    header.header.lighttheme.fixeds div#access>div>ul>li>a {
+        color: #fff;
+    }
+
+    header.header.lighttheme.fixeds .dskbtn-outline img {
+        filter: invert(0);
+    }
+
+    header.header.lighttheme.fixeds .dskbtn-outline {
+        box-shadow: 0 0 0 2px #fff inset;
+        color: #fff;
+    }
 }
 
 @media only screen and (max-width: 959px) {
 }
 
 @media only screen and (max-width: 637px) {
+    .section-1 .top-slider-text {
+        margin-top: 0;
+    }
 }
 
 @media only screen and (max-width: 479px) {

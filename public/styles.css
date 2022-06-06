@@ -147,35 +147,15 @@ div#access {
     height: 50px;
     line-height: 50px;
     border-radius: 8px;
-    position: relative;
-    z-index: 0;
     overflow: hidden;
     transition: all linear .4s;
     cursor: pointer;
-    padding: 0 25px 0 40px;
-}
-
-.dskbtn:before {
-    content: "";
-    background: #2c3536;
-    height: 600px;
-    width: 600px;
-    display: block;
-    border-radius: 100%;
-    position: absolute;
-    right: -400px;
-    z-index: -1;
-    top: 50px;
-    transition: all linear .8s;
-}
-
-.dskbtn:hover:before {
-    top: -200px;
-    right: -200px;
+    padding: 0 25px;
 }
 
 .dskbtn:hover {
     color: #fff;
+    background: #333333;
 }
 
 div#footermenu {
@@ -696,4 +676,8 @@ body.redtheme .top-slider-text h3 {
 
 .page-2-section-2.page-3-section-3 {
     background: none;
+}
+.writetous .dskbtn {
+    position: relative;
+    padding: 0 25px 0 40px;
 }
