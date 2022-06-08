@@ -158,6 +158,24 @@ div#access {
     background: #333333;
 }
 
+.dskbtn-openrpa {
+    background: #333333;
+    color: #fff;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all linear .4s;
+    cursor: pointer;
+    padding: 0 25px;
+}
+
+.dskbtn-openrpa:hover {
+    color: #fff;
+    background: #35E48D;
+}
+
 div#footermenu {
     text-align: right;
 }
