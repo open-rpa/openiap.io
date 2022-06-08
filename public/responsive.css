@@ -38,7 +38,7 @@
 @media only screen and (max-width: 1281px) {
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1181px) {
     .row>* {
         width: 100%;
     }
@@ -55,7 +55,7 @@
 
     .section-1 .top-slider-text {
         text-align: center;
-        margin-top: 250px;
+        margin-top: 0;
     }
 
     .top-slider-text {
@@ -78,9 +78,10 @@
     }
 
     .section-1 {
-        padding: 310px 0 0;
-        background-position: 100% 10%;
-        background-size: 130% auto;
+        padding: 150px 0px 100px;
+        background-position: 0% 10%;
+        background-size: 90% auto;
+        background-image: none;
     }
 
     .section-3 {
@@ -199,7 +200,7 @@
 
     .writetous .dskbtn-outline {
         color: #fff;
-        margin: 0 0 30px 0;
+        margin: 0 0 0 0;
         box-shadow: 0 0 0 2px #fff inset;
     }
 
@@ -239,7 +240,7 @@
     }
 
     .page-2-section-1:before {
-        height: 65vh;
+        height: 65%;
     }
 
     img, svg {
@@ -289,44 +290,95 @@
         box-shadow: 0 0 0 2px #fff inset;
         color: #fff;
     }
-	.top-sli-imagemobile {
-		display: block;
-		margin: 0 -40px 0;
-	}
 
-	.top-sli-imagemobile > img {
-		margin: 0 0 40px;
-		max-width: 100%;
-		position: relative;
-		z-index: 0;
-	}
-	.priceingbox {
-		margin-top: 50px;
-	}
+    .top-sli-imagemobile {
+        display: block;
+        margin: 0 0 0;
+    }
 
-	.nav-tabs .nav-link {
-		padding: 20px;
-	}
+    .top-sli-imagemobile > img {
+        margin: 0 0 40px;
+        max-width: 100%;
+        position: relative;
+        z-index: 0;
+    }
 
-	.single-price-table-tab {
-		min-height: auto;
-		margin: 0 0 50px 0;
-	}
+    .priceingbox {
+        margin-top: 50px;
+    }
 
-	.pricing-cta-section > div {
-		padding: 40px;
-	}
+    .nav-tabs .nav-link {
+        padding: 20px;
+    }
 
-	.pricing-cta-section-text-2 {
-		padding: 0;
-		margin: 40px auto 0;
-		max-width: 500px;
-	}
-	.top-slider-text ul {
-		text-align: left;
-	}
+    .single-price-table-tab {
+        min-height: auto;
+        margin: 0 0 50px 0;
+    }
 
+    .pricing-cta-section > div {
+        padding: 40px;
+    }
 
+    .pricing-cta-section-text-2 {
+        padding: 0;
+        margin: 40px auto 0;
+        max-width: 500px;
+    }
+
+    .top-slider-text ul {
+        text-align: left;
+    }
+
+    .top-sli-imagemobile {
+        text-align: center;
+    }
+
+    .top-sli-image2 img {
+        max-width: 100%;
+    }
+
+    .section-4.page-2-section-3 {
+        padding-bottom: 0;
+    }
+
+    .top-slider-text p:last-child {
+        margin-bottom: 20px;
+    }
+    .top-sli-image.hidemobile {
+        display: none;
+    }
+    div#accordionExample {
+        display: block;
+    }
+    #myTab {
+        display: none;
+    }
+    .tab-content {
+        display: none;
+    }
+    div#collapseTwo .pricing-table-tapri .col-md-3 {
+        width: 50%;
+    }
+
+    div#collapseTwo .pricing-table-tapri .col-md-3 p {
+        margin: 0 0 20px 0;
+    }
+    .home-social-icons {
+    text-align: center;
+    display: block;
+}
+
+.home-social-icons a {
+    margin: 0 7px 0;
+    display: inline-block;
+    width: 90px;
+}
+.home-social-icons.only-two-icons a {
+    margin: 0 7px 0;
+    display: inline-block;
+    width: 500px;
+}
 }
 
 @media only screen and (max-width: 959px) {
@@ -336,14 +388,32 @@
     .section-1 .top-slider-text {
         margin-top: 0;
     }
-	.pricing-cta-section-text-2 > h2 {
-		padding: 20px 20px;
-		font-size: 40px;
-	}
 
-	.pricing-cta-section > div {
-		padding: 30px;
-	}
+    .pricing-cta-section-text-2 > h2 {
+        padding: 20px 20px;
+        font-size: 40px;
+    }
+
+    .pricing-cta-section > div {
+        padding: 30px;
+    }
+    
+    div#collapseTwo .pricing-table-tapri .col-md-3 {
+        width: 100%;
+    }
+    .accordion-body .single-tab-content12a h2 {
+        font-size: 33px;
+        margin: 30px 0 0 0;
+    }
+
+    .accordion-body .single-tab-content12a h5 {
+        font-size: 14px;
+    }
+    .home-social-icons a {
+    margin: 0 0 35px;
+    display: inline-block;
+    width: 49%;
+}
 }
 
 @media only screen and (max-width: 479px) {

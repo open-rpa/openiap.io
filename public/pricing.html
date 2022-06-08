@@ -13,8 +13,11 @@
 <link rel="icon" href="images/favicon.png" type="image/png" />
 <link rel="shortcut icon" href="images/favicon.ico" />
 
-<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="style.css" /><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="fonts/stylesheet.css" rel="stylesheet">
+
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
 <link href="responsive.css" rel="stylesheet">
@@ -44,10 +47,11 @@
 							<div class="menu-header">
 								<ul id="menu-main-menu" class="nav-menu">
 									<li><a href="index.html">Home</a></li>
-									<li><a href="OpenRPA.html">OpenRPA</a></li>
-									<li><a href="OpenFlow.html">OpenFlow</a></li>
+									<li><a href="openrpa.html">OpenRPA</a></li>
+									<li><a href="openflow.html">OpenFlow</a></li>
 									<li><a href="pricing.html">Pricing</a></li>
-									<li><a href="source.html">Sourcecode</a></li>
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="privacy.html">Privacy Policy</a></li>
 								</ul>
 							</div>
 						</div>
@@ -123,105 +127,45 @@
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation">
-								<button class="nav-link active" id="cloud-offering-tab" data-bs-toggle="tab" data-bs-target="#cloud-offering" type="button" role="tab" aria-controls="cloud-offering" aria-selected="true">Cloud Offering</button>
+								<button class="nav-link active" id="premium-license-tab" data-bs-toggle="tab" data-bs-target="#premium-license" type="button" role="tab" aria-controls="premium-license" aria-selected="false">Premium License</button>
 							</li>
 							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="kubernetes-cluster-tab" data-bs-toggle="tab" data-bs-target="#kubernetes-cluster" type="button" role="tab" aria-controls="kubernetes-cluster" aria-selected="false">Kubernetes Cluster</button>
+								<button class="nav-link" id="cloud-offering-tab" data-bs-toggle="tab" data-bs-target="#cloud-offering" type="button" role="tab" aria-controls="cloud-offering" aria-selected="true">Cloud Offering</button>
 							</li>
 							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="premium-license-tab" data-bs-toggle="tab" data-bs-target="#premium-license" type="button" role="tab" aria-controls="premium-license" aria-selected="false">Premium License</button>
+								<button class="nav-link" id="proof-of-concept-tab" data-bs-toggle="tab" data-bs-target="#proof-of-concept" type="button" role="tab" aria-controls="proof-of-concept" aria-selected="false">Proof Of Concept</button>
 							</li>
 							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="proof-of-concept-tab" data-bs-toggle="tab" data-bs-target="#proof-of-concept" type="button" role="tab" aria-controls="proof-of-concept" aria-selected="false">Proof of concept</button>
+								<button class="nav-link" id="basic-support-tab" data-bs-toggle="tab" data-bs-target="#basic-support" type="button" role="tab" aria-controls="basic-support" aria-selected="false">Basic Support</button>
 							</li>
 						</ul>
 						<!-- Tab panes -->
 						<div class="tab-content">
-							<div class="tab-pane active" id="cloud-offering" role="tabpanel" aria-labelledby="cloud-offering-tab">
+							<div class="tab-pane active" id="premium-license" role="tabpanel" aria-labelledby="premium-license-tab">
 								<div class="single-tab-content">
-									<p>OpenIAP offers free access to OpenIAP flow at https://app.openiap.io you get 25mb diskspace for free and you can start a ram limited NodeRED that gets turned off after 24 hours.If you enable multi tenancy for your user, you can add multiple users and roles. Only with a valid VAT number will billing be enabled. Then you can buy ...</p>
-									<p>more diskspace at 3DKK per 50MB a month (Aprox 0,46 USD at December 26. 2021) dedicated NodeRED(s) that does not get turned off, price will depend on the amount of RAM you need</p>
+									<h3>Enterprise tools for scaling</h3>
+									<p>When you want to deploy on premise, your local hosting center or using your own cloud provider ( like Azure, AWS, Google, IBM, Alibaba etc. ) you can buy one or more license keys. You can combine and run multiple OpenCore and premium versions at the same time.</p>
 								</div>
-								<div class="pricing-table-tapri">
-									<div class="row">
-										<div class="col-md-3">
-											<div class="single-price-table-tab">
-												<h3>BASIC</h3>
-												<h4>With 355MB ram</h4>
-												<p>Add a basic NodeRED instance to one or more users, that does not get turned off after 24 hours.</p>
-												<h2>Price 228 DKK/month</h2>
-												<h5>(Aprox 35 USD at December 29. 2021)</h5> </div>
-										</div>
-										<div class="col-md-3">
-											<div class="single-price-table-tab">
-												<h3>PLUS</h3>
-												<h4>With 512MB ram</h4>
-												<p>More RAM, useful if using TagUI or Puppeteer image ( chrome likes ram ) or when using nodes that require more ram like, Tensor for image recognition.</p>
-												<h2>Price 532 DKK/month</h2>
-												<h5>(Aprox 80 USD at December 29. 2021)</h5> </div>
-										</div>
-										<div class="col-md-3">
-											<div class="single-price-table-tab">
-												<h3>Premium</h3>
-												<h4>With 1 Gigabyte ram</h4>
-												<p>Even more ram for heavy dudy workflows that needs alot of RAM. </p>
-												<h2>Price 800 DKK/month</h2>
-												<h5>(Aprox 121 USD at December 29. 2021)</h5> </div>
-										</div>
-										<div class="col-md-3">
-											<div class="single-price-table-tab">
-												<h3>Premium+</h3>
-												<h4>With 2 Gigabyte ram</h4>
-												<p>Add a basic NodeRED instance to one or more users, that does not get turned off after 24 hours.</p>
-												<h2>Price 1600 DKK/month</h2>
-												<h5>(Aprox 243 USD at December 29. 2021)</h5> </div>
-										</div>
-									</div>
+								<div class="single-tab-content12a">
+									<h3>Product elements</h3>
+									<ul>
+										<li>Opencore software - All the features in the open source offering</li>
+										<li>Access to monitoring using OpenTelemetry. Collection of both performance data for monitoring and spans for detailed logging of all events.</li>
+										<li>Access to reporting/dashboards on any (un)structured data saved in the database. Easy design custom reports and dashboard, using same security model as in OpenFlow.</li>
+										<li>Product liability</li>
+										<li>Premium support, helpdesk support with 4 hour SLA within danish opening hours.</li>
+										<li>Access to dedicated priority support channels on rocket chat.</li>
+										<li>Access to support/training/operations via email/rocketchat/online meetings at 1150 DKK/hour (Aprox 175 USD at December 26. 2021)</li>
+										<li>Option to fund development of new features or enhancements of existing features.</li>
+										<li>Monitoring of your instance. We make sure, that infrastructure and our software is performing and up and running. We will also react if it is not running or performing well. Lightweight monitoring is a "open eye" version of monitoring. If you want monitoring of your infrastructure ask for a quote.</li>
+										<li>Updates, we log on, in agreed upon service windows and update the infrastructure and OpenFlow to the latest version.</li>
+										<li>When you buy the first license you get access to two license keys ( one for demo/dev and one for production ) and you can then buy more instances at 2500 DKK/Month (Aprox 380 USD)</li>
+									</ul>
+									<h2>Price 5000 DKK/month</h2>
+									<h5>(Aprox 760 USD at December 29. 2021)</h5>
 								</div>
 							</div>
-							<div class="tab-pane" id="kubernetes-cluster" role="tabpanel" aria-labelledby="kubernetes-cluster-tab">
-								<div class="single-tab-content">
-									<p>OpenIAP offers free access to OpenIAP flow at https://app.openiap.io you get 25mb diskspace for free and you can start a ram limited NodeRED that gets turned off after 24 hours.If you enable multi tenancy for your user, you can add multiple users and roles. Only with a valid VAT number will billing be enabled. Then you can buy ...</p>
-									<p>more diskspace at 3DKK per 50MB a month (Aprox 0,46 USD at December 26. 2021) dedicated NodeRED(s) that does not get turned off, price will depend on the amount of RAM you need</p>
-								</div>
-								<div class="pricing-table-tapri">
-									<div class="row">
-										<div class="col-md-3">
-											<div class="single-price-table-tab">
-												<h3>BASIC</h3>
-												<h4>With 355MB ram</h4>
-												<p>Add a basic NodeRED instance to one or more users, that does not get turned off after 24 hours.</p>
-												<h2>Price 228 DKK/month</h2>
-												<h5>(Aprox 35 USD at December 29. 2021)</h5> </div>
-										</div>
-										<div class="col-md-3">
-											<div class="single-price-table-tab">
-												<h3>PLUS</h3>
-												<h4>With 512MB ram</h4>
-												<p>More RAM, useful if using TagUI or Puppeteer image ( chrome likes ram ) or when using nodes that require more ram like, Tensor for image recognition.</p>
-												<h2>Price 532 DKK/month</h2>
-												<h5>(Aprox 80 USD at December 29. 2021)</h5> </div>
-										</div>
-										<div class="col-md-3">
-											<div class="single-price-table-tab">
-												<h3>Premium</h3>
-												<h4>With 1 Gigabyte ram</h4>
-												<p>Even more ram for heavy dudy workflows that needs alot of RAM. </p>
-												<h2>Price 800 DKK/month</h2>
-												<h5>(Aprox 121 USD at December 29. 2021)</h5> </div>
-										</div>
-										<div class="col-md-3">
-											<div class="single-price-table-tab">
-												<h3>Premium+</h3>
-												<h4>With 2 Gigabyte ram</h4>
-												<p>Add a basic NodeRED instance to one or more users, that does not get turned off after 24 hours.</p>
-												<h2>Price 1600 DKK/month</h2>
-												<h5>(Aprox 243 USD at December 29. 2021)</h5> </div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tab-pane" id="premium-license" role="tabpanel" aria-labelledby="premium-license-tab">
+							<div class="tab-pane" id="cloud-offering" role="tabpanel" aria-labelledby="cloud-offering-tab">
 								<div class="single-tab-content">
 									<p>OpenIAP offers free access to OpenIAP flow at https://app.openiap.io you get 25mb diskspace for free and you can start a ram limited NodeRED that gets turned off after 24 hours.If you enable multi tenancy for your user, you can add multiple users and roles. Only with a valid VAT number will billing be enabled. Then you can buy ...</p>
 									<p>more diskspace at 3DKK per 50MB a month (Aprox 0,46 USD at December 26. 2021) dedicated NodeRED(s) that does not get turned off, price will depend on the amount of RAM you need</p>
@@ -264,6 +208,97 @@
 								</div>
 							</div>
 							<div class="tab-pane" id="proof-of-concept" role="tabpanel" aria-labelledby="proof-of-concept-tab">
+								<div class="pricing-table-tapri">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="single-price-table-tab">
+												<h3>BASIC</h3>
+												<ul>
+													<li>Docker compose file with the complete OpenFlow platform</li>
+													<li>2 hours POC setup help</li>
+													<li>Opencore software for 3 months</li>
+													<li>Get 3 hours of training in an area of the platform of your choosing. </li>
+												</ul>
+												<h2>Price 228 DKK/month</h2>
+												<h5>(Aprox 35 USD at December 29. 2021)</h5>
+												<p>This is a full price for 3 months. After 3 months the premium features will be deactivated. You can choose to continue without premium at no further costs.</p>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="single-price-table-tab">
+												<h3>ADDITIONAL HOURS</h3>
+												<ul>
+													<li>In the first 3 months, from your first purchase of the POC package, you will be able to buy more hours.</li>
+													<li>You book and pay in our calendar, and the help can be used for anything related to the framework, apart from actually us building your solution.</li>
+													<li>After 3 months you need to choose a support plan to get more help. </li>
+												</ul>
+												<h2>Price per hour 1654 DKK/hour </h2>
+												<h5>(Aprox 251 USD at December 29. 2021)</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="basic-support" role="tabpanel" aria-labelledby="basic-support-tab">
+								<div class="single-tab-content">
+									<h3>Product elements</h3>
+									<ul>
+										<li>Enhanced community support. </li>
+										<li>Email/helpdesk support with 1 business day SLA within danish opening hours.</li>
+										<li>Access to support/training/operations via email/rocketchat/online meetings at 1350 DKK/hour (Aprox 205 USD at December 26. 2021)</li>
+										<li>May not be used for Proof of Concepts</li>
+									</ul>
+								</div>
+								<div class="single-tab-content12a">
+									<h2>Price 500 DKK/month</h2>
+									<h5>(Aprox 76 USD at December 29. 2021)</h5>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="accordion" id="accordionExample">
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+							  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								Premium License
+							  </button>
+							</h2>
+							<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								<div class="single-tab-content">
+									<h3>Enterprise tools for scaling</h3>
+									<p>When you want to deploy on premise, your local hosting center or using your own cloud provider ( like Azure, AWS, Google, IBM, Alibaba etc. ) you can buy one or more license keys. You can combine and run multiple OpenCore and premium versions at the same time.</p>
+								</div>
+								<div class="single-tab-content12a">
+									<h3>Product elements</h3>
+									<ul>
+										<li>Opencore software - All the features in the open source offering</li>
+										<li>Access to monitoring using OpenTelemetry. Collection of both performance data for monitoring and spans for detailed logging of all events.</li>
+										<li>Access to reporting/dashboards on any (un)structured data saved in the database. Easy design custom reports and dashboard, using same security model as in OpenFlow.</li>
+										<li>Product liability</li>
+										<li>Premium support, helpdesk support with 4 hour SLA within danish opening hours.</li>
+										<li>Access to dedicated priority support channels on rocket chat.</li>
+										<li>Access to support/training/operations via email/rocketchat/online meetings at 1150 DKK/hour (Aprox 175 USD at December 26. 2021)</li>
+										<li>Option to fund development of new features or enhancements of existing features.</li>
+										<li>Monitoring of your instance. We make sure, that infrastructure and our software is performing and up and running. We will also react if it is not running or performing well. Lightweight monitoring is a "open eye" version of monitoring. If you want monitoring of your infrastructure ask for a quote.</li>
+										<li>Updates, we log on, in agreed upon service windows and update the infrastructure and OpenFlow to the latest version.</li>
+										<li>When you buy the first license you get access to two license keys ( one for demo/dev and one for production ) and you can then buy more instances at 2500 DKK/Month (Aprox 380 USD)</li>
+									</ul>
+									<h2>Price 5000 DKK/month</h2>
+									<h5>(Aprox 760 USD at December 29. 2021)</h5>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwo">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Cloud Offering
+							  </button>
+							</h2>
+							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
 								<div class="single-tab-content">
 									<p>OpenIAP offers free access to OpenIAP flow at https://app.openiap.io you get 25mb diskspace for free and you can start a ram limited NodeRED that gets turned off after 24 hours.If you enable multi tenancy for your user, you can add multiple users and roles. Only with a valid VAT number will billing be enabled. Then you can buy ...</p>
 									<p>more diskspace at 3DKK per 50MB a month (Aprox 0,46 USD at December 26. 2021) dedicated NodeRED(s) that does not get turned off, price will depend on the amount of RAM you need</p>
@@ -304,32 +339,77 @@
 										</div>
 									</div>
 								</div>
+							  </div>
 							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingThree">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								Proof Of Concept
+							  </button>
+							</h2>
+							<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								<div class="pricing-table-tapri">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="single-price-table-tab">
+												<h3>BASIC</h3>
+												<ul>
+													<li>Docker compose file with the complete OpenFlow platform</li>
+													<li>2 hours POC setup help</li>
+													<li>Opencore software for 3 months</li>
+													<li>Get 3 hours of training in an area of the platform of your choosing. </li>
+												</ul>
+												<h2>Price 228 DKK/month</h2>
+												<h5>(Aprox 35 USD at December 29. 2021)</h5>
+												<p>This is a full price for 3 months. After 3 months the premium features will be deactivated. You can choose to continue without premium at no further costs.</p>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="single-price-table-tab">
+												<h3>ADDITIONAL HOURS</h3>
+												<ul>
+													<li>In the first 3 months, from your first purchase of the POC package, you will be able to buy more hours.</li>
+													<li>You book and pay in our calendar, and the help can be used for anything related to the framework, apart from actually us building your solution.</li>
+													<li>After 3 months you need to choose a support plan to get more help. </li>
+												</ul>
+												<h2>Price per hour 1654 DKK/hour </h2>
+												<h5>(Aprox 251 USD at December 29. 2021)</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingFour">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								Basic Support
+							  </button>
+							</h2>
+							<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								<div class="single-tab-content">
+									<h3>Product elements</h3>
+									<ul>
+										<li>Enhanced community support. </li>
+										<li>Email/helpdesk support with 1 business day SLA within danish opening hours.</li>
+										<li>Access to support/training/operations via email/rocketchat/online meetings at 1350 DKK/hour (Aprox 205 USD at December 26. 2021)</li>
+										<li>May not be used for Proof of Concepts</li>
+									</ul>
+								</div>
+								<div class="single-tab-content12a">
+									<h2>Price 500 DKK/month</h2>
+									<h5>(Aprox 76 USD at December 29. 2021)</h5>
+								</div>
+							  </div>
+							</div>
+						  </div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="pricing-cta-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="pricing-cta-section-text">
-							<h2>Basic Support</h2>
-							<p>Product elements</p>
-							<ul>
-								<li>Enhanced community support.</li>
-								<li>Email/helpdesk support with 1 business day SLA within danish opening hours.</li>
-								<li>Access to support/training/operations via email/rocketchat/online meetings at 1350 DKK/hour (Aprox 205 USD at December 26. 2021)</li>
-								<li>May not be used for Proff of Concepts</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="pricing-cta-section-text-2">
-							<h2>Price 500 DKK/month</h2>
-							<p>(Aprox 76 USD at December 29. 2021)</p>
-						</div>
+						
+						
 					</div>
 				</div>
 			</div>
@@ -368,10 +448,11 @@
 					<div class="footermenu">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="OpenRPA.html">OpenRPA</a></li>
-							<li><a href="OpenFlow.html">OpenFlow</a></li>
+							<li><a href="openrpa.html">OpenRPA</a></li>
+							<li><a href="openflow.html">OpenFlow</a></li>
 							<li><a href="pricing.html">Pricing</a></li>
-							<li><a href="source.html">Sourcecode</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="privacy.html">Privacy Policy</a></li>
 						</ul>
 					</div>
 				</div>
