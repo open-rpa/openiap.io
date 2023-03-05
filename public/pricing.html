@@ -96,9 +96,9 @@
 								<li>OpenRPA - Support for Child Session ( some times called Picture in Picture )</li>
 								<li>OpenRPA - Can run stand alone or be connected to OpenIAP Flow for enhanced features and security.</li>
 								<li>OpenRPA - Supports high density (HD) robots, for scalable and unattended robotics.</li>
-								<li>OpenRPA - Fully controllable using PowerShell or NodeRED or OpenIAP Flow</li>
+								<li>OpenRPA - Fully controllable using PowerShell or NodeRED or Agents or OpenIAP Flow</li>
 								<li>OpenIAP Flow - Easy single server deployment using either NPM packages or docker.</li>
-								<li>OpenIAP Flow - Easy spin up multiple NodeRED instances to automate across 3000+ api integrations and inside OpenFlow and your robots.</li>
+								<li>OpenIAP Flow - Easy spin up multiple agents to automate across 3000+ api integrations and inside OpenFlow and your robots.</li>
 								<li>OpenIAP Flow - User Federation, Access Control List on all data, on the fly encryption on sensitive data, extensive audit logging, built in version history on all data, scales to PETA byte of data</li>
 								<li>OpenIAP Flow - Built as an Micro Service Architecture solutions and makes it easy for you to comply with this way of thinking and scaling your own automation.</li>
 								<li>OpenIAP Flow - Support for multi data center deployments, supports mesh topologies for running in secure enclaves</li>
@@ -145,16 +145,17 @@
 						<div class="tab-content">
 							<div class="tab-pane active" id="cloud-offering" role="tabpanel" aria-labelledby="cloud-offering-tab">
 								<div class="single-tab-content">
-									<p>OpenIAP offers free access to OpenIAP flow at <a href="https://app.openiap.io" target="_blank">https://app.openiap.io</a> you get 25mb diskspace for free and you can start a ram limited NodeRED that gets turned off after 8 hours.If you enable multi tenancy for your user, you can add multiple users and roles. Only with a valid VAT number will billing be enabled. Then you can buy ...</p>
-									<p>more diskspace at 3DKK per 50MB a month (Aprox 0,43 USD at December 23. 2022) dedicated NodeRED(s) that does not get turned off, price will depend on the amount of RAM you need</p>
+									<p>OpenIAP offers access to OpenIAP flow at <a href="https://app.openiap.io" target="_blank">https://app.openiap.io</a> you get 25mb diskspace for free and you can start a RAM limited agent that gets turned off after 8 hours. If you enable multi tenancy for your user, you can add multiple users and roles.</p>
+									<p>You can then purchase more diskspace at 3DKK per 50MB a month (Aprox 0,43 USD at December 23. 2022) dedicated agent(s) that does not get turned off, see prices below</p>
+									<p>To avoid these restrictions (or offer them to your own customers) you can always <a href="https://github.com/open-rpa/docker" target="_blank">run</a> OpenIAP flow on premise or at your own cloud.</p>
 								</div>
 								<div class="pricing-table-tapri">
 									<div class="row">
 										<div class="col-md-3">
 											<div class="single-price-table-tab">
 												<h3>BASIC</h3>
-												<h4>With 355MB ram</h4>
-												<p>Add a basic NodeRED instance to one or more users, that does not get turned off after 8 hours.</p>
+												<h4>With 256MB ram</h4>
+												<p>Add a basic agent instance that does not get turned off after 8 hours.</p>
 												<h2>Price 228 DKK/month</h2>
 												<h5>(Aprox 33 USD at December 23. 2022)</h5> </div>
 										</div>
@@ -162,7 +163,7 @@
 											<div class="single-price-table-tab">
 												<h3>PLUS</h3>
 												<h4>With 512MB ram</h4>
-												<p>More RAM, useful if using TagUI or Puppeteer image ( chrome likes ram ) or when using nodes that require more ram like, Tensor for image recognition.</p>
+												<p>More RAM, useful if doing browser automation using chromium ( like TagUI, Puppeteer  or robot framework ) when using nodes that require more ram ( for instance doing image recognition )</p>
 												<h2>Price 532 DKK/month</h2>
 												<h5>(Aprox 76 USD at December 23. 2022)</h5> </div>
 										</div>
@@ -178,7 +179,7 @@
 											<div class="single-price-table-tab">
 												<h3>Premium+</h3>
 												<h4>With 2 Gigabyte ram</h4>
-												<p>Add a basic NodeRED instance to one or more users, that does not get turned off after 8 hours.</p>
+												<p>Get dedicated server for your instance</p>
 												<h2>Price 1600 DKK/month</h2>
 												<h5>(Aprox 228 USD at December 23. 2022)</h5> </div>
 										</div>
