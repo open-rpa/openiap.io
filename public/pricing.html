@@ -49,8 +49,8 @@
 									<li><a href="/">Home</a></li>
 									<li><a href="/openrpa">OpenRPA</a></li>
 									<li><a href="/openflow">OpenFlow</a></li>
+									<li><a href="/partners">Partners</a></li>
 									<li><a href="/pricing">Pricing</a></li>
-									<li><a href="/about">About Us</a></li>
 								</ul>
 							</div>
 						</div>
@@ -74,14 +74,14 @@
 						<div class="top-slider-text2">
 							<h3>PRICING</h3>
 							<h1>OpenIAP's open source solutions.</h1>
-							<p>With unlimited RPA robots</p>
-							<p>With unlimited users, workflows, runtime, api requests and what ever weird
+							<p>With unlimited robots, agents, users, workflows, runtime, api requests and what ever weird
 								<br>thing you could think of someone would charge for.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+<!--
 		<div class="page-pricing-sec-1-2">
 			<div class="container">
 				<div class="row">
@@ -120,6 +120,38 @@
 				</div>
 			</div>
 		</div>
+-->
+<div class="page-2-section-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="top-slider-text">
+					<h3>OpenRPA</h3>
+					<p>OpenRPA is released as open source, with no commercial model around it. 
+					You are free to use it however and as much as you want, also for commercial use.
+					OpenIAP ApS does not offer any additional services or features for OpenRPA.
+					By default, OpenRPA will connect to OpenIAP's cloud offering at <a href="https://app.openiap.io" target="_blank">app.openiap.io</a>.
+					</p>
+					<h3>OpenIAP Flow</h3>
+					<p>OpenFlow is released as open source, but OpenIAP ApS also offers additional features and services 
+					that are not part of the open source offering.
+					You are free to use the open source version however and as much as you want, also for commercial use.
+					Click the "Premium License" tab to see features enabled with a premium license.
+					</p>
+					<h3>OpenIAP Cloud Offering</h3>
+					<p>OpenIAP ApS runs an instance of OpenIAP Flow at app.openiap.io.
+					You can use this instance for free, but with some limitations.
+					You can also buy more resources at a very low price (see below).
+					If you do not wish to use OpenIAP's cloud offering, you can run OpenRPA in <a href="https://openrpa.openrpa.dk/pages/offline" target="_blank">offline mode</a>,
+					or <a href="https://github.com/open-rpa/docker" target="_blank">install</a> OpenFlow on your own infrastructure.                        
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 		<div class="section-pricing-tab">
 			<div class="container">
 				<div class="row">
@@ -137,79 +169,86 @@
 								<button class="nav-link" id="proof-of-concept-tab" data-bs-toggle="tab" data-bs-target="#proof-of-concept" type="button" role="tab" aria-controls="proof-of-concept" aria-selected="false">Proof Of Concept</button>
 							</li>
 							-->
-							<li class="nav-item" role="presentation">
+							<!-- <li class="nav-item" role="presentation">
 								<button class="nav-link" id="basic-support-tab" data-bs-toggle="tab" data-bs-target="#basic-support" type="button" role="tab" aria-controls="basic-support" aria-selected="false">Basic Support</button>
-							</li>
+							</li> -->
+							<!-- <li class="nav-item" role="presentation">
+								<button class="nav-link" id="consulting-tab" data-bs-toggle="tab" data-bs-target="#consulting" type="button" role="tab" aria-controls="consulting" aria-selected="false">Consulting</button>
+							</li> -->
 						</ul>
 						<!-- Tab panes -->
 						<div class="tab-content">
 							<div class="tab-pane active" id="cloud-offering" role="tabpanel" aria-labelledby="cloud-offering-tab">
 								<div class="single-tab-content">
-									<p>OpenIAP offers access to OpenIAP flow at <a href="https://app.openiap.io" target="_blank">https://app.openiap.io</a> you get 25mb diskspace for free and you can start a RAM limited agent that gets turned off after 8 hours. If you enable multi tenancy for your user, you can add multiple users and roles.</p>
-									<p>You can then purchase more diskspace at 3DKK per 50MB a month (Aprox 0,43 USD at December 23. 2022) dedicated agent(s) that does not get turned off, see prices below</p>
-									<p>To avoid these restrictions (or offer them to your own customers) you can always <a href="https://github.com/open-rpa/docker" target="_blank">run</a> OpenIAP flow on premise or at your own cloud.</p>
+									<p>OpenIAP offers access to OpenIAP Flow at <a href="https://app.openiap.io" target="_blank">app.openiap.io</a>. You get 25MB of disk space for free, and you can start a RAM-limited agent that gets turned off after 8 hours. If you enable multi-tenancy for your user, you can add multiple users and roles.</p>
+									<p>You can then purchase additional disk space at 3 DKK per 50MB a month (Approx. 0.43 USD as of November 6, 2023), dedicated agent(s) that do not get turned off; see prices below.</p>
+									<p>To avoid these restrictions (or offer them to your own customers), you can always <a href="https://github.com/open-rpa/docker" target="_blank">run</a> OpenIAP Flow on-premise or at your own cloud free of any charge.</p>
 								</div>
 								<div class="pricing-table-tapri">
 									<div class="row">
 										<div class="col-md-3">
 											<div class="single-price-table-tab">
 												<h3>BASIC</h3>
-												<h4>With 256MB ram</h4>
+												<h4>With 256MB RAM</h4>
 												<p>Add a basic agent instance that does not get turned off after 8 hours.</p>
-												<h2>Price 228 DKK/month</h2>
-												<h5>(Aprox 33 USD at December 23. 2022)</h5> </div>
+												<h2>Price: 228 DKK/month</h2>
+												<h5>(Approx. 32 USD as of November 6, 2023)</h5>
+											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="single-price-table-tab">
 												<h3>PLUS</h3>
-												<h4>With 512MB ram</h4>
-												<p>More RAM, useful if doing browser automation using chromium ( like TagUI, Puppeteer  or robot framework ) when using nodes that require more ram ( for instance doing image recognition )</p>
-												<h2>Price 532 DKK/month</h2>
-												<h5>(Aprox 76 USD at December 23. 2022)</h5> </div>
+												<h4>With 512MB RAM</h4>
+												<p>More RAM, useful if doing browser automation using Chromium (like TagUI, Puppeteer, or Robot Framework) when using nodes that require more RAM (for instance, doing image recognition).</p>
+												<h2>Price: 532 DKK/month</h2>
+												<h5>(Approx. 77 USD as of November 6, 2023)</h5>
+											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="single-price-table-tab">
-												<h3>Premium</h3>
-												<h4>With 1 Gigabyte ram</h4>
-												<p>Even more ram for heavy dudy workflows that needs alot of RAM. </p>
-												<h2>Price 800 DKK/month</h2>
-												<h5>(Aprox 114 USD at December 23. 2022)</h5> </div>
+												<h3>PREMIUM</h3>
+												<h4>With 1 gigabyte RAM</h4>
+												<p>Even more RAM for heavy-duty workflows that need a lot of RAM.</p>
+												<h2>Price: 800 DKK/month</h2>
+												<h5>(Approx. 115 USD as of November 6, 2023)</h5>
+											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="single-price-table-tab">
-												<h3>Premium+</h3>
-												<h4>With 2 Gigabyte ram</h4>
-												<p>Get dedicated server for your instance</p>
-												<h2>Price 1600 DKK/month</h2>
-												<h5>(Aprox 228 USD at December 23. 2022)</h5> </div>
+												<h3>PREMIUM+</h3>
+												<h4>With 2 gigabytes RAM</h4>
+												<p>Get a dedicated server for your instance.</p>
+												<h2>Price: 1600 DKK/month</h2>
+												<h5>(Approx. 230 USD as of November 6, 2023)</h5>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+						
 							<div class="tab-pane" id="premium-license" role="tabpanel" aria-labelledby="premium-license-tab">
 								<div class="single-tab-content">
 									<h3>Enterprise tools for scaling</h3>
-									<p>When you want to deploy on premise, your local hosting center or using your own cloud provider ( like Azure, AWS, Google, IBM, Alibaba etc. ) you can buy one or more license keys.</p>
+									<p>When you want to deploy on premise, your local hosting center or using your own cloud provider ( like Azure, AWS, Google, IBM, Alibaba etc. ) you can buy one or more license keys.
+									Deploying openflow on premise is easy using <a href="https://github.com/open-rpa/docker" target="_blank">docker compose</a> for docker or our <a href="https://github.com/open-rpa/helm-charts" target="_blank">helm chart</a> for kubernetes.
+									After purching a license, please send an email to info@openiap.io with your customer name, and the domain name you wish to use for your openflow installation. Once updated in our system you can get your license on your <a href="https://app.openiap.io/#/Customer" target="_blank">customer page</a>
+									</p>
 								</div>
 								<div class="single-tab-content12a">
 									<h3>Product elements</h3>
 									<ul>
-										<li>Opencore software - All the features in the open source offering</li>
-										<li>Product liability</li>
 										<li>Access to monitoring using OpenTelemetry. Collection of both performance data for monitoring and spans for detailed logging of all events.</li>
-										<li>Access to reporting/dashboards on any (un)structured data saved in the database. </li>
+										<li>Custom grafana dashboards for OpenTelemtry data (if collected). </li>
+
+										<li>Custom grafana dashboards on any (un)structured data saved in the openflow database. </li>
 										<li>Easy design custom reports and dashboard, using same security model as in OpenFlow.</li>
-										<li>Support for Kubernetes and OpenShift</li>
-										<li>Premium support, helpdesk support with down to 8 hour SLA within danish business hours.</li>
-										<li>Access to dedicated priority support channels on rocket chat.</li>
-										<li>Access to support/training/operations via email/rocketchat/online meetings at 1150 DKK/hour (Aprox 164 USD at December 23. 2022)</li>
-										<li>Option to fund development of new features or enhancements of existing features.</li>
-										<li>Monitoring of your instance. We make sure, that infrastructure and our software is performing and up and running. We will also react if it is not running or performing well. Lightweight monitoring is a "open eye" version of monitoring. If you want monitoring of your infrastructure ask for a quote.</li>
-										<li>Updates, we log on, in agreed upon service windows and update the infrastructure and OpenFlow to the latest version.</li>
-										<li>When you buy the first license you get access to two license keys ( one for demo/dev and one for production ) and you can then buy more instances at 2500 DKK/Month (Aprox 357 USD)</li>
+										
+										<li>Kubernetes agent driver (with limited OpenShift support)</li>
+										<li>A license is per api domain. Therefor if it used in multitenant mode you will only need one license</li>
+										<li>The first license purchase, will also allows you an ekstra license that may only be used for a development envoriment</li>
 									</ul>
 									<h2>Price 5000 DKK/month</h2>
-									<h5>(Aprox 760 USD at December 23. 2022)</h5>
+									<h5>(Aprox 720 USD at November 6. 2023)</h5>
 								</div>
 							</div>
 							<!-- skip POC right now 
@@ -227,7 +266,7 @@
 													<li>Get 3 hours of training in an area of the platform of your choosing. </li>
 												</ul>
 												<h2>Price 17.092,50 DKK</h2>
-												<h5>(Aprox 2600 USD at December 23. 2022)</h5>
+												<h5>(Aprox 2600 USD at November 6. 2023)</h5>
 												<p>This is a full price for 3 months. After 3 months the premium features will be deactivated. You can choose to continue without premium at no further costs.</p>
 											</div>
 										</div>
@@ -240,25 +279,49 @@
 													<li>After 3 months you need to choose a support plan to get more help. </li>
 												</ul>
 												<h2>Price per hour 1654 DKK/hour </h2>
-												<h5>(Aprox 251 USD at December 23. 2022)</h5>
+												<h5>(Aprox 251 USD at November 6. 2023)</h5>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 							-->
-							<div class="tab-pane" id="basic-support" role="tabpanel" aria-labelledby="basic-support-tab">
+							<!-- <div class="tab-pane" id="basic-support" role="tabpanel" aria-labelledby="basic-support-tab">
 								<div class="single-tab-content">
 									<h3>Product elements</h3>
 									<ul>
 										<li>Enhanced community support. </li>
 										<li>Email/helpdesk support with 1-2 business day SLA within danish opening hours.</li>
-										<li>Access to support/training/operations via email/rocketchat/online meetings at 1350 DKK/hour (Aprox 192 USD at December 23. 2022)</li>
+										<li>Access to support/training/operations via email/rocketchat/online meetings at 1350 DKK/hour (Aprox 192 USD at November 6. 2023)</li>
 									</ul>
 								</div>
 								<div class="single-tab-content12a">
 									<h2>Price 500 DKK/month</h2>
-									<h5>(Aprox 72 USD at December 23. 2022)</h5>
+									<h5>(Aprox 72 USD at November 6. 2023)</h5>
+								</div>
+							</div> -->
+							<div class="tab-pane" id="consulting" role="tabpanel" aria-labelledby="consulting-tab">
+								<div class="single-tab-content">
+									<h3>Consulting Service</h3>
+									<p>
+										You can purchase per hour consulting services from OpenIAP ApS.
+										Hours are limited to the offerings below. If you are looking for a company to build or monitor your flows and installation,
+										please contact one of our <a href="/partners">partners</a>.
+										Hours are billed in 30-minute increments and must be pre-paid before work begins.
+										You can buy a single ad-hoc hour when <a href="https://calendly.com/openiap" target="_blank">booking a meeting</a> with us, or purchase packages of hours on your <a href="https://app.openiap.io/#/Customer" target="_blank">customer page</a>.
+										Buying packages will offer a discount on the hourly rate.
+									</p>
+									<ul>
+										<li>Installation and troubleshooting of OpenIAP Flow on Kubernetes</li>
+										<li>Installation and troubleshooting of OpenIAP Flow on Docker</li>
+										<li>Priority on bug fixes for OpenIAP Flow and OpenRPA</li>
+										<li>Feature expansion and new feature additions in OpenIAP Flow</li>
+										<li>Architectural and solutions consulting for developers</li>
+									</ul>
+								</div>
+								<div class="single-tab-content12a">
+									<h2>Price: 1500 DKK/hour</h2>
+									<h5>(Approx. 216 USD as of November 6, 2023)</h5>
 								</div>
 							</div>
 						</div>
@@ -304,8 +367,8 @@
 							<li><a href="/">Home</a></li>
 							<li><a href="/openrpa">OpenRPA</a></li>
 							<li><a href="/openflow">OpenFlow</a></li>
+							<li><a href="/partners">Partners</a></li>
 							<li><a href="/pricing">Pricing</a></li>
-							<li><a href="/about">About Us</a></li>
 							<li><a href="/telemetry">Telemetry</a></li>
 							<li><a href="/terms">Terms & Conditions</a></li>
 						</ul>
