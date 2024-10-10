@@ -8,4 +8,4 @@ CMD ["nginx", "-g", "daemon off;"]
 # docker build -t cloudhack/openiap:latest -t cloudhack/openiap:0.18 .
 # docker run -it -p 80:80 --rm cloudhack/openiap:latest
 # docker build -t cloudhack/openiap:latest -t cloudhack/openiap:0.18 . && docker run -it -p 80:80 --rm cloudhack/openiap:latest
-# docker build -t cloudhack/openiap:latest -t cloudhack/openiap:0.19 . && docker push cloudhack/openiap:latest
+# docker build -t cloudhack/openiap:latest -t cloudhack/openiap:0.21 . && docker push cloudhack/openiap:latest && docker push cloudhack/openiap:0.21
