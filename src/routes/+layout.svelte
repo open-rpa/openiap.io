@@ -1,0 +1,19 @@
+<script lang="ts">
+	import { ModeWatcher } from "mode-watcher";
+	import { Toaster } from "svelte-sonner";
+	import Footer from "./Footer.svelte";
+	import Header from "./Header.svelte";
+	import "../app.css";
+
+	let { children } = $props();
+</script>
+
+<ModeWatcher />
+<div class="min-h-screen bg-background flex flex-col">
+	<Header />
+	<main class="flex-grow">
+		{@render children()}
+	</main>
+	<Footer />
+</div>
+<Toaster />
