@@ -17,7 +17,7 @@ const config: Config = {
 		extend: {
 			colors: {
 				customGreen: "#32E38B",
-				
+
 				test: '#EF4444',
 				bw50: "#FDFDFD",
 				bw100: "#EEEFF1",
@@ -46,11 +46,13 @@ const config: Config = {
 				darkentities: "#46686D",
 				darkentitiesselected: "#304A4E",
 
+				darkbutton: "#111114",
+
 				// Green Button
 				darkbggreen: "#304E46",
 				darkbghovergreen: "#426A5F",
 				darktextgreen: "#DDEFE6",
-				darkbordergreen: "#56846D",
+				darkbordergreen: "#A7CFC6",
 				lightbggreen: "#BDE9CF",
 				lighthovergreen: "#96D5AF",
 				lighttextgreen: "#145A41",
@@ -144,6 +146,7 @@ const config: Config = {
 			},
 			fontSize: {
 				'smaller': ['0.875rem', '1rem'], // 14px font size, 16px line height
+				'hero': ['80px', '100%'], // 14px font size, 16px line height
 			},
 			keyframes: {
 				"accordion-down": {

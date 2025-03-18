@@ -1,15 +1,10 @@
 <script>
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
-    import {
-        ArrowDown,
-        ArrowRight,
-        Github,
-        Icon,
-        LibraryBig,
-        MessageSquareText,
-        Youtube,
-    } from "lucide-svelte";
-    import hero from "$lib/images/hero.png";
+    import hero from "$lib/images/home/hero.svg";
+    import logo1 from "$lib/images/testimonials/alphatods.jpeg";
+    import logo2 from "$lib/images/testimonials/b2bpresales.png";
+    import logo3 from "$lib/images/testimonials/nagel.png";
+    import logo4 from "$lib/images/testimonials/synerg.png";
 
     let iconClass =
         "flex flex-col items-center justify-center space-y-2 cursor-pointer animate-fade-in";
@@ -19,116 +14,98 @@
 </script>
 
 <div>
-    <div
-        class="pt-14 md:Pt-0 px-4 gradient-bg h-screen flex justify-center items-center"
-    >
-        <div class="container mx-auto text-center">
-            <div
-                class="hidden md:block absolute bottom-0 left-0 w-full h-2/6 bg-no-repeat opacity-50 hero-img"
-                style="background-image: url({hero}); width: 100%;"
-            ></div>
-            <div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-                    Open Source{" "}
-                    <span class="bg-clip-text text-customGreen">
-                        Automation
-                    </span>{" "}
-                    Platform
-                </h1>
-                <p
-                    class="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto animate-fade-in"
-                >
-                    Orchestrate and Scale your Workflows in Seamless
-                    Collaboration Between Humans, Robots, Systems and Devices.
-                </p>
-                <div
-                    class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in"
-                >
-                    <HotkeyButton
-                        class="hover-lift border border-customGreen"
-                        size="lg"
-                        onclick={() =>
-                            window.open(
-                                "https://github.com/open-rpa/openrpa/releases/latest/download/OpenRPA.msi",
-                                "_blank",
-                                "noopener,noreferrer",
-                            )}
-                    >
-                        Download OpenRPA <ArrowDown class="ml-2 h-5 w-5" />
-                    </HotkeyButton>
-                    <HotkeyButton
-                        class="hover-lift"
-                        size="lg"
-                        onclick={() =>
-                            window.open(
-                                "https://docs.openiap.io/docs/Accessing-for-the-First-Time.html",
-                                "_blank",
-                                "noopener,noreferrer",
-                            )}
-                    >
-                        Get Started <ArrowRight class="ml-2 h-5 w-5" />
-                    </HotkeyButton>
-                </div>
-            </div>
-            <div
-                class="flex justify-center mt-10 space-x-4 relative items-center"
+    <!-- <div class="h-full bg-white sm:bg-red-500 md:bg-blue-500 lg:bg-green-500 xl:bg-yellow-500"> -->
+    <div class="h-full">
+        <div
+            class="xl:absolute xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center"
+        >
+            <h1
+                class="md:text-5xl xl:text-hero font-bold mb-6 animate-fade-in gradient-text"
             >
-                <div
-                    class={iconClass}
+                A scalable and secure <br />
+                automation platform
+            </h1>
+            <p class="xl:text-xl text-bw500 mb-8 mx-auto animate-fade-in">
+                An opinionated platform that gives you the complete
+                infrastructure for deploying, monitoring <br /> and troubleshooting
+                automation
+            </p>
+            <div
+                class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in"
+            >
+                <HotkeyButton
+                    variant="success"
                     onclick={() =>
                         window.open(
-                            "https://www.youtube.com/@AllanZimmermann/videos",
+                            "https://github.com/open-rpa/openrpa/releases/latest/download/OpenRPA.msi",
                             "_blank",
                             "noopener,noreferrer",
                         )}
                 >
-                    <Youtube width={30} height={30} />
-                    <p>YouTube</p>
-                </div>
-                <div
-                    class={iconClass}
+                    Download OpenRPA
+                </HotkeyButton>
+                <HotkeyButton
+                    class="hover-lift"
                     onclick={() =>
                         window.open(
-                            "https://docs.openiap.io/",
+                            "https://docs.openiap.io/docs/Accessing-for-the-First-Time.html",
                             "_blank",
                             "noopener,noreferrer",
                         )}
                 >
-                    <LibraryBig width={30} height={30} />
-                    <p>Docs</p>
-                </div>
-                <div
-                    class={iconClass}
-                    onclick={() =>
-                        window.open(
-                            "https://discourse.openiap.io/",
-                            "_blank",
-                            "noopener,noreferrer",
-                        )}
-                >
-                    <MessageSquareText width={30} height={30} />
-                    <p>Forum</p>
-                </div>
-                <div
-                    class={iconClass}
-                    onclick={() =>
-                        window.open(
-                            "https://github.com/open-rpa/",
-                            "_blank",
-                            "noopener,noreferrer",
-                        )}
-                >
-                    <Github width={30} height={30} />
-                    <p>GitHub</p>
-                </div>
+                    Get Started
+                </HotkeyButton>
+            </div>
+        </div>
+        <div class="flex items-end justify-center">
+            <img src={hero} alt="hero" />
+        </div>
+    </div>
+    <div class="h-56">
+        <div class="text-bw500 text-center">Trusted by companies worldwide</div>
+        <div class="relative w-full overflow-hidden flex justify-center py-6">
+            <!-- The fade wrapper -->
+            <div
+                class="fade-mask flex items-center gap-8 overflow-x-auto no-scrollbar px-12 py-2 whitespace-nowrap"
+            >
+                <img
+                    src={logo3}
+                    alt="Logo"
+                    class="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <img
+                    src={logo2}
+                    alt="Logo"
+                    class="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                />
+
+                <img
+                    src={logo2}
+                    alt="Logo"
+                    class="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <img
+                    src={logo2}
+                    alt="Logo"
+                    class="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <img
+                    src={logo3}
+                    alt="Logo"
+                    class="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <img
+                    src={logo3}
+                    alt="Logo"
+                    class="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <img
+                    src={logo3}
+                    alt="Logo"
+                    class="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <!-- Add more logos here -->
             </div>
         </div>
     </div>
 </div>
-
-<style>
-    .hero-img {
-        filter: sepia(1) saturate(0) brightness(0.1) contrast(1.5)
-            hue-rotate(-180deg);
-    }
-</style>

@@ -1,54 +1,83 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 	import { base } from "$app/paths";
-	import { Link } from "$lib/components/ui/breadcrumb";
 	import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
-	import Backgound from "$lib/images/backgound.png";
-	import Logo from "$lib/images/logo.png";
-	import { Github, Icon, MenuIcon, Moon, Sun, X } from "lucide-svelte";
-	import { toggleMode } from "mode-watcher";
+	import Logo from "$lib/images/logo.svg";
+	import { Icon, MenuIcon, X } from "lucide-svelte";
 
 	let isMenuOpen = $state(false);
 </script>
 
-<header
-	class="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-gray-800"
->
-	<div class="container mx-auto px-4 h-16 flex items-center justify-between">
-		<div class="flex items-center w-200">
-			<Link
-				href="/"
-				class="flex flex-row justify-center items-center align-middle"
+<header class="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-sm">
+	<div class="px-4 h-16 flex items-center justify-between">
+		<HotkeyButton variant="ghostfull" onclick={() => goto(base + "/")}>
+			<div class="flex items-center justify-center space-x-[15px]">
+				<div class="justify-end">
+					<img src={Logo} alt="Logo" />
+				</div>
+				<div class="text-xl text-bw50 font-semibold items-center">
+					OpenIAP
+				</div>
+			</div>
+		</HotkeyButton>
+		<nav class="hidden md:flex md:space-x-2 space-x-2">
+			<!-- <HotkeyButton variant="link" onclick={() => goto(base + "/")}>
+				Home
+			</HotkeyButton> -->
+			<HotkeyButton
+				variant="link"
+				onclick={() => goto(base + "/solutions")}
 			>
-				<div class="h-full">
-					<img src={Backgound} width={34} alt="Background" />
-				</div>
-				<div class="mx-2 lg:ms-4 h-10 h-full">
-					<img src={Logo} width={120} alt="Logo" />
-				</div>
-			</Link>
-		</div>
+				Solutions
+			</HotkeyButton>
+			<!-- <HotkeyButton
+				variant="link"
+				onclick={() => goto(base + "/pricing")}
+			>
+				Pricing
+			</HotkeyButton> -->
+			<HotkeyButton
+				variant="link"
+				onclick={() =>
+					window.open(
+						"https://docs.openiap.io/",
+						"_blank",
+						"noopener,noreferrer",
+					)}
+			>
+				Docs
+			</HotkeyButton>
+			<HotkeyButton
+				variant="link"
+				onclick={() => {
+					goto("/contact/view");
+					isMenuOpen = false;
+				}}
+			>
+				Get In Touch
+			</HotkeyButton>
+		</nav>
 
-		<div class="hidden md:flex items-center align-middle">
+		<!-- <div class="hidden md:flex items-center align-middle">
 			<nav class="flex lg:space-x-8 space-x-2">
-				<Link
+				<HotkeyButton
 					onclick={() => goto(base + "/")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline cursor-pointer"
 				>
 					Home
-				</Link>
-				<Link
+				</HotkeyButton>
+				<HotkeyButton
 					onclick={() => goto(base + "/solutions")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline cursor-pointer"
 				>
 					Solutions
-				</Link>
-				<Link
+				</HotkeyButton>
+				<HotkeyButton
 					onclick={() => goto(base + "/pricing")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline cursor-pointer"
 				>
 					Pricing
-				</Link>
+				</HotkeyButton>
 				<span
 					class="text-gray-300 hover:text-white transition-colors cursor-pointer underline-offset-4 hover:underline"
 					onclick={() =>
@@ -88,27 +117,27 @@
 							"noopener,noreferrer",
 						)}
 				/>
-				<HotkeyButton
-					class="hover-lift"
-					onclick={() => goto("/contact/view")}
-				>
-					Get In Touch
-				</HotkeyButton>
-				<HotkeyButton
-					class="hover-lift"
-					onclick={() =>
-						window.open(
-							"https://app.openiap.io/",
-							"_blank",
-							"noopener,noreferrer",
-						)}
-				>
-					Login
-				</HotkeyButton>
-			</div>
+				</div>
+		</div> -->
+
+		<div class="hidden md:flex">
+			<HotkeyButton
+				aria-label="Login"
+				variant="link"
+				class="hover-lift"
+				onclick={() =>
+					window.open(
+						"https://app.openiap.io/",
+						"_blank",
+						"noopener,noreferrer",
+					)}
+			>
+				Login
+			</HotkeyButton>
 		</div>
 
 		<HotkeyButton
+			variant="link"
 			class="md:hidden"
 			onclick={() => (isMenuOpen = !isMenuOpen)}
 		>
@@ -121,34 +150,18 @@
 	</div>
 
 	{#if isMenuOpen}
-		(
 		<div
 			class="md:hidden absolute w-full bg-background border-b border-gray-800 animate-fade-in"
 		>
 			<nav class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-				<Link
-					href="/"
-					class="text-gray-300 hover:text-white transition-colors"
-					onclick={() => (isMenuOpen = false)}
-				>
-					Home
-				</Link>
-				<Link
-					href="/solutions"
-					class="text-gray-300 hover:text-white transition-colors"
-					onclick={() => (isMenuOpen = false)}
+				<HotkeyButton
+					variant="link"
+					onclick={() => goto(base + "/solutions")}
 				>
 					Solutions
-				</Link>
-				<Link
-					href="/pricing"
-					class="text-gray-300 hover:text-white transition-colors"
-					onclick={() => (isMenuOpen = false)}
-				>
-					Pricing
-				</Link>
-				<span
-					class="text-gray-300 hover:text-white transition-colors cursor-pointer"
+				</HotkeyButton>
+				<HotkeyButton
+					variant="link"
 					onclick={() =>
 						window.open(
 							"https://docs.openiap.io/",
@@ -157,10 +170,9 @@
 						)}
 				>
 					Docs
-				</span>
-				<Icon icon="ri:github-fill" width={30} />
+				</HotkeyButton>
 				<HotkeyButton
-					class="w-full"
+					variant="link"
 					onclick={() => {
 						goto("/contact/view");
 						isMenuOpen = false;
@@ -169,7 +181,7 @@
 					Get In Touch
 				</HotkeyButton>
 				<HotkeyButton
-					class="w-full"
+					variant="link"
 					onclick={() =>
 						window.open(
 							"https://app.openiap.io/",
@@ -181,6 +193,5 @@
 				</HotkeyButton>
 			</nav>
 		</div>
-		)
 	{/if}
 </header>
