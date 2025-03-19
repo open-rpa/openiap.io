@@ -167,12 +167,6 @@ client.free()`,
                     Multi-language support
                 </p>
                 <div class="flex space-x-5 items-center pe-10">
-                    <!-- <HotkeyButton variant="carousel" size="carousel"
-                        ><ChevronLeft /></HotkeyButton
-                    >
-                    <HotkeyButton variant="carousel" size="carousel"
-                        ><ChevronRight /></HotkeyButton
-                    > -->
                     <Carousel.Previous />
                     <Carousel.Next />
                 </div>
@@ -280,13 +274,13 @@ client.free()`,
                             <div
                                 class="flex items-center justify-between p-2.5 border-b border-bw500"
                             >
-                                <div class="flex items-center">
-                                    <IdCard class="h-4 w-4" />
-                                    <p class="text-sm">Name</p>
+                                <div class="flex items-center space-x-2">
+                                    <IdCard class="h-4 w-4 text-bw500" />
+                                    <p>Name</p>
                                 </div>
-                                <div class="flex items-center">
-                                    <Code class="h-4 w-4" />
-                                    <p class="justify-center">Language</p>
+                                <div class="flex items-center space-x-2">
+                                    <Code class="h-4 w-4 text-bw500" />
+                                    <p>Language</p>
                                 </div>
                             </div>
                             <div
