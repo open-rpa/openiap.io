@@ -319,7 +319,11 @@ client.free()`,
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 Multi-language
                             </p>
-                            <p class="text-sm">Need Text here</p>
+                            <p class="text-sm">
+                                Each work item queue can orchestrate code in
+                                different languages. This allows using the right
+                                language for the right task.
+                            </p>
                         </div>
                         <div class="flex items-center justify-center">
                             <div class="grid grid-cols-2 gap-3">

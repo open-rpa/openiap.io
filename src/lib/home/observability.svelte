@@ -1,5 +1,8 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
+    import performanceSvg from "$lib/images/home/observability/performance.svg";
+    import timelineSvg from "$lib/images/home/observability/timeline.svg";
+    import graphSvg from "$lib/images/home/observability/graph.svg";
     import cSvg from "$lib/images/svgs/C_Programming_Language.svg";
     import dotnetSvg from "$lib/images/svgs/dotnet.svg";
     import javaSvg from "$lib/images/svgs/java.svg";
@@ -8,35 +11,9 @@
     import pythonSvg from "$lib/images/svgs/python.svg";
     import rustSvg from "$lib/images/svgs/rust.svg";
     import browerSvg from "$lib/images/svgs/web.svg";
-    import { Code, Copy, Globe, IdCard } from "lucide-svelte";
-    import { toast } from "svelte-sonner";
-    import * as Tabs from "$lib/components/ui/tabs/index";
-    import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
 
-    let languages = [
-        {
-            name: "Rust",
-            code: `client = Client ()
-client.connect()
-query_result = client.query(collectionname='entities', query={})
-print('result', query_result)
-client.free()
-print('result', query_result)
-client.free()`,
-        },
-        {
-            name: "NodeJS",
-            code: `node`,
-        },
-        {
-            name: "Python",
-            code: `python`,
-        },
-        {
-            name: "Dotnet",
-            code: `dotnet`,
-        },
-    ];
+    import { Globe } from "lucide-svelte";
+
     const clientlibraries = [
         {
             title: "NodeJS",
@@ -183,7 +160,7 @@ client.free()`,
                     <div
                         class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
                     >
-                        <div class="p-12">
+                        <div class="p-12 pb-24">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 Central logging
                             </p>
@@ -201,51 +178,17 @@ client.free()`,
                             >
                                 <Globe class="h-4 w-4" />
                             </div>
-                            <div class="m-3 pt-3 dark:bg-[#1D1F22] h-full">
-                                <Tabs.Root value="1" class="w-[400px] ms-5">
-                                    <div></div>
-                                    <Tabs.List
-                                        class="h-fit grid grid-cols-1 md:block w-full md:w-fit bg-bw200 dark:bg-darkagenttab rounded-[5px] p-1 mb-2 lg:mb-0 text-bw50 font-normal"
-                                    >
-                                        {#each languages as language, index}
-                                            <Tabs.Trigger value={`${index + 1}`}
-                                                >{language.name}</Tabs.Trigger
-                                            >
-                                        {/each}
-                                    </Tabs.List>
-                                    <div class="mt-5">
-                                        {#each languages as language, index}
-                                            <Tabs.Content
-                                                value={`${index + 1}`}
-                                            >
-                                                <div
-                                                    class="text-bw300 flex justify-between"
-                                                >
-                                                    <div>
-                                                        <pre>
-<code>{language.code}</code>
-                                            </pre>
-                                                    </div>
-                                                    <HotkeyButton
-                                                        onclick={() => {
-                                                            navigator.clipboard.writeText(
-                                                                language.code,
-                                                            );
-                                                            toast.success(
-                                                                "Code copied to clipboard",
-                                                            );
-                                                        }}
-                                                        aria-label="Copy code"
-                                                        variant="icon"
-                                                        size="icon"
-                                                    >
-                                                        <Copy />
-                                                    </HotkeyButton>
-                                                </div>
-                                            </Tabs.Content>
-                                        {/each}
-                                    </div>
-                                </Tabs.Root>
+                            <div class="m-3 mt-0 pt-3 h-full">
+                                <img
+                                    src={timelineSvg}
+                                    alt="timeline"
+                                    class="w-full mb-4"
+                                />
+                                <img
+                                    src={graphSvg}
+                                    alt="timeline"
+                                    class="w-full"
+                                />
                             </div>
                         </div>
                     </div>
@@ -254,9 +197,9 @@ client.free()`,
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
                     >
-                        <div class="mb-10">
+                        <div class="p-12">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 Customize Your Performance Data
                             </p>
@@ -267,46 +210,11 @@ client.free()`,
                             </p>
                         </div>
 
-                        <div
-                            class="border border-bw500 rounded-[10px] text-bw100"
-                        >
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500"
-                            >
-                                <div class="flex items-center space-x-2">
-                                    <IdCard class="h-4 w-4 text-bw500" />
-                                    <p>Name</p>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <Code class="h-4 w-4 text-bw500" />
-                                    <p>Language</p>
-                                </div>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500 dark:bg-[#1D1F22]"
-                            >
-                                <p>process_edi</p>
-                                <p class="text-bw300 me-4">Python</p>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500 dark:bg-[#1D1F22]"
-                            >
-                                <p>run_inventory</p>
-                                <p class="text-bw300 me-3">NodeJS</p>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500 dark:bg-[#1D1F22]"
-                            >
-                                <p>move_orders</p>
-                                <p class="text-bw300 me-6">Java</p>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 dark:bg-[#1D1F22] rounded-b-[10px]"
-                            >
-                                <p>generate_invoices</p>
-                                <p class="text-bw300 me-6">Rust</p>
-                            </div>
-                        </div>
+                        <img
+                            src={performanceSvg}
+                            alt="performance"
+                            class="w-full"
+                        />
                     </div>
                 </div>
             </Carousel.Item>
@@ -319,7 +227,11 @@ client.free()`,
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 Ready-to-use Telemetery
                             </p>
-                            <p class="text-sm">Need Text here</p>
+                            <p class="text-sm">
+                                Get instant access to 300 unique performance
+                                metrics with our pre-built template—making
+                                valuable insights just a click away.
+                            </p>
                         </div>
                         <div class="flex items-center justify-center">
                             <div class="grid grid-cols-2 gap-3">

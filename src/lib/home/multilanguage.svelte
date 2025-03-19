@@ -321,7 +321,7 @@ client.free()`,
                                 Programing Languages
                             </p>
                             <p class="text-sm">
-                               Need Text here
+                                A unified SDK delivering the same seamless experience across 10 different programming languages.
                             </p>
                         </div>
                         <div class="flex items-center justify-center">

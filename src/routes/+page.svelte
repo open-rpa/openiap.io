@@ -16,6 +16,6 @@
     <Hero />
     <TrustedBy />
     <MultiLanguage />
-    <!-- <Observability />
-    <Workitemqueue /> -->
+    <Observability />
+    <Workitemqueue />
 </div>
