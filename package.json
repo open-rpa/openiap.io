@@ -1,6 +1,6 @@
 {
     "name": "opencore-web",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "type": "module",
     "main": "build/index.js",
     "scripts": {
@@ -17,6 +17,7 @@
     },
     "devDependencies": {
         "@fontsource/fira-mono": "^5.1.0",
+        "@lucide/svelte": "^0.483.0",
         "@openiap/jsapi": "github:openiap/jsapi#esm",
         "@sveltejs/adapter-node": "^5.2.9",
         "@sveltejs/kit": "^2.15.1",
@@ -24,9 +25,10 @@
         "@types/mousetrap": "^1.6.15",
         "ansi_up": "^6.0.2",
         "autoprefixer": "^10.4.20",
-        "bits-ui": "^1.3.6",
+        "bits-ui": "^1.3.13",
         "clsx": "^2.1.1",
         "driver.js": "^1.3.1",
+        "embla-carousel-svelte": "^8.5.2",
         "formiojs": "^4.21.6",
         "formsnap": "^2.0.0-next.1",
         "lucide-svelte": "^0.462.0",
