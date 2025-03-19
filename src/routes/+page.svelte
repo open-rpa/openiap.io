@@ -1,5 +1,11 @@
 <script>
-    import { Hero, MultiLanguage,TrustedBy } from "$lib/home";
+    import {
+        Hero,
+        TrustedBy,
+        MultiLanguage,
+        Observability,
+        Workitemqueue,
+    } from "$lib/home";
 
     $effect(() => {
         window.scrollTo(0, 0);
@@ -10,4 +16,6 @@
     <Hero />
     <TrustedBy />
     <MultiLanguage />
+    <!-- <Observability />
+    <Workitemqueue /> -->
 </div>

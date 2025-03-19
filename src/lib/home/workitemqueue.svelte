@@ -164,7 +164,7 @@ client.free()`,
         <div class="mb-12">
             <div class="flex items-end justify-between gap-8">
                 <p class={"text-[64px] font-semibold" + gradienttext}>
-                    Multi-language support
+                    Workitem Queues
                 </p>
                 <div class="flex space-x-5 items-center pe-10">
                     <Carousel.Previous />
@@ -172,8 +172,9 @@ client.free()`,
                 </div>
             </div>
             <p class="text-bw300 font-semibold text-xl">
-                OpenCore allows different types of developers to work together
-                via one common framework
+                Work item queues let your automation handle tasks in a scalable
+                way — distributing work, tracking progress, and ensuring no task
+                gets lost.
             </p>
         </div>
 
@@ -185,13 +186,11 @@ client.free()`,
                     >
                         <div class="p-12">
                             <p class="text-xl font-medium mb-2 text-bw50">
-                                Choose your favourite coding language
+                                Modulization
                             </p>
                             <p class="text-sm">
-                                Leverage OpenRPA and Node-RED to build
-                                efficient, low-code automation solutions for RPA
-                                and API integrations—streamlining workflows with
-                                minimal coding effort.
+                                Divide your processes into smaller parts for
+                                easier testing, troubleshooting and reporting
                             </p>
                         </div>
                         <div
@@ -259,12 +258,12 @@ client.free()`,
                     >
                         <div class="mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
-                                Modular Code, Maximum Flexibility
+                                Scalability
                             </p>
                             <p class="text-sm">
-                                Break code into small, independent modules for
-                                easier maintenance, better testability, and
-                                seamless scalability.
+                                Easily scale up the code associated with each
+                                work item queue to handle any amount of
+                                workload.
                             </p>
                         </div>
 
@@ -318,11 +317,9 @@ client.free()`,
                     >
                         <div class="mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
-                                Programing Languages
+                                Multi-language
                             </p>
-                            <p class="text-sm">
-                               Need Text here
-                            </p>
+                            <p class="text-sm">Need Text here</p>
                         </div>
                         <div class="flex items-center justify-center">
                             <div class="grid grid-cols-2 gap-3">
