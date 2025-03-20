@@ -1,12 +1,14 @@
 <script>
     import {
         Hero,
-        TrustedBy,
+        Joincommunity,
         MultiLanguage,
         Observability,
-        Workitemqueue,
         Reports,
         Security,
+        Testimonials,
+        TrustedBy,
+        Workitemqueue,
     } from "$lib/home";
 
     $effect(() => {
@@ -22,4 +24,6 @@
     <Workitemqueue />
     <Reports />
     <Security />
+    <Testimonials />
+    <Joincommunity />
 </div>
