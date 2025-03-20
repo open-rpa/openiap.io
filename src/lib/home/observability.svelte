@@ -3,131 +3,12 @@
     import performanceSvg from "$lib/images/home/observability/performance.svg";
     import timelineSvg from "$lib/images/home/observability/timeline.svg";
     import graphSvg from "$lib/images/home/observability/graph.svg";
-    import cSvg from "$lib/images/svgs/C_Programming_Language.svg";
-    import dotnetSvg from "$lib/images/svgs/dotnet.svg";
-    import javaSvg from "$lib/images/svgs/java.svg";
-    import jsSvg from "$lib/images/svgs/js.svg";
-    import phpSvg from "$lib/images/svgs/php.svg";
-    import pythonSvg from "$lib/images/svgs/python.svg";
-    import rustSvg from "$lib/images/svgs/rust.svg";
-    import browerSvg from "$lib/images/svgs/web.svg";
-
+    import tetTSvg from "$lib/images/home/observability/telemetry_top.svg";
+    import telDSvg from "$lib/images/home/observability/telemetry_down.svg";
+    import grafanaSvg from "$lib/images/home/observability/Grafana_icon.svg";
+    import tracingSvg from "$lib/images/home/observability/tracing.svg";
     import { Globe } from "lucide-svelte";
 
-    const clientlibraries = [
-        {
-            title: "NodeJS",
-            logo: jsSvg,
-            buttons: {
-                example: "https://github.com/skadefro/nodetest",
-                package: {
-                    title: "npm",
-                    link: "https://www.npmjs.com/package/openiap",
-                },
-            },
-        },
-
-        {
-            title: "Php",
-            logo: phpSvg,
-            buttons: {
-                example: "https://github.com/skadefro/phptest",
-                package: {
-                    title: "packagist",
-                    link: "https://packagist.org/packages/openiap/client/",
-                },
-            },
-        },
-        {
-            title: "Python",
-            logo: pythonSvg,
-            buttons: {
-                example: "https://github.com/skadefro/pythontest",
-                package: {
-                    title: "pyip",
-                    link: "https://pypi.org/project/openiap-edge/",
-                },
-            },
-        },
-        {
-            title: "Java",
-            logo: javaSvg,
-            buttons: {
-                example: "https://github.com/skadefro/javatest",
-                package: {
-                    title: "maven",
-                    link: "https://central.sonatype.com/artifact/io.openiap/client",
-                },
-            },
-        },
-        {
-            title: ".net",
-            logo: dotnetSvg,
-            buttons: {
-                example: "https://github.com/skadefro/dotnettest",
-                package: {
-                    title: "nuget",
-                    link: "https://www.nuget.org/packages/openiap/",
-                },
-            },
-        },
-        {
-            title: "C",
-            logo: cSvg,
-            buttons: {
-                example: "https://github.com/skadefro/ctest",
-                package: {
-                    title: "conan",
-                    link: "https://conan.io/center/recipes/openiap",
-                },
-            },
-        },
-        {
-            title: "Rust",
-            logo: rustSvg,
-            buttons: {
-                example:
-                    "https://github.com/openiap/rustapi/tree/main/crates/cli",
-                package: {
-                    title: "crates.io",
-                    link: "https://crates.io/crates/openiap-client",
-                },
-            },
-        },
-        {
-            title: "C++",
-            logo: cSvg,
-            buttons: {
-                example: "https://github.com/skadefro/ctest",
-                package: {
-                    title: "conan",
-                    link: "https://conan.io/center/recipes/openiap",
-                },
-            },
-        },
-        {
-            title: "Powershell",
-            logo: browerSvg,
-            buttons: {
-                example: "https://github.com/openiap/core-web",
-                package: {
-                    title: "esm",
-                    link: "https://www.npmjs.com/package/@openiap/jsapi",
-                },
-            },
-        },
-        {
-            title: "Bash",
-            logo: browerSvg,
-            buttons: {
-                example: "https://github.com/openiap/core-web",
-                package: {
-                    title: "esm",
-                    link: "https://www.npmjs.com/package/@openiap/jsapi",
-                },
-            },
-        },
-    ];
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
@@ -221,9 +102,9 @@
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
                     >
-                        <div class="mb-10">
+                        <div class="p-12 mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 Ready-to-use Telemetery
                             </p>
@@ -233,24 +114,83 @@
                                 valuable insights just a click away.
                             </p>
                         </div>
-                        <div class="flex items-center justify-center">
-                            <div class="grid grid-cols-2 gap-3">
-                                {#each clientlibraries as library}
-                                    <div
-                                        class="border border-bw500 rounded-[10px] text-bw100 flex items-center text-center p-2 w-fit"
-                                    >
-                                        <div class="me-2">
-                                            <img
-                                                src={library.logo}
-                                                alt="logo"
-                                                class="h-4 w-4"
-                                            />
-                                        </div>
-                                        <div>
-                                            {library.title}
-                                        </div>
-                                    </div>
-                                {/each}
+                        <div
+                            class="ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
+                        >
+                            <div
+                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
+                            >
+                                <img
+                                    src={grafanaSvg}
+                                    alt="timeline"
+                                    class="ms-2 my-1 h-4 w-4"
+                                />
+                            </div>
+                            <div class="m-3 mt-0 pt-3 h-full">
+                                <img
+                                    src={tetTSvg}
+                                    alt="timeline"
+                                    class="w-full mb-4"
+                                />
+                                <img
+                                    src={telDSvg}
+                                    alt="timeline"
+                                    class="w-full"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Carousel.Item>
+            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+                <div class="p-1">
+                    <div
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                    >
+                        <div class="p-12 mb-10">
+                            <p class="text-xl font-medium mb-2 text-bw50">
+                                Tracing
+                            </p>
+                            <p class="text-sm">
+                                Trace every request across multiple app domains
+                                and servers to easily pinpoint failure points.
+                            </p>
+                        </div>
+                        <div
+                            class="ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
+                        >
+                            <div
+                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
+                            >
+                                <img
+                                    src={tracingSvg}
+                                    alt="timeline"
+                                    class="ms-2 my-1 h-4 w-4"
+                                />
+                            </div>
+                            <div
+                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full flex space-x-5 text-xs"
+                            >
+                                <div>Trace start</div>
+                                <div class="text-bw100">
+                                    February 24 2025, 12:12:45.394
+                                </div>
+                            </div>
+                            <div
+                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
+                            >
+                                <!-- <img
+                                    src={tetTSvg}
+                                    alt="timeline"
+                                    class="w-full mb-4"
+                                /> -->
+                            </div>
+                            <div class="m-3 mt-0 pt-3 h-full">
+                                <!-- <img
+                                    src={telDSvg}
+                                    alt="timeline"
+                                    class="w-full"
+                                /> -->
                             </div>
                         </div>
                     </div>

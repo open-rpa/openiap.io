@@ -1,5 +1,7 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
+    import elsaSvg from "$lib/images/home/multilang/elsa.svg";
+    import noderedSvg from "$lib/images/home/multilang/node-red.svg";
     import cSvg from "$lib/images/svgs/C_Programming_Language.svg";
     import dotnetSvg from "$lib/images/svgs/dotnet.svg";
     import javaSvg from "$lib/images/svgs/java.svg";
@@ -8,10 +10,11 @@
     import pythonSvg from "$lib/images/svgs/python.svg";
     import rustSvg from "$lib/images/svgs/rust.svg";
     import browerSvg from "$lib/images/svgs/web.svg";
+
+    import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
+    import * as Tabs from "$lib/components/ui/tabs/index";
     import { Code, Copy, Globe, IdCard } from "lucide-svelte";
     import { toast } from "svelte-sonner";
-    import * as Tabs from "$lib/components/ui/tabs/index";
-    import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
 
     let languages = [
         {
@@ -149,6 +152,20 @@ client.free()`,
                     link: "https://www.npmjs.com/package/@openiap/jsapi",
                 },
             },
+        },
+    ];
+    const nonDev = [
+        {
+            title: "OpenRPA",
+            logo: jsSvg,
+        },
+        {
+            title: "Elsa Workflows",
+            logo: elsaSvg,
+        },
+        {
+            title: "Node-RED",
+            logo: noderedSvg,
         },
     ];
     let gradienttext =
@@ -321,7 +338,9 @@ client.free()`,
                                 Programing Languages
                             </p>
                             <p class="text-sm">
-                                A unified SDK delivering the same seamless experience across 10 different programming languages.
+                                A unified SDK delivering the same seamless
+                                experience across 10 different programming
+                                languages.
                             </p>
                         </div>
                         <div class="flex items-center justify-center">
@@ -342,6 +361,52 @@ client.free()`,
                                         </div>
                                     </div>
                                 {/each}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Carousel.Item>
+            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+                <div class="p-1">
+                    <div
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale hover:grayscale-0 transition-all"
+                    >
+                        <div class="mb-10">
+                            <p class="text-xl font-medium mb-2 text-bw50">
+                                Low-Code, High Impact
+                            </p>
+                            <p class="text-sm">
+                                Empower non-developers to effortlessly build
+                                functional solutions with their low-code tool of
+                                choice. Rapidly create prototypes with ease — no
+                                coding expertise required.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center justify-center">
+                            <div class="flex flex-col items-center gap-3">
+                                {#each nonDev as library}
+                                    <div
+                                        class="border border-bw500 rounded-[10px] text-bw100 flex items-center text-center p-2 w-fit"
+                                    >
+                                        <div class="me-2">
+                                            <img
+                                                src={library.logo}
+                                                alt="logo"
+                                                class="h-4 w-4"
+                                            />
+                                        </div>
+                                        <div>
+                                            {library.title}
+                                        </div>
+                                    </div>
+                                {/each}
+                                <div
+                                    class="border border-bw500 rounded-[10px] text-bw100 flex items-center text-center p-2 w-fit"
+                                >
+                                    <div class="me-2"></div>
+                                    <div>... and many more</div>
+                                </div>
                             </div>
                         </div>
                     </div>

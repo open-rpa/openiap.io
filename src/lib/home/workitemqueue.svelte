@@ -1,156 +1,10 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import cSvg from "$lib/images/svgs/C_Programming_Language.svg";
-    import dotnetSvg from "$lib/images/svgs/dotnet.svg";
-    import javaSvg from "$lib/images/svgs/java.svg";
-    import jsSvg from "$lib/images/svgs/js.svg";
-    import phpSvg from "$lib/images/svgs/php.svg";
-    import pythonSvg from "$lib/images/svgs/python.svg";
-    import rustSvg from "$lib/images/svgs/rust.svg";
-    import browerSvg from "$lib/images/svgs/web.svg";
-    import { Code, Copy, Globe, IdCard } from "lucide-svelte";
-    import { toast } from "svelte-sonner";
-    import * as Tabs from "$lib/components/ui/tabs/index";
-    import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
-
-    let languages = [
-        {
-            name: "Rust",
-            code: `client = Client ()
-client.connect()
-query_result = client.query(collectionname='entities', query={})
-print('result', query_result)
-client.free()
-print('result', query_result)
-client.free()`,
-        },
-        {
-            name: "NodeJS",
-            code: `node`,
-        },
-        {
-            name: "Python",
-            code: `python`,
-        },
-        {
-            name: "Dotnet",
-            code: `dotnet`,
-        },
-    ];
-    const clientlibraries = [
-        {
-            title: "NodeJS",
-            logo: jsSvg,
-            buttons: {
-                example: "https://github.com/skadefro/nodetest",
-                package: {
-                    title: "npm",
-                    link: "https://www.npmjs.com/package/openiap",
-                },
-            },
-        },
-
-        {
-            title: "Php",
-            logo: phpSvg,
-            buttons: {
-                example: "https://github.com/skadefro/phptest",
-                package: {
-                    title: "packagist",
-                    link: "https://packagist.org/packages/openiap/client/",
-                },
-            },
-        },
-        {
-            title: "Python",
-            logo: pythonSvg,
-            buttons: {
-                example: "https://github.com/skadefro/pythontest",
-                package: {
-                    title: "pyip",
-                    link: "https://pypi.org/project/openiap-edge/",
-                },
-            },
-        },
-        {
-            title: "Java",
-            logo: javaSvg,
-            buttons: {
-                example: "https://github.com/skadefro/javatest",
-                package: {
-                    title: "maven",
-                    link: "https://central.sonatype.com/artifact/io.openiap/client",
-                },
-            },
-        },
-        {
-            title: ".net",
-            logo: dotnetSvg,
-            buttons: {
-                example: "https://github.com/skadefro/dotnettest",
-                package: {
-                    title: "nuget",
-                    link: "https://www.nuget.org/packages/openiap/",
-                },
-            },
-        },
-        {
-            title: "C",
-            logo: cSvg,
-            buttons: {
-                example: "https://github.com/skadefro/ctest",
-                package: {
-                    title: "conan",
-                    link: "https://conan.io/center/recipes/openiap",
-                },
-            },
-        },
-        {
-            title: "Rust",
-            logo: rustSvg,
-            buttons: {
-                example:
-                    "https://github.com/openiap/rustapi/tree/main/crates/cli",
-                package: {
-                    title: "crates.io",
-                    link: "https://crates.io/crates/openiap-client",
-                },
-            },
-        },
-        {
-            title: "C++",
-            logo: cSvg,
-            buttons: {
-                example: "https://github.com/skadefro/ctest",
-                package: {
-                    title: "conan",
-                    link: "https://conan.io/center/recipes/openiap",
-                },
-            },
-        },
-        {
-            title: "Powershell",
-            logo: browerSvg,
-            buttons: {
-                example: "https://github.com/openiap/core-web",
-                package: {
-                    title: "esm",
-                    link: "https://www.npmjs.com/package/@openiap/jsapi",
-                },
-            },
-        },
-        {
-            title: "Bash",
-            logo: browerSvg,
-            buttons: {
-                example: "https://github.com/openiap/core-web",
-                package: {
-                    title: "esm",
-                    link: "https://www.npmjs.com/package/@openiap/jsapi",
-                },
-            },
-        },
-    ];
+    import modSvg from "$lib/images/home/workitemqueues/mod1.svg";
+    import scaleabilitySvg from "$lib/images/home/workitemqueues/scaleability.svg";
+    import multilangSvg from "$lib/images/home/workitemqueues/multilang.svg";
+    import insightSvg from "$lib/images/home/workitemqueues/insight.svg";
+    
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
@@ -184,7 +38,7 @@ client.free()`,
                     <div
                         class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
                     >
-                        <div class="p-12">
+                        <div class="p-12 mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 Modulization
                             </p>
@@ -193,60 +47,8 @@ client.free()`,
                                 easier testing, troubleshooting and reporting
                             </p>
                         </div>
-                        <div
-                            class="ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
-                        >
-                            <div
-                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
-                            >
-                                <Globe class="h-4 w-4" />
-                            </div>
-                            <div class="m-3 pt-3 dark:bg-[#1D1F22] h-full">
-                                <Tabs.Root value="1" class="w-[400px] ms-5">
-                                    <div></div>
-                                    <Tabs.List
-                                        class="h-fit grid grid-cols-1 md:block w-full md:w-fit bg-bw200 dark:bg-darkagenttab rounded-[5px] p-1 mb-2 lg:mb-0 text-bw50 font-normal"
-                                    >
-                                        {#each languages as language, index}
-                                            <Tabs.Trigger value={`${index + 1}`}
-                                                >{language.name}</Tabs.Trigger
-                                            >
-                                        {/each}
-                                    </Tabs.List>
-                                    <div class="mt-5">
-                                        {#each languages as language, index}
-                                            <Tabs.Content
-                                                value={`${index + 1}`}
-                                            >
-                                                <div
-                                                    class="text-bw300 flex justify-between"
-                                                >
-                                                    <div>
-                                                        <pre>
-<code>{language.code}</code>
-                                            </pre>
-                                                    </div>
-                                                    <HotkeyButton
-                                                        onclick={() => {
-                                                            navigator.clipboard.writeText(
-                                                                language.code,
-                                                            );
-                                                            toast.success(
-                                                                "Code copied to clipboard",
-                                                            );
-                                                        }}
-                                                        aria-label="Copy code"
-                                                        variant="icon"
-                                                        size="icon"
-                                                    >
-                                                        <Copy />
-                                                    </HotkeyButton>
-                                                </div>
-                                            </Tabs.Content>
-                                        {/each}
-                                    </div>
-                                </Tabs.Root>
-                            </div>
+                        <div>
+                            <img src={modSvg} alt="modulization" />
                         </div>
                     </div>
                 </div>
@@ -254,9 +56,9 @@ client.free()`,
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
                     >
-                        <div class="mb-10">
+                        <div class="p-12 mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 Scalability
                             </p>
@@ -267,55 +69,20 @@ client.free()`,
                             </p>
                         </div>
 
-                        <div
-                            class="border border-bw500 rounded-[10px] text-bw100"
-                        >
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500"
-                            >
-                                <div class="flex items-center space-x-2">
-                                    <IdCard class="h-4 w-4 text-bw500" />
-                                    <p>Name</p>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <Code class="h-4 w-4 text-bw500" />
-                                    <p>Language</p>
-                                </div>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500 dark:bg-[#1D1F22]"
-                            >
-                                <p>process_edi</p>
-                                <p class="text-bw300 me-4">Python</p>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500 dark:bg-[#1D1F22]"
-                            >
-                                <p>run_inventory</p>
-                                <p class="text-bw300 me-3">NodeJS</p>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500 dark:bg-[#1D1F22]"
-                            >
-                                <p>move_orders</p>
-                                <p class="text-bw300 me-6">Java</p>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 dark:bg-[#1D1F22] rounded-b-[10px]"
-                            >
-                                <p>generate_invoices</p>
-                                <p class="text-bw300 me-6">Rust</p>
-                            </div>
-                        </div>
+                        <img
+                            src={scaleabilitySvg}
+                            alt="performance"
+                            class="w-full"
+                        />
                     </div>
                 </div>
             </Carousel.Item>
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
                     >
-                        <div class="mb-10">
+                        <div class="p-12 mb-6">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 Multi-language
                             </p>
@@ -325,29 +92,66 @@ client.free()`,
                                 language for the right task.
                             </p>
                         </div>
-                        <div class="flex items-center justify-center">
-                            <div class="grid grid-cols-2 gap-3">
-                                {#each clientlibraries as library}
-                                    <div
-                                        class="border border-bw500 rounded-[10px] text-bw100 flex items-center text-center p-2 w-fit"
-                                    >
-                                        <div class="me-2">
-                                            <img
-                                                src={library.logo}
-                                                alt="logo"
-                                                class="h-4 w-4"
-                                            />
-                                        </div>
-                                        <div>
-                                            {library.title}
-                                        </div>
-                                    </div>
-                                {/each}
-                            </div>
-                        </div>
+
+                        <img
+                            src={multilangSvg}
+                            alt="performance"
+                            class="w-full"
+                        />
                     </div>
                 </div>
             </Carousel.Item>
+            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+                <div class="p-1">
+                    <div
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                    >
+                        <div class="p-12 mb-6">
+                            <p class="text-xl font-medium mb-2 text-bw50">
+                                Quickly Retry Failed Work Items
+                            </p>
+                            <p class="text-sm">
+                                Isolate and handle errors by easily re-trying or
+                                re-submitting failed work items
+                            </p>
+                        </div>
+
+                        <!-- <img
+                            src={multilangSvg}
+                            alt="performance"
+                            class="w-full"
+                        /> -->
+                    </div>
+                </div>
+            </Carousel.Item>
+
+            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+                <div class="p-1">
+                    <div
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                    >
+                        <div class="p-12">
+                            <p class="text-xl font-medium mb-2 text-bw50">
+                                Gain insights over your process
+                            </p>
+                            <p class="text-sm">
+                                By splitting your process up into multiple units
+                                that work across multiple parts of the process,
+                                we can now easily gain better insights to how
+                                our process is performing and where there are
+                                bottle-necks.
+                            </p>
+                        </div>
+
+                        <img
+                            src={insightSvg}
+                            alt="performance"
+                            class="w-full"
+                        />
+                    </div>
+                </div>
+            </Carousel.Item>
+
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1"></div>
             </Carousel.Item>
