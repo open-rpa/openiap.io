@@ -1,18 +1,22 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import builtinreportsSvg from "$lib/images/home/reports/builtin_reports.svg";
-    import owndashboardSvg from "$lib/images/home/reports/owndashboard.svg";
-    import datasourceSvg from "$lib/images/home/reports/datasource.svg";
+    import builtinDarkSvg from "$lib/images/home/reports/builtindark.svg";
+    import builtinSvg from "$lib/images/home/reports/builtin.svg";
+    import createdashDarkSvg from "$lib/images/home/reports/createdashdark.svg";
+    import createdashSvg from "$lib/images/home/reports/createdash.svg";
+    import connectdataDarkSvg from "$lib/images/home/reports/connectdatadark.svg";
+    import connectdataSvg from "$lib/images/home/reports/connectdata.svg";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
 
-<div class="px-32 mb-24">
+<div class="px-32 mb-24 flex justify-center">
     <Carousel.Root
         opts={{
             align: "start",
         }}
+        class="xl:w-[1700px]"
     >
         <div class="mb-12">
             <div class="flex items-end justify-between gap-8">
@@ -33,7 +37,7 @@
             <Carousel.Item class="basis-3/5">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -44,8 +48,17 @@
                                 easier testing, troubleshooting and reporting
                             </p>
                         </div>
-                        <div class="flex items-center justify-center">
-                            <img src={builtinreportsSvg} alt="builtinreports" />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={builtinDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={builtinSvg} alt="performance" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,7 +66,7 @@
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-24">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -64,18 +77,25 @@
                             </p>
                         </div>
 
-                        <img
-                            src={owndashboardSvg}
-                            alt="performance"
-                            class="px-10"
-                        />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={createdashDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={createdashSvg} alt="performance" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Carousel.Item>
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-6">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -86,8 +106,17 @@
                                 create reports in other platforms
                             </p>
                         </div>
-                        <div class="flex items-center justify-center">
-                            <img src={datasourceSvg} alt="performance" />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={connectdataDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={connectdataSvg} alt="performance" />
+                            </div>
                         </div>
                     </div>
                 </div>

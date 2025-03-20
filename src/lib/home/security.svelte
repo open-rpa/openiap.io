@@ -1,18 +1,22 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import earthSvg from "$lib/images/home/Security/earth.svg";
-    import owndashboardSvg from "$lib/images/home/Security/earth.svg";
-    import auditSvg from "$lib/images/home/Security/audittrailing.svg";
+    import auditSvg from "$lib/images/home/Security/audit.svg";
+    import auditDarkSvg from "$lib/images/home/Security/auditdark.svg";
+    import datasecSvg from "$lib/images/home/Security/datasec.svg";
+    import datasecDarkSvg from "$lib/images/home/Security/datasecdark.svg";
+    import globeSvg from "$lib/images/home/Security/globe.svg";
+    import globeDarkSvg from "$lib/images/home/Security/globedark.svg";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
 
-<div class="px-32 mb-24">
+<div class="px-32 mb-24 flex justify-center">
     <Carousel.Root
         opts={{
             align: "start",
         }}
+        class="xl:w-[1700px]"
     >
         <div class="mb-12">
             <div class="flex items-end justify-between gap-8">
@@ -33,7 +37,7 @@
             <Carousel.Item class="basis-3/5">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -44,8 +48,17 @@
                                 the fly encryption for sensitive data
                             </p>
                         </div>
-                        <div class="flex items-center justify-center">
-                            <img src={earthSvg} alt="builtinreports" />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 right-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={datasecDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 right-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={datasecSvg} alt="performance" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,7 +66,7 @@
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-6">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -65,8 +78,17 @@
                                 packages that in itself are also scalable
                             </p>
                         </div>
-                        <div class="flex items-center justify-center">
-                            <img src={earthSvg} alt="performance" />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={globeDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={globeSvg} alt="performance" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,7 +96,7 @@
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-6">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -87,8 +109,17 @@
                                 with even the most restrictive demands
                             </p>
                         </div>
-                        <div class="ps-8 flex items-center justify-center">
-                            <img src={auditSvg} alt="performance" />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-20 right-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={auditDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-20 right-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={auditSvg} alt="performance" />
+                            </div>
                         </div>
                     </div>
                 </div>

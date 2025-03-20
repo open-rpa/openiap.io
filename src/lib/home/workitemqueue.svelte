@@ -1,19 +1,26 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import modSvg from "$lib/images/home/workitemqueues/mod1.svg";
-    import scaleabilitySvg from "$lib/images/home/workitemqueues/scaleability.svg";
+    import insightDarkSvg from "$lib/images/home/workitemqueues/insightdark.svg";
+    import insightSvg from "$lib/images/home/workitemqueues/insights.svg";
+    import modSvg from "$lib/images/home/workitemqueues/mod.svg";
+    import modDarkSvg from "$lib/images/home/workitemqueues/moddark.svg";
     import multilangSvg from "$lib/images/home/workitemqueues/multilang.svg";
-    import insightSvg from "$lib/images/home/workitemqueues/insight.svg";
-    
+    import multilangDarkSvg from "$lib/images/home/workitemqueues/multilangdark.svg";
+    import quickretrySvg from "$lib/images/home/workitemqueues/quickretry.svg";
+    import quickretryDarkSvg from "$lib/images/home/workitemqueues/quickretrydark.svg";
+    import scaledarkSvg from "$lib/images/home/workitemqueues/scale.svg";
+    import scaledarkDarkSvg from "$lib/images/home/workitemqueues/scaledark.svg";
+
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
 
-<div class="px-32 mb-24">
+<div class="px-32 mb-24 flex justify-center">
     <Carousel.Root
         opts={{
             align: "start",
         }}
+        class="xl:w-[1700px]"
     >
         <div class="mb-12">
             <div class="flex items-end justify-between gap-8">
@@ -36,7 +43,7 @@
             <Carousel.Item class="basis-3/5">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -47,8 +54,17 @@
                                 easier testing, troubleshooting and reporting
                             </p>
                         </div>
-                        <div>
-                            <img src={modSvg} alt="modulization" />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={modDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={modSvg} alt="performance" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,7 +72,7 @@
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -69,18 +85,25 @@
                             </p>
                         </div>
 
-                        <img
-                            src={scaleabilitySvg}
-                            alt="performance"
-                            class="w-full"
-                        />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={scaledarkDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={scaledarkSvg} alt="performance" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Carousel.Item>
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-6">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -92,19 +115,25 @@
                                 language for the right task.
                             </p>
                         </div>
-
-                        <img
-                            src={multilangSvg}
-                            alt="performance"
-                            class="w-full"
-                        />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={multilangDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={multilangSvg} alt="performance" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Carousel.Item>
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-6">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -115,12 +144,18 @@
                                 re-submitting failed work items
                             </p>
                         </div>
-
-                        <!-- <img
-                            src={multilangSvg}
-                            alt="performance"
-                            class="w-full"
-                        /> -->
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={quickretryDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={quickretrySvg} alt="performance" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Carousel.Item>
@@ -128,7 +163,7 @@
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -143,11 +178,18 @@
                             </p>
                         </div>
 
-                        <img
-                            src={insightSvg}
-                            alt="performance"
-                            class="w-full"
-                        />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={insightDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={insightSvg} alt="performance" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Carousel.Item>

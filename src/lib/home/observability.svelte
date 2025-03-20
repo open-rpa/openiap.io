@@ -1,26 +1,27 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import performanceSvg from "$lib/images/home/observability/performance.svg";
-    import timelineSvg from "$lib/images/home/observability/timeline.svg";
-    import graphSvg from "$lib/images/home/observability/graph.svg";
-    import tetTSvg from "$lib/images/home/observability/telemetry_top.svg";
-    import telDSvg from "$lib/images/home/observability/telemetry_down.svg";
-    import grafanaSvg from "$lib/images/home/observability/Grafana_icon.svg";
+    import cenlogeSvg from "$lib/images/home/observability/cenlog.svg";
+    import cenlogDarkSvg from "$lib/images/home/observability/cenlogdark.svg";
+    import customizeSvg from "$lib/images/home/observability/customize.svg";
+    import customizeDarkSvg from "$lib/images/home/observability/customizedark.svg";
+    import readytouseSvg from "$lib/images/home/observability/readytouse.svg";
+    import readytouseDarkSvg from "$lib/images/home/observability/readytousedark.svg";
     import tracingSvg from "$lib/images/home/observability/tracing.svg";
-    import { Globe } from "lucide-svelte";
+    import tracingDarkSvg from "$lib/images/home/observability/tracingdark.svg";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
 
-<div class="px-32 mb-24">
+<div class="px-32 mb-24 flex justify-center">
     <Carousel.Root
         opts={{
             align: "start",
         }}
+        class="xl:w-[1700px]"
     >
         <div class="mb-12">
-            <div class="flex items-end justify-between gap-8">
+            <div class="flex items-end justify-between xl:gap-8">
                 <p class={"text-[64px] font-semibold" + gradienttext}>
                     Observability
                 </p>
@@ -36,10 +37,10 @@
         </div>
 
         <Carousel.Content class="fade-mask-rights">
-            <Carousel.Item class="basis-3/5">
+            <Carousel.Item class="basis-1 lg:basis-3/5">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 pb-24">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -51,34 +52,25 @@
                                 multiple bots and servers.
                             </p>
                         </div>
-                        <div
-                            class="ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
-                        >
+                        <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <Globe class="h-4 w-4" />
+                                <img src={cenlogDarkSvg} alt="timeline" />
                             </div>
-                            <div class="m-3 mt-0 pt-3 h-full">
-                                <img
-                                    src={timelineSvg}
-                                    alt="timeline"
-                                    class="w-full mb-4"
-                                />
-                                <img
-                                    src={graphSvg}
-                                    alt="timeline"
-                                    class="w-full"
-                                />
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={cenlogeSvg} alt="performance" />
                             </div>
                         </div>
                     </div>
                 </div>
             </Carousel.Item>
-            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+            <Carousel.Item class="basis-1 md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -90,19 +82,25 @@
                                 personalized experience
                             </p>
                         </div>
-
-                        <img
-                            src={performanceSvg}
-                            alt="performance"
-                            class="w-full"
-                        />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={customizeDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={customizeSvg} alt="performance" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Carousel.Item>
-            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+            <Carousel.Item class="basis-1 md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -114,38 +112,25 @@
                                 valuable insights just a click away.
                             </p>
                         </div>
-                        <div
-                            class="ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
-                        >
+                        <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img
-                                    src={grafanaSvg}
-                                    alt="timeline"
-                                    class="ms-2 my-1 h-4 w-4"
-                                />
+                                <img src={readytouseDarkSvg} alt="timeline" />
                             </div>
-                            <div class="m-3 mt-0 pt-3 h-full">
-                                <img
-                                    src={tetTSvg}
-                                    alt="timeline"
-                                    class="w-full mb-4"
-                                />
-                                <img
-                                    src={telDSvg}
-                                    alt="timeline"
-                                    class="w-full"
-                                />
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={readytouseSvg} alt="performance" />
                             </div>
                         </div>
                     </div>
                 </div>
             </Carousel.Item>
-            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+            <Carousel.Item class="basis-1 md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -156,41 +141,16 @@
                                 and servers to easily pinpoint failure points.
                             </p>
                         </div>
-                        <div
-                            class="ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
-                        >
+                        <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img
-                                    src={tracingSvg}
-                                    alt="timeline"
-                                    class="ms-2 my-1 h-4 w-4"
-                                />
+                                <img src={tracingDarkSvg} alt="timeline" />
                             </div>
                             <div
-                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full flex space-x-5 text-xs"
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
                             >
-                                <div>Trace start</div>
-                                <div class="text-bw100">
-                                    February 24 2025, 12:12:45.394
-                                </div>
-                            </div>
-                            <div
-                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
-                            >
-                                <!-- <img
-                                    src={tetTSvg}
-                                    alt="timeline"
-                                    class="w-full mb-4"
-                                /> -->
-                            </div>
-                            <div class="m-3 mt-0 pt-3 h-full">
-                                <!-- <img
-                                    src={telDSvg}
-                                    alt="timeline"
-                                    class="w-full"
-                                /> -->
+                                <img src={tracingSvg} alt="performance" />
                             </div>
                         </div>
                     </div>

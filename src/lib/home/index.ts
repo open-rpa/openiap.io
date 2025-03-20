@@ -8,6 +8,6 @@ import Security from "./security.svelte";
 
 export {
 	Hero,
-	MultiLanguage, Observability, Reports, TrustedBy, Workitemqueue
+	MultiLanguage, Observability, Reports, TrustedBy, Workitemqueue, Security
 };
 

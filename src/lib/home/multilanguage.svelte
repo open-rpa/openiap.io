@@ -1,19 +1,14 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import elsaSvg from "$lib/images/home/multilang/elsa.svg";
-    import noderedSvg from "$lib/images/home/multilang/node-red.svg";
-    import cSvg from "$lib/images/svgs/C_Programming_Language.svg";
-    import dotnetSvg from "$lib/images/svgs/dotnet.svg";
-    import javaSvg from "$lib/images/svgs/java.svg";
-    import jsSvg from "$lib/images/svgs/js.svg";
-    import phpSvg from "$lib/images/svgs/php.svg";
-    import pythonSvg from "$lib/images/svgs/python.svg";
-    import rustSvg from "$lib/images/svgs/rust.svg";
-    import browerSvg from "$lib/images/svgs/web.svg";
-
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
     import * as Tabs from "$lib/components/ui/tabs/index";
-    import { Code, Copy, Globe, IdCard } from "lucide-svelte";
+    import lowcodeSvg from "$lib/images/home/multilang/lowcode.svg";
+    import lowcodedarkSvg from "$lib/images/home/multilang/lowcodedark.svg";
+    import modularcodeSvg from "$lib/images/home/multilang/modularcode.svg";
+    import modularcodeDarkSvg from "$lib/images/home/multilang/modularcodedark.svg";
+    import proglangSvg from "$lib/images/home/multilang/proglang.svg";
+    import proglangDarkSvg from "$lib/images/home/multilang/proglangdark.svg";
+    import { Copy, Globe } from "lucide-svelte";
     import { toast } from "svelte-sonner";
 
     let languages = [
@@ -40,143 +35,16 @@ client.free()`,
             code: `dotnet`,
         },
     ];
-    const clientlibraries = [
-        {
-            title: "NodeJS",
-            logo: jsSvg,
-            buttons: {
-                example: "https://github.com/skadefro/nodetest",
-                package: {
-                    title: "npm",
-                    link: "https://www.npmjs.com/package/openiap",
-                },
-            },
-        },
-
-        {
-            title: "Php",
-            logo: phpSvg,
-            buttons: {
-                example: "https://github.com/skadefro/phptest",
-                package: {
-                    title: "packagist",
-                    link: "https://packagist.org/packages/openiap/client/",
-                },
-            },
-        },
-        {
-            title: "Python",
-            logo: pythonSvg,
-            buttons: {
-                example: "https://github.com/skadefro/pythontest",
-                package: {
-                    title: "pyip",
-                    link: "https://pypi.org/project/openiap-edge/",
-                },
-            },
-        },
-        {
-            title: "Java",
-            logo: javaSvg,
-            buttons: {
-                example: "https://github.com/skadefro/javatest",
-                package: {
-                    title: "maven",
-                    link: "https://central.sonatype.com/artifact/io.openiap/client",
-                },
-            },
-        },
-        {
-            title: ".net",
-            logo: dotnetSvg,
-            buttons: {
-                example: "https://github.com/skadefro/dotnettest",
-                package: {
-                    title: "nuget",
-                    link: "https://www.nuget.org/packages/openiap/",
-                },
-            },
-        },
-        {
-            title: "C",
-            logo: cSvg,
-            buttons: {
-                example: "https://github.com/skadefro/ctest",
-                package: {
-                    title: "conan",
-                    link: "https://conan.io/center/recipes/openiap",
-                },
-            },
-        },
-        {
-            title: "Rust",
-            logo: rustSvg,
-            buttons: {
-                example:
-                    "https://github.com/openiap/rustapi/tree/main/crates/cli",
-                package: {
-                    title: "crates.io",
-                    link: "https://crates.io/crates/openiap-client",
-                },
-            },
-        },
-        {
-            title: "C++",
-            logo: cSvg,
-            buttons: {
-                example: "https://github.com/skadefro/ctest",
-                package: {
-                    title: "conan",
-                    link: "https://conan.io/center/recipes/openiap",
-                },
-            },
-        },
-        {
-            title: "Powershell",
-            logo: browerSvg,
-            buttons: {
-                example: "https://github.com/openiap/core-web",
-                package: {
-                    title: "esm",
-                    link: "https://www.npmjs.com/package/@openiap/jsapi",
-                },
-            },
-        },
-        {
-            title: "Bash",
-            logo: browerSvg,
-            buttons: {
-                example: "https://github.com/openiap/core-web",
-                package: {
-                    title: "esm",
-                    link: "https://www.npmjs.com/package/@openiap/jsapi",
-                },
-            },
-        },
-    ];
-    const nonDev = [
-        {
-            title: "OpenRPA",
-            logo: jsSvg,
-        },
-        {
-            title: "Elsa Workflows",
-            logo: elsaSvg,
-        },
-        {
-            title: "Node-RED",
-            logo: noderedSvg,
-        },
-    ];
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
 
-<div class="px-32 mb-24">
+<div class="px-32 mb-24 flex justify-center">
     <Carousel.Root
         opts={{
             align: "start",
         }}
+        class="xl:w-[1700px]"
     >
         <div class="mb-12">
             <div class="flex items-end justify-between gap-8">
@@ -198,7 +66,7 @@ client.free()`,
             <Carousel.Item class="basis-3/5">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -272,7 +140,7 @@ client.free()`,
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale-0 group"
                     >
                         <div class="mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -285,44 +153,16 @@ client.free()`,
                             </p>
                         </div>
 
-                        <div
-                            class="border border-bw500 rounded-[10px] text-bw100"
-                        >
+                        <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500"
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <div class="flex items-center space-x-2">
-                                    <IdCard class="h-4 w-4 text-bw500" />
-                                    <p>Name</p>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <Code class="h-4 w-4 text-bw500" />
-                                    <p>Language</p>
-                                </div>
+                                <img src={modularcodeDarkSvg} alt="timeline" />
                             </div>
                             <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500 dark:bg-[#1D1F22]"
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
                             >
-                                <p>process_edi</p>
-                                <p class="text-bw300 me-4">Python</p>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500 dark:bg-[#1D1F22]"
-                            >
-                                <p>run_inventory</p>
-                                <p class="text-bw300 me-3">NodeJS</p>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 border-b border-bw500 dark:bg-[#1D1F22]"
-                            >
-                                <p>move_orders</p>
-                                <p class="text-bw300 me-6">Java</p>
-                            </div>
-                            <div
-                                class="flex items-center justify-between p-2.5 dark:bg-[#1D1F22] rounded-b-[10px]"
-                            >
-                                <p>generate_invoices</p>
-                                <p class="text-bw300 me-6">Rust</p>
+                                <img src={modularcodeSvg} alt="performance" />
                             </div>
                         </div>
                     </div>
@@ -331,7 +171,7 @@ client.free()`,
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale-0 group"
                     >
                         <div class="mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -343,24 +183,16 @@ client.free()`,
                                 languages.
                             </p>
                         </div>
-                        <div class="flex items-center justify-center">
-                            <div class="grid grid-cols-2 gap-3">
-                                {#each clientlibraries as library}
-                                    <div
-                                        class="border border-bw500 rounded-[10px] text-bw100 flex items-center text-center p-2 w-fit"
-                                    >
-                                        <div class="me-2">
-                                            <img
-                                                src={library.logo}
-                                                alt="logo"
-                                                class="h-4 w-4"
-                                            />
-                                        </div>
-                                        <div>
-                                            {library.title}
-                                        </div>
-                                    </div>
-                                {/each}
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={proglangDarkSvg} alt="timeline" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={proglangSvg} alt="performance" />
                             </div>
                         </div>
                     </div>
@@ -369,9 +201,9 @@ client.free()`,
             <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden p-12 grayscale hover:grayscale-0 transition-all"
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden group relative"
                     >
-                        <div class="mb-10">
+                        <div class="p-12 mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 Low-Code, High Impact
                             </p>
@@ -382,32 +214,15 @@ client.free()`,
                                 coding expertise required.
                             </p>
                         </div>
-
-                        <div class="flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-3">
-                                {#each nonDev as library}
-                                    <div
-                                        class="border border-bw500 rounded-[10px] text-bw100 flex items-center text-center p-2 w-fit"
-                                    >
-                                        <div class="me-2">
-                                            <img
-                                                src={library.logo}
-                                                alt="logo"
-                                                class="h-4 w-4"
-                                            />
-                                        </div>
-                                        <div>
-                                            {library.title}
-                                        </div>
-                                    </div>
-                                {/each}
-                                <div
-                                    class="border border-bw500 rounded-[10px] text-bw100 flex items-center text-center p-2 w-fit"
-                                >
-                                    <div class="me-2"></div>
-                                    <div>... and many more</div>
-                                </div>
-                            </div>
+                        <div
+                            class="absolute top-10 left-0 group-hover:hidden block"
+                        >
+                            <img src={lowcodedarkSvg} alt="performance" />
+                        </div>
+                        <div
+                            class="absolute top-10 left-0 group-hover:block hidden"
+                        >
+                            <img src={lowcodeSvg} alt="performance" />
                         </div>
                     </div>
                 </div>
