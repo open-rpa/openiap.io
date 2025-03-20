@@ -32,7 +32,7 @@
 </script>
 
 <div class="px-32 mb-24 flex justify-center">
-    <div class="xl:max-w-[1700px]">
+    <div class="xl:w-[1700px]">
         <div class="mb-16">
             <p class={"text-[64px] font-semibold" + gradienttext}>
                 Industry leaders deliver winning <br />solutions with OpenCore
