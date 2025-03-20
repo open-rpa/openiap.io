@@ -1,11 +1,11 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import builtinDarkSvg from "$lib/images/home/reports/builtindark.svg";
     import builtinSvg from "$lib/images/home/reports/builtin.svg";
-    import createdashDarkSvg from "$lib/images/home/reports/createdashdark.svg";
-    import createdashSvg from "$lib/images/home/reports/createdash.svg";
-    import connectdataDarkSvg from "$lib/images/home/reports/connectdatadark.svg";
+    import builtinDarkSvg from "$lib/images/home/reports/builtindark.svg";
     import connectdataSvg from "$lib/images/home/reports/connectdata.svg";
+    import connectdataDarkSvg from "$lib/images/home/reports/connectdatadark.svg";
+    import createdashSvg from "$lib/images/home/reports/createdash.svg";
+    import createdashDarkSvg from "$lib/images/home/reports/createdashdark.svg";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
@@ -50,14 +50,17 @@
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={builtinDarkSvg} alt="timeline" />
+                                <img
+                                    src={builtinDarkSvg}
+                                    alt="builtinDarkSvg"
+                                />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:inline-flex hidden"
                             >
-                                <img src={builtinSvg} alt="performance" />
+                                <img src={builtinSvg} alt="builtinSvg" />
                             </div>
                         </div>
                     </div>
@@ -77,16 +80,23 @@
                             </p>
                         </div>
 
-                        <div class="ms-12 h-full flex justify-end w-full">
+                        <div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={createdashDarkSvg} alt="timeline" />
+                                <img
+                                    src={createdashDarkSvg}
+                                    alt="createdashDarkSvg"
+                                />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:inline-flex hidden"
                             >
-                                <img src={createdashSvg} alt="performance" />
+                                <img
+                                    src={createdashSvg}
+                                    alt="createdashSvg"
+                                    class="flex justify-center items-center"
+                                />
                             </div>
                         </div>
                     </div>
@@ -108,14 +118,20 @@
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={connectdataDarkSvg} alt="timeline" />
+                                <img
+                                    src={connectdataDarkSvg}
+                                    alt="connectdataDarkSvg"
+                                />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:inline-flex hidden"
                             >
-                                <img src={connectdataSvg} alt="performance" />
+                                <img
+                                    src={connectdataSvg}
+                                    alt="connectdataSvg"
+                                />
                             </div>
                         </div>
                     </div>

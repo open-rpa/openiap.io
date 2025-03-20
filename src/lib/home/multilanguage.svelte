@@ -155,14 +155,20 @@ client.free()`,
 
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={modularcodeDarkSvg} alt="timeline" />
+                                <img
+                                    src={modularcodeDarkSvg}
+                                    alt="modularcodeDarkSvg"
+                                />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:inline-flex hidden"
                             >
-                                <img src={modularcodeSvg} alt="performance" />
+                                <img
+                                    src={modularcodeSvg}
+                                    alt="modularcodeSvg"
+                                />
                             </div>
                         </div>
                     </div>
@@ -185,14 +191,14 @@ client.free()`,
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={proglangDarkSvg} alt="timeline" />
+                                <img src={proglangDarkSvg} alt="proglangDarkSvg" />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:inline-flex hidden"
                             >
-                                <img src={proglangSvg} alt="performance" />
+                                <img src={proglangSvg} alt="proglangSvg" />
                             </div>
                         </div>
                     </div>
@@ -214,15 +220,17 @@ client.free()`,
                                 coding expertise required.
                             </p>
                         </div>
-                        <div
-                            class="absolute top-10 left-0 group-hover:hidden block"
-                        >
-                            <img src={lowcodedarkSvg} alt="performance" />
-                        </div>
-                        <div
-                            class="absolute top-10 left-0 group-hover:block hidden"
-                        >
-                            <img src={lowcodeSvg} alt="performance" />
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={lowcodedarkSvg} alt="lowcodedarkSvg" />
+                            </div>
+                            <div
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:inline-flex hidden"
+                            >
+                                <img src={lowcodeSvg} alt="lowcodeSvg" />
+                            </div>
                         </div>
                     </div>
                 </div>

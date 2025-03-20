@@ -56,14 +56,14 @@
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={modDarkSvg} alt="timeline" />
+                                <img src={modDarkSvg} alt="modDarkSvg" />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:group-hover:inline-flex hidden"
                             >
-                                <img src={modSvg} alt="performance" />
+                                <img src={modSvg} alt="modSvg" />
                             </div>
                         </div>
                     </div>
@@ -87,14 +87,17 @@
 
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={scaledarkDarkSvg} alt="timeline" />
+                                <img
+                                    src={scaledarkDarkSvg}
+                                    alt="scaledarkDarkSvg"
+                                />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:group-hover:inline-flex hidden"
                             >
-                                <img src={scaledarkSvg} alt="performance" />
+                                <img src={scaledarkSvg} alt="scaledarkSvg" />
                             </div>
                         </div>
                     </div>
@@ -117,14 +120,17 @@
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={multilangDarkSvg} alt="timeline" />
+                                <img
+                                    src={multilangDarkSvg}
+                                    alt="multilangDarkSvg"
+                                />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:inline-flex hidden"
                             >
-                                <img src={multilangSvg} alt="performance" />
+                                <img src={multilangSvg} alt="multilangSvg" />
                             </div>
                         </div>
                     </div>
@@ -146,14 +152,17 @@
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={quickretryDarkSvg} alt="timeline" />
+                                <img
+                                    src={quickretryDarkSvg}
+                                    alt="quickretryDarkSvg"
+                                />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:inline-flex hidden"
                             >
-                                <img src={quickretrySvg} alt="performance" />
+                                <img src={quickretrySvg} alt="quickretrySvg" />
                             </div>
                         </div>
                     </div>
@@ -182,12 +191,15 @@
                             <div
                                 class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={insightDarkSvg} alt="timeline" />
+                                <img
+                                    src={insightDarkSvg}
+                                    alt="insightDarkSvg"
+                                />
                             </div>
                             <div
                                 class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
                             >
-                                <img src={insightSvg} alt="performance" />
+                                <img src={insightSvg} alt="insightSvg" />
                             </div>
                         </div>
                     </div>

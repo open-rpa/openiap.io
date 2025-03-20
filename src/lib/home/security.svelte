@@ -6,7 +6,10 @@
     import datasecDarkSvg from "$lib/images/home/Security/datasecdark.svg";
     import globeSvg from "$lib/images/home/Security/globe.svg";
     import globeDarkSvg from "$lib/images/home/Security/globedark.svg";
-
+    import versionhistDarkSvg from "$lib/images/home/Security/versionhist.svg";
+    import versionhistSvg from "$lib/images/home/Security/versionhistdark.svg";
+    import leastprivDarkSvg from "$lib/images/home/Security/leastprivdark.svg";
+    import leastprivSvg from "$lib/images/home/Security/leastpriv.svg";
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
@@ -52,12 +55,15 @@
                             <div
                                 class="absolute top-10 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={datasecDarkSvg} alt="timeline" />
+                                <img
+                                    src={datasecDarkSvg}
+                                    alt="datasecDarkSvg"
+                                />
                             </div>
                             <div
                                 class="absolute top-10 right-0 flex items-center justify-center group-hover:block hidden"
                             >
-                                <img src={datasecSvg} alt="performance" />
+                                <img src={datasecSvg} alt="datasecSvg" />
                             </div>
                         </div>
                     </div>
@@ -82,12 +88,12 @@
                             <div
                                 class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={globeDarkSvg} alt="timeline" />
+                                <img src={globeDarkSvg} alt="globeDarkSvg" />
                             </div>
                             <div
                                 class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
                             >
-                                <img src={globeSvg} alt="performance" />
+                                <img src={globeSvg} alt="globeSvg" />
                             </div>
                         </div>
                     </div>
@@ -113,12 +119,74 @@
                             <div
                                 class="absolute top-20 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={auditDarkSvg} alt="timeline" />
+                                <img src={auditDarkSvg} alt="auditDarkSvg" />
                             </div>
                             <div
                                 class="absolute top-20 right-0 flex items-center justify-center group-hover:block hidden"
                             >
-                                <img src={auditSvg} alt="performance" />
+                                <img src={auditSvg} alt="auditSvg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Carousel.Item>
+            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+                <div class="p-1">
+                    <div
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
+                    >
+                        <div class="p-12 mb-6">
+                            <p class="text-xl font-medium mb-2 text-bw50">
+                                Least privileges
+                            </p>
+                            <p class="text-sm">
+                                The platform incentives using least privileges
+                                and avoid using service accounts everywhere.
+                                This avoids the potential of leaking data to the
+                                wrong users by always running in the context of
+                                the user that initiated the request.
+                            </p>
+                        </div>
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-20 right-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={leastprivDarkSvg} alt="leastprivDarkSvg" />
+                            </div>
+                            <div
+                                class="absolute top-20 right-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={leastprivSvg} alt="leastprivSvg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Carousel.Item>
+            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+                <div class="p-1">
+                    <div
+                        class="border-2 rounded-[20px] border-gradient-to-r from-bw500 to-[bw500_70%] h-[514px] overflow-hidden grayscale-0 group"
+                    >
+                        <div class="p-12 mb-6">
+                            <p class="text-xl font-medium mb-2 text-bw50">
+                                Version History
+                            </p>
+                            <p class="text-sm">
+                                Version history on all data in the database so
+                                you can keep track of what users did what
+                                changes at what points in time.
+                            </p>
+                        </div>
+                        <div class="ms-12 h-full flex justify-end w-full">
+                            <div
+                                class="absolute top-20 right-0 flex items-center justify-center group-hover:hidden block"
+                            >
+                                <img src={versionhistDarkSvg} alt="versionhistDarkSvg" />
+                            </div>
+                            <div
+                                class="absolute top-20 right-0 flex items-center justify-center group-hover:block hidden"
+                            >
+                                <img src={versionhistSvg} alt="versionhistSvg" />
                             </div>
                         </div>
                     </div>

@@ -5,9 +5,9 @@
         MultiLanguage,
         Observability,
         Workitemqueue,
+        Reports,
+        Security,
     } from "$lib/home";
-    import Reports from "$lib/home/reports.svelte";
-    import Security from "$lib/home/security.svelte";
 
     $effect(() => {
         window.scrollTo(0, 0);

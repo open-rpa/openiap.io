@@ -54,12 +54,12 @@
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 right-0 flex items-center justify-center group-hover:hidden block"
                             >
                                 <img src={cenlogDarkSvg} alt="timeline" />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 right-0 flex items-center justify-center group-hover:block hidden"
                             >
                                 <img src={cenlogeSvg} alt="performance" />
                             </div>
@@ -84,12 +84,12 @@
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
                                 <img src={customizeDarkSvg} alt="timeline" />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 left-0 right-0  flex items-center justify-center group-hover:inline-flex hidden"
                             >
                                 <img src={customizeSvg} alt="performance" />
                             </div>
@@ -114,12 +114,12 @@
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 right-0 flex items-center justify-center group-hover:hidden block"
                             >
                                 <img src={readytouseDarkSvg} alt="timeline" />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 right-0 flex items-center justify-center group-hover:block hidden"
                             >
                                 <img src={readytouseSvg} alt="performance" />
                             </div>
@@ -143,14 +143,14 @@
                         </div>
                         <div class="ms-12 h-full flex justify-end w-full">
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:hidden block"
+                                class="absolute top-10 right-0 flex items-center justify-center group-hover:hidden block"
                             >
-                                <img src={tracingDarkSvg} alt="timeline" />
+                                <img src={tracingDarkSvg} alt="tracingDarkSvg" />
                             </div>
                             <div
-                                class="absolute top-10 left-0 flex items-center justify-center group-hover:block hidden"
+                                class="absolute top-10 right-0 flex items-center justify-center group-hover:block hidden"
                             >
-                                <img src={tracingSvg} alt="performance" />
+                                <img src={tracingSvg} alt="tracingSvg" />
                             </div>
                         </div>
                     </div>
