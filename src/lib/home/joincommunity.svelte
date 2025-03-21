@@ -44,11 +44,11 @@
 <div class="px-32 mb-24 flex justify-center">
     <div class="flex justify-between xl:max-w-[1700px]">
         <div
-            class="border-2 border-bw500 rounded-[20px]"
+            class="border-2 border-bw500/70 rounded-[20px]"
         >
         <div class="flex flex-col justify-between py-14 px-52">
 
-            <p class={"text-[64px] font-semibold mb-16" + gradienttext}>
+            <p class={"text-[64px] text-center font-semibold mb-16" + gradienttext}>
                 Join the community
             </p>
             <div class="flex">

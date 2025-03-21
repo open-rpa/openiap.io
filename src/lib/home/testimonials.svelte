@@ -47,7 +47,7 @@
         <div class="flex justify-between">
             {#each testimonials as item}
                 <div
-                    class="border-2 border-bw500 rounded-[20px] h-[400px] w-[400px] p-10 flex flex-col justify-between"
+                    class="border-2 border-bw500/70 rounded-[20px] h-[400px] w-[400px] p-10 flex flex-col justify-between"
                 >
                     <div>
                         <div class="flex justify-between mb-12">

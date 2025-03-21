@@ -18,7 +18,7 @@
     });
 </script>
 
-<!-- <div class="bg-white sm:bg-red-500 md:bg-blue-500 lg:bg-green-500 xl:bg-yellow-500">  -->
+<!-- <div class="bg-pink-500 sm:bg-red-500 md:bg-blue-500 lg:bg-green-500 xl:bg-yellow-500">  -->
 <div>
     <Hero />
     <TrustedBy />
