@@ -9,6 +9,8 @@
         Testimonials,
         TrustedBy,
         Workitemqueue,
+        Increased,
+        Contactus,
     } from "$lib/home";
 
     $effect(() => {
@@ -16,6 +18,7 @@
     });
 </script>
 
+<!-- <div class="bg-white sm:bg-red-500 md:bg-blue-500 lg:bg-green-500 xl:bg-yellow-500">  -->
 <div>
     <Hero />
     <TrustedBy />
@@ -24,6 +27,8 @@
     <Workitemqueue />
     <Reports />
     <Security />
+    <Increased />
     <Testimonials />
     <Joincommunity />
+    <Contactus />
 </div>

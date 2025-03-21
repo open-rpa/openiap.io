@@ -34,8 +34,9 @@
 <div class="px-32 mb-24 flex justify-center">
     <div class="xl:w-[1700px]">
         <div class="mb-16">
-            <p class={"text-[64px] font-semibold" + gradienttext}>
-                Industry leaders deliver winning <br />solutions with OpenCore
+            <p class={"text-[64px] leading-none font-semibold" + gradienttext}>
+                Industry leaders deliver winning <br />
+                solutions with OpenCore
             </p>
             <p class="text-bw300 font-semibold text-xl">
                 OpenCore allows different types of developers to work together

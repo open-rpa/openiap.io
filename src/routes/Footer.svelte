@@ -43,9 +43,9 @@
 					<div class="justify-end">
 						<img src={Logo} alt="Logo" />
 					</div>
-					<div class="text-xl text-bw50 font-semibold items-center">
+					<!-- <div class="text-xl text-bw50 font-semibold items-center">
 						OpenIAP
-					</div>
+					</div> -->
 				</div>
 			</HotkeyButton>
 			<div
@@ -116,8 +116,8 @@
 				</HotkeyButton>
 			</div>
 		</div>
-		<p class="text-center md:text-start mt-6 md:mt-4 text-gray-500 text-sm">
+		<!-- <p class="text-center md:text-start mt-6 md:mt-4 text-gray-500 text-sm">
 			OpenIAP is automation made simple - and open source
-		</p>
+		</p> -->
 	</div>
 </section>

@@ -44,8 +44,10 @@
 <div class="px-32 mb-24 flex justify-center">
     <div class="flex justify-between xl:max-w-[1700px]">
         <div
-            class="border-2 border-bw500 rounded-[20px] py-14 px-52 flex flex-col justify-between"
+            class="border-2 border-bw500 rounded-[20px]"
         >
+        <div class="flex flex-col justify-between py-14 px-52">
+
             <p class={"text-[64px] font-semibold mb-16" + gradienttext}>
                 Join the community
             </p>
@@ -53,7 +55,7 @@
                 {#each community as item, index}
                     <div class="flex justify-start items-start">
                         {#if index != 0}
-                            <img src={lineSvg} alt="lineSvg" class="mt-2 mx-10 w-full" />
+                            <img src={lineSvg} alt="lineSvg" class="mt-2 mx-10 w-full h-[82px]" />
                         {/if}
                         <div
                             class="flex flex-col items-center justify-center w-fit"
@@ -74,6 +76,7 @@
                     </div>
                 {/each}
             </div>
+        </div>
         </div>
     </div>
 </div>
