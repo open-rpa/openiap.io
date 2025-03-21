@@ -35,7 +35,7 @@
 	});
 </script>
 
-<section class="py-4 px-4 border-t border-gradient-bg">
+<section class="py-4 px-4">
 	<div class="container mx-auto">
 		<div class="md:flex md:justify-between md:items-center md:align-middle">
 			<HotkeyButton variant="ghostfull" onclick={() => goto(base + "/")}>
