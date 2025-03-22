@@ -31,14 +31,14 @@
             imageDark: connectdataDarkSvg,
         },
     ];
-    function renderTop(index: number) {
+    function renderTopSmall(index: number) {
         let newClass = "";
         if (index == 0) {
-            newClass = "md:top-5 lg:top xl:top-0";
+            newClass = "md:top-5";
         } else if (index == 1) {
-            newClass = "md:top-5 lg:top-16 xl:top-0 bottom-0";
+            newClass = "md:top-5 bottom-0";
         } else if (index == 2) {
-            newClass = "top-12 md:top-16 lg:top-32 xl:top-0 xl:bottom-0";
+            newClass = "top-12 md:top-16";
         }
         return newClass + " left-0 right-0  ";
     }
@@ -102,7 +102,7 @@
                         >
                             <div
                                 class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
-                                    renderTop(index)}
+                                    renderTopSmall(index)}
                                 id={`wi-${index}`}
                             >
                                 <img
@@ -113,7 +113,7 @@
                             </div>
                             <div
                                 class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
-                                    renderTop(index)}
+                                    renderTopSmall(index)}
                                 id={`wi-${index + 1000}`}
                             >
                                 <img
