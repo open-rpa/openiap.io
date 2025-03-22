@@ -112,16 +112,42 @@
                                 {item.description}
                             </p>
                         </div>
-                        <div class="lg:ms-12 h-full flex justify-end w-full">
+                        <div
+                            class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
+                        >
                             <div
-                                class={"absolute flex items-center justify-center group-hover:hidden inline-flex " +
+                                class={"w-full h-[300px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
                                     renderTop(index)}
+                                id={`wi-${index}`}
+                            >
+                                <img
+                                    src={item.imageDark}
+                                    alt="imagedark"
+                                    class="relative -mt-[200px]"
+                                />
+                            </div>
+                            <div
+                                class={"w-full h-[300px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                    renderTop(index)}
+                                id={`wi-${index + 1000}`}
+                            >
+                                <img
+                                    src={item.image}
+                                    alt="imagelight"
+                                    class="relative -mt-[200px]"
+                                />
+                            </div>
+                        </div>
+                        <div
+                            class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
+                        >
+                            <div
+                                class="md:absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"absolute flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
-                                    renderTop(index)}
+                                class="md:absolute top-10 left-0 right-0 flex items-center justify-center group-hover:group-hover:inline-flex hidden"
                             >
                                 <img src={item.image} alt="imagelight" />
                             </div>
