@@ -38,8 +38,18 @@
         } else if (index == 1) {
             newClass = "md:top-5 lg:top-16 xl:top-0 bottom-0";
         } else if (index == 2) {
-            newClass =
-                "top-12 md:top-16 lg:top-0 lg:bottom-0 xl:top-0 xl:bottom-0";
+            newClass = "top-12 md:top-16 lg:top-32 xl:top-0 xl:bottom-0";
+        }
+        return newClass + " left-0 right-0  ";
+    }
+    function renderTopLarge(index: number) {
+        let newClass = "";
+        if (index == 0) {
+            newClass = "lg:top xl:top-0";
+        } else if (index == 1) {
+            newClass = "lg:top-16 xl:top-0 bottom-0";
+        } else if (index == 2) {
+            newClass = "lg:top-32 xl:top-0 xl:bottom-0";
         }
         return newClass + " left-0 right-0  ";
     }
@@ -77,7 +87,7 @@
                         : "md:basis-1/2 lg:basis-1/3"}
                 >
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[400px] xl:h-[514px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-8 xl:p-12 pb-0 md:mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -87,16 +97,44 @@
                                 {item.description}
                             </p>
                         </div>
-                        <div class="lg:ms-12 h-full flex justify-end w-full">
+                        <div
+                            class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
+                        >
                             <div
-                                class={"absolute flex items-center justify-center group-hover:hidden inline-flex " +
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
                                     renderTop(index)}
+                                id={`wi-${index}`}
+                            >
+                                <img
+                                    src={item.imageDark}
+                                    alt="imagedark"
+                                    class="relative -mt-[200px]"
+                                />
+                            </div>
+                            <div
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                    renderTop(index)}
+                                id={`wi-${index + 1000}`}
+                            >
+                                <img
+                                    src={item.image}
+                                    alt="imagelight"
+                                    class="relative -mt-[200px]"
+                                />
+                            </div>
+                        </div>
+                        <div
+                            class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
+                        >
+                            <div
+                                class={"md:absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block " +
+                                    renderTopLarge(index)}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"absolute flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
-                                    renderTop(index)}
+                                class={"md:absolute top-10 left-0 right-0 flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                    renderTopLarge(index)}
                             >
                                 <img src={item.image} alt="imagelight" />
                             </div>
