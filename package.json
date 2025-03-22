@@ -1,6 +1,6 @@
 {
     "name": "opencore-web",
-    "version": "0.0.13",
+    "version": "0.0.17",
     "type": "module",
     "main": "build/index.js",
     "scripts": {

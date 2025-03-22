@@ -10,7 +10,7 @@
         <div class="container">
             <img
                 src={coverSvg}
-                alt="Background image"
+                alt="coverSvg"
                 class="h-full w-full object-cover top-0 left-0 absolute"
             />
             <div class="text-overlay">
