@@ -47,9 +47,9 @@
         if (index == 0) {
             newClass = "lg:top-0 xl:top-0";
         } else if (index == 1) {
-            newClass = "lg:top-0 xl:top-0 xl:bottom-0";
+            newClass = "lg:top-40 xl:top-0 xl:bottom-0";
         } else if (index == 2) {
-            newClass = "lg:top-0 xl:top-0 xl:bottom-0";
+            newClass = "lg:top-32 xl:top-0 xl:bottom-0";
         }
         return newClass + " left-0 right-0  ";
     }
@@ -126,7 +126,7 @@
                         <div
                             class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
                         >
-                            <div
+                           <div
                                 class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-100 group-hover:opacity-0 " +
                                     renderTopLarge(index)}
                             >

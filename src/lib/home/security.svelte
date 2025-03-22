@@ -50,19 +50,33 @@
             imageDark: versionhistDarkSvg,
         },
     ];
-    function renderTop(index: number) {
+    function renderTopSmall(index: number) {
         let newClass = "";
         if (index == 0) {
-            newClass = "right-0  md:top-5 lg:top-10 xl:top-0";
+            newClass = "right-0  md:top-5";
         } else if (index == 1) {
-            newClass = "left-0 md:top-5 lg:top-16 xl:top-0 bottom-0";
+            newClass = "left-0 md:top-0";
         } else if (index == 2) {
-            newClass =
-                "left-0 right-0 top-20 md:top-16 lg:top-24 xl:top-0 xl:bottom-0";
+            newClass = "left-0 right-0 top-20 md:top-0";
         } else if (index == 3) {
-            newClass = "left-0 right-0 top-24 md:top-20 xl:top-10";
+            newClass = "left-0 right-0 top-24 md:top-0";
         } else if (index == 4) {
-            newClass = "right-0 top-10 md:top-10 lg:top-12 xl:top-10";
+            newClass = "right-0 top-10 md:top-0";
+        }
+        return newClass + "  ";
+    }
+    function renderTopLarge(index: number) {
+        let newClass = "";
+        if (index == 0) {
+            newClass = "right-0  lg:top-10 xl:top-0";
+        } else if (index == 1) {
+            newClass = "left-0 lg:top-16 xl:top-0 bottom-0";
+        } else if (index == 2) {
+            newClass = "left-0 right-0 lg:top-24 xl:top-0 xl:bottom-0";
+        } else if (index == 3) {
+            newClass = "left-0 right-0 lg:top-20 xl:top-10";
+        } else if (index == 4) {
+            newClass = "right-0 top-10 lg:top-12 xl:top-10";
         }
         return newClass + "  ";
     }
@@ -101,7 +115,7 @@
                         : "md:basis-1/2 lg:basis-1/3"}
                 >
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[400px] xl:h-[514px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[500px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-8 xl:p-12 pb-0 md:mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -111,16 +125,44 @@
                                 {item.description}
                             </p>
                         </div>
-                        <div class="lg:ms-12 h-full flex justify-end w-full">
+                        <div
+                            class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
+                        >
                             <div
-                                class={"absolute flex items-center justify-center group-hover:hidden inline-flex " +
-                                    renderTop(index)}
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
+                                    renderTopSmall(index)}
+                                id={`wi-${index}`}
+                            >
+                                <img
+                                    src={item.imageDark}
+                                    alt="imagedark"
+                                    class="relative -mt-[200px]"
+                                />
+                            </div>
+                            <div
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                    renderTopSmall(index)}
+                                id={`wi-${index + 1000}`}
+                            >
+                                <img
+                                    src={item.image}
+                                    alt="imagelight"
+                                    class="relative -mt-[200px]"
+                                />
+                            </div>
+                        </div>
+                        <div
+                            class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
+                        >
+                            <div
+                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-100 group-hover:opacity-0 " +
+                                    renderTopLarge(index)}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"absolute flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
-                                    renderTop(index)}
+                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100 " +
+                                    renderTopLarge(index)}
                             >
                                 <img src={item.image} alt="imagelight" />
                             </div>
