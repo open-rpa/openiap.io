@@ -18,17 +18,17 @@
     });
 </script>
 
-<!-- <div class="bg-pink-500 sm:bg-red-500 md:bg-blue-500 lg:bg-green-500 xl:bg-yellow-500">  -->
+<!-- <div class="bg-pink-800 sm:bg-red-800 md:bg-blue-800 lg:bg-green-800 xl:bg-yellow-800">  -->
 <div>
     <Hero />
-    <!-- <TrustedBy />
+    <TrustedBy />
     <MultiLanguage />
     <Observability />
     <Workitemqueue />
-    <Reports /> -->
+    <Reports />
     <Security />
-    <!-- <Increased />
+    <Increased />
     <Testimonials />
     <Joincommunity />
-    <Contactus /> -->
+    <Contactus />
 </div>
