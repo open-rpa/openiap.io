@@ -6,13 +6,15 @@
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
 
-<div class="px-32 mb-24 flex justify-center">
-    <div class="flex justify-between xl:max-w-[1700px]">
+<div
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:px-32 xl:mb-24 xl:flex xl:justify-center"
+>
+    <div class="xl:max-w-[1700px]">
         <div
             class="border-2 border-bw500/70 rounded-[20px] flex flex-col justify-between"
         >
-            <div class="flex">
-                <div class="flex flex-col justify-between px-10 pt-10 pb-10">
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="flex flex-col justify-between px-10 py-4">
                     <div>
                         <p
                             class={"text-[44px] leading-none font-semibold mb-6" +
