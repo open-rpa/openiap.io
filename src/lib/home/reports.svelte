@@ -45,11 +45,11 @@
     function renderTopLarge(index: number) {
         let newClass = "";
         if (index == 0) {
-            newClass = "lg:top xl:top-0";
+            newClass = "lg:top-0 xl:top-0";
         } else if (index == 1) {
-            newClass = "lg:top-16 xl:top-0 bottom-0";
+            newClass = "lg:top-0 xl:top-0 xl:bottom-0";
         } else if (index == 2) {
-            newClass = "lg:top-32 xl:top-0 xl:bottom-0";
+            newClass = "lg:top-0 xl:top-0 xl:bottom-0";
         }
         return newClass + " left-0 right-0  ";
     }
@@ -87,7 +87,7 @@
                         : "md:basis-1/2 lg:basis-1/3"}
                 >
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[500px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-8 xl:p-12 pb-0 md:mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -127,13 +127,13 @@
                             class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
                         >
                             <div
-                                class={"md:absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block " +
+                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-100 group-hover:opacity-0 " +
                                     renderTopLarge(index)}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"md:absolute top-10 left-0 right-0 flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100 " +
                                     renderTopLarge(index)}
                             >
                                 <img src={item.image} alt="imagelight" />

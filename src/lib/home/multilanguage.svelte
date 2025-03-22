@@ -60,14 +60,25 @@ client.free()`,
             imageDark: lowcodedarkSvg,
         },
     ];
-    function renderTop(index: number) {
+    function renderTopSmall(index: number) {
         let newClass = "";
         if (index == 0) {
-            newClass = "top-16 md:top-5 lg:top-0 lg:bottom-0 xl:top-12";
+            newClass = "top-16 md:top-20";
         } else if (index == 1) {
-            newClass = "top-10 md:top-5 lg:top-0 lg:bottom-0 xl:top-14";
+            newClass = "top-10 md:top-24";
         } else if (index == 2) {
-            newClass = "top-16 md:top-14 lg:top-10 xl:top-20";
+            newClass = "top-16 md:top-28";
+        }
+        return newClass + " left-0 right-0  ";
+    }
+    function renderTopLarge(index: number) {
+        let newClass = "";
+        if (index == 0) {
+            newClass = "lg:top-10 lg:bottom-0 xl:top-0";
+        } else if (index == 1) {
+            newClass = "lg:top-10 lg:bottom-0 xl:top-0";
+        } else if (index == 2) {
+            newClass = "lg:top-10 xl:top-0";
         }
         return newClass + " left-0 right-0  ";
     }
@@ -102,7 +113,7 @@ client.free()`,
             <Carousel.Item class="lg:basis-3/5">
                 <div class="p-1">
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[500px] xl:h-[514px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[500px] lg:h-[440px] xl:h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-8 xl:p-12 pb-0 mb-2 md:mb-4">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -116,7 +127,7 @@ client.free()`,
                             </p>
                         </div>
                         <div
-                            class="ms-8 md:ms-10 lg:ms-2 xl:ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
+                            class="ms-8 md:ms-10 lg:ms-8 xl:ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
                         >
                             <div
                                 class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
@@ -127,7 +138,7 @@ client.free()`,
                                 <Tabs.Root value="1" class="ms-5">
                                     <div></div>
                                     <Tabs.List
-                                        class="h-fit  md:block w-full w-fit bg-bw200 dark:bg-darkagenttab rounded-[5px] p-1 mb-2 lg:mb-0 text-bw50 font-normal"
+                                        class="h-fit md:block w-full w-fit bg-bw200 dark:bg-darkagenttab rounded-[5px] p-1 mb-2 lg:mb-0 text-bw50 font-normal"
                                     >
                                         {#each languages as language, index}
                                             <Tabs.Trigger value={`${index + 1}`}
@@ -144,7 +155,8 @@ client.free()`,
                                                 <div
                                                     class="text-bw300 flex justify-between"
                                                 >
-                                                    <pre class="overflow-hidden w-64 lf:w-full">
+                                                    <pre
+                                                        class="overflow-hidden w-64 md:w-96 xl:w-full">
 <code>{language.code}</code>
                                             </pre>
                                                     <HotkeyButton
@@ -176,9 +188,9 @@ client.free()`,
             {#each carouselItem as item, index}
                 <Carousel.Item class={"md:basis-1/2 lg:basis-1/3"}>
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[500px] xl:h-[514px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[500px] lg:h-[440px] xl:h-[514px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-12 pb-0 md:mb-10">
+                        <div class="p-8 xl:p-12 pb-0 md:mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
@@ -186,16 +198,44 @@ client.free()`,
                                 {item.description}
                             </p>
                         </div>
-                        <div class="lg:ms-12 h-full flex justify-end w-full">
+                        <div
+                            class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
+                        >
                             <div
-                                class={"absolute flex items-center justify-center group-hover:hidden inline-flex " +
-                                    renderTop(index)}
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
+                                    renderTopSmall(index)}
+                                id={`wi-${index}`}
+                            >
+                                <img
+                                    src={item.imageDark}
+                                    alt="imagedark"
+                                    class="relative -mt-[200px]"
+                                />
+                            </div>
+                            <div
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                    renderTopSmall(index)}
+                                id={`wi-${index + 1000}`}
+                            >
+                                <img
+                                    src={item.image}
+                                    alt="imagelight"
+                                    class="relative -mt-[200px]"
+                                />
+                            </div>
+                        </div>
+                        <div
+                            class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
+                        >
+                            <div
+                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-100 group-hover:opacity-0 " +
+                                    renderTopLarge(index)}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"absolute flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
-                                    renderTop(index)}
+                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100 " +
+                                    renderTopLarge(index)}
                             >
                                 <img src={item.image} alt="imagelight" />
                             </div>
@@ -208,8 +248,8 @@ client.free()`,
             </Carousel.Item>
         </Carousel.Content>
         <div
-        class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-10
+            class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-10
 bg-gradient-to-l from-[#0D0D11] to-transparent z-10"
-    ></div>
+        ></div>
     </Carousel.Root>
 </div>
