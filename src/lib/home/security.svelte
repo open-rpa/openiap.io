@@ -1,15 +1,15 @@
 <script>
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import auditSvg from "$lib/images/home/Security/audit.svg";
-    import auditDarkSvg from "$lib/images/home/Security/auditdark.svg";
-    import datasecSvg from "$lib/images/home/Security/datasec.svg";
-    import datasecDarkSvg from "$lib/images/home/Security/datasecdark.svg";
-    import globeSvg from "$lib/images/home/Security/globe.svg";
-    import globeDarkSvg from "$lib/images/home/Security/globedark.svg";
-    import leastprivDarkSvg from "$lib/images/home/Security/leastprivdark.svg";
-    import leastprivSvg from "$lib/images/home/Security/leastpriv.svg";
-    import versionhistDarkSvg from "$lib/images/home/Security/versionhistdark.svg";
-    import versionhistSvg from "$lib/images/home/Security/versionhist.svg";
+    import auditSvg from "$lib/images/home/security/audit.svg";
+    import auditDarkSvg from "$lib/images/home/security/auditdark.svg";
+    import datasecSvg from "$lib/images/home/security/datasec.svg";
+    import datasecDarkSvg from "$lib/images/home/security/datasecdark.svg";
+    import globeSvg from "$lib/images/home/security/globe.svg";
+    import globeDarkSvg from "$lib/images/home/security/globedark.svg";
+    import leastprivDarkSvg from "$lib/images/home/security/leastprivdark.svg";
+    import leastprivSvg from "$lib/images/home/security/leastpriv.svg";
+    import versionhistDarkSvg from "$lib/images/home/security/versionhistdark.svg";
+    import versionhistSvg from "$lib/images/home/security/versionhist.svg";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
