@@ -54,7 +54,7 @@
     function renderTop(index: number) {
         let newClass = "";
         if (index == 0) {
-            newClass = "md:top-5 lg:top xl:top-0";
+            newClass = "md:top-5 lg:top-0 xl:top-0";
         } else if (index == 1) {
             newClass = "md:top-5 lg:top-16 xl:top-0 bottom-0";
         } else if (index == 2) {
@@ -68,7 +68,7 @@
     }
 </script>
 
-<div class="mx-6 md:mx-10 lg:mx-20 xl:px-32 xl:mb-24 xl:flex xl:justify-center">
+<div class="mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center">
     <Carousel.Root
         opts={{
             align: "start",
@@ -104,7 +104,7 @@
                     <div
                         class="border-2 rounded-[20px] border-bw500/70 h-[400px] xl:h-[514px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-12 pb-0 md:mb-10">
+                        <div class="p-8 xl:p-12 pb-0 md:mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
