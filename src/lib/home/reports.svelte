@@ -47,9 +47,9 @@
         if (index == 0) {
             newClass = "lg:top-0 xl:top-0";
         } else if (index == 1) {
-            newClass = "lg:top-40 xl:top-0 xl:bottom-0";
+            newClass = "lg:top-0 xl:top-0 xl:bottom-0";
         } else if (index == 2) {
-            newClass = "lg:top-32 xl:top-0 xl:bottom-0";
+            newClass = "lg:top-10 xl:top-0 xl:bottom-0";
         }
         return newClass + " left-0 right-0  ";
     }
