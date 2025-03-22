@@ -31,23 +31,25 @@
     ];
 </script>
 
-<div class="px-32 mb-24 flex justify-center">
+<div
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:px-32 xl:mb-24 xl:flex xl:justify-center"
+>
     <div class="xl:w-[1700px]">
         <div class="mb-16">
-            <p class={"text-[64px] leading-none font-semibold" + gradienttext}>
+            <p class={"text-[30px] lg:text-[64px] py-6 leading-none font-semibold" + gradienttext}>
                 Industry leaders deliver winning <br />
                 solutions with OpenCore
             </p>
-            <p class="text-bw300 font-semibold text-xl">
+            <p class="text-bw300 font-semibold lg:text-xl">
                 OpenCore allows different types of developers to work together
                 via one common framework
             </p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex flex-col lg:flex-row gap-4 justify-between overflow-auto">
             {#each testimonials as item}
                 <div
-                    class="border-2 border-bw500/70 rounded-[20px] h-[400px] w-[400px] p-10 flex flex-col justify-between"
+                    class="border-2 border-bw500/70 rounded-[20px] lg:h-[400px] lg:w-[400px] p-10 flex flex-col justify-between"
                 >
                     <div>
                         <div class="flex justify-between mb-12">

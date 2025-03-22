@@ -55,7 +55,7 @@
     <div class="text-bw500 text-center">Trusted by companies worldwide</div>
     <div class="relative w-full overflow-hidden flex justify-center py-6">
         <!-- The fade wrapper -->
-        <div class="fade-mask lg:mx-20">
+        <div class="fade-mask lg:mx-32">
             <div
                 bind:this={scrollContainer}
                 class="scroll-container flex items-center gap-8 overflow-x-auto no-scrollbar px-12 py-2 whitespace-nowrap"
