@@ -180,6 +180,28 @@
   transform: translateX(0) scale(1) rotate(0);
 }
 
+.fade-mask-right {
+  /* For Safari/WebKit */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+
+  /* Standard mask properties */
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
 
 /* Hide scrollbar across browsers */
 .no-scrollbar::-webkit-scrollbar {
