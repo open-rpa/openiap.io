@@ -67,12 +67,12 @@
     }
 </script>
 
-<div class="lg:px-32 lg:mb-24 lg:flex lg:justify-center">
+<div class="mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center">
     <Carousel.Root
         opts={{
             align: "start",
         }}
-        class="px-6 lg:px-0 lg:max-w-[1700px]"
+        class="lg:max-w-[1700px]"
     >
         <div class="mb-12">
             <div class="flex items-end justify-between gap-8">
