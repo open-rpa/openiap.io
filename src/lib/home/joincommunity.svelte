@@ -41,27 +41,39 @@
     ];
 </script>
 
-<div class="px-32 mb-24 flex justify-center">
-    <div class="flex justify-between xl:max-w-[1700px]">
-        <div
-            class="border-2 border-bw500/70 rounded-[20px]"
-        >
-        <div class="flex flex-col justify-between py-14 px-52">
-
-            <p class={"text-[64px] text-center font-semibold mb-16" + gradienttext}>
+<div
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:px-32 xl:mb-24 xl:flex xl:justify-center"
+>
+    <div class="xl:max-w-[1700px]">
+        <div class="text-center border-2 border-bw500/70 rounded-[20px] p-10">
+            <p
+                class={"text-[30px] lg:text-[64px] py-6 leading-none font-semibold mb-16" +
+                    gradienttext}
+            >
                 Join the community
             </p>
-            <div class="flex">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-20 xl:flex items-center justify-center xl:flex-row xl:justify-between"
+            >
                 {#each community as item, index}
-                    <div class="flex justify-start items-start">
+                    <div
+                        class="flex justify-center items-center xl:justify-start xl:items-start"
+                    >
                         {#if index != 0}
-                            <img src={lineSvg} alt="lineSvg" class="mt-2 mx-10 w-full h-[82px]" />
+                            <div class="flex items-start justify-start">
+                                <img
+                                    src={lineSvg}
+                                    alt="lineSvg"
+                                    class="me-10 px-4 mt-4 w-full h-[82px] hidden xl:block"
+                                />
+                            </div>
                         {/if}
+
                         <div
                             class="flex flex-col items-center justify-center w-fit"
                         >
                             <p
-                                class={"text-[60px] font-semibold" +
+                                class={"text-[30px] lg:text-[64px] font-semibold" +
                                     gradienttext}
                             >
                                 {item.number}
@@ -76,7 +88,6 @@
                     </div>
                 {/each}
             </div>
-        </div>
         </div>
     </div>
 </div>
