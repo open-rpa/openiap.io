@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import * as Carousel from "$lib/components/ui/carousel/index";
     import insightDarkSvg from "$lib/images/home/workitemqueues/insightdark.svg";
     import insightSvg from "$lib/images/home/workitemqueues/insights.svg";
@@ -51,14 +51,29 @@
             imageDark: insightDarkSvg,
         },
     ];
+    function renderTop(index: number) {
+        let newClass = "";
+        if (index == 0) {
+            newClass = "md:top-5 lg:top xl:top-0";
+        } else if (index == 1) {
+            newClass = "md:top-5 lg:top-16 xl:top-0 bottom-0";
+        } else if (index == 2) {
+            newClass = "top-12 md:top-14 lg:top-10 xl:top-0 xl:bottom-0";
+        } else if (index == 3) {
+            newClass = "top-12 md:top-14 lg:top-10  xl:top-0 xl:bottom-0";
+        } else if (index == 4) {
+            newClass = "top-20 md:top-16 lg:top-24  xl:top-0 xl:bottom-0";
+        }
+        return newClass + " left-0 right-0  ";
+    }
 </script>
 
-<div class="lg:px-32 lg:mb-24 lg:flex lg:justify-center">
+<div class="mx-6 md:mx-10 lg:mx-20 xl:px-32 xl:mb-24 xl:flex xl:justify-center">
     <Carousel.Root
         opts={{
             align: "start",
         }}
-        class="px-6 lg:px-0 lg:max-w-[1700px]"
+        class="lg:max-w-[1700px]"
     >
         <div class="mb-12">
             <div class="flex items-end justify-between gap-8">
@@ -87,7 +102,7 @@
                         : "md:basis-1/2 lg:basis-1/3"}
                 >
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 md:h-[514px] overflow-hidden md:grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[400px] xl:h-[514px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-12 pb-0 md:mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
@@ -99,12 +114,14 @@
                         </div>
                         <div class="lg:ms-12 h-full flex justify-end w-full">
                             <div
-                                class="md:absolute top-10 left-0 right-0 flex items-center justify-center group-hover:hidden block"
+                                class={"absolute flex items-center justify-center group-hover:hidden inline-flex " +
+                                    renderTop(index)}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class="md:absolute top-10 left-0 right-0 flex items-center justify-center group-hover:group-hover:inline-flex hidden"
+                                class={"absolute flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                    renderTop(index)}
                             >
                                 <img src={item.image} alt="imagelight" />
                             </div>
@@ -112,6 +129,9 @@
                     </div>
                 </Carousel.Item>
             {/each}
+            <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
+                <div class="p-1"></div>
+            </Carousel.Item>
         </Carousel.Content>
         <div
             class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-10
