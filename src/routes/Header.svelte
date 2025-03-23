@@ -26,9 +26,9 @@
 			</HotkeyButton> -->
 			<HotkeyButton
 				variant="link"
-				onclick={() => goto(base + "/solutions")}
+				onclick={() => goto(base + "/usecases")}
 			>
-				Solutions
+				Use Cases
 			</HotkeyButton>
 			<!-- <HotkeyButton
 				variant="link"
@@ -156,9 +156,9 @@
 			<nav class="container mx-auto px-4 py-4 flex flex-col space-y-4">
 				<HotkeyButton
 					variant="link"
-					onclick={() => goto(base + "/solutions")}
+					onclick={() => goto(base + "/usecase")}
 				>
-					Solutions
+					Use Cases
 				</HotkeyButton>
 				<HotkeyButton
 					variant="link"

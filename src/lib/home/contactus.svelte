@@ -24,7 +24,7 @@
                 variant="contact"
                 size="contact"
                 class="absolute top-5 right-5"
-                onclick={() => goto(base + "/contact/view")}
+                onclick={() => goto(base + "/contact/meet")}
                 ><ArrowUpRight /></HotkeyButton
             >
             <div class="text-overlay">

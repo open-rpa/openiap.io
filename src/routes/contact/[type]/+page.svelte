@@ -64,71 +64,39 @@
     });
     const { form: formData, enhance, message } = form;
 
-    let isScreenSmall = $state();
-    let isScreenSmallTab = $state();
-    let isScreenMedium = $state();
-    let isScreenLarge = $state();
-
     $effect(() => {
-        if (data.type == "meet") {
-            const meetingLinkElement = document?.getElementById("meetinglink");
-            if (meetingLinkElement) {
-                const offset = -60; // Adjust this value to match your header height
-                if (sectionRef == null) return;
-                const elementPosition = sectionRef.getBoundingClientRect().top;
-                const offsetPosition =
-                    elementPosition + window.scrollY + offset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth",
-                });
-                // meetingLinkElement.scrollIntoView({
-                //     behavior: "smooth",
-                // });
-            }
-        } else {
-            window.scrollTo(0, 0);
-        }
-        isScreenSmall = window.innerWidth < 450;
-        isScreenSmallTab = window.innerWidth > 1160;
-        isScreenMedium = window.innerWidth < 1160 && window.innerWidth > 769;
-        isScreenLarge = window.innerWidth > 1160;
-        const handleResize = () => {
-            isScreenSmall = window.innerWidth < 540;
-            isScreenSmallTab =
-                window.innerWidth > 540 && window.innerWidth < 769;
-            isScreenMedium =
-                window.innerWidth > 769 && window.innerWidth < 1160;
-            isScreenLarge = window.innerWidth > 1160;
-        };
-        window.addEventListener("resize", handleResize);
-
-        handleResize();
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
-                });
-            },
-            { threshold: 0.1 },
-        );
-        const elements = document.querySelectorAll(
-            ".scroll-fade-in, .scroll-zoom-in, .scroll-rotate-in, .scroll-bounce",
-        );
-        elements.forEach((el) => observer.observe(el));
         const script = document.createElement("script");
         script.src = "https://assets.calendly.com/assets/external/widget.js";
         script.async = true;
         document.body.appendChild(script);
 
+        if (data.type == "meet") {
+            console.log(data.type);
+            const meetingLinkElement = document?.getElementById("meetinglink");
+            console.log(meetingLinkElement);
+            if (meetingLinkElement) {
+                console.log("meetingLinkElement found");
+                const offset = -100; // Adjust this value to match your header height
+                if (sectionRef == null) return;
+                console.log("sectionRef found");
+                const elementPosition = sectionRef.getBoundingClientRect().top;
+                console.log("elementPosition", elementPosition);
+
+                const offsetPosition =
+                    elementPosition + window.scrollY + offset;
+                console.log("offsetPosition", offsetPosition);
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                });
+            }
+        } else {
+            window.scrollTo(0, 0);
+        }
         return () => {
             document.body.removeChild(script);
-            observer.disconnect();
-            window.removeEventListener("resize", handleResize);
+            // observer.disconnect();
         };
     });
 </script>
@@ -277,18 +245,12 @@
         </div>
     </section>
 
-    <section
-        class="py-20 px-4 gradient-bg"
-        id="meetinglink"
-        bind:this={sectionRef}
-    >
-        <div class="md:container mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold">Book a Meeting Now</h2>
-            <iframe
-                class={`calendly-inline-widget min-w-80 w-full ${isScreenSmall && "h-[66rem]"} ${isScreenSmallTab && "h-[70rem]"} ${isScreenMedium && "h-[70rem]"}  ${isScreenLarge && "h-[50rem]"} `}
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3uQ_PUYcVYRPtxpvIVUac6CKOKpr9z-lBo3vc-ScYGaeX1766BKtaol1MUfGlZNZ1yU2WLQGPO?gv=true"
-            ></iframe>
-        </div>
+    <section class="min-h-[80vh]" id="meetinglink" bind:this={sectionRef}>
+        <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/openiap/30min?hide_gdpr_banner=1&background_color=0f1013&text_color=f8fafc"
+            data-resize="true"
+        ></div>
     </section>
 </div>
 

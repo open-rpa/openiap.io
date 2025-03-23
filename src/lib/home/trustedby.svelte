@@ -21,7 +21,9 @@
 
         const startScrolling = () => {
             const scroll = () => {
-                scrollContainer.scrollLeft += scrollSpeed;
+                if (scrollContainer) {
+                    scrollContainer.scrollLeft += scrollSpeed;
+                }
                 if (
                     scrollContainer.scrollLeft >=
                     scrollContainer.scrollWidth - scrollContainer.clientWidth
@@ -44,9 +46,9 @@
         startScrolling();
 
         return () => {
-            stopScrolling();
-            scrollContainer.removeEventListener("mouseenter", stopScrolling);
             scrollContainer.removeEventListener("mouseleave", startScrolling);
+            scrollContainer.removeEventListener("mouseenter", stopScrolling);
+            stopScrolling();
         };
     });
 </script>

@@ -58,13 +58,13 @@
 				>
 					Home
 				</HotkeyButton>
-				<HotkeyButton
+				<!-- <HotkeyButton
 					variant="link"
 					onclick={() => goto(base + "/solutions")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
 				>
 					Solutions
-				</HotkeyButton>
+				</HotkeyButton> -->
 				<HotkeyButton
 					variant="link"
 					onclick={() => goto(base + "/usecases")}

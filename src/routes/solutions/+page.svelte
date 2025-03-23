@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
   import {
     ArrowRight,
@@ -86,9 +86,6 @@
         </HotkeyButton>
       </div>
     </div>
-    <!-- <div
-      class="absolute inset-0 bg-gradient-to-b from-transparent to-background/80"
-    /> -->
   </section>
 
   <section class="py-10 px-4">
@@ -190,8 +187,6 @@
     </div>
   </section>
 
-  <!-- <CircularFeatures /> -->
-
   <section class="py-20 px-4">
     <div class="container mx-auto">
       <div class="flex flex-col md:flex-row items-center gap-12">
@@ -222,17 +217,6 @@
             instills confidence and meets the highest professional standards.
           </p>
           <ul class="space-y-4">
-            <!-- {[
-              "End-to-end encryption",
-              "Access control lists",
-              "Audit logging",
-              "Compliance certifications"
-            ].map((item, index) => (
-              <li  class="flex items-center space-x-2">
-                <Lock class="h-5 w-5 text-customGreen" />
-                <span>{item}</span>
-              </li>
-            ))} -->
           </ul>
         </div>
       </div>
@@ -471,4 +455,4 @@
       </div>
     </div>
   </section>
-</div>
+</div> -->
