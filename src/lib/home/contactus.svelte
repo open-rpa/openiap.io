@@ -1,11 +1,17 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
+    import { base } from "$app/paths";
+    import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
     import coverSvg from "$lib/images/home/contact_cover.svg";
+    import { ArrowUpRight } from "lucide-svelte";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
 
-<div class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:px-6 xl:px-0 xl:max-w-[1700px]">
+<div
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:px-6 xl:px-0 xl:max-w-[1700px]"
+>
     <div class="border-2 rounded-[20px] border-bw500/70">
         <div class="container">
             <img
@@ -13,6 +19,14 @@
                 alt="coverSvg"
                 class="h-full w-full object-cover top-0 left-0 absolute"
             />
+            <HotkeyButton
+                aria-label="Contact Us"
+                variant="contact"
+                size="contact"
+                class="absolute top-5 right-5"
+                onclick={() => goto(base + "/contact/view")}
+                ><ArrowUpRight /></HotkeyButton
+            >
             <div class="text-overlay">
                 <p class="small-text">Book a meeting</p>
                 <p class={"text-[30px] lg:text-[40px]" + gradienttext}>

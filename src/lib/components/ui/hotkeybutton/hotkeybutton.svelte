@@ -34,6 +34,7 @@
 				deleteentity:
 					"shadow-light dark:shadow-dark border border-bw300 hover:border-bw400 dark:border-bw700 dark:hover:border-bw400 bg-bw50 dark:bg-bw850 hover:bg-lightbgred dark:hover:bg-darkbghoverred text-bw950 dark:text-bw100",
 				carousel: "dark:bg-bw900 border border-bw500 ",
+				contact: "dark:text-bw950 dark:bg-bw500 hover:dark:bg-bw300",
 			},
 			size: {
 				base: "h-[38px] px-5 py-3 rounded-[10px]",
@@ -45,6 +46,7 @@
 				entity: "h-8 px-2.5 py-1.5",
 				ghost: "",
 				carousel: "h-8 w-8 rounded-full",
+				contact: "h-8 w-8 rounded-[10px]",
 			},
 		},
 		defaultVariants: {
