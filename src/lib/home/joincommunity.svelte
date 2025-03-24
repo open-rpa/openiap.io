@@ -15,7 +15,7 @@
             },
         },
         {
-            number: "2.73",
+            number: "+3k",
             text: "Stars on Github",
             button: {
                 title: "Give a Star",
@@ -31,7 +31,7 @@
             },
         },
         {
-            number: "+500k",
+            number: "+500",
             text: "Videos on YouTube",
             button: {
                 title: "See the Playlist",
@@ -42,12 +42,11 @@
 </script>
 
 <div
-    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:px-32 xl:mb-24 xl:flex xl:justify-center"
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:mb-24 xl:flex xl:justify-center max-w-[1700px]"
 >
-    <div class="xl:max-w-[1700px]">
-        <div class="text-center border-2 border-bw500/70 rounded-[20px] p-10">
+        <div class="text-center border-2 border-bw500/70 rounded-[20px] p-10 min-w-full">
             <p
-                class={"text-[30px] lg:text-[64px] py-6 leading-none font-semibold mb-16" +
+                class={"text-[24px] lg:text-[50px] lg:text-[64px] py-6 leading-none font-semibold mb-16" +
                     gradienttext}
             >
                 Join the community
@@ -64,7 +63,7 @@
                                 <img
                                     src={lineSvg}
                                     alt="lineSvg"
-                                    class="me-10 px-4 mt-4 w-full h-[82px] hidden xl:block"
+                                    class="me-10 px-4 w-full h-[82px] hidden xl:block"
                                 />
                             </div>
                         {/if}
@@ -73,7 +72,7 @@
                             class="flex flex-col items-center justify-center w-fit"
                         >
                             <p
-                                class={"text-[30px] lg:text-[64px] font-semibold" +
+                                class={"text-[24px] lg:text-[50px] lg:text-[64px] font-semibold" +
                                     gradienttext}
                             >
                                 {item.number}
@@ -89,5 +88,4 @@
                 {/each}
             </div>
         </div>
-    </div>
 </div>
