@@ -102,7 +102,7 @@
                 <p class="text-xl text-gray-400 mb-8 text-center">
                     We will get back to you as soon as we can.
                 </p>
-                <div class="bg-card border border-1 rounded-xl p-4 m-2">
+                <div class="bg-card border border rounded-[10px] p-4 m-2">
                     <form method="POST" use:enhance>
                         <div
                             class="grid grid-cols-2 space-x-5 justify-between w-full"
@@ -188,10 +188,10 @@
                         <HotkeyButton
                             type="submit"
                             disabled={loading}
-                            aria-label="Create User"
+                            aria-label="Submit"
                             variant="success"
                             size="base"
-                            data-shortcut="ctrl+s"
+                            data-shortcut="enter"
                         >
                             <Check />
                             Submit</HotkeyButton

@@ -4,14 +4,14 @@
 	import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
 	import Logo from "$lib/images/logo.svg";
 	import { Icon, MenuIcon, Moon, Sun, X } from "lucide-svelte";
-    import { toggleMode } from "mode-watcher";
+	import { toggleMode } from "mode-watcher";
 
 	let isMenuOpen = $state(false);
 </script>
 
 <header class="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-sm">
 	<div class="px-4 h-16 flex items-center justify-between">
-		<HotkeyButton variant="ghostfull" onclick={() => goto(base + "/")}>
+		<HotkeyButton variant="ghostfull" onclick={() => goto(base + "/")} aria-label="Go to Home">
 			<div class="flex items-center justify-center space-x-[15px]">
 				<div class="justify-end">
 					<img src={Logo} alt="Logo" />
@@ -22,21 +22,13 @@
 			</div>
 		</HotkeyButton>
 		<nav class="hidden md:flex md:space-x-2 space-x-2">
-			<!-- <HotkeyButton variant="link" onclick={() => goto(base + "/")}>
-				Home
-			</HotkeyButton> -->
 			<HotkeyButton
 				variant="link"
 				onclick={() => goto(base + "/usecases")}
+				aria-label="Go to Use Cases"
 			>
 				Use Cases
 			</HotkeyButton>
-			<!-- <HotkeyButton
-				variant="link"
-				onclick={() => goto(base + "/pricing")}
-			>
-				Pricing
-			</HotkeyButton> -->
 			<HotkeyButton
 				variant="link"
 				onclick={() =>
@@ -44,7 +36,8 @@
 						"https://docs.openiap.io/",
 						"_blank",
 						"noopener,noreferrer",
-					)}
+						)}
+				aria-label="Open Documentation"
 			>
 				Docs
 			</HotkeyButton>
@@ -54,73 +47,12 @@
 					goto("/contact/view");
 					isMenuOpen = false;
 				}}
+				aria-label="Get In Touch"
 			>
 				Get In Touch
 			</HotkeyButton>
 		</nav>
-
-		<!-- <div class="hidden md:flex items-center align-middle">
-			<nav class="flex lg:space-x-8 space-x-2">
-				<HotkeyButton
-					onclick={() => goto(base + "/")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline cursor-pointer"
-				>
-					Home
-				</HotkeyButton>
-				<HotkeyButton
-					onclick={() => goto(base + "/solutions")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline cursor-pointer"
-				>
-					Solutions
-				</HotkeyButton>
-				<HotkeyButton
-					onclick={() => goto(base + "/pricing")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline cursor-pointer"
-				>
-					Pricing
-				</HotkeyButton>
-				<span
-					class="text-gray-300 hover:text-white transition-colors cursor-pointer underline-offset-4 hover:underline"
-					onclick={() =>
-						window.open(
-							"https://docs.openiap.io/",
-							"_blank",
-							"noopener,noreferrer",
-						)}
-				>
-					Docs
-				</span>
-			</nav>
-			<div class="ms-4">
-				<HotkeyButton
-					onclick={toggleMode}
-					variant="headericon"
-					size="icon"
-					aria-label="Toggle Theme"
-				>
-					<Sun
-						class="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
-					/>
-					<Moon
-						class="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
-					/>
-					<span class="sr-only">Toggle theme</span>
-				</HotkeyButton>
-			</div>
-			<div class="ms-4 flex space-x-2 items-center align-middle">
-				<Github
-					width={30}
-					class="cursor-pointer"
-					onclick={() =>
-						window.open(
-							"https://github.com/open-rpa/",
-							"_blank",
-							"noopener,noreferrer",
-						)}
-				/>
-				</div>
-		</div> -->
-		<!-- <div class="ms-4">
+		<div class="ms-4">
 			<HotkeyButton
 				onclick={toggleMode}
 				variant="headericon"
@@ -135,7 +67,7 @@
 				/>
 				<span class="sr-only">Toggle theme</span>
 			</HotkeyButton>
-		</div> -->
+		</div>
 
 		<div class="hidden md:flex">
 			<HotkeyButton
@@ -157,6 +89,7 @@
 			variant="link"
 			class="md:hidden"
 			onclick={() => (isMenuOpen = !isMenuOpen)}
+			aria-label="Toggle Menu"
 		>
 			{#if isMenuOpen == true}
 				<X class="h-6 w-6" />
@@ -174,6 +107,7 @@
 				<HotkeyButton
 					variant="link"
 					onclick={() => goto(base + "/usecase")}
+					aria-label="Go to Use Cases"
 				>
 					Use Cases
 				</HotkeyButton>
@@ -185,6 +119,7 @@
 							"_blank",
 							"noopener,noreferrer",
 						)}
+					aria-label="Open Documentation"
 				>
 					Docs
 				</HotkeyButton>
@@ -194,6 +129,7 @@
 						goto("/contact/view");
 						isMenuOpen = false;
 					}}
+					aria-label="Get In Touch"
 				>
 					Get In Touch
 				</HotkeyButton>
@@ -205,6 +141,7 @@
 							"_blank",
 							"noopener,noreferrer",
 						)}
+					aria-label="Login"
 				>
 					Login
 				</HotkeyButton>

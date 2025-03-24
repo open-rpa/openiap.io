@@ -38,14 +38,11 @@
 <section class="py-4 px-4">
 	<div class="container mx-auto">
 		<div class="md:flex md:justify-between md:items-center md:align-middle">
-			<HotkeyButton variant="ghostfull" onclick={() => goto(base + "/")}>
+			<HotkeyButton variant="ghostfull" onclick={() => goto(base + "/")} aria-label="Go to Home">
 				<div class="flex items-center justify-center space-x-[15px]">
 					<div class="justify-end">
 						<img src={Logo} alt="Logo" />
 					</div>
-					<!-- <div class="text-xl text-bw50 font-semibold items-center">
-						OpenIAP
-					</div> -->
 				</div>
 			</HotkeyButton>
 			<div
@@ -55,20 +52,15 @@
 					variant="link"
 					onclick={() => goto(base + "/")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					aria-label="Go to Home"
 				>
 					Home
 				</HotkeyButton>
-				<!-- <HotkeyButton
-					variant="link"
-					onclick={() => goto(base + "/solutions")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-				>
-					Solutions
-				</HotkeyButton> -->
 				<HotkeyButton
 					variant="link"
 					onclick={() => goto(base + "/usecases")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					aria-label="Go to Use Cases"
 				>
 					Use Cases
 				</HotkeyButton>
@@ -76,6 +68,7 @@
 					variant="link"
 					onclick={() => goto(base + "/pricing")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					aria-label="Go to Pricing"
 				>
 					Pricing
 				</HotkeyButton>
@@ -83,6 +76,7 @@
 					variant="link"
 					onclick={() => goto(base + "/partners")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					aria-label="Go to Partners"
 				>
 					Partners
 				</HotkeyButton>
@@ -90,6 +84,7 @@
 					variant="link"
 					onclick={() => goto(base + "/contact/view")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					aria-label="Go to Contact"
 				>
 					Contact
 				</HotkeyButton>
@@ -97,6 +92,7 @@
 					variant="link"
 					onclick={() => goto(base + "/telemetry")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					aria-label="Go to Telemetry"
 				>
 					Telemetry
 				</HotkeyButton>
@@ -104,6 +100,7 @@
 					variant="link"
 					onclick={() => goto(base + "/terms")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					aria-label="Go to Terms & Conditions"
 				>
 					Terms & Conditions
 				</HotkeyButton>
@@ -111,13 +108,11 @@
 					variant="link"
 					onclick={() => goto(base + "/privacy")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					aria-label="Go to Privacy Policy"
 				>
 					Privacy Policy
 				</HotkeyButton>
 			</div>
 		</div>
-		<!-- <p class="text-center md:text-start mt-6 md:mt-4 text-gray-500 text-sm">
-			OpenIAP is automation made simple - and open source
-		</p> -->
 	</div>
 </section>
