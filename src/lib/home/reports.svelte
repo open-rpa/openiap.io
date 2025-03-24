@@ -52,7 +52,7 @@
     }
 </script>
 
-<div class="mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center">
+<div class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center">
     <Carousel.Root
         opts={{
             align: "start",
