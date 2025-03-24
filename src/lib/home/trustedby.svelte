@@ -17,12 +17,6 @@
         ...logos,
         ...logos,
         ...logos,
-        ...logos,
-        ...logos,
-        ...logos,
-        ...logos,
-        ...logos,
-        ...logos,
     ];
 
     onMount(() => {
