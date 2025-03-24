@@ -34,41 +34,36 @@
 
 @layer base {
   :root {
-    --background: 0 0% 96%;
-    --foreground: 210 8% 5%;
-    --muted: 220 10% 94%;
-    --muted-foreground: 210 8% 5%;
-    --popover: 0 0% 96%;
-    --popover-foreground: 210 8% 5%;
-    --card: 0 0% 85%;
-    --card-foreground: 210 8% 5%;
-    --border: 225 3% 54%;
-    --input: 223 4% 64%;
-    --primary: 220 8% 15%;
-    --primary-foreground: 0 0% 99%;
+    --background: 240 13% 6%;
+    --foreground: 223 4% 64%;
+    --muted: 220 6% 20%;
+    --muted-foreground: 223 4% 64%;
+    --popover: 228 9% 11%;
+    --popover-foreground: 223 4% 64%;
+    --card: 228 9% 11%;
+    --card-foreground: 223 4% 64%;
+    --border: 218 6% 36%;
+    --input: 225 3% 54%;
+    /* need to be updated */
+    --primary: 220 6% 20%;
+    --primary-foreground: 223 4% 64%;
+    /* --secondary: 220 6% 20%;
+    --secondary-foreground: 223 4% 64%; */
+    /* Hover property */
+    --accent: 220 6% 20%;
+    --accent-foreground: 223 4% 64%;
+    /*--destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 223 4% 64%; */
+    --ring: 223 4% 64%;
 
-    /*--secondary: 0.0 84.2% 60.2%;
-    --secondary-foreground: 0.0 84.2% 60.2%; */
-
-    --accent: 220 10% 94%;
-    --accent-foreground: 210 8% 5%;
-
-    /* --destructive: 0 72.2% 50.6%;
-    --destructive-foreground: 210 40% 98%; */
-
-    --ring: 210 8% 5%;
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 96%;
-    --sidebar-foreground: 210 8% 5%;
-    /* --sidebar-primary: 220 6% 20%;
-    --sidebar-primary-foreground: 0 0% 99%; */
-    /* selected color */
-    --sidebar-accent: 0 0% 85%;
-    /* text color */
-    --sidebar-accent-foreground: 210 8% 5%;
-    --sidebar-border: 225 3% 54%;
-    --sidebar-ring: 210 8% 5%;
+    --sidebar-background: 228 9% 11%;
+    --sidebar-foreground: 223 4% 64%;
+    /* --sidebar-primary: 223 4% 64%;
+    --sidebar-primary-foreground: 223 4% 64%; */
+    --sidebar-accent: 220 6% 20%;
+    --sidebar-accent-foreground: 220 10% 94%;
+    --sidebar-border: 218 6% 36%;
+    --sidebar-ring: 223 4% 64%;
   }
 
   .dark {
@@ -182,22 +177,18 @@
 
 .fade-mask-right {
   /* For Safari/WebKit */
-  -webkit-mask-image: linear-gradient(
-    to right,
-    black 0%,
-    black 90%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  -webkit-mask-image: linear-gradient(to right,
+      black 0%,
+      black 90%,
+      rgba(0, 0, 0, 0) 100%);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
 
   /* Standard mask properties */
-  mask-image: linear-gradient(
-    to right,
-    black 0%,
-    black 90%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  mask-image: linear-gradient(to right,
+      black 0%,
+      black 90%,
+      rgba(0, 0, 0, 0) 100%);
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
 }
