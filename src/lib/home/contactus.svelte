@@ -10,9 +10,9 @@
 </script>
 
 <div
-    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:px-6 xl:px-0 xl:max-w-[1700px]"
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 xl:flex xl:justify-center"
 >
-    <div class="border-2 rounded-[20px] border-bw500/70">
+    <div class="border-2 rounded-[20px] border-bw500/70 w-full max-w-[1700px]">
         <div class="container">
             <img
                 src={coverSvg}
@@ -29,7 +29,7 @@
             >
             <div class="text-overlay">
                 <p class="small-text">Book a meeting</p>
-                <p class={"text-[30px] lg:text-[40px]" + gradienttext}>
+                <p class={"text-[24px] lg:text-[50px]" + gradienttext}>
                     Speak with our dedicated sales team
                 </p>
             </div>
@@ -56,7 +56,7 @@
     }
 
     .small-text {
-        font-size: 14px;
+        font-size: 16px;
         color: #cfcfcf;
         margin-bottom: 5px;
     }

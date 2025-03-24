@@ -1,6 +1,8 @@
 <script lang="ts">
     import coverSvg from "$lib/images/home/cover.svg";
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
+    import { base } from "$app/paths";
+    import { goto } from "$app/navigation";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
@@ -14,21 +16,26 @@
             class="border-2 border-bw500/70 rounded-[20px] flex flex-col justify-between"
         >
             <div class="flex flex-col lg:flex-row justify-between">
-                <div class="flex flex-col justify-between px-10 py-4">
+                <div class="flex flex-col justify-between px-10 py-10">
                     <div>
                         <p
-                            class={"text-[44px] leading-none font-semibold mb-6" +
+                            class={"text-[24px] lg:text-[50px] leading-none font-semibold mb-6" +
                                 gradienttext}
                         >
                             Increased Integration Efficiency by 25x
                         </p>
-                        <p class="text-bw300">
+                        <p class="text-bw300 lg:text-[16px]">
                             Kuehne + Nagel increased their integration
                             efficiency <br /> by 25x using OpenCore
                         </p>
                     </div>
                     <div>
-                        <HotkeyButton>Learn more</HotkeyButton>
+                        <HotkeyButton
+                            aria-label="Learn more"
+                            onclick={() => {
+                                goto(base + "/usecases");
+                            }}>Learn more</HotkeyButton
+                        >
                     </div>
                 </div>
                 <div>

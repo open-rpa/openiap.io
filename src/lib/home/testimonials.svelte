@@ -36,11 +36,11 @@
 >
     <div class="xl:w-[1700px]">
         <div class="mb-16">
-            <p class={"text-[30px] lg:text-[64px] py-6 leading-none font-semibold" + gradienttext}>
+            <p class={"text-[24px] lg:text-[50px] lg:text-[64px] py-6 leading-none font-semibold" + gradienttext}>
                 Industry leaders deliver winning <br />
                 solutions with OpenCore
             </p>
-            <p class="text-bw300 font-semibold lg:text-xl">
+            <p class="text-bw300 font-semibold lg:text-[16px]">
                 OpenCore allows different types of developers to work together
                 via one common framework
             </p>
