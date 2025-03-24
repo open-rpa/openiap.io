@@ -52,7 +52,7 @@
 				Get In Touch
 			</HotkeyButton>
 		</nav>
-		<div class="ms-4">
+		<!-- <div class="ms-4">
 			<HotkeyButton
 				onclick={toggleMode}
 				variant="headericon"
@@ -67,7 +67,7 @@
 				/>
 				<span class="sr-only">Toggle theme</span>
 			</HotkeyButton>
-		</div>
+		</div> -->
 
 		<div class="hidden md:flex">
 			<HotkeyButton
