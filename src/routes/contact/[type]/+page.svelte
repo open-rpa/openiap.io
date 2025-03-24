@@ -1,22 +1,19 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
     import { base } from "$app/paths";
+    import Calendlywidget from "$lib/calendlywidget/calendlywidget.svelte";
     import * as Form from "$lib/components/ui/form/index.js";
+    import { HotkeyButton } from "$lib/components/ui/hotkeybutton/index.js";
+    import { CustomInput } from "$lib/custominput/index.js";
+    import { Check } from "lucide-svelte";
     import { toast } from "svelte-sonner";
     import SuperDebug, { defaults, superForm } from "sveltekit-superforms";
-    import { effect as formEffect, zod } from "sveltekit-superforms/adapters";
+    import { zod } from "sveltekit-superforms/adapters";
     import { newFormSchema } from "../schema.js";
-    import { HotkeyButton } from "$lib/components/ui/hotkeybutton/index.js";
-    import { Check } from "lucide-svelte";
-    import { CustomInput } from "$lib/custominput/index.js";
-    import Calendlywidget from "$lib/calendlywidget/calendlywidget.svelte";
 
     let { data } = $props();
 
-    console.log(data.type);
-
     let loading = $state(false);
-    let disabled = $state(false);
     let showdebug = $state(false);
     let sectionRef: HTMLElement | null = $state(null);
 
@@ -66,52 +63,22 @@
     const { form: formData, enhance, message } = form;
 
     $effect(() => {
-        // const script = document.createElement("script");
-        // script.src = "https://assets.calendly.com/assets/external/widget.js";
-        // script.async = true;
-        // document.body.appendChild(script);
-
-        // const interval = setInterval(() => {
-        //     Calendly.initInlineWidget({
-        //         url: "https://calendly.com/openiap/30min?hide_gdpr_banner=1&background_color=0f1013&text_color=f8fafc",
-        //         parentElement: document.getElementById("calendly-embed"),
-        //     });
-        //     var calendlyEmbed = document.getElementById("calendly-embed");
-        //     calendlyEmbed.setAttribute(
-        //         "style",
-        //         "background-color: #00000000;min-width:100%;height:960px;",
-        //     );
-        //     clearInterval(interval);
-        // }, 100);
-
         if (data.type == "meet") {
             console.log(data.type);
-            const meetingLinkElement = document?.getElementById("meetinglink");
-            console.log(meetingLinkElement);
-            if (meetingLinkElement) {
-                console.log("meetingLinkElement found");
-                const offset = -100; // Adjust this value to match your header height
-                if (sectionRef == null) return;
-                console.log("sectionRef found");
-                const elementPosition = sectionRef.getBoundingClientRect().top;
-                console.log("elementPosition", elementPosition);
-
-                const offsetPosition =
-                    elementPosition + window.scrollY + offset;
-                console.log("offsetPosition", offsetPosition);
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth",
-                });
-            }
+            const offset = -100; // Adjust this value to match your header height
+            if (sectionRef == null) return;
+            console.log("sectionRef found");
+            const elementPosition = sectionRef.getBoundingClientRect().top;
+            console.log("elementPosition", elementPosition);
+            const offsetPosition = elementPosition + window.scrollY + offset;
+            console.log("offsetPosition", offsetPosition);
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+            });
         } else {
             window.scrollTo(0, 0);
         }
-        return () => {
-            // document.body.removeChild(script);
-            // observer.disconnect();
-        };
     });
 </script>
 
@@ -267,7 +234,7 @@
         </div>
     </section>
 
-    <section id="meetinglink" bind:this={sectionRef}>
+    <section class="min-h-[100vh]" bind:this={sectionRef}>
         <Calendlywidget />
     </section>
 

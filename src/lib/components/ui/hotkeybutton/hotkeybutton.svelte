@@ -12,7 +12,7 @@
 		base: "ring-offset-background focus-visible:ring-ring inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 ",
 		variants: {
 			variant: {
-				base: "shadow-light dark:shadow-dark border border border-bw500 hover:border-bw400 bg-bw50 hover:bg-bw100 text-bw950 dark:border-bw600 dark:text-bw100 dark:hover:border-bw500 dark:hover:bg-bw700 dark:bg-darkbutton dark:text-bw200",
+				base: "shadow-light dark:shadow-dark border border border-bw600 hover:border-bw500 bg-darkbutton hover:bg-bw700 text-bw100 dark:border-bw600 dark:text-bw100 dark:hover:border-bw500 dark:hover:bg-bw700 dark:bg-darkbutton dark:text-bw200",
 				danger: "shadow-light dark:shadow-dark border bg-lightbgred hover:bg-lighthoverred dark:border-bw600 dark:text-bw100 dark:hover:border-bw500 dark:bg-darkbgred dark:hover:bg-darkbghoverred",
 				ghost: "hover:bg-accent font-normal hover:text-accent-foreground",
 				link: "text-bw50 text-base underline-offset-4 hover:underline",
@@ -21,7 +21,7 @@
 				headericon:
 					"shadow-light dark:shadow-dark border border-bw500 dark:border-transparent text-bw600 bg-bw200 hover:bg-bw300 dark:text-bw300 dark:bg-bw700 dark:hover:bg-bw700 border dark:hover:border-bw500",
 				success:
-					"shadow-light dark:shadow-dark border dark:text-bw50 font-normal bg-lightbggreen hover:bg-lighthovergreen dark:border-darkbordergreen dark:text-bw100 dark:hover:border-bw500 dark:bg-darkbggreen dark:hover:bg-darkbghovergreen ",
+					"shadow-light dark:shadow-dark border  dark:text-bw50 font-normal bg-darkbggreen hover:bg-darkhovergreen border-darkbordergreen text-bw100 dark:hover:border-bw500 dark:border-darkbordergreen dark:text-bw100 dark:hover:border-bw500 dark:bg-darkbggreen dark:hover:bg-darkbghovergreen ",
 				refresh:
 					"shadow-light dark:shadow-dark text-bw950 bg-bw200 hover:bg-bw300 hover:border-bw500 border dark:border-bw600 dark:bg-bw850 dark:text-bw100 dark:hover:bg-bw700 dark:hover:border-bw500",
 				entitydefault:

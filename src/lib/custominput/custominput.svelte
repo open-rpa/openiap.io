@@ -17,7 +17,7 @@
 
 	function getClass() {
 		let classes =
-			"bg-bw50 py-2 rounded-[10px] border border-bw600 dark:border-bw600 dark:placeholder-bw500 dark:text-bw400 dark:bg-bw800 focus:outline-none ";
+			"py-2 rounded-[10px] border border-bw600 placeholder-bw500 text-bw400 bg-bw800 dark:border-bw600 dark:placeholder-bw500 dark:text-bw400 dark:bg-bw800 focus:outline-none ";
 		if (size === "sm") {
 			classes += "h-7";
 		} else if (size === "md") {
