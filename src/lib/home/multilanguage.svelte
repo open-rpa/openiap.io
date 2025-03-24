@@ -55,7 +55,7 @@ client.free()`,
         {
             title: "Low-Code, High Impact",
             description:
-                " Empower non-developers to effortlessly build functional solutions with their low-code tool of choice. Rapidly create prototypes with ease — no coding expertise required.",
+                "Empower non-technical users to prototype and build functional solutions with ease, using their low-code tool of choice.",
             image: lowcodeSvg,
             imageDark: lowcodedarkSvg,
         },
@@ -106,7 +106,7 @@ client.free()`,
             </div>
             <p class="text-bw300 font-semibold lg:text-xl">
                 OpenCore allows different types of developers to work together
-                via one common framework
+                in one common framework.
             </p>
         </div>
         <Carousel.Content class="fade-mask-rights">

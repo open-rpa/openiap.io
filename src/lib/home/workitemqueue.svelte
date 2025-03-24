@@ -18,35 +18,37 @@
         {
             title: "Modulization",
             description:
-                "Divide your processes into smaller parts for easier testing, troubleshooting and reporting",
+                "Divide your processes into smaller parts for easier testing, troubleshooting and reporting.",
             image: modSvg,
             imageDark: modDarkSvg,
         },
         {
             title: "Scalability",
-            description:
-                "Easily scale up the code associated with each work item queue to handle any amount of workload.",
+            // description:"Easily scale up code associated with each work item queue to handle any amount of workload.",
+            description:"Effortlessly scale up code for each workitem queue to manage workloads of any size.",
+           
+                
             image: scaledarkSvg,
             imageDark: scaledarkDarkSvg,
         },
         {
             title: "Multi-language",
             description:
-                "Each work item queue can orchestrate code in different languages. This allows using the right language for the right task.",
+                "Each workitem queue can orchestrate code in different languages, giving you the flexibility to choose the right language for the right task.",
             image: multilangSvg,
             imageDark: multilangDarkSvg,
         },
         {
-            title: "Quickly Retry Failed Work Items",
+            title: "Quickly Retry Failed Workitems",
             description:
-                "Isolate and handle errors by easily re-trying or re-submitting failed work items",
+                "Isolate and handle errors by easily re-trying or re-submitting failed workitems.",
             image: quickretrySvg,
             imageDark: quickretryDarkSvg,
         },
         {
             title: "Gain insights over your process",
-            description:
-                "By splitting your process up into multiple units that work across multiple parts of the process, we can now easily gain better insights to how our process is performing and where there are bottle-necks.",
+            // description: "By splitting your process up into multiple units that work across multiple parts of the process, we can now easily gain better insights to how our process is performing and where there are bottle-necks.",
+            description: " By dividing your process into multiple units that operate across different stages, we can easily gain deeper insights into its performance and identify bottlenecks more effectively",
             image: insightSvg,
             imageDark: insightDarkSvg,
         },
@@ -104,7 +106,7 @@
                 </div>
             </div>
             <p class="text-bw300 font-semibold lg:text-xl">
-                Work item queues let your automation handle tasks in a scalable
+                Workitem queues let your automation handle tasks in a scalable
                 way — distributing work, <br /> tracking progress, and ensuring no
                 task gets lost.
             </p>

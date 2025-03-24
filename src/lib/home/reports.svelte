@@ -13,20 +13,20 @@
         {
             title: "Modulization",
             description:
-                "Divide your processes into smaller parts for easier testing, troubleshooting and reporting",
+                "Divide your processes into smaller parts for easier testing, troubleshooting and reporting.",
             image: builtinSvg,
             imageDark: builtinDarkSvg,
         },
         {
             title: "Create your own dashboards",
-            description: "If you’re looking for specific",
+            description: "If you’re looking for specific.",
             image: createdashSvg,
             imageDark: createdashDarkSvg,
         },
         {
             title: "Connect to other data sources",
             description:
-                "For larger enterprises we give you the option to create reports in other platforms",
+                "We give you the option to create reports in the platforms of your choice",
             image: connectdataSvg,
             imageDark: connectdataDarkSvg,
         },

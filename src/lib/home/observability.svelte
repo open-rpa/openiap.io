@@ -15,28 +15,28 @@
         {
             title: "Central logging",
             description:
-                "Centralized logs capture all automation activity, making it easy to track issues across multiple bots and servers.",
+                "Centralized logs capture all automation activity, making it easy to track and troubleshoot across multiple bots and servers.",
             imageDark: cenlogDarkSvg,
             image: cenlogeSvg,
         },
         {
             title: "Customize Your Performance Data",
             description:
-                "Choose the performance metrics that matter most to you and tailor your insights for a personalized experience",
+                "Choose the performance metrics that matter most to you and tailor your insights for a personalised experience",
             imageDark: customizeDarkSvg,
             image: customizeSvg,
         },
         {
             title: "Ready-to-use Telemetery",
             description:
-                "Get instant access to 300 unique performance metrics with our pre-built template—making valuable insights just a click away.",
+                "Get instant access to 300 unique performance metrics with our pre-built template—valuable insights just a click away.",
             imageDark: readytouseDarkSvg,
             image: readytouseSvg,
         },
         {
             title: "Tracing",
             description:
-                "Trace every request across multiple app domains and servers to easily pinpoint failure points.",
+                "Trace every request across multiple app domains and servers to easily pinpoint points of failure.",
             imageDark: tracingDarkSvg,
             image: tracingSvg,
         },

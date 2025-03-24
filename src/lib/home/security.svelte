@@ -17,21 +17,21 @@
         {
             title: "Data Security",
             description:
-                "Access control lists on all data. Option for on the fly encryption for sensitive data",
+                "Access control lists on all data and on the fly encryption for added security on sensitive data.",
             image: datasecSvg,
             imageDark: datasecDarkSvg,
         },
         {
             title: "Scalability",
             description:
-                "Every component in the platform can be made scalable and we force developers to create packages that in itself are also scalable",
+                "Every component of the platform is designed to be scalable, and we require developers to build packages that are inherently scalable as well.",
             image: globeSvg,
             imageDark: globeDarkSvg,
         },
         {
             title: "Audit trailing",
             description:
-                "The platform generates extensive audit trailing and keeps complete version history of all changes in the database. This allows complying with even the most restrictive demands",
+                "The platform generates extensive audit trailing and keeps complete version history of all changes in the database. This allows complying with even the most restrictive demands.",
             image: auditSvg,
             imageDark: auditDarkSvg,
         },
