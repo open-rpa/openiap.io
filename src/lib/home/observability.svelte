@@ -1,13 +1,13 @@
 <script lang="ts">
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import cenlogeSvg from "$lib/images/home/observability/cenlog.svg";
-    import cenlogDarkSvg from "$lib/images/home/observability/cenlogdark.svg";
-    import customizeSvg from "$lib/images/home/observability/customize.svg";
-    import customizeDarkSvg from "$lib/images/home/observability/customizedark.svg";
-    import readytouseSvg from "$lib/images/home/observability/readytouse.svg";
-    import readytouseDarkSvg from "$lib/images/home/observability/readytousedark.svg";
-    import tracingSvg from "$lib/images/home/observability/tracing.svg";
-    import tracingDarkSvg from "$lib/images/home/observability/tracingdark.svg";
+    import customizeSvg from "$lib/images/home/observability/customizeyourperformance_color.svg";
+    import customizeDarkSvg from "$lib/images/home/observability/customizeyourperformance_mono.svg";
+    import cenlogeSvg from "$lib/images/home/observability/centrallogging_color.svg";
+    import cenlogDarkSvg from "$lib/images/home/observability/centrallogging_mono.svg";
+    import readytouseSvg from "$lib/images/home/observability/readytousetel_color.svg";
+    import readytouseDarkSvg from "$lib/images/home/observability/readytousetel_mono.svg";
+    import tracingSvg from "$lib/images/home/observability/tracing_color.svg";
+    import tracingDarkSvg from "$lib/images/home/observability/tracing_mono.svg";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
@@ -44,7 +44,7 @@
     function renderTopSmall(index: number) {
         let newClass = "";
         if (index == 0) {
-            newClass = "md:top-5";
+            newClass = "bottom-0 md:top-5";
         } else if (index == 1) {
             newClass = "md:top-0";
         } else if (index == 2) {
@@ -54,16 +54,11 @@
     }
     function renderTopLarge(index: number) {
         let newClass = "";
-        if (index == 0) {
-            newClass = "lg:top-16 xl:top-0";
-        } else if (index == 1) {
-            newClass = "lg:top-16 xl:top-0 bottom-0";
-        } else if (index == 2) {
-            newClass = "lg:top-16 xl:top-0 xl:bottom-0";
-        } else if (index == 3) {
-            newClass = "lg:top-16 xl:top-0 xl:bottom-0";
+        if (index == 1) {
+            return newClass = " items-center justify-center";
+        } else {
+            return newClass + " items-end justify-end";
         }
-        return newClass + " left-0 right-0  ";
     }
 </script>
 
@@ -77,7 +72,7 @@
         <div class="mb-10">
             <div class="flex items-end justify-between gap-8">
                 <p
-                    class={"text-[24px] lg:text-[50px] font-semibold my-3.5" +
+                    class={"text-[24px] lg:text-[50px] font-semibold" +
                         gradienttext}
                 >
                     Observability
@@ -103,7 +98,7 @@
                     <div
                         class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-8 xl:p-12 pb-0 md:mb-10">
+                        <div class="p-8 xl:p-12 pb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
@@ -115,39 +110,37 @@
                             class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
                         >
                             <div
-                                class={"w-full h-[300px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:hidden inline-flex " +
                                     renderTopSmall(index)}
-                                id={`wi-${index}`}
                             >
                                 <img
                                     src={item.imageDark}
                                     alt="imagedark"
-                                    class="relative -mt-[180px]"
+                                    class="relative -mt-[200px]"
                                 />
                             </div>
                             <div
-                                class={"w-full h-[300px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:group-hover:inline-flex hidden " +
                                     renderTopSmall(index)}
-                                id={`wi-${index + 1000}`}
                             >
                                 <img
                                     src={item.image}
                                     alt="imagelight"
-                                    class="relative -mt-[180px]"
+                                    class="relative -mt-[200px]"
                                 />
                             </div>
                         </div>
                         <div
-                            class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
+                            class="h-full flex justify-end w-full hidden lg:block"
                         >
                             <div
-                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-100 group-hover:opacity-0 " +
+                                class={"w-full overflow-hidden flex group-hover:hidden inline-flex " +
                                     renderTopLarge(index)}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100 " +
+                                class={"w-full overflow-hidden flex group-hover:group-hover:inline-flex hidden " +
                                     renderTopLarge(index)}
                             >
                                 <img src={item.image} alt="imagelight" />

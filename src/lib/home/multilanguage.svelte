@@ -2,12 +2,12 @@
     import * as Carousel from "$lib/components/ui/carousel/index";
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
     import * as Tabs from "$lib/components/ui/tabs/index";
-    import lowcodeSvg from "$lib/images/home/multilang/lowcode.svg";
-    import lowcodedarkSvg from "$lib/images/home/multilang/lowcodedark.svg";
-    import modularcodeSvg from "$lib/images/home/multilang/modularcode.svg";
-    import modularcodeDarkSvg from "$lib/images/home/multilang/modularcodedark.svg";
-    import proglangSvg from "$lib/images/home/multilang/proglang.svg";
-    import proglangDarkSvg from "$lib/images/home/multilang/proglangdark.svg";
+    import modularcodeSvg from "$lib/images/home/multilang/modularcode_color.svg";
+    import modularcodeDarkSvg from "$lib/images/home/multilang/modularcode_mono.svg";
+    import lowcodeSvg from "$lib/images/home/multilang/lowcode_color.svg";
+    import lowcodedarkSvg from "$lib/images/home/multilang/lowcode_mono.svg";
+    import proglangSvg from "$lib/images/home/multilang/programminglanguages_color.svg";
+    import proglangDarkSvg from "$lib/images/home/multilang/programminglanguages_mono.svg";
     import { Copy, Globe } from "lucide-svelte";
     import { toast } from "svelte-sonner";
 
@@ -65,7 +65,7 @@ client.free()`,
         if (index == 0) {
             newClass = "top-16 md:top-20";
         } else if (index == 1) {
-            newClass = "top-10 md:top-24";
+            newClass = "top-50 md:top-24";
         } else if (index == 2) {
             newClass = "top-16 md:top-28";
         }
@@ -73,14 +73,10 @@ client.free()`,
     }
     function renderTopLarge(index: number) {
         let newClass = "";
-        if (index == 0) {
-            newClass = "lg:top-10 lg:bottom-0 xl:top-0";
-        } else if (index == 1) {
-            newClass = "lg:top-10 lg:bottom-0 xl:top-0";
-        } else if (index == 2) {
-            newClass = "lg:top-10 xl:top-0";
+        if (index == 1) {
+            newClass = "items-center justify-center";
         }
-        return newClass + " left-0 right-0  ";
+        return newClass + " items-center justify-center  ";
     }
 </script>
 
@@ -94,7 +90,7 @@ client.free()`,
         <div class="mb-10">
             <div class="flex items-end justify-between gap-8">
                 <p
-                    class={"text-[24px] lg:text-[50px] font-semibold my-3.5" +
+                    class={"text-[24px] lg:text-[50px] font-semibold" +
                         gradienttext}
                 >
                     Multi-language support
@@ -104,17 +100,19 @@ client.free()`,
                     <Carousel.Next />
                 </div>
             </div>
-            <p class="text-bw300 font-semibold lg:text-[16px]">
+            <p class="text-bw300 lg:text-[16px]">
                 OpenCore allows different types of developers to work together
-                in one common framework.
+                in one common framework
             </p>
         </div>
-        <Carousel.Content class="gap-10">
+        <Carousel.Content class="gap-5">
             <Carousel.Item class="lg:basis-3/5">
                 <div
                     class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                 >
-                    <div class="pt-8 px-8 pb-2 xl:pt-12 xl:px-12 xl:pb-8 mb-2 md:mb-4">
+                    <div
+                        class="pt-8 px-8 pb-2 xl:pt-12 xl:px-12 xl:pb-8 mb-2 md:mb-4"
+                    >
                         <p class="text-xl font-medium mb-2 text-bw50">
                             Choose your favourite coding language
                         </p>
@@ -133,14 +131,18 @@ client.free()`,
                         >
                             <Globe class="h-4 w-4" />
                         </div>
-                        <div class="m-3 pt-3 rounded-[5px] dark:bg-[#1D1F22] h-full">
+                        <div
+                            class="m-3 pt-3 rounded-[5px] dark:bg-[#1D1F22] h-full"
+                        >
                             <Tabs.Root value="1" class="ms-5">
                                 <div></div>
                                 <Tabs.List
                                     class="h-fit md:block w-full w-fit bg-bw200 dark:bg-darkagenttab rounded-[5px] p-1 mb-2 lg:mb-0 text-bw50 font-normal"
                                 >
                                     {#each languages as language, index}
-                                        <Tabs.Trigger value={`${index + 1}`} class=" text-xs sm:text-base"
+                                        <Tabs.Trigger
+                                            value={`${index + 1}`}
+                                            class=" text-xs sm:text-base"
                                             >{language.name}</Tabs.Trigger
                                         >
                                     {/each}
@@ -151,25 +153,28 @@ client.free()`,
                                             <div
                                                 class="text-bw300 flex justify-between text-xs sm:text-sm"
                                             >
-                                                <pre class="w-64">
+                                                <pre class="w-72">
 {language.code.trim()}
  </pre>
-                                                <HotkeyButton
-                                                    class="absolute top-4/4 md:top-1/2 lg:top-60 xl:top-4/5 right-5"
-                                                    onclick={() => {
-                                                        navigator.clipboard.writeText(
-                                                            language.code,
-                                                        );
-                                                        toast.success(
-                                                            "Code copied to clipboard",
-                                                        );
-                                                    }}
-                                                    aria-label="Copy code"
-                                                    variant="icon"
-                                                    size="icon"
+                                                <div
+                                                    class="w-full flex justify-center"
                                                 >
-                                                    <Copy />
-                                                </HotkeyButton>
+                                                    <HotkeyButton
+                                                        onclick={() => {
+                                                            navigator.clipboard.writeText(
+                                                                language.code,
+                                                            );
+                                                            toast.success(
+                                                                "Code copied to clipboard",
+                                                            );
+                                                        }}
+                                                        aria-label="Copy code"
+                                                        variant="icon"
+                                                        size="icon"
+                                                    >
+                                                        <Copy />
+                                                    </HotkeyButton>
+                                                </div>
                                             </div>
                                         </Tabs.Content>
                                     {/each}
@@ -185,7 +190,7 @@ client.free()`,
                     <div
                         class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-8 xl:p-12 pb-0 md:mb-10">
+                        <div class="p-8 xl:p-12 pb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
@@ -199,7 +204,6 @@ client.free()`,
                             <div
                                 class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
                                     renderTopSmall(index)}
-                                id={`wi-${index}`}
                             >
                                 <img
                                     src={item.imageDark}
@@ -210,7 +214,6 @@ client.free()`,
                             <div
                                 class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
                                     renderTopSmall(index)}
-                                id={`wi-${index + 1000}`}
                             >
                                 <img
                                     src={item.image}
@@ -220,17 +223,15 @@ client.free()`,
                             </div>
                         </div>
                         <div
-                            class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
+                            class="h-full flex justify-end w-full hidden lg:block"
                         >
                             <div
-                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-100 group-hover:opacity-0 " +
-                                    renderTopLarge(index)}
+                                class={"w-full overflow-hidden flex items-center justify-center group-hover:hidden inline-flex "}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100 " +
-                                    renderTopLarge(index)}
+                                class={"w-full overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden "}
                             >
                                 <img src={item.image} alt="imagelight" />
                             </div>

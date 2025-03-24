@@ -48,9 +48,9 @@
                 </p>
             </div>
             <div class="p-9 mx-auto">
-                <p class="text-[16px] lg:text-[30px]">Industry</p>
+                <p class="text-[16px] lg:text-[30px]">Location</p>
                 <p class="dark:text-bw200 text-[14px] lg:text-[22px]">
-                    Logistics
+                    Europe
                 </p>
             </div>
         </div>

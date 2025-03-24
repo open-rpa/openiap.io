@@ -1,15 +1,15 @@
 <script lang="ts">
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import auditSvg from "$lib/images/home/security/audit.svg";
-    import auditDarkSvg from "$lib/images/home/security/auditdark.svg";
-    import datasecSvg from "$lib/images/home/security/datasec.svg";
-    import datasecDarkSvg from "$lib/images/home/security/datasecdark.svg";
-    import globeSvg from "$lib/images/home/security/globe.svg";
-    import globeDarkSvg from "$lib/images/home/security/globedark.svg";
-    import leastprivDarkSvg from "$lib/images/home/security/leastprivdark.svg";
-    import leastprivSvg from "$lib/images/home/security/leastpriv.svg";
-    import versionhistDarkSvg from "$lib/images/home/security/versionhistdark.svg";
-    import versionhistSvg from "$lib/images/home/security/versionhist.svg";
+    import auditSvg from "$lib/images/home/security/audittrailing.svg";
+    import auditDarkSvg from "$lib/images/home/security/audittrailing.svg";
+    import datasecSvg from "$lib/images/home/security/datasecurity_color.svg";
+    import datasecDarkSvg from "$lib/images/home/security/datasecurity_mono.svg";
+    import globeSvg from "$lib/images/home/security/scalability2_color.svg";
+    import globeDarkSvg from "$lib/images/home/security/scalability2_mono.svg";
+    import leastprivDarkSvg from "$lib/images/home/security/leastpriv_mono.svg";
+    import leastprivSvg from "$lib/images/home/security/leastpriv_color.svg";
+    import versionhistDarkSvg from "$lib/images/home/security/versionhistory_mono.svg";
+    import versionhistSvg from "$lib/images/home/security/versionhistory_mono.svg";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
@@ -67,18 +67,11 @@
     }
     function renderTopLarge(index: number) {
         let newClass = "";
-        if (index == 0) {
-            newClass = "right-0  lg:top-10 xl:top-0";
-        } else if (index == 1) {
-            newClass = "left-0 lg:top-16 xl:top-0 bottom-0";
-        } else if (index == 2) {
-            newClass = "left-0 right-0 lg:top-24 xl:top-0 xl:bottom-0";
-        } else if (index == 3) {
-            newClass = "left-0 right-0 lg:top-20 xl:top-10";
-        } else if (index == 4) {
-            newClass = "right-0 top-10 lg:top-12 xl:top-10";
+        if (index == 1) {
+            return (newClass = " items-start justify-start");
+        } else {
+            return newClass + " items-end justify-end ms-4";
         }
-        return newClass + "  ";
     }
 </script>
 
@@ -92,7 +85,7 @@
         <div class="mb-10">
             <div class="flex items-end justify-between gap-8">
                 <p
-                    class={"text-[24px] lg:text-[50px] font-semibold my-3.5" +
+                    class={"text-[24px] lg:text-[50px] font-semibold" +
                         gradienttext}
                 >
                     Security
@@ -107,7 +100,7 @@
             </p>
         </div>
 
-        <Carousel.Content class="gap-10">
+        <Carousel.Content class="gap-5">
             {#each carouselItem as item, index}
                 <Carousel.Item
                     class={index == 0
@@ -115,9 +108,9 @@
                         : "md:basis-1/2 lg:basis-1/3"}
                 >
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[500px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-8 xl:p-12 pb-0 md:mb-10">
+                        <div class="p-8 xl:p-12 pb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
@@ -129,9 +122,8 @@
                             class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
                         >
                             <div
-                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:hidden inline-flex " +
                                     renderTopSmall(index)}
-                                id={`wi-${index}`}
                             >
                                 <img
                                     src={item.imageDark}
@@ -140,9 +132,8 @@
                                 />
                             </div>
                             <div
-                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:group-hover:inline-flex hidden " +
                                     renderTopSmall(index)}
-                                id={`wi-${index + 1000}`}
                             >
                                 <img
                                     src={item.image}
@@ -152,16 +143,16 @@
                             </div>
                         </div>
                         <div
-                            class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
+                            class="h-full flex justify-end w-full hidden lg:block"
                         >
                             <div
-                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-100 group-hover:opacity-0 " +
+                                class={"w-full overflow-hidden flex group-hover:hidden inline-flex " +
                                     renderTopLarge(index)}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100 " +
+                                class={"w-full overflow-hidden flex group-hover:group-hover:inline-flex hidden " +
                                     renderTopLarge(index)}
                             >
                                 <img src={item.image} alt="imagelight" />
@@ -174,9 +165,9 @@
                 <div class="p-1"></div>
             </Carousel.Item>
         </Carousel.Content>
-        <!-- <div
-            class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-10
-   bg-gradient-to-l from-[#0D0D11] to-transparent z-10"
-        ></div> -->
+        <div
+            class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-36
+   bg-gradient-to-l from-[rgba(13,13,17,0.5)] to-transparent z-10"
+        ></div>
     </Carousel.Root>
 </div>

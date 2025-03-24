@@ -58,9 +58,9 @@
     });
 </script>
 
-<div class="h-auto">
-    <div class="text-bw500 text-center">Trusted by companies worldwide</div>
-    <div class="relative w-full overflow-hidden flex justify-center py-12">
+<div class="h-auto mb-48">
+    <div class="text-bw500 text-center text-[14px]">Trusted by companies worldwide</div>
+    <div class="relative w-full overflow-hidden flex justify-center py-6">
         <!-- The fade wrapper -->
         <div class="fade-mask lg:mx-32">
             <div

@@ -1,15 +1,15 @@
 <script lang="ts">
     import * as Carousel from "$lib/components/ui/carousel/index";
-    import insightDarkSvg from "$lib/images/home/workitemqueues/insightdark.svg";
-    import insightSvg from "$lib/images/home/workitemqueues/insights.svg";
-    import modSvg from "$lib/images/home/workitemqueues/mod.svg";
-    import modDarkSvg from "$lib/images/home/workitemqueues/moddark.svg";
-    import multilangSvg from "$lib/images/home/workitemqueues/multilang.svg";
-    import multilangDarkSvg from "$lib/images/home/workitemqueues/multilangdark.svg";
-    import quickretrySvg from "$lib/images/home/workitemqueues/quickretry.svg";
-    import quickretryDarkSvg from "$lib/images/home/workitemqueues/quickretrydark.svg";
-    import scaledarkSvg from "$lib/images/home/workitemqueues/scale.svg";
-    import scaledarkDarkSvg from "$lib/images/home/workitemqueues/scaledark.svg";
+    import insightDarkSvg from "$lib/images/home/workitemqueues/gaininsights_mono.svg";
+    import insightSvg from "$lib/images/home/workitemqueues/gaininsights_color.svg";
+    import modSvg from "$lib/images/home/workitemqueues/modulization_color.svg";
+    import modDarkSvg from "$lib/images/home/workitemqueues/modulization_mono.svg";
+    import multilangSvg from "$lib/images/home/workitemqueues/multi-lang_color.svg";
+    import multilangDarkSvg from "$lib/images/home/workitemqueues/multi-lang_mono.svg";
+    import quickretrySvg from "$lib/images/home/workitemqueues/quicklyretry_color.svg";
+    import quickretryDarkSvg from "$lib/images/home/workitemqueues/quicklyretry_mono.svg";
+    import scaledarkSvg from "$lib/images/home/workitemqueues/scalability_color.svg";
+    import scaledarkDarkSvg from "$lib/images/home/workitemqueues/scalability_mono.svg";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
@@ -25,9 +25,9 @@
         {
             title: "Scalability",
             // description:"Easily scale up code associated with each work item queue to handle any amount of workload.",
-            description:"Effortlessly scale up code for each workitem queue to manage workloads of any size.",
-           
-                
+            description:
+                "Effortlessly scale up code for each workitem queue to manage workloads of any size.",
+
             image: scaledarkSvg,
             imageDark: scaledarkDarkSvg,
         },
@@ -48,7 +48,8 @@
         {
             title: "Gain insights over your process",
             // description: "By splitting your process up into multiple units that work across multiple parts of the process, we can now easily gain better insights to how our process is performing and where there are bottle-necks.",
-            description: " By dividing your process into multiple units that operate across different stages, we can easily gain deeper insights into its performance and identify bottlenecks more effectively",
+            description:
+                " By dividing your process into multiple units that operate across different stages, we can easily gain deeper insights into its performance and identify bottlenecks more effectively",
             image: insightSvg,
             imageDark: insightDarkSvg,
         },
@@ -71,17 +72,10 @@
     function renderTopLarge(index: number) {
         let newClass = "";
         if (index == 0) {
-            newClass = "lg:top-10 xl:top-0";
-        } else if (index == 1) {
-            newClass = "lg:top-10 xl:top-0 bottom-0";
-        } else if (index == 2) {
-            newClass = "lg:top-10 xl:top-0 xl:bottom-0";
-        } else if (index == 3) {
-            newClass = "lg:top-10  xl:top-0 xl:bottom-0";
-        } else if (index == 4) {
-            newClass = "lg:top-14  xl:top-10 xl:bottom-0";
+            return (newClass = " items-end justify-end ");
+        } else {
+            return newClass + " items-center justify-center";
         }
-        return newClass + " left-0 right-0  ";
     }
 </script>
 
@@ -95,7 +89,7 @@
         <div class="mb-10">
             <div class="flex items-end justify-between gap-8">
                 <p
-                    class={"text-[24px] lg:text-[50px] font-semibold my-3.5" +
+                    class={"text-[24px] lg:text-[50px] font-semibold" +
                         gradienttext}
                 >
                     Workitem Queues
@@ -111,7 +105,7 @@
                 task gets lost.
             </p>
         </div>
-        <Carousel.Content class="gap-10">
+        <Carousel.Content class="gap-5">
             {#each carouselItem as item, index}
                 <Carousel.Item
                     class={index == 0
@@ -119,9 +113,9 @@
                         : "md:basis-1/2 lg:basis-1/3"}
                 >
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[400px] xl:h-[480px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-8 xl:p-12 pb-0 md:mb-10">
+                        <div class="p-8 xl:p-12 pb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
@@ -133,9 +127,8 @@
                             class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
                         >
                             <div
-                                class={"w-full h-[300px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:hidden inline-flex " +
                                     renderTopSmall(index)}
-                                id={`wi-${index}`}
                             >
                                 <img
                                     src={item.imageDark}
@@ -144,9 +137,8 @@
                                 />
                             </div>
                             <div
-                                class={"w-full h-[300px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
+                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:group-hover:inline-flex hidden " +
                                     renderTopSmall(index)}
-                                id={`wi-${index + 1000}`}
                             >
                                 <img
                                     src={item.image}
@@ -156,16 +148,16 @@
                             </div>
                         </div>
                         <div
-                            class="lg:ms-12 h-full flex justify-end w-full hidden lg:block"
+                            class="h-full flex justify-end w-full hidden lg:block"
                         >
                             <div
-                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-100 group-hover:opacity-0 " +
+                                class={"w-full overflow-hidden flex group-hover:hidden inline-flex " +
                                     renderTopLarge(index)}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100 " +
+                                class={"w-full overflow-hidden flex group-hover:group-hover:inline-flex hidden " +
                                     renderTopLarge(index)}
                             >
                                 <img src={item.image} alt="imagelight" />
