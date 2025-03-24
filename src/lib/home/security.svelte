@@ -38,7 +38,7 @@
         {
             title: "Least privileges",
             description:
-                "The platform incentives using least privileges and avoid using service accounts everywhere. This avoids the potential of leaking data to the wrong users by always running in the context of the user that initiated the request.",
+                "The platform encourages the use of least privileges over service accounts, minimizing the risk of data leaks. By running  within the context of the user who initiated the request, access is tightly controlled and more secure",
             image: leastprivSvg,
             imageDark: leastprivDarkSvg,
         },
@@ -82,7 +82,9 @@
     }
 </script>
 
-<div class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:px-12 xl:mb-24 xl:flex xl:justify-center">
+<div
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:px-12 xl:mb-24 xl:flex xl:justify-center"
+>
     <Carousel.Root
         opts={{
             align: "start",

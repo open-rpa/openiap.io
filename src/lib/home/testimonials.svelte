@@ -1,6 +1,6 @@
 <script>
     import greenlogoSvg from "$lib/images/home/testimonials/greenlogo.svg";
-    import knlogoSvg from "$lib/images/home/testimonials/Kühne_Nagel_logo.svg";
+    import knlogoSvg from "$lib/images/home/testimonials/kn_logo.svg";
     import greenrectSvg from "$lib/images/home/testimonials/greenRectangle.svg";
     import synergerplogoSvg from "$lib/images/home/testimonials/synergerp.svg";
 
@@ -9,7 +9,7 @@
     let testimonials = [
         {
             logo: knlogoSvg,
-            name: "Felix",
+            name: "Felix Hassine",
             position: "Global Head of indirect tax",
             testimonial:
                 "This is the perfect tool that we need in order to create complex invoicing scenarios. Today it has become the pillar of how we handle invoicing, globally.",
@@ -22,9 +22,9 @@
                 "OpenCore is light on resources, extremely fast and incredibly easy to scale when required. ",
         },
         {
-            logo: synergerplogoSvg,
-            name: "Felix Hassine ",
-            position: "Head of ITS & HCM",
+            logo: "",
+            name: "test ",
+            position: "test",
             testimonial:
                 "OpenCore is light on resources, extremely fast and incredibly easy to scale when required.",
         },
@@ -32,7 +32,7 @@
 </script>
 
 <div
-    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:px-32 xl:mb-24 xl:flex xl:justify-center"
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 xl:flex xl:justify-center"
 >
     <div class="xl:w-[1700px]">
         <div class="mb-16">
@@ -67,7 +67,7 @@
                                 alt="greenrectSvg"
                                 class="mb-4"
                             />
-                            <p class="text-bw50">Felix</p>
+                            <p class="text-bw50">{item.name}</p>
                             <p class="text-[#4F8D7D] font-bold">
                                 {item.position}
                             </p>
