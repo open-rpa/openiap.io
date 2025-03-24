@@ -4,12 +4,13 @@
     import logo3 from "$lib/images/home/companylogos/avag.svg";
     import logo4 from "$lib/images/home/companylogos/sloif.svg";
     import logo5 from "$lib/images/home/companylogos/synergy.svg";
+    import logo6 from "$lib/images/home/companylogos/bpatech.svg";
 
     import { onMount } from "svelte";
 
     let scrollContainer: any;
 
-    const logos = [logo1, logo2, logo3, logo4, logo5];
+    const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
     const multipliedLogos = [
         ...logos,
         ...logos,
