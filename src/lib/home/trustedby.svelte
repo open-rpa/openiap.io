@@ -1,12 +1,22 @@
 <script lang="ts">
-    import logo2 from "$lib/images/testimonials/nagel.png";
-    import logo3 from "$lib/images/testimonials/b2bpresales.png";
+    import logo1 from "$lib/images/home/companylogos/alphatrods.svg";
+    import logo2 from "$lib/images/home/companylogos/arctic.svg";
+    import logo3 from "$lib/images/home/companylogos/avag.svg";
+    import logo4 from "$lib/images/home/companylogos/sloif.svg";
+    import logo5 from "$lib/images/home/companylogos/synergy.svg";
+
     import { onMount } from "svelte";
 
     let scrollContainer: any;
 
-    const logos = [logo3, logo2];
+    const logos = [logo1, logo2, logo3, logo4, logo5];
     const multipliedLogos = [
+        ...logos,
+        ...logos,
+        ...logos,
+        ...logos,
+        ...logos,
+        ...logos,
         ...logos,
         ...logos,
         ...logos,
