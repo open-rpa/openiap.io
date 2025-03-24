@@ -9,6 +9,7 @@
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton/index.js";
     import { Check } from "lucide-svelte";
     import { CustomInput } from "$lib/custominput/index.js";
+    import Calendlywidget from "$lib/calendlywidget/calendlywidget.svelte";
 
     let { data } = $props();
 
@@ -65,10 +66,23 @@
     const { form: formData, enhance, message } = form;
 
     $effect(() => {
-        const script = document.createElement("script");
-        script.src = "https://assets.calendly.com/assets/external/widget.js";
-        script.async = true;
-        document.body.appendChild(script);
+        // const script = document.createElement("script");
+        // script.src = "https://assets.calendly.com/assets/external/widget.js";
+        // script.async = true;
+        // document.body.appendChild(script);
+
+        // const interval = setInterval(() => {
+        //     Calendly.initInlineWidget({
+        //         url: "https://calendly.com/openiap/30min?hide_gdpr_banner=1&background_color=0f1013&text_color=f8fafc",
+        //         parentElement: document.getElementById("calendly-embed"),
+        //     });
+        //     var calendlyEmbed = document.getElementById("calendly-embed");
+        //     calendlyEmbed.setAttribute(
+        //         "style",
+        //         "background-color: #00000000;min-width:100%;height:960px;",
+        //     );
+        //     clearInterval(interval);
+        // }, 100);
 
         if (data.type == "meet") {
             console.log(data.type);
@@ -95,11 +109,19 @@
             window.scrollTo(0, 0);
         }
         return () => {
-            document.body.removeChild(script);
+            // document.body.removeChild(script);
             // observer.disconnect();
         };
     });
 </script>
+
+<svelte:head>
+    <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        defer
+    ></script>
+</svelte:head>
 
 <div>
     <section
@@ -217,9 +239,9 @@
         <SuperDebug data={formData} theme="vscode" />
     {/if}
 
-    <section class="py-20 px-4">
+    <section class="py-20 px-4 text-white">
         <div class="container mx-auto text-center">
-            <div class="max-w-3xl mx-auto scroll-fade-in">
+            <div class="max-w-3xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">
                     Reach out to Learn More
                 </h2>
@@ -245,13 +267,19 @@
         </div>
     </section>
 
-    <section class="min-h-[80vh]" id="meetinglink" bind:this={sectionRef}>
+    <section id="meetinglink" bind:this={sectionRef}>
+        <Calendlywidget />
+    </section>
+
+    <!-- <section class="min-h-[80vh]" id="meetinglink" bind:this={sectionRef}>
         <div
             class="calendly-inline-widget"
             data-url="https://calendly.com/openiap/30min?hide_gdpr_banner=1&background_color=0f1013&text_color=f8fafc"
             data-resize="true"
         ></div>
     </section>
+     -->
+    <!-- <div id="calendly-embed" style="min-width:100%;height:1200px;"></div> -->
 </div>
 
 <HotkeyButton
@@ -261,3 +289,10 @@
     data-shortcut={"ctrl+d,meta+d"}
     onclick={() => (showdebug = !showdebug)}
 />
+
+<style>
+    :global(.custom-wrapper :is(body, .body-class)) {
+        background-color: #0f1013;
+        color: white;
+    }
+</style>
