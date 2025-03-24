@@ -55,7 +55,7 @@
 
 <div class="h-auto">
     <div class="text-bw500 text-center">Trusted by companies worldwide</div>
-    <div class="relative w-full overflow-hidden flex justify-center py-6">
+    <div class="relative w-full overflow-hidden flex justify-center py-12">
         <!-- The fade wrapper -->
         <div class="fade-mask lg:mx-32">
             <div

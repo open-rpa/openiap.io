@@ -9,7 +9,7 @@
 </script>
 
 <ModeWatcher track={false} defaultMode={"dark"} />
-<div class="min-h-screen bg-background flex flex-col">
+<div class="min-h-screen bg-background flex flex-col font-custom">
 	<Header />
 	<main class="flex-grow">
 		{@render children()}

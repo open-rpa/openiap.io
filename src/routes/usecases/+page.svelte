@@ -206,8 +206,8 @@
                 </h1>
             </div>
             <p class="mb-10">Try OpenCore now for free</p>
-            <HotkeyButton variant="success" onclick={() => {}}>
-                Download OpenCore
+            <HotkeyButton variant="success" onclick={() => window.open("https://app.openiap.io/ui/#/Login", "_blank")}>
+                Try OpenCore
             </HotkeyButton>
         </div>
     </div>

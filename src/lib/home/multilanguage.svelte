@@ -91,10 +91,10 @@ client.free()`,
         }}
         class="lg:max-w-[1700px]"
     >
-        <div class="mb-12">
+        <div class="mb-10">
             <div class="flex items-end justify-between gap-8">
                 <p
-                    class={"text-[30px] lg:text-[64px] font-semibold my-6" +
+                    class={"text-[24px] lg:text-[50px] font-semibold my-3.5" +
                         gradienttext}
                 >
                     Multi-language support
@@ -104,14 +104,13 @@ client.free()`,
                     <Carousel.Next />
                 </div>
             </div>
-            <p class="text-bw300 font-semibold lg:text-xl">
+            <p class="text-bw300 font-semibold lg:text-[16px]">
                 OpenCore allows different types of developers to work together
                 in one common framework.
             </p>
         </div>
-        <Carousel.Content class="fade-mask-rights">
+        <Carousel.Content class="gap-10">
             <Carousel.Item class="lg:basis-3/5">
-                <div class="p-1">
                     <div
                         class="border-2 rounded-[20px] border-bw500/70 h-[500px] lg:h-[440px] xl:h-[514px] overflow-hidden grayscale-0 group"
                     >
@@ -156,7 +155,7 @@ client.free()`,
                                                     class="text-bw300 flex justify-between"
                                                 >
                                                     <pre
-                                                        class="overflow-hidden w-64 md:w-96 xl:w-full">
+                                                        class="overflow-hidden w-64 md:w-64">
 <code>{language.code}</code>
                                             </pre>
                                                     <HotkeyButton
@@ -182,7 +181,6 @@ client.free()`,
                             </div>
                         </div>
                     </div>
-                </div>
             </Carousel.Item>
 
             {#each carouselItem as item, index}
@@ -247,9 +245,9 @@ client.free()`,
                 <div class="p-1"></div>
             </Carousel.Item>
         </Carousel.Content>
-        <div
+        <!-- <div
             class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-10
 bg-gradient-to-l from-[#0D0D11] to-transparent z-10"
-        ></div>
+        ></div> -->
     </Carousel.Root>
 </div>

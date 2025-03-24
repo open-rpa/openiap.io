@@ -29,16 +29,16 @@
             class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in"
         >
             <HotkeyButton
-                aria-label="Download OpenRPA"
+                aria-label="Try OpenCore"
                 variant="success"
                 onclick={() =>
                     window.open(
-                        "https://github.com/open-rpa/openrpa/releases/latest/download/OpenRPA.msi",
+                        "https://app.openiap.io/ui/#/Login",
                         "_blank",
                         "noopener,noreferrer",
                     )}
             >
-                Download OpenRPA
+                Try OpenCore
             </HotkeyButton>
             <HotkeyButton
                 aria-label="Get Started"

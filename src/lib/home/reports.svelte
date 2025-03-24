@@ -62,10 +62,10 @@
         }}
         class="lg:max-w-[1700px]"
     >
-        <div class="mb-12">
+        <div class="mb-10">
             <div class="flex items-end justify-between gap-8">
                 <p
-                    class={"text-[30px] lg:text-[64px] font-semibold my-6" +
+                    class={"text-[24px] lg:text-[50px] font-semibold my-3.5" +
                         gradienttext}
                 >
                     Reports
@@ -75,11 +75,11 @@
                     <Carousel.Next />
                 </div>
             </div>
-            <p class="text-bw300 font-semibold lg:text-xl">
+            <p class="text-bw300 font-semibold lg:text-[16px]">
                 Easily create dashboards and reports on user data
             </p>
         </div>
-        <Carousel.Content>
+        <Carousel.Content class="gap-10">
             {#each carouselItem as item, index}
                 <Carousel.Item
                     class={index == 0
@@ -146,9 +146,9 @@
                 <div class="p-1"></div>
             </Carousel.Item>
         </Carousel.Content>
-        <div
+        <!-- <div
             class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-10
    bg-gradient-to-l from-[#0D0D11] to-transparent z-10"
-        ></div>
+        ></div> -->
     </Carousel.Root>
 </div>
