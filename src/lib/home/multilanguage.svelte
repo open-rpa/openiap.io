@@ -84,7 +84,7 @@ client.free()`,
     }
 </script>
 
-<div class="mx-6 md:mx-10 lg:mx-20 xl:mx-28 xl:mb-24 xl:flex xl:justify-center">
+<div class="mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center">
     <Carousel.Root
         opts={{
             align: "start",
@@ -111,82 +111,79 @@ client.free()`,
         </div>
         <Carousel.Content class="gap-10">
             <Carousel.Item class="lg:basis-3/5">
+                <div
+                    class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
+                >
+                    <div class="pt-8 px-8 pb-2 xl:pt-12 xl:px-12 xl:pb-8 mb-2 md:mb-4">
+                        <p class="text-xl font-medium mb-2 text-bw50">
+                            Choose your favourite coding language
+                        </p>
+                        <p class="text-sm">
+                            Leverage OpenRPA and Node-RED to build efficient,
+                            low-code automation solutions for RPA and API
+                            integrations—streamlining workflows with minimal
+                            coding effort.
+                        </p>
+                    </div>
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[500px] lg:h-[440px] xl:h-[514px] overflow-hidden grayscale-0 group"
+                        class="ms-4 sm:ms-8 md:ms-10 lg:ms-8 xl:ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
                     >
-                        <div class="p-8 xl:p-12 pb-0 mb-2 md:mb-4">
-                            <p class="text-xl font-medium mb-2 text-bw50">
-                                Choose your favourite coding language
-                            </p>
-                            <p class="text-sm">
-                                Leverage OpenRPA and Node-RED to build
-                                efficient, low-code automation solutions for RPA
-                                and API integrations—streamlining workflows with
-                                minimal coding effort.
-                            </p>
-                        </div>
                         <div
-                            class="ms-8 md:ms-10 lg:ms-8 xl:ms-12 h-[387px] border-2 rounded-[20px] border-bw500/70 w-full"
+                            class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
                         >
-                            <div
-                                class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
-                            >
-                                <Globe class="h-4 w-4" />
-                            </div>
-                            <div class="m-3 pt-3 dark:bg-[#1D1F22] h-full">
-                                <Tabs.Root value="1" class="ms-5">
-                                    <div></div>
-                                    <Tabs.List
-                                        class="h-fit md:block w-full w-fit bg-bw200 dark:bg-darkagenttab rounded-[5px] p-1 mb-2 lg:mb-0 text-bw50 font-normal"
-                                    >
-                                        {#each languages as language, index}
-                                            <Tabs.Trigger value={`${index + 1}`}
-                                                >{language.name}</Tabs.Trigger
+                            <Globe class="h-4 w-4" />
+                        </div>
+                        <div class="m-3 pt-3 rounded-[5px] dark:bg-[#1D1F22] h-full">
+                            <Tabs.Root value="1" class="ms-5">
+                                <div></div>
+                                <Tabs.List
+                                    class="h-fit md:block w-full w-fit bg-bw200 dark:bg-darkagenttab rounded-[5px] p-1 mb-2 lg:mb-0 text-bw50 font-normal"
+                                >
+                                    {#each languages as language, index}
+                                        <Tabs.Trigger value={`${index + 1}`} class=" text-xs sm:text-base"
+                                            >{language.name}</Tabs.Trigger
+                                        >
+                                    {/each}
+                                </Tabs.List>
+                                <div>
+                                    {#each languages as language, index}
+                                        <Tabs.Content value={`${index + 1}`}>
+                                            <div
+                                                class="text-bw300 flex justify-between text-xs sm:text-sm"
                                             >
-                                        {/each}
-                                    </Tabs.List>
-                                    <div class="mt-5 w-fit">
-                                        {#each languages as language, index}
-                                            <Tabs.Content
-                                                value={`${index + 1}`}
-                                                class=""
-                                            >
-                                                <div
-                                                    class="text-bw300 flex justify-between"
+                                                <pre class="w-64">
+{language.code.trim()}
+ </pre>
+                                                <HotkeyButton
+                                                    class="absolute top-4/4 md:top-1/2 lg:top-60 xl:top-4/5 right-5"
+                                                    onclick={() => {
+                                                        navigator.clipboard.writeText(
+                                                            language.code,
+                                                        );
+                                                        toast.success(
+                                                            "Code copied to clipboard",
+                                                        );
+                                                    }}
+                                                    aria-label="Copy code"
+                                                    variant="icon"
+                                                    size="icon"
                                                 >
-                                                    <pre
-                                                        class="overflow-hidden w-64 md:w-64">
-<code>{language.code}</code>
-                                            </pre>
-                                                    <HotkeyButton
-                                                        onclick={() => {
-                                                            navigator.clipboard.writeText(
-                                                                language.code,
-                                                            );
-                                                            toast.success(
-                                                                "Code copied to clipboard",
-                                                            );
-                                                        }}
-                                                        aria-label="Copy code"
-                                                        variant="icon"
-                                                        size="icon"
-                                                    >
-                                                        <Copy />
-                                                    </HotkeyButton>
-                                                </div>
-                                            </Tabs.Content>
-                                        {/each}
-                                    </div>
-                                </Tabs.Root>
-                            </div>
+                                                    <Copy />
+                                                </HotkeyButton>
+                                            </div>
+                                        </Tabs.Content>
+                                    {/each}
+                                </div>
+                            </Tabs.Root>
                         </div>
                     </div>
+                </div>
             </Carousel.Item>
 
             {#each carouselItem as item, index}
                 <Carousel.Item class={"md:basis-1/2 lg:basis-1/3"}>
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[500px] lg:h-[440px] xl:h-[514px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-8 xl:p-12 pb-0 md:mb-10">
                             <p class="text-xl font-medium mb-2 text-bw50">
