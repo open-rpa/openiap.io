@@ -93,8 +93,7 @@
                 </div>
             </div>
             <p class="text-bw300 font-semibold lg:text-[14px]">
-                Access enterprise-grade security that meets the most demanding
-                standards
+                Enterprise-grade security that meets the most demanding standards
             </p>
         </div>
 
