@@ -11,7 +11,7 @@
     });
 </script>
 
-<div class="h-screen xl:pb-16">
+<div class="xl:pb-16">
     <div
         class="xl:absolute xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center"
     >
