@@ -19,7 +19,7 @@
         },
         {
             title: "Create your own dashboards",
-            description: "If you’re looking for specific.",
+            description: "Create personalised dashboards to display the data that matters most to you.",
             image: createdashSvg,
             imageDark: createdashDarkSvg,
         },
