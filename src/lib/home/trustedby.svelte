@@ -1,18 +1,18 @@
 <script lang="ts">
     import logo1 from "$lib/images/home/companylogos/alphatrods.svg";
-    // import logo2 from "$lib/images/home/companylogos/arctic.svg";
     import logo2 from "$lib/images/home/companylogos/kn_logo.svg";
     // import logo3 from "$lib/images/home/companylogos/avag.svg";
     import logo3 from "$lib/images/home/companylogos/aiot.svg";
     import logo4 from "$lib/images/home/companylogos/sloif.svg";
     import logo5 from "$lib/images/home/companylogos/synergy.svg";
     import logo6 from "$lib/images/home/companylogos/bpatech.svg";
+    import logo7 from "$lib/images/home/companylogos/arctic.svg";
 
     import { onMount } from "svelte";
 
     let scrollContainer: any;
 
-    const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
+    const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
     const multipliedLogos = [
         ...logos,
         ...logos,
@@ -72,11 +72,7 @@
                 class="scroll-container flex items-center gap-20 overflow-x-hidden no-scrollbar px-12 py-2 whitespace-nowrap"
             >
                 {#each multipliedLogos as logo}
-                    <img
-                        src={logo}
-                        alt="Logo"
-                        class="h-8"
-                    />
+                    <img src={logo} alt="Logo" class="h-8" />
                 {/each}
             </div>
         </div>
@@ -87,7 +83,6 @@
     .fade-mask {
         position: relative;
         width: 80%;
-
     }
 
     .fade-mask::before,

@@ -18,7 +18,7 @@ const config: Config = {
 			colors: {
 				customGreen: "#32E38B",
 				cardbgdark: "#0D0D11",
-
+				greentick: "#589F8B",
 				test: '#EF4444',
 				bw50: "#FDFDFD",
 				bw100: "#EEEFF1",

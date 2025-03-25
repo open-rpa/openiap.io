@@ -1,7 +1,8 @@
 <script>
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
-    import hero from "$lib/images/home/hero.svg";
-
+    import hero1 from "$lib/images/home/hero.svg";
+    import hero from "$lib/images/home/horizonpng.png";
+    
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 

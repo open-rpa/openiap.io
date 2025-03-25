@@ -4,6 +4,10 @@
   import * as Card from "$lib/components/ui/card";
   import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
   import { Check, X } from "lucide-svelte";
+  import * as Tabs from "$lib/components/ui/tabs/index";
+  import Separator from "$lib/components/ui/separator/separator.svelte";
+  import border_bottom from "$lib/images/border_bottom.svg";
+  import border_bottom_large from "$lib/images/border_bottom_large.svg";
 
   let screen = $state(1);
   $effect(() => {
@@ -25,204 +29,87 @@
 
     return () => observer.disconnect();
   });
+
+  let gradienttext =
+    " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
 
-<section class="pt-24 md:min-h-screen px-4 gradient-bg">
+<section class="pt-20 md:min-h-screen px-4 gradient-bg">
   <div class="container mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center animate-fade-in">
-      Flexible Pricing Tailored To Your Needs
-    </h2>
-    <p
-      class="text-xl text-gray-400 my-6 text-center max-w-2xl mx-auto animate-fade-in"
-    >
-      Explore our different pricing plans
-    </p>
-
-    <div
-      class="flex space-x-4 justify-center items-center mb-8 animate-fade-in"
-    >
-      <div
-        class={`p-2 rounded cursor-pointer hover:bg-customGreen hover:text-black ${screen === 1 && "bg-customGreen text-black"} `}
-        onclick={() => (screen = 1)}
-      >
-        Licenses
-      </div>
-      <div
-        class={`p-2 rounded cursor-pointer hover:bg-customGreen hover:text-black ${screen === 2 && "bg-customGreen text-black"} `}
-        onclick={() => (screen = 2)}
-      >
-        Cloud
-      </div>
-      <div
-        class={`p-2 rounded cursor-pointer  hover:bg-customGreen hover:text-black ${screen === 3 && "bg-customGreen text-black"} `}
-        onclick={() => (screen = 3)}
-      >
-        Consulting
+    <div class="text-center">
+      <div class="mb-10">
+        <div class="text-center">
+          <p class={"text-[24px] lg:text-[50px] font-semibold" + gradienttext}>
+            Plans and Pricing
+          </p>
+        </div>
+        <p class="text-bw300 font-semibold lg:text-[14px]">
+          Explore our different pricing plans tailored to your needs
+        </p>
       </div>
     </div>
 
-    {#if screen == 1}
-      <div
-        class="grid grid-cols-1 md:grid-cols-6 gap-4 mx-auto animate-fade-in"
-      >
-        <Card.Root
-          class="md:col-span-3 lg:col-start-2 lg:col-span-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
+    <Tabs.Root value="3">
+      <div class="flex justify-center mb-10">
+        <Tabs.List
+          class="bg-bw700 dark:bg-bw700 rounded-[5px] p-1 lg:mb-0 text-bw50 font-normal flex justify-center w-fit rounded-[10px]"
         >
-          <Card.Header class="mb-0">
-            <Card.Title>Open Source</Card.Title>
-            <Card.Description>Perfect for getting started</Card.Description>
-            <Card.Content class="p-0">
-              <div class="grid grid-cols-1">
-                <div class="m-1">
-                  <p class="flex items-center my-2">Control and Scalability</p>
-                  <ul class="space-y-2 text-sm">
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500 " />
-                      Limited access to features
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="m-1">
-                  <p class="flex items-center my-2">Support</p>
-                  <ul class="space-y-2 text-sm">
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500" />
-                      Community support
-                    </li>
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500" />
-                      Basic tutorials
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </Card.Content>
-          </Card.Header>
-          <HotkeyButton
-            onclick={() =>
-              window.open(
-                "https://docs.openiap.io/",
-                "_blank",
-                "noopener,noreferrer",
-              )}
-            class="m-6 mt-0">Get Started</HotkeyButton
+          <Tabs.Trigger value="1" class=" text-xs sm:text-base"
+            >Licenses</Tabs.Trigger
           >
-        </Card.Root>
-
-        <Card.Root
-          class="md:col-span-3 lg:col-start-4 lg:col-span-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
-        >
-          <Card.Header>
-            <Card.Title>Enterprise</Card.Title>
-            <Card.Description>Custom solutions</Card.Description>
-            <Card.Content class="p-0">
-              <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="m-1">
-                  <p class="flex items-center my-2">Control</p>
-                  <ul class="space-y-2 text-sm">
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500 " />
-                      Access to OpenAI's APIs
-                    </li>
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500" />
-                      Reporting
-                    </li>
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500" />
-                      Performance Monitoring
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="m-1">
-                  <p class="flex items-center my-2">Scalability</p>
-                  <ul class="space-y-2 text-sm">
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500 " />
-                      Custom AI Chatbot
-                    </li>
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500 " />
-                      Kubernetes
-                    </li>
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500 " />
-                      Git
-                    </li>
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500 " />
-                      Grafana
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="m-1">
-                  <p class="flex items-center my-2">Support</p>
-                  <ul class="space-y-2 text-sm">
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500" />
-                      SLA
-                    </li>
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500 " />
-                      Priority Support
-                    </li>
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500 " />
-                      Prod Dev Roadmap
-                    </li>
-                    <li class="flex items-center">
-                      <Check class="mr-2 h-4 w-4 text-green-500 " />
-                      Access to Dev Team
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </Card.Content>
-          </Card.Header>
-          <HotkeyButton
-            onclick={() => goto(base + "/contact/meet")}
-            class="m-6 mt-0">Contact Sales</HotkeyButton
+          <Tabs.Trigger value="2" class=" text-xs sm:text-base"
+            >Cloud</Tabs.Trigger
           >
-        </Card.Root>
+          <Tabs.Trigger value="3" class=" text-xs sm:text-base"
+            >Consulting</Tabs.Trigger
+          >
+        </Tabs.List>
       </div>
-    {/if}
+      <Tabs.Content value="1">
+        <div class="flex justify-center space-x-[40px] animate-fade-in">
+          <Card.Root
+            class="md:col-span-3 lg:col-start-2 lg:col-span-2  transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-[510px] h-[600px] px-[26px] py-1.5 border-bw500/70"
+          >
+            <Card.Header class="mb-0">
+              <Card.Title class="font-normal mb-2">Open Source</Card.Title>
+              <Card.Description>Perfect for getting started</Card.Description>
+              <div class="pt-5 pb-[30px]">
+                <Separator />
+              </div>
+              <Card.Content class="p-0">
+                <div class="grid grid-cols-1 space-x-4">
+                  <div class="m-1 mb-10">
+                    <p class="flex items-center my-2 text-bw50 text-[14px]">
+                      Control and Scalability
+                    </p>
+                    <ul class="space-y-2 text-sm">
+                      <li class="flex items-center">
+                        <Check
+                          class="mr-2 h-4 w-4 text-greentick text-[14px]"
+                        />
+                        Limited access to features
+                      </li>
+                    </ul>
+                  </div>
 
-    {#if screen == 2}
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto animate-fade-in"
-      >
-        <Card.Root
-          class=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
-        >
-          <Card.Header>
-            <Card.Title>Open Source</Card.Title>
-            <Card.Description>Perfect for getting started</Card.Description>
-          </Card.Header>
-
-          <div class="flex p-6 items-end">
-            <span class="text-3xl font-bold text-center"
-              >0 <span class="text-2xl">USD</span></span
-            >
-          </div>
-
-          <Card.Content>
-            <ul class="space-y-4">
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Runtime limited to 4 hours
-              </li>
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Limited disk space (25 MB)
-              </li>
-              <li class="flex items-center">
-                <X class="mr-2 h-4 w-4 text-red-500" />
-                Dedicated Server
-              </li>
-            </ul>
+                  <div class="m-1">
+                    <p class="flex items-center my-2 text-bw50 text-[14px]">
+                      Support
+                    </p>
+                    <ul class="space-y-2 text-sm text-[14px]">
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick" />
+                        Community support
+                      </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick" />
+                        Basic tutorials
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </Card.Content>
+            </Card.Header>
             <HotkeyButton
               onclick={() =>
                 window.open(
@@ -230,226 +117,384 @@
                   "_blank",
                   "noopener,noreferrer",
                 )}
-              class="w-full mt-6">Get Started</HotkeyButton
+              class="m-6 mt-0">Get Started</HotkeyButton
             >
-          </Card.Content>
-        </Card.Root>
+          </Card.Root>
 
-        <Card.Root
-          class=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
-        >
-          <Card.Header>
-            <Card.Title>Cloud Basic</Card.Title>
-            <Card.Description
-              >Perfect for Beginners and Small Projects</Card.Description
-            >
-          </Card.Header>
-          <div class="flex px-6 items-end">
-            <span class="text-3xl font-bold text-center"
-              ><span class="text-2xl">DKK {" "}</span>277</span
-            >
-            <span
-              class="text-sm font-bold text-center justify-end text-gray-400"
-              >/Month</span
-            >
-          </div>
-          <div class="flex px-6 pb-6 items-end">
-            <span class="text-base font-bold text-center text-gray-400"
-              >Approx. 39 <span class="text-base text-gray-400">USD</span></span
-            >
-          </div>
-          <Card.Content>
-            <ul class="space-y-4">
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Run your agents 24/7
-              </li>
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                256 MB RAM
-              </li>
-              <li class="flex items-center">
-                <X class="mr-2 h-4 w-4 text-red-500" />
-                Dedicated Server
-              </li>
-            </ul>
+          <Card.Root
+            class="md:col-span-3 lg:col-start-4 lg:col-span-2 transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-[510px] px-[26px] py-1.5 border-bw500/70"
+          >
+            <Card.Header>
+              <Card.Title class="font-normal mb-2">Enterprise</Card.Title>
+              <Card.Description>Customized solutions</Card.Description>
+              <div class="pt-5 pb-[30px]">
+                <Separator />
+              </div>
+              <Card.Content class="p-0">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                  <div class="m-1">
+                    <p class="flex items-center my-2 text-bw50 text-[14px]">
+                      Control
+                    </p>
+                    <ul class="space-y-2 text-sm text-[14px]">
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick " />
+                        Access to OpenAI's APIs
+                      </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick" />
+                        Reporting
+                      </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick" />
+                        Performance Monitoring
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="m-1">
+                    <p class="flex items-center my-2 text-bw50 text-[14px]">
+                      Scalability
+                    </p>
+                    <ul class="space-y-2 text-sm text-[14px]">
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick " />
+                        Custom AI Chatbot
+                      </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick " />
+                        Kubernetes
+                      </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick " />
+                        Git
+                      </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick " />
+                        Grafana
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="m-1">
+                    <p class="flex items-center my-2 text-bw50 text-[14px]">
+                      Support
+                    </p>
+                    <ul class="space-y-2 text-sm text-[14px]">
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick" />
+                        SLA
+                      </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick " />
+                        Priority Support
+                      </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick " />
+                        Prod Dev Roadmap
+                      </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick " />
+                        Access to Dev Team
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </Card.Content>
+            </Card.Header>
             <HotkeyButton
-              onclick={() =>
-                window.open(
-                  "https://app.openiap.io/ui/#/Customer",
-                  "_blank",
-                  "noopener,noreferrer",
-                )}
-              class="w-full mt-6">Subscribe Now</HotkeyButton
+              variant="success"
+              onclick={() => goto(base + "/contact/meet")}
+              class="m-6 mt-0">Contact Sales</HotkeyButton
             >
-          </Card.Content>
-        </Card.Root>
+          </Card.Root>
+        </div>
+      </Tabs.Content>
+      <Tabs.Content value="2">
+        <div class="flex justify-center space-x-4 animate-fade-in">
+          <Card.Root
+            class=" hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-[335px] px-[26px] py-1.5 border-bw500/70"
+          >
+            <Card.Header>
+              <Card.Title class="font-normal">Open Source</Card.Title>
+              <Card.Description>Perfect for getting started</Card.Description>
+            </Card.Header>
 
-        <Card.Root
-          class="scale-105 transition-all duration-300 hover:shadow-lg border-customGreen flex flex-col justify-between"
-        >
-          <Card.Header>
-            <Card.Title>Cloud Premium</Card.Title>
-            <Card.Description>For great value over performance</Card.Description
-            >
-          </Card.Header>
-          <div class="flex px-6 items-end">
-            <span class="text-3xl font-bold text-center"
-              ><span class="text-2xl">DKK {" "}</span>915
-            </span>
-            <span
-              class="text-sm font-bold text-center justify-end text-gray-400"
-              >/Month</span
-            >
-          </div>
-          <div class="flex px-6 pb-6 items-end">
-            <span class="text-base font-bold text-center text-gray-400"
-              >Approx. 129 <span class="text-base text-gray-400">USD</span
-              ></span
-            >
-          </div>
-          <Card.Content>
-            <ul class="space-y-4">
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Run your agents 24/7
-              </li>
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                1 GB RAM
-              </li>
-              <li class="flex items-center">
-                <X class="mr-2 h-4 w-4 text-red-500" />
-                Dedicated Server
-              </li>
-            </ul>
-            <HotkeyButton
-              onclick={() =>
-                window.open(
-                  "https://app.openiap.io/ui/#/Customer",
-                  "_blank",
-                  "noopener,noreferrer",
-                )}
-              class="w-full mt-6">Subscribe Now</HotkeyButton
-            >
-          </Card.Content>
-        </Card.Root>
+            <div class="flex p-6 items-end text-bw50">
+              <span class="text-[30px] font-bold text-center">0 USD </span>
+            </div>
 
-        <Card.Root
-          class=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
-        >
-          <Card.Header>
-            <Card.Title>Cloud Advanced</Card.Title>
-            <Card.Description
-              >Ample resources for advanced projects</Card.Description
-            >
-          </Card.Header>
-          <div class="flex px-6 items-end">
-            <span class="text-3xl font-bold text-center"
-              ><span class="text-2xl">DKK {" "}</span>1699</span
-            >
-            <span
-              class="text-sm font-bold text-center justify-end text-gray-400"
-              >/Month</span
-            >
-          </div>
-          <div class="flex px-6 pb-6 items-end">
-            <span class="text-base font-bold text-center text-gray-400"
-              >Approx. 239<span class="text-base text-gray-400">
-                USD</span
-              ></span
-            >
-          </div>
-          <Card.Content>
-            <ul class="space-y-4">
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Run your agents 24/7
-              </li>
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                2 GB RAM
-              </li>
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Dedicated Server
-              </li>
-            </ul>
-            <HotkeyButton
-              onclick={() =>
-                window.open(
-                  "https://app.openiap.io/ui/#/Customer",
-                  "_blank",
-                  "noopener,noreferrer",
-                )}
-              class="w-full mt-6">Subscribe Now</HotkeyButton
-            >
-          </Card.Content>
-        </Card.Root>
-      </div>
-    {/if}
+            <div class="pt-5 pb-[30px] px-6">
+              <img src={border_bottom} alt="border_bottom" />
+            </div>
 
-    {#if screen == 3}
-      <div
-        class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-4 mx-auto animate-fade-in"
-      >
-        <Card.Root
-          class="md:col-start-2 md:col-span-3 lg:md:col-span-1 lg:col-start-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
-        >
-          <Card.Header>
-            <Card.Title>Hourly</Card.Title>
-            <Card.Description
-              >Perfect for onboarding developers</Card.Description
-            >
-          </Card.Header>
+            <Card.Content>
+              <ul class="space-y-4 text-[14px]">
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Runtime limited to 4 hours
+                </li>
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Limited disk space (25 MB)
+                </li>
+                <li class="flex items-center">
+                  <X class="mr-2 h-4 w-4 text-red-500" />
+                  Dedicated Server
+                </li>
+              </ul>
+              <HotkeyButton
+                onclick={() =>
+                  window.open(
+                    "https://docs.openiap.io/",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )}
+                class="w-full mt-6">Get Started</HotkeyButton
+              >
+            </Card.Content>
+          </Card.Root>
 
-          <div class="flex px-4 items-end">
-            <span class="text-3xl font-bold text-center"
-              ><span class="text-2xl">DKK {" "}</span>1530</span
-            >
-            <span
-              class="text-md font-bold text-center justify-end text-gray-400"
-              >/hour</span
-            >
-          </div>
-          <div class="flex px-4 pb-4 items-end">
-            <span class="text-base font-bold text-center text-gray-400"
-              >Approx. 216 <span class="text-base text-gray-400">USD</span
-              ></span
-            >
-          </div>
-          <Card.Content>
-            <ul class="space-y-2">
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Advanced support
-              </li>
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Troubleshooting
-              </li>
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Designing software architecture
-              </li>
-              <li class="flex items-center">
-                <Check class="mr-2 h-4 w-4 text-green-500" />
-                Assistance with custom infrastructure
-              </li>
-            </ul>
-            <HotkeyButton
-              onclick={() =>
-                window.open(
-                  "https://calendar.app.google/9Kt9XWGRYPLTyhQF7",
-                  "_blank",
-                  "noopener,noreferrer",
-                )}
-              class="w-full mt-6">Book a meeting</HotkeyButton
-            >
-          </Card.Content>
-        </Card.Root>
-      </div>
-    {/if}
+          <Card.Root
+            class=" hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-[335px] px-[26px] py-1.5 border-bw500/70"
+          >
+            <Card.Header>
+              <Card.Title class="font-normal">Cloud Basic</Card.Title>
+              <Card.Description>Perfect for Beginners</Card.Description>
+            </Card.Header>
+
+            <div class="pt-5">
+              <div class="flex px-6 items-end text-bw50">
+                <span class="text-[30px] font-bold text-center"
+                  >DKK 277
+                  <span
+                    class="ms-1 font-bold text-center justify-end text-bw500 text-[14px]"
+                    >/Month</span
+                  >
+                </span>
+              </div>
+              <div class="flex px-6 pb-6 items-end text-[14px]">
+                <span class="font-bold text-center text-bw500"
+                  >Approx. 39 <span class="text-bw500">USD</span></span
+                >
+              </div>
+            </div>
+
+            <div class="pt-2 pb-[30px] px-6">
+              <img src={border_bottom} alt="border_bottom" />
+            </div>
+
+            <Card.Content>
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Run your agents 24/7
+                </li>
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  256 MB RAM
+                </li>
+                <li class="flex items-center">
+                  <X class="mr-2 h-4 w-4 text-red-500" />
+                  Dedicated Server
+                </li>
+              </ul>
+              <HotkeyButton
+                variant="success"
+                onclick={() =>
+                  window.open(
+                    "https://app.openiap.io/ui/#/Customer",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )}
+                class="w-full mt-6">Subscribe Now</HotkeyButton
+              >
+            </Card.Content>
+          </Card.Root>
+
+          <Card.Root
+            class="transition-all duration-300 hover:shadow-lg border-customGreen flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-[335px] px-[26px] py-1.5 border-bw500/70"
+          >
+            <Card.Header>
+              <Card.Title class="font-normal">Cloud Premium</Card.Title>
+              <Card.Description
+                >Perfect for medium-size projects</Card.Description
+              >
+            </Card.Header>
+
+            <div class="pt-5">
+              <div class="flex px-6 items-end text-bw50">
+                <span class="text-[30px] font-bold text-center"
+                  >DKK 915
+                  <span
+                    class="ms-1 font-bold text-center justify-end text-bw500 text-[14px]"
+                    >/Month</span
+                  >
+                </span>
+              </div>
+              <div class="flex px-6 pb-6 items-end text-[14px]">
+                <span class="font-bold text-center text-bw500"
+                  >Approx. 129 <span class="text-bw500">USD</span></span
+                >
+              </div>
+            </div>
+
+            <div class="pt-2 pb-[30px] px-6">
+              <img src={border_bottom} alt="border_bottom" />
+            </div>
+            <Card.Content>
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Run your agents 24/7
+                </li>
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  1 GB RAM
+                </li>
+                <li class="flex items-center">
+                  <X class="mr-2 h-4 w-4 text-red-500" />
+                  Dedicated Server
+                </li>
+              </ul>
+              <HotkeyButton
+                variant="success"
+                onclick={() =>
+                  window.open(
+                    "https://app.openiap.io/ui/#/Customer",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )}
+                class="w-full mt-6">Subscribe Now</HotkeyButton
+              >
+            </Card.Content>
+          </Card.Root>
+
+          <Card.Root
+            class=" hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-[335px] px-[26px] py-1.5 border-bw500/70"
+          >
+            <Card.Header>
+              <Card.Title class="font-normal">Cloud Advanced</Card.Title>
+              <Card.Description>Perfect for advanced projects</Card.Description>
+            </Card.Header>
+
+            <div class="pt-5">
+              <div class="flex px-6 items-end text-bw50">
+                <span class="text-[30px] font-bold text-center"
+                  >DKK 1699
+                  <span
+                    class="ms-1 font-bold text-center justify-end text-bw500 text-[14px]"
+                    >/Month</span
+                  >
+                </span>
+              </div>
+              <div class="flex px-6 pb-6 items-end text-[14px]">
+                <span class="font-bold text-center text-bw500"
+                  >Approx. 239 <span class="text-bw500">USD</span></span
+                >
+              </div>
+            </div>
+
+            <div class="pt-2 pb-[30px] px-6">
+              <img src={border_bottom} alt="border_bottom" />
+            </div>
+
+            <Card.Content>
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Run your agents 24/7
+                </li>
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  2 GB RAM
+                </li>
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Dedicated Server
+                </li>
+              </ul>
+              <HotkeyButton
+                variant="success"
+                onclick={() =>
+                  window.open(
+                    "https://app.openiap.io/ui/#/Customer",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )}
+                class="w-full mt-6">Subscribe Now</HotkeyButton
+              >
+            </Card.Content>
+          </Card.Root>
+        </div>
+      </Tabs.Content>
+      <Tabs.Content value="3">
+        <div class="flex justify-center animate-fade-in">
+          <Card.Root
+            class="md:col-start-2 md:col-span-3 lg:md:col-span-1 lg:col-start-2 hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-[400px] px-[26px] py-1.5 border-bw500/70"
+          >
+            <Card.Header>
+              <Card.Title class="font-normal">Hourly</Card.Title>
+              <Card.Description
+                >Perfect for onboarding developers</Card.Description
+              >
+            </Card.Header>
+
+            <div class="pt-5">
+              <div class="flex px-6 items-end text-bw50">
+                <span class="text-[30px] font-bold text-center"
+                  >DKK 1530
+                  <span
+                    class="ms-1 font-bold text-center justify-end text-bw500 text-[14px]"
+                    >/Month</span
+                  >
+                </span>
+              </div>
+              <div class="flex px-6 pb-6 items-end text-[14px]">
+                <span class="font-bold text-center text-bw500"
+                  >Approx. 216 <span class="text-bw500">USD</span></span
+                >
+              </div>
+            </div>
+
+            <div class="pt-2 pb-[20px] px-6">
+              <img src={border_bottom_large} alt="border_bottom" />
+            </div>
+
+            <Card.Content>
+              <ul class="space-y-2 text-[14px]">
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Advanced support
+                </li>
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Troubleshooting
+                </li>
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Designing software architecture
+                </li>
+                <li class="flex items-center">
+                  <Check class="mr-2 h-4 w-4 text-greentick" />
+                  Assistance with custom infrastructure
+                </li>
+              </ul>
+              <HotkeyButton
+                variant="success"
+                onclick={() =>
+                  window.open(
+                    "https://calendar.app.google/9Kt9XWGRYPLTyhQF7",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )}
+                class="w-full mt-6">Book a meeting</HotkeyButton
+              >
+            </Card.Content>
+          </Card.Root>
+        </div>
+      </Tabs.Content>
+    </Tabs.Root>
 
     <div class="flex justify-center gap-4 py-6">
       <HotkeyButton
