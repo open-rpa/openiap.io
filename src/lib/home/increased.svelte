@@ -16,7 +16,7 @@
             class="border-2 border-bw500/70 rounded-[20px] flex flex-col justify-between overflow-hidden"
         >
             <div class="flex flex-col lg:flex-row justify-between">
-                <div class="flex flex-col justify-between px-10 py-10">
+                <div class="flex flex-col justify-between px-10 py-10 space-y-10 lg:space-y-0">
                     <div>
                         <p
                             class={"text-[24px] lg:text-[50px] leading-none font-semibold mb-6" +
