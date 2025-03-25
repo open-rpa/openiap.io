@@ -36,19 +36,24 @@
             </h1>
         </div>
 
-        <div class="flex items-center justify-center">
-
+        <div class="flex items-center justify-center hidden lg:block">
             <div
                 class="border-2 rounded-[20px] mb-10 lg:mb-16 text-center w-fit overflow-hidden"
             >
                 <div class="container-rectangle h-14 w-72 md:w-full md:h-full">
-                    <img src={logo1} alt="logo1"  class="h-full hidden md:block" />
-    
+                    <img
+                        src={logo1}
+                        alt="logo1"
+                        class="h-full hidden md:block"
+                    />
+
                     <div
                         class="absolute top-1 lg:top-2.5 left-10 md:left-32 lg:left-60"
                     >
                         <p class="lg:text-[16px] xl:text-[30px]">Industry</p>
-                        <p class="lg:text-[14px] xl:text-[22px] dark:text-bw200">
+                        <p
+                            class="lg:text-[14px] xl:text-[22px] dark:text-bw200"
+                        >
                             Logistics
                         </p>
                     </div>
@@ -56,11 +61,28 @@
                         class="absolute top-1 lg:top-2.5 right-10 md:right-32 lg:right-60"
                     >
                         <p class="lg:text-[16px] xl:text-[30px]">Location</p>
-                        <p class="lg:text-[14px] xl:text-[22px] dark:text-bw200">
+                        <p
+                            class="lg:text-[14px] xl:text-[22px] dark:text-bw200"
+                        >
                             Europe
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div
+            class="lg:hidden flex border-2 rounded-[20px] items-center justify-center w-full mb-10 lg:mb-16 text-center"
+        >
+            <div class="p-5 mx-auto">
+                <p class="text-[16px] lg:text-[30px]">Industry</p>
+                <p class="dark:text-bw200 text-[14px] lg:text-[22px]">
+                    Logistics
+                </p>
+            </div>
+            <div class="p-5 mx-auto">
+                <p class="text-[16px] lg:text-[30px]">Location</p>
+                <p class="dark:text-bw200 text-[14px] lg:text-[22px]">Europe</p>
             </div>
         </div>
 
@@ -214,7 +236,9 @@
                     Ready to get started?
                 </h1>
             </div>
-            <p class="mb-10 text-[10px] lg:text-[16px]">Try OpenCore now for free</p>
+            <p class="mb-10 text-[10px] lg:text-[16px]">
+                Try OpenCore now for free
+            </p>
             <HotkeyButton
                 variant="success"
                 onclick={() =>
