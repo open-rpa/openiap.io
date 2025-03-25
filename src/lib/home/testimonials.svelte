@@ -4,7 +4,7 @@
     import greenrectSvg from "$lib/images/home/testimonials/greenRectangle.svg";
     import synergerplogoSvg from "$lib/images/home/testimonials/synergerp.svg";
     import accessiotlogo from "$lib/images/home/testimonials/accessiotlogo.svg";
-    
+
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
     let testimonials = [
@@ -23,7 +23,7 @@
                 "OpenCore is light on resources, extremely fast and incredibly easy to scale when required. ",
         },
         {
-            logo: "",
+            logo: accessiotlogo,
             name: "Henk van Ark",
             position: "CEO and Founder Access IoT",
             testimonial:
