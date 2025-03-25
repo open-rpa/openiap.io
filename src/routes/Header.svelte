@@ -21,7 +21,8 @@
 				</div>
 			</div>
 		</HotkeyButton>
-		<nav class="hidden md:flex md:space-x-2 space-x-2">
+
+		<nav class="hidden md:block me-20">
 			<HotkeyButton
 				variant="link"
 				onclick={() => goto(base + "/usecases")}
