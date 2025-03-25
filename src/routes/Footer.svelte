@@ -35,84 +35,118 @@
 	});
 </script>
 
-<section class="py-4 px-4">
-	<div class="container mx-auto">
-		<div class="md:flex md:justify-between md:items-center md:align-middle">
-			<HotkeyButton variant="ghostfull" onclick={() => goto(base + "/")} aria-label="Go to Home">
+<section
+	class="pt-10 pb-24 mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:flex xl:justify-center"
+>
+	<div
+		class={`w-full lg:max-w-[1700px] ${isScreenSmall && "grid grid-cols-2 mt-4 space-y-2 text-center items-center "} ${isScreenSmallTab && "grid grid-cols-4 mt-4 space-y-2 text-center items-center "} ${isScreenMedium && "grid grid-cols-5 space-y-2 text-center items-center"}  ${isScreenLarge && "flex flex-row justify-between"} `}
+	>
+		<div
+			class={`${isScreenSmall && "col-span-2 "} ${
+				isScreenSmallTab && "col-span-4 "
+			} ${isScreenMedium && "col-span-5"}  ${isScreenLarge && ""}`}
+		>
+			<HotkeyButton
+				variant="ghostfull"
+				onclick={() => goto(base + "/")}
+				aria-label="Go to Home"
+			>
 				<div class="flex items-center justify-center space-x-[15px]">
 					<div class="justify-end">
 						<img src={Logo} alt="Logo" />
 					</div>
 				</div>
 			</HotkeyButton>
-			<div
-				class={`${isScreenSmall && "grid grid-cols-2 mt-4 space-y-2 text-center items-center "} ${isScreenSmallTab && "grid grid-cols-4 mt-4 space-y-2 text-center items-center "} ${isScreenMedium && "grid grid-cols-5 space-y-2 text-center items-center"}  ${isScreenLarge && "flex flex-row "} `}
-			>
-				<HotkeyButton
-					variant="link"
-					onclick={() => goto(base + "/")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-					aria-label="Go to Home"
-				>
-					Home
-				</HotkeyButton>
-				<HotkeyButton
-					variant="link"
-					onclick={() => goto(base + "/usecases")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-					aria-label="Go to Use Cases"
-				>
-					Use Cases
-				</HotkeyButton>
-				<HotkeyButton
-					variant="link"
-					onclick={() => goto(base + "/pricing")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-					aria-label="Go to Pricing"
-				>
-					Pricing
-				</HotkeyButton>
-				<HotkeyButton
-					variant="link"
-					onclick={() => goto(base + "/partners")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-					aria-label="Go to Partners"
-				>
-					Partners
-				</HotkeyButton>
-				<HotkeyButton
-					variant="link"
-					onclick={() => goto(base + "/contact")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-					aria-label="Go to Contact"
-				>
-					Contact
-				</HotkeyButton>
-				<HotkeyButton
-					variant="link"
-					onclick={() => goto(base + "/telemetry")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-					aria-label="Go to Telemetry"
-				>
-					Telemetry
-				</HotkeyButton>
-				<HotkeyButton
-					variant="link"
-					onclick={() => goto(base + "/terms")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-					aria-label="Go to Terms & Conditions"
-				>
-					Terms & Conditions
-				</HotkeyButton>
-				<HotkeyButton
-					variant="link"
-					onclick={() => goto(base + "/privacy")}
-					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-					aria-label="Go to Privacy Policy"
-				>
-					Privacy Policy
-				</HotkeyButton>
-			</div>
 		</div>
+		<HotkeyButton
+			variant="link"
+			onclick={() => goto(base + "/")}
+			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			aria-label="Go to Home"
+		>
+			Home
+		</HotkeyButton>
+		<!-- <div class="flex flex-col justify-start items-start">
+			<HotkeyButton
+				variant="link"
+				onclick={() => goto(base + "/")}
+				class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				aria-label="Go to Home"
+			>
+				Solutions
+			</HotkeyButton>
+			<HotkeyButton
+				variant="link"
+				onclick={() => goto(base + "/")}
+				class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				aria-label="Go to Home"
+			>
+				OpenCores
+			</HotkeyButton>
+			<HotkeyButton
+				variant="link"
+				onclick={() => goto(base + "/")}
+				class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				aria-label="Go to Home"
+			>
+				OpenRPA
+			</HotkeyButton>
+		</div> -->
+		<HotkeyButton
+			variant="link"
+			onclick={() => goto(base + "/usecases")}
+			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			aria-label="Go to Use Cases"
+		>
+			Use Cases
+		</HotkeyButton>
+		<HotkeyButton
+			variant="link"
+			onclick={() => goto(base + "/pricing")}
+			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			aria-label="Go to Pricing"
+		>
+			Pricing
+		</HotkeyButton>
+		<HotkeyButton
+			variant="link"
+			onclick={() => goto(base + "/partners")}
+			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			aria-label="Go to Partners"
+		>
+			Partners
+		</HotkeyButton>
+		<HotkeyButton
+			variant="link"
+			onclick={() => goto(base + "/contact")}
+			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			aria-label="Go to Contact"
+		>
+			Contact
+		</HotkeyButton>
+		<HotkeyButton
+			variant="link"
+			onclick={() => goto(base + "/telemetry")}
+			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			aria-label="Go to Telemetry"
+		>
+			Telemetry
+		</HotkeyButton>
+		<HotkeyButton
+			variant="link"
+			onclick={() => goto(base + "/terms")}
+			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			aria-label="Go to Terms & Conditions"
+		>
+			Terms & Conditions
+		</HotkeyButton>
+		<HotkeyButton
+			variant="link"
+			onclick={() => goto(base + "/privacy")}
+			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			aria-label="Go to Privacy Policy"
+		>
+			Privacy Policy
+		</HotkeyButton>
 	</div>
 </section>
