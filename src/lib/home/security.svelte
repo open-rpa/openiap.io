@@ -51,31 +51,28 @@
         },
     ];
     function renderTopSmall(index: number) {
-        let newClass = "";
-        if (index == 0) {
-            newClass = "right-0  md:top-5";
-        } else if (index == 1) {
-            newClass = "left-0 md:top-0";
+        if (index == 1) {
+            return " mt-4 items-start justify-start";
         } else if (index == 2) {
-            newClass = "left-0 right-0 top-20 md:top-0";
-        } else if (index == 3) {
-            newClass = "left-0 right-0 top-24 md:top-0";
-        } else if (index == 4) {
-            newClass = "right-0 top-10 md:top-0";
+            return " mt-4 items-start justify-start";
+        }else if (index == 3) {
+            return " mt-4 items-start justify-start";
+        } else {
+            return " mt-10 items-end justify-end ms-4";
         }
-        return newClass + "  ";
     }
     function renderTopLarge(index: number) {
-        let newClass = "";
         if (index == 1) {
-            return (newClass = " items-start justify-start");
+            return " items-start justify-start";
         } else {
-            return newClass + " items-end justify-end ms-4";
+            return " items-end justify-end ms-4";
         }
     }
 </script>
 
-<div class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center">
+<div
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center"
+>
     <Carousel.Root
         opts={{
             align: "start",
@@ -118,28 +115,18 @@
                                 {item.description}
                             </p>
                         </div>
-                        <div
-                            class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
-                        >
+                        <div class="lg:hidden">
                             <div
-                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:hidden inline-flex " +
+                                class={"w-full overflow-hidden flex group-hover:hidden inline-flex " +
                                     renderTopSmall(index)}
                             >
-                                <img
-                                    src={item.imageDark}
-                                    alt="imagedark"
-                                    class="relative -mt-[200px]"
-                                />
+                                <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:group-hover:inline-flex hidden " +
+                                class={"w-full overflow-hidden flex group-hover:group-hover:inline-flex hidden " +
                                     renderTopSmall(index)}
                             >
-                                <img
-                                    src={item.image}
-                                    alt="imagelight"
-                                    class="relative -mt-[200px]"
-                                />
+                                <img src={item.image} alt="imagelight" />
                             </div>
                         </div>
                         <div

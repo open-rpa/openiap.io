@@ -61,26 +61,16 @@ client.free()`,
         },
     ];
     function renderTopSmall(index: number) {
-        let newClass = "";
-        if (index == 0) {
-            newClass = "top-16 md:top-20";
-        } else if (index == 1) {
-            newClass = "top-50 md:top-24";
-        } else if (index == 2) {
-            newClass = "top-16 md:top-28";
-        }
-        return newClass + " left-0 right-0  ";
+        return " justify-center items-center";
     }
     function renderTopLarge(index: number) {
-        let newClass = "";
-        if (index == 1) {
-            newClass = "items-center justify-center";
-        }
-        return newClass + " items-center justify-center  ";
+        return " items-center justify-center";
     }
 </script>
 
-<div class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center">
+<div
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center"
+>
     <Carousel.Root
         opts={{
             align: "start",
@@ -188,9 +178,9 @@ client.free()`,
             {#each carouselItem as item, index}
                 <Carousel.Item class={"md:basis-1/2 lg:basis-1/3"}>
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[420px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-8 xl:p-12 pb-0">
+                        <div class="p-8 xl:p-12 pb-0 mb-4 lg:mb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
@@ -198,40 +188,34 @@ client.free()`,
                                 {item.description}
                             </p>
                         </div>
-                        <div
-                            class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
-                        >
+                        <div class="lg:hidden">
                             <div
-                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:hidden inline-flex " +
+                                class={"w-full overflow-hidden flex group-hover:hidden inline-flex " +
                                     renderTopSmall(index)}
-                            >
-                                <img
-                                    src={item.imageDark}
-                                    alt="imagedark"
-                                    class="relative -mt-[200px]"
-                                />
-                            </div>
-                            <div
-                                class={"w-full h-[400px] overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden " +
-                                    renderTopSmall(index)}
-                            >
-                                <img
-                                    src={item.image}
-                                    alt="imagelight"
-                                    class="relative -mt-[200px]"
-                                />
-                            </div>
-                        </div>
-                        <div
-                            class="h-full flex justify-end w-full hidden lg:block"
-                        >
-                            <div
-                                class={"w-full overflow-hidden flex items-center justify-center group-hover:hidden inline-flex "}
                             >
                                 <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"w-full overflow-hidden flex items-center justify-center group-hover:group-hover:inline-flex hidden "}
+                                class={"w-full overflow-hidden flex group-hover:group-hover:inline-flex hidden " +
+                                    renderTopSmall(index)}
+                            >
+                                <img src={item.image} alt="imagelight" />
+                            </div>
+                        </div>
+                        <div class="hidden lg:block">
+                            <div
+                                class={"w-full overflow-hidden flex group-hover:hidden inline-flex " +
+                                    renderTopLarge(index)}
+                            >
+                                <img
+                                    src={item.imageDark}
+                                    alt="imagedark"
+                                    class="h-1/2"
+                                />
+                            </div>
+                            <div
+                                class={"w-full overflow-hidden flex group-hover:group-hover:inline-flex hidden " +
+                                    renderTopLarge(index)}
                             >
                                 <img src={item.image} alt="imagelight" />
                             </div>

@@ -42,27 +42,32 @@
         },
     ];
     function renderTopSmall(index: number) {
-        let newClass = "";
         if (index == 0) {
-            newClass = "bottom-0 md:top-5";
+            return " mt-16 md:mt-0 items-end justify-end";
         } else if (index == 1) {
-            newClass = "md:top-0";
-        } else if (index == 2) {
-            newClass = "top-12 md:top-16";
+            return " mt-6 items-center justify-center";
+        } else {
+            return " items-end justify-end";
         }
-        return newClass + " left-0 right-0  ";
     }
     function renderTopLarge(index: number) {
-        let newClass = "";
-        if (index == 1) {
-            return newClass = " items-center justify-center";
+        if (index == 0) {
+            return " items-end justify-end";
+        } else if (index == 1) {
+            return " mt-10 items-center justify-center";
+        } else if (index == 2) {
+            return " items-end justify-end";
+        } else if (index == 3) {
+            return " items-end justify-end";
         } else {
-            return newClass + " items-end justify-end";
+            return " items-end justify-end";
         }
     }
 </script>
 
-<div class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center">
+<div
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-32 xl:mb-24 xl:flex xl:justify-center"
+>
     <Carousel.Root
         opts={{
             align: "start",
@@ -96,9 +101,9 @@
                         : "md:basis-1/2 lg:basis-1/3"}
                 >
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[360px] md:h-[400px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-8 xl:p-12 pb-0">
+                        <div class="p-8 pb-0 xl:p-12 xl:pb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
@@ -106,33 +111,21 @@
                                 {item.description}
                             </p>
                         </div>
-                        <div
-                            class="lg:ms-12 h-full flex justify-end w-full lg:hidden"
-                        >
+                        <div class="lg:hidden">
                             <div
-                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:hidden inline-flex " +
+                                class={"w-full overflow-hidden flex group-hover:hidden inline-flex " +
                                     renderTopSmall(index)}
                             >
-                                <img
-                                    src={item.imageDark}
-                                    alt="imagedark"
-                                    class="relative -mt-[200px]"
-                                />
+                                <img src={item.imageDark} alt="imagedark" />
                             </div>
                             <div
-                                class={"w-full h-[400px] overflow-hidden flex items-center justify-end group-hover:group-hover:inline-flex hidden " +
+                                class={"w-full overflow-hidden flex group-hover:group-hover:inline-flex hidden " +
                                     renderTopSmall(index)}
                             >
-                                <img
-                                    src={item.image}
-                                    alt="imagelight"
-                                    class="relative -mt-[200px]"
-                                />
+                                <img src={item.image} alt="imagelight" />
                             </div>
                         </div>
-                        <div
-                            class="h-full flex justify-end w-full hidden lg:block"
-                        >
+                        <div class="hidden lg:block">
                             <div
                                 class={"w-full overflow-hidden flex group-hover:hidden inline-flex " +
                                     renderTopLarge(index)}
