@@ -97,7 +97,7 @@
                     <Carousel.Next />
                 </div>
             </div>
-            <p class="text-bw300 font-semibold lg:text-[16px]">
+            <p class="text-bw300 font-semibold lg:text-[14px]">
                 Workitem queues let your automation handle tasks in a scalable
                 way — distributing work, <br /> tracking progress, and ensuring no
                 task gets lost.
@@ -163,9 +163,9 @@
                 <div class="p-1"></div>
             </Carousel.Item>
         </Carousel.Content>
-        <!-- <div
-            class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-10
-   bg-gradient-to-l from-[#0D0D11] to-transparent z-10"
-        ></div> -->
+        <div
+            class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-36
+   bg-gradient-to-l from-[rgba(13,13,17,0.5)] to-transparent z-10"
+        ></div>
     </Carousel.Root>
 </div>

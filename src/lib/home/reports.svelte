@@ -36,7 +36,7 @@
             return " p-10 md:p-5 lg:p-0 items-center justify-center";
         } else if (index == 1) {
             return " mt-20 px-10 items-end justify-end";
-        }else {
+        } else {
             return " items-center justify-center";
         }
     }
@@ -71,7 +71,7 @@
                     <Carousel.Next />
                 </div>
             </div>
-            <p class="text-bw300 font-semibold lg:text-[16px]">
+            <p class="text-bw300 font-semibold lg:text-[14px]">
                 Easily create dashboards and reports on user data
             </p>
         </div>
@@ -130,9 +130,9 @@
                 <div class="p-1"></div>
             </Carousel.Item>
         </Carousel.Content>
-        <!-- <div
-            class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-10
-   bg-gradient-to-l from-[#0D0D11] to-transparent z-10"
-        ></div> -->
+        <div
+            class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-36
+bg-gradient-to-l from-[rgba(13,13,17,0.5)] to-transparent z-10"
+        ></div>
     </Carousel.Root>
 </div>

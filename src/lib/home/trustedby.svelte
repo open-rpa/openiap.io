@@ -61,7 +61,7 @@
 </script>
 
 <div class="h-auto mb-48">
-    <div class="text-bw500 text-center text-[14px]">
+    <div class="text-bw600 text-center text-[14px] tracking-widest">
         Trusted by companies worldwide
     </div>
     <div class="relative w-full overflow-hidden flex justify-center py-6">

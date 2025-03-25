@@ -21,7 +21,7 @@
             A scalable and secure <br />
             automation platform
         </h1>
-        <p class="xl:text-xl text-bw500 mb-8 mx-auto animate-fade-in">
+        <p class="xl:text-[14px] text-bw500 mb-[52px] mx-auto animate-fade-in">
             An opinionated platform that gives you the complete infrastructure
             for deploying, monitoring <br /> and troubleshooting automation
         </p>
@@ -38,7 +38,7 @@
                         "noopener,noreferrer",
                     )}
             >
-                Try OpenCore
+                Try OpenCore for Free
             </HotkeyButton>
             <HotkeyButton
                 aria-label="Get Started"

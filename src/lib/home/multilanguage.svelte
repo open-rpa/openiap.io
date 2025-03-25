@@ -90,7 +90,7 @@ client.free()`,
                     <Carousel.Next />
                 </div>
             </div>
-            <p class="text-bw300 lg:text-[16px]">
+            <p class="text-bw300 lg:text-[14px]">
                 OpenCore allows different types of developers to work together
                 in one common framework
             </p>
@@ -124,7 +124,7 @@ client.free()`,
                         <div
                             class="m-3 pt-3 rounded-[5px] dark:bg-[#1D1F22] h-full"
                         >
-                            <Tabs.Root value="1" class="ms-5">
+                            <Tabs.Root value="1" class="ms-5 mt-2">
                                 <div></div>
                                 <Tabs.List
                                     class="h-fit md:block w-full w-fit bg-bw200 dark:bg-darkagenttab rounded-[5px] p-1 mb-2 lg:mb-0 text-bw50 font-normal"
@@ -141,7 +141,7 @@ client.free()`,
                                     {#each languages as language, index}
                                         <Tabs.Content value={`${index + 1}`}>
                                             <div
-                                                class="text-bw300 flex justify-between text-xs sm:text-sm"
+                                                class="text-bw300 flex justify-between text-xs sm:text-sm pt-2"
                                             >
                                                 <pre class="w-72">
 {language.code.trim()}
@@ -227,9 +227,9 @@ client.free()`,
                 <div class="p-1"></div>
             </Carousel.Item>
         </Carousel.Content>
-        <!-- <div
-            class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-10
-bg-gradient-to-l from-[#0D0D11] to-transparent z-10"
-        ></div> -->
+        <div
+            class="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-36
+   bg-gradient-to-l from-[rgba(13,13,17,0.5)] to-transparent z-10"
+        ></div>
     </Carousel.Root>
 </div>

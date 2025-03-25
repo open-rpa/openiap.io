@@ -16,20 +16,20 @@
             class="border-2 border-bw500/70 rounded-[20px] flex flex-col justify-between overflow-hidden"
         >
             <div class="flex flex-col lg:flex-row justify-between">
-                <div class="flex flex-col justify-between px-10 py-10 space-y-10 lg:space-y-0">
-                    <div>
+                <div class="flex flex-col xl:justify-between px-10 xl:py-10 space-y-10 xl:space-y-0">
+                    <div class="pt-10 xl:pt-0">
                         <p
-                            class={"text-[24px] lg:text-[50px] leading-none font-semibold mb-6" +
+                            class={"text-[24px] xl:text-[50px] leading-none font-semibold" +
                                 gradienttext}
                         >
                             Increased Integration Efficiency by 25x
                         </p>
-                        <p class="text-bw300 lg:text-[16px]">
+                        <p class="text-bw300 lg:text-[14px]">
                             Kuehne + Nagel increased their integration
                             efficiency <br /> by 25x using OpenCore
                         </p>
                     </div>
-                    <div>
+                    <div class="pb-4 lg:pb-0">
                         <HotkeyButton
                             aria-label="Learn more"
                             onclick={() => {

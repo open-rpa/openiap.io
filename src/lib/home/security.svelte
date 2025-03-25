@@ -92,7 +92,7 @@
                     <Carousel.Next />
                 </div>
             </div>
-            <p class="text-bw300 font-semibold lg:text-[16px]">
+            <p class="text-bw300 font-semibold lg:text-[14px]">
                 Easily create dashboards and reports on user data
             </p>
         </div>
