@@ -1,7 +1,5 @@
 <script>
-    import logo1 from "$lib/images/testimonials/nagel.png";
-    import logo2 from "$lib/images/testimonials/b2bpresales.png";
-    import logo3 from "$lib/images/testimonials/alphatods.jpeg";
+    import logo1 from "$lib/images/usecases/rectangle.svg";
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
 
     $effect(() => {
@@ -38,24 +36,35 @@
             </h1>
         </div>
 
-        <div
-            class="flex border-2 rounded-[20px] items-center justify-center w-full mb-10 lg:mb-16 text-center"
-        >
-            <div class="p-9 mx-auto">
-                <p class="text-[16px] lg:text-[30px]">Industry</p>
-                <p class="dark:text-bw200 text-[14px] lg:text-[22px]">
-                    Logistics
-                </p>
-            </div>
-            <div class="p-9 mx-auto">
-                <p class="text-[16px] lg:text-[30px]">Location</p>
-                <p class="dark:text-bw200 text-[14px] lg:text-[22px]">
-                    Europe
-                </p>
+        <div class="flex items-center justify-center">
+
+            <div
+                class="border-2 rounded-[20px] mb-10 lg:mb-16 text-center w-fit overflow-hidden"
+            >
+                <div class="container-rectangle h-14 w-72 md:w-full md:h-full">
+                    <img src={logo1} alt="logo1"  class="h-full hidden md:block" />
+    
+                    <div
+                        class="absolute top-1 lg:top-2.5 left-10 md:left-32 lg:left-60"
+                    >
+                        <p class="lg:text-[16px] xl:text-[30px]">Industry</p>
+                        <p class="lg:text-[14px] xl:text-[22px] dark:text-bw200">
+                            Logistics
+                        </p>
+                    </div>
+                    <div
+                        class="absolute top-1 lg:top-2.5 right-10 md:right-32 lg:right-60"
+                    >
+                        <p class="lg:text-[16px] xl:text-[30px]">Location</p>
+                        <p class="lg:text-[14px] xl:text-[22px] dark:text-bw200">
+                            Europe
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="px-4 lg:px-60">
+        <div class="px-4 lg:px-60 text-start">
             <div class="mb-10">
                 <ul
                     class="list-disc pl-5 [&>li::marker]:text-white border-l-2 border-[#ffffff80] ps-10"
@@ -199,16 +208,55 @@
         >
             <div class="text-center">
                 <h1
-                    class={"text-[40px] text-center font-bold mb-6 animate-fade-in mb-10" +
+                    class={"md:text-[24] lg:text-[50px] text-center font-bold mb-6 animate-fade-in mb-10" +
                         gradienttext}
                 >
                     Ready to get started?
                 </h1>
             </div>
-            <p class="mb-10">Try OpenCore now for free</p>
-            <HotkeyButton variant="success" onclick={() => window.open("https://app.openiap.io/ui/#/Login", "_blank")}>
+            <p class="mb-10 text-[10px] lg:text-[16px]">Try OpenCore now for free</p>
+            <HotkeyButton
+                variant="success"
+                onclick={() =>
+                    window.open("https://app.openiap.io/ui/#/Login", "_blank")}
+            >
                 Try OpenCore
             </HotkeyButton>
         </div>
     </div>
 </section>
+
+<style>
+    .container-rectangle {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    /* Top left text */
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    /* Top left text */
+    .top-left {
+        position: absolute;
+        top: 10px;
+    }
+
+    /* Top right text */
+    .top-right {
+        position: absolute;
+        top: 10px;
+    }
+
+    /* Centered text */
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
