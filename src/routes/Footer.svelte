@@ -82,7 +82,7 @@
 				</HotkeyButton>
 				<HotkeyButton
 					variant="link"
-					onclick={() => goto(base + "/contact/view")}
+					onclick={() => goto(base + "/contact")}
 					class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
 					aria-label="Go to Contact"
 				>

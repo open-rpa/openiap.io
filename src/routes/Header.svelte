@@ -44,7 +44,7 @@
 			<HotkeyButton
 				variant="link"
 				onclick={() => {
-					goto("/contact/view");
+					goto("/contact");
 					isMenuOpen = false;
 				}}
 				aria-label="Get In Touch"
