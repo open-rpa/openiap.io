@@ -13,7 +13,7 @@
 
     let languages = [
         {
-            name: "Rust",
+            name: "Python",
             code: `client = Client ()
 client.connect()
 query_result = client.query(collectionname='entities', query={})
@@ -24,15 +24,79 @@ client.free()`,
         },
         {
             name: "NodeJS",
-            code: `node`,
-        },
-        {
-            name: "Python",
-            code: `python`,
+            code: `const { Client } = require('openiap');
+const client = new Client();
+client.connect();
+const query_result = client.query({ 
+    collectionname: 'entities', query: '{}', projection: '{"name":1}' 
+});
+console.log("result", query_result);
+client.free();`,
         },
         {
             name: "Dotnet",
-            code: `dotnet`,
+            code: `static async Task MainAsync(string[] args) {
+    Client client = new Client();
+    await client.connect();
+    string results = await client.Query<string>("entities", "{}", "{\"name\": 1}");
+    Console.WriteLine("result: " + results);    
+}`,
+        },
+        {
+            name: "Rust",
+            code: `use openiap_client::{OpenIAPError, Client, QueryRequest};
+async fn main() -> Result<(), OpenIAPError> {
+    let client = Client::new_connect("").await?;
+    let q = client.query( QueryRequest::with_projection(
+        "entities",
+        "{}",
+        "{\"name\":1}"
+    )).await?;
+    let items: serde_json::Value = serde_json::from_str(&q.results).unwrap();
+    let items: &Vec<serde_json::Value> = items.as_array().unwrap();
+    for item in items {
+        println!("Item: {:?}", item);
+    }
+    Ok(())
+}
+`,
+        },
+        {
+            name: "C/C++",
+            code: `
+struct ClientWrapper *client = create_client();
+const char *server_address = "";
+struct ConnectResponseWrapper *conn_resp = client_connect(client, server_address);
+free_connect_response(conn_resp);
+QueryRequestWrapper req;
+req.collectionname = "entities";
+req.query = "{}";
+struct QueryResponseWrapper *query_resp = query(client, &req);
+printf("Query succeeded. Results: %s\n", query_resp->results);
+free_query_response(query_resp);
+client_disconnect(client);
+free_client(client);`,
+        },
+        {
+            name: "Php",
+            code: `use openiap\Client;
+$client = new Client();
+$client->connect("");
+$entities = $client->Query("entities", []);
+print_r("Query returned: " . count($entities) . PHP_EOL);
+$client->free();
+unset($client);`,
+        },
+        {
+            name: "Java",
+            code: `client = new Client();
+List<clienttestcli.Entity> results = 
+client.query(new TypeReference<List<clienttestcli.Entity>>() {}.getType(),
+new QueryParameters.Builder().collectionname("entities")
+    .query("{\"_type\":\"test\"}").top(10).build());
+for (clienttestcli.Entity item : results) {
+    System.out.println("Item: " + item._type + " " + item._id + " " + item.name);
+}`,
         },
     ];
     let gradienttext =
