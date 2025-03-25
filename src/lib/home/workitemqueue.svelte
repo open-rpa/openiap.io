@@ -92,7 +92,7 @@
                 >
                     Workitem Queues
                 </p>
-                <div class="block flex space-x-5 items-center lg:pe-10">
+                <div class="block flex space-x-5 items-center lg:pe-10 hidden md:block">
                     <Carousel.Previous />
                     <Carousel.Next />
                 </div>

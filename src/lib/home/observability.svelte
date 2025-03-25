@@ -82,7 +82,7 @@
                 >
                     Observability
                 </p>
-                <div class="flex space-x-5 items-center lg:pe-10">
+                <div class="flex space-x-5 items-center lg:pe-10 hidden md:block">
                     <Carousel.Previous />
                     <Carousel.Next />
                 </div>
