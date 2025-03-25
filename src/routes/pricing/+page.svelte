@@ -64,14 +64,20 @@
         <Tabs.List
           class="bg-bw700 dark:bg-bw700 rounded-[5px] p-1 lg:mb-0 text-bw50 font-normal flex justify-center w-fit rounded-[10px]"
         >
-          <Tabs.Trigger value="1" class=" text-xs sm:text-base"
-            >Licenses</Tabs.Trigger
+          <Tabs.Trigger
+            value="1"
+            class=" text-xs sm:text-base"
+            onclick={() => (screen = 1)}>Licenses</Tabs.Trigger
           >
-          <Tabs.Trigger value="2" class=" text-xs sm:text-base"
-            >Cloud</Tabs.Trigger
+          <Tabs.Trigger
+            value="2"
+            class=" text-xs sm:text-base"
+            onclick={() => (screen = 2)}>Cloud</Tabs.Trigger
           >
-          <Tabs.Trigger value="3" class=" text-xs sm:text-base"
-            >Consulting</Tabs.Trigger
+          <Tabs.Trigger
+            value="3"
+            class=" text-xs sm:text-base"
+            onclick={() => (screen = 3)}>Consulting</Tabs.Trigger
           >
         </Tabs.List>
       </div>
@@ -220,7 +226,7 @@
             </Card.Header>
             <HotkeyButton
               variant="success"
-              onclick={() => goto(base + "/contact/meet")}
+              onclick={() => goto(base + "/contact")}
               class="m-6 mt-0">Contact Sales</HotkeyButton
             >
           </Card.Root>
@@ -418,9 +424,7 @@
               <Card.Title class={"font-normal" + gradienttextnew}
                 >Cloud Advanced</Card.Title
               >
-              <Card.Description
-                >Perfect for advanced projects</Card.Description
-              >
+              <Card.Description>Perfect for advanced projects</Card.Description>
             </Card.Header>
 
             <div class="pt-5">
@@ -554,5 +558,3 @@
     </div>
   </div>
 </section>
-
-
