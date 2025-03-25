@@ -51,6 +51,16 @@
 			>
 				Get In Touch
 			</HotkeyButton>
+			<HotkeyButton
+					variant="link"
+					onclick={() => {
+						goto("/pricing");
+						isMenuOpen = false;
+					}}
+					aria-label="Get In Touch"
+				>
+					Pricing
+				</HotkeyButton>
 		</nav>
 		<!-- <div class="ms-4">
 			<HotkeyButton
@@ -126,12 +136,22 @@
 				<HotkeyButton
 					variant="link"
 					onclick={() => {
-						goto("/contact/view");
+						goto("/contact");
 						isMenuOpen = false;
 					}}
 					aria-label="Get In Touch"
 				>
 					Get In Touch
+				</HotkeyButton>
+				<HotkeyButton
+					variant="link"
+					onclick={() => {
+						goto("/pricing");
+						isMenuOpen = false;
+					}}
+					aria-label="Get In Touch"
+				>
+					Pricing
 				</HotkeyButton>
 				<HotkeyButton
 					variant="link"
