@@ -11,7 +11,7 @@
             text: "User Downloads",
             button: {
                 title: "Download Opencore",
-                link: "https://github.com/open-rpa/openrpa/releases/latest/download/OpenRPA.msi",
+                link: "https://github.com/open-rpa/docker",
             },
         },
         {
@@ -19,7 +19,7 @@
             text: "Stars on Github",
             button: {
                 title: "Give a Star",
-                link: "https://github.com/open-rpa/",
+                link: "https://github.com/open-rpa/openrpa",
             },
         },
         {

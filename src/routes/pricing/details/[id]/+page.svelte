@@ -139,7 +139,7 @@
           <HotkeyButton
             class="hover-lift"
             size="lg"
-            onclick={() => goto(base + "/contact/meet")}
+            onclick={() => goto(base + "/contact")}
           >
             Schedule a Meeting <CalendarFold class="ml-2 h-5 w-5" />
           </HotkeyButton>

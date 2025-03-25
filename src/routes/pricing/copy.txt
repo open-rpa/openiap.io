@@ -224,7 +224,7 @@
               </Card.Header>
               <HotkeyButton
                 variant="success"
-                onclick={() => goto(base + "/contact/meet")}
+                onclick={() => goto(base + "/contact")}
                 class="m-6 mt-0">Contact Sales</HotkeyButton
               >
             </Card.Root>

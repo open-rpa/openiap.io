@@ -41,7 +41,7 @@
                     } else {
                         toast.error(resData.error);
                     }
-                    goto(base + `/user`);
+                    // goto(base + `/`);
                 } catch (error: any) {
                     toast.error("Error", {
                         description: error.message,

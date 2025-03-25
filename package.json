@@ -1,6 +1,6 @@
 {
     "name": "opencore-web",
-    "version": "0.0.37",
+    "version": "0.0.41",
     "type": "module",
     "main": "build/index.js",
     "scripts": {
@@ -47,7 +47,8 @@
         "ws": "^8.18.0"
     },
     "dependencies": {
-        "mousetrap": "^1.6.5"
+        "mousetrap": "^1.6.5",
+        "posthog-js": "^1.232.7"
     },
     "openiap": {
         "language": "nodejs",
