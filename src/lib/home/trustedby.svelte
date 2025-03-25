@@ -60,7 +60,7 @@
     });
 </script>
 
-<div class="h-auto mb-48">
+<div class="mt-32 mb-48">
     <div class="text-bw600 text-center text-[14px] tracking-widest">
         Trusted by companies worldwide
     </div>
