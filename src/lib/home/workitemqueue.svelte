@@ -100,7 +100,7 @@
             <p class="text-bw300 font-semibold lg:text-[14px]">
                 Workitem queues let your automation handle tasks in a scalable
                 way — distributing work, <br /> tracking progress, and ensuring no
-                task gets lost.
+                task gets lost
             </p>
         </div>
         <Carousel.Content class="gap-5">

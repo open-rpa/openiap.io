@@ -1,5 +1,5 @@
 <script lang="ts">
-    import coverSvg from "$lib/images/home/cover.svg";
+    import coverSvg from "$lib/images/home/increased_cover.svg";
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
     import { base } from "$app/paths";
     import { goto } from "$app/navigation";

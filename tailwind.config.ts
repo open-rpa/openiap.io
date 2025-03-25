@@ -17,6 +17,7 @@ const config: Config = {
 		extend: {
 			colors: {
 				customGreen: "#32E38B",
+				cardbgdark: "#0D0D11",
 
 				test: '#EF4444',
 				bw50: "#FDFDFD",

@@ -3,7 +3,8 @@
     import knlogoSvg from "$lib/images/home/testimonials/kn_logo.svg";
     import greenrectSvg from "$lib/images/home/testimonials/greenRectangle.svg";
     import synergerplogoSvg from "$lib/images/home/testimonials/synergerp.svg";
-
+    import accessiotlogo from "$lib/images/home/testimonials/accessiotlogo.svg";
+    
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
     let testimonials = [
@@ -23,10 +24,10 @@
         },
         {
             logo: "",
-            name: "test ",
-            position: "test",
+            name: "Henk van Ark",
+            position: "CEO and Founder Access IoT",
             testimonial:
-                "OpenCore is light on resources, extremely fast and incredibly easy to scale when required.",
+                "Since adopting OpenIAP, we’ve cut operational costs, improved response times, and gained full visibility into our IoT ecosystem. It’s a game-changer for multi-site operations.",
         },
     ];
 </script>
@@ -36,7 +37,10 @@
 >
     <div class="xl:w-[1700px]">
         <div class="mb-16">
-            <p class={"text-[24px] lg:text-[50px] lg:text-[64px] py-6 leading-none font-semibold" + gradienttext}>
+            <p
+                class={"text-[24px] lg:text-[50px] lg:text-[64px] py-6 leading-none font-semibold" +
+                    gradienttext}
+            >
                 Industry leaders deliver winning <br />
                 solutions with OpenCore
             </p>
@@ -46,7 +50,9 @@
             </p>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-4 justify-between overflow-auto">
+        <div
+            class="flex flex-col lg:flex-row gap-4 justify-between overflow-auto"
+        >
             {#each testimonials as item}
                 <div
                     class="border-2 border-bw500/70 rounded-[20px] lg:h-[400px] lg:w-[400px] p-10 flex flex-col justify-between"

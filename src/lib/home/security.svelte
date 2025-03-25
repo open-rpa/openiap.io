@@ -55,7 +55,7 @@
             return " mt-4 items-start justify-start";
         } else if (index == 2) {
             return " mt-4 items-start justify-start";
-        }else if (index == 3) {
+        } else if (index == 3) {
             return " mt-4 items-start justify-start";
         } else {
             return " mt-10 items-end justify-end ms-4";
@@ -93,7 +93,8 @@
                 </div>
             </div>
             <p class="text-bw300 font-semibold lg:text-[14px]">
-                Easily create dashboards and reports on user data
+                Access enterprise-grade security that meets the most demanding
+                standards
             </p>
         </div>
 
