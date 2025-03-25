@@ -23,19 +23,25 @@
     ];
 
     onMount(() => {
-        const scrollSpeed = 1; // Adjust the speed as needed
         let scrollInterval: any;
 
+        const calculateScrollSpeed = () => {
+            // Adjust scroll speed based on screen width
+            const screenWidth = window.innerWidth;
+            return screenWidth > 1024 ? 2 : 1; // Faster speed for larger screens
+        };
+
         const startScrolling = () => {
+            const scrollSpeed = calculateScrollSpeed();
             const scroll = () => {
                 if (scrollContainer) {
                     scrollContainer.scrollLeft += scrollSpeed;
-                }
-                if (
-                    scrollContainer.scrollLeft >=
-                    scrollContainer.scrollWidth - scrollContainer.clientWidth
-                ) {
-                    scrollContainer.scrollLeft = 0;
+                    if (
+                        scrollContainer.scrollLeft >=
+                        scrollContainer.scrollWidth - scrollContainer.clientWidth
+                    ) {
+                        scrollContainer.scrollLeft = 0; // Reset scroll position
+                    }
                 }
             };
             scrollInterval = setInterval(() => {
@@ -47,14 +53,9 @@
             clearInterval(scrollInterval);
         };
 
-        scrollContainer.addEventListener("mouseenter", stopScrolling);
-        scrollContainer.addEventListener("mouseleave", startScrolling);
-
         startScrolling();
 
         return () => {
-            scrollContainer.removeEventListener("mouseleave", startScrolling);
-            scrollContainer.removeEventListener("mouseenter", stopScrolling);
             stopScrolling();
         };
     });
@@ -66,7 +67,7 @@
     </div>
     <div class="relative w-full overflow-hidden flex justify-center py-6">
         <!-- The fade wrapper -->
-        <div class="fade-mask lg:mx-32">
+        <div class="fade-mask lg:mx-64">
             <div
                 bind:this={scrollContainer}
                 class="scroll-container flex items-center gap-20 overflow-x-hidden no-scrollbar px-12 py-2 whitespace-nowrap"
