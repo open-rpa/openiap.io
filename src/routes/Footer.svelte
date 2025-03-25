@@ -36,7 +36,7 @@
 </script>
 
 <section
-	class="pt-10 pb-24 mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:flex xl:justify-center"
+	class="pt-10 pb-16 mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:flex xl:justify-center"
 >
 	<div
 		class={`w-full lg:max-w-[1700px] ${isScreenSmall && "grid grid-cols-2 mt-4 space-y-2 text-center items-center "} ${isScreenSmallTab && "grid grid-cols-4 mt-4 space-y-2 text-center items-center "} ${isScreenMedium && "grid grid-cols-5 space-y-2 text-center items-center"}  ${isScreenLarge && "flex flex-row justify-between"} `}

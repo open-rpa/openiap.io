@@ -37,7 +37,7 @@
 				contact: "dark:text-bw950 dark:bg-bw500 hover:dark:bg-bw300",
 			},
 			size: {
-				base: "h-[38px] px-5 py-3 rounded-[10px]",
+				base: "h-[38px] px-4 py-3 rounded-[10px]",
 				icon: "h-7 w-7 rounded-[10px] p-2",
 				sm: "h-7 px-2.5 py-1.5 rounded-[10px]",
 				lg: "h-8 px-2.5 py-1.5 rounded-[10px]",

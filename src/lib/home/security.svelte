@@ -31,7 +31,7 @@
         {
             title: "Audit trailing",
             description:
-                "The platform generates extensive audit trailing and keeps complete version history of all changes in the database. This allows complying with even the most restrictive demands.",
+                "The platform generates extensive audit trailing and keeps complete version history of all changes in the database. This allows complying with even the most restrictive regulatory demands.",
             image: auditSvg,
             imageDark: auditDarkSvg,
         },

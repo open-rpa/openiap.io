@@ -15,13 +15,15 @@
         class="xl:absolute xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center"
     >
         <h1
-            class={"text-[30px] xl:text-hero font-bold mb-6 animate-fade-in" +
+            class={"text-[30px] xl:text-hero font-bold mb-6 animate-fade-in tracking-widest" +
                 gradienttext}
         >
             A scalable and secure <br />
             automation platform
         </h1>
-        <p class="xl:text-[14px] text-bw500 mb-[52px] mx-auto animate-fade-in">
+        <p
+            class="xl:text-[16px] text-bw500 mb-[52px] mx-auto animate-fade-in tracking-widest"
+        >
             An opinionated platform that gives you the complete infrastructure
             for deploying, monitoring <br /> and troubleshooting automation
         </p>
@@ -29,6 +31,7 @@
             class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in"
         >
             <HotkeyButton
+                class="tracking-wider"
                 aria-label="Try OpenCore"
                 variant="success"
                 onclick={() =>
@@ -42,7 +45,7 @@
             </HotkeyButton>
             <HotkeyButton
                 aria-label="Get Started"
-                class="hover-lift"
+                class="tracking-wider"
                 onclick={() =>
                     window.open(
                         "https://docs.openiap.io/docs/Accessing-for-the-First-Time.html",
