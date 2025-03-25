@@ -29,7 +29,7 @@
 			>
 				Use Cases
 			</HotkeyButton>
-			<HotkeyButton
+			<!-- <HotkeyButton
 				variant="link"
 				onclick={() =>
 					window.open(
@@ -40,7 +40,7 @@
 				aria-label="Open Documentation"
 			>
 				Docs
-			</HotkeyButton>
+			</HotkeyButton> -->
 			<HotkeyButton
 				variant="link"
 				onclick={() => {
@@ -121,7 +121,7 @@
 				>
 					Use Cases
 				</HotkeyButton>
-				<HotkeyButton
+				<!-- <HotkeyButton
 					variant="link"
 					onclick={() =>
 						window.open(
@@ -132,7 +132,7 @@
 					aria-label="Open Documentation"
 				>
 					Docs
-				</HotkeyButton>
+				</HotkeyButton> -->
 				<HotkeyButton
 					variant="link"
 					onclick={() => {
