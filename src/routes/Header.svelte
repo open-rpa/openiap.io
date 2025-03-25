@@ -106,7 +106,7 @@
 			<nav class="container mx-auto px-4 py-4 flex flex-col space-y-4">
 				<HotkeyButton
 					variant="link"
-					onclick={() => goto(base + "/usecase")}
+					onclick={() => goto(base + "/usecases")}
 					aria-label="Go to Use Cases"
 				>
 					Use Cases

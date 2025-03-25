@@ -75,7 +75,7 @@
                     <img
                         src={logo}
                         alt="Logo"
-                        class="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                        class="h-8"
                     />
                 {/each}
             </div>
