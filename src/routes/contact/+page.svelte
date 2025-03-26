@@ -70,12 +70,12 @@
 
 <div>
     <section
-        class="py-20 px-4 md:h-screen flex items-center justify-center gradient-bg"
+        class="py-20 px-4 mt-10 flex items-center justify-center gradient-bg"
     >
         <div class="md:container mx-auto">
             <div class="max-w-3xl mx-auto animate-fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">
-                    Get in Touch!
+                <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center text-bw50">
+                    Get in touch!
                 </h2>
                 <p class="text-xl text-gray-400 mb-8 text-center">
                     We will get back to you as soon as we can.
@@ -184,7 +184,14 @@
         <SuperDebug data={formData} theme="vscode" />
     {/if}
 
-    <section class="py-20 px-4 text-white">
+    <section class="h-[100vh]" id="meetinglink">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-bw50">
+            Or book a meeting  
+        </h2>
+        <Calendlywidget />
+    </section>
+
+    <!-- <section class="py-20 px-4 text-white">
         <div class="container mx-auto text-center">
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">
@@ -210,11 +217,9 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="lg:h-[100vh]" id="meetinglink">
-        <Calendlywidget />
-    </section>
+   
 </div>
 
 <HotkeyButton
