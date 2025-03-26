@@ -61,6 +61,7 @@
 </script>
 
 <svelte:head>
+    <title>Get in Touch | OpenIAP</title>
     <script
         type="text/javascript"
         src="https://assets.calendly.com/assets/external/widget.js"
@@ -74,7 +75,9 @@
     >
         <div class="md:container mx-auto">
             <div class="max-w-3xl mx-auto animate-fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center text-bw50">
+                <h2
+                    class="text-3xl md:text-4xl font-bold mb-2 text-center text-bw50"
+                >
                     Get in touch!
                 </h2>
                 <p class="text-xl text-gray-400 mb-8 text-center">
@@ -186,7 +189,7 @@
 
     <section class="h-[100vh]" id="meetinglink">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-bw50">
-            Or book a meeting  
+            Or book a meeting
         </h2>
         <Calendlywidget />
     </section>
@@ -218,8 +221,6 @@
             </div>
         </div>
     </section> -->
-
-   
 </div>
 
 <HotkeyButton

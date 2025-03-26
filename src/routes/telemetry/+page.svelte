@@ -1,8 +1,6 @@
-<script>
-    $effect(()=>{
-        window.scrollTo(0, 0);
-    })
-</script>
+<svelte:head>
+    <title>Telemetry | OpenIAP</title>
+</svelte:head>
 
 <div class="px-4 pt-20  gradient-bg md:h-screen">
     <div class="container mx-auto text-start">

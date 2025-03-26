@@ -5,10 +5,6 @@
     
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
-
-    $effect(() => {
-        window.scrollTo(0, 0);
-    });
 </script>
 
 <div class="xl:pb-16">

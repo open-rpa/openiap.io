@@ -11,7 +11,11 @@
 
 <header class="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-sm">
 	<div class="px-4 h-16 flex items-center justify-between">
-		<HotkeyButton variant="ghostfull" onclick={() => goto(base + "/")} aria-label="Go to Home">
+		<HotkeyButton
+			variant="ghostfull"
+			onclick={() => goto(base + "/")}
+			aria-label="Go to home page"
+		>
 			<div class="flex items-center justify-center space-x-[15px]">
 				<div class="justify-end">
 					<img src={Logo} alt="Logo" />
@@ -26,9 +30,9 @@
 			<HotkeyButton
 				variant="link"
 				onclick={() => goto(base + "/usecases")}
-				aria-label="Go to Use Cases"
+				aria-label="Go to use cases page"
 			>
-				Use Cases
+				Use cases
 			</HotkeyButton>
 			<!-- <HotkeyButton
 				variant="link"
@@ -48,20 +52,20 @@
 					goto("/contact");
 					isMenuOpen = false;
 				}}
-				aria-label="Get In Touch"
+				aria-label="Go to get in touch page"
 			>
-				Get In Touch
+				Get in touch
 			</HotkeyButton>
 			<HotkeyButton
-					variant="link"
-					onclick={() => {
-						goto("/pricing");
-						isMenuOpen = false;
-					}}
-					aria-label="Get In Touch"
-				>
-					Pricing
-				</HotkeyButton>
+				variant="link"
+				onclick={() => {
+					goto("/pricing");
+					isMenuOpen = false;
+				}}
+				aria-label="Go to pricing page"
+			>
+				Pricing
+			</HotkeyButton>
 		</nav>
 		<!-- <div class="ms-4">
 			<HotkeyButton
@@ -118,9 +122,9 @@
 				<HotkeyButton
 					variant="link"
 					onclick={() => goto(base + "/usecases")}
-					aria-label="Go to Use Cases"
+					aria-label="Go to use cases page"
 				>
-					Use Cases
+					Use cases
 				</HotkeyButton>
 				<!-- <HotkeyButton
 					variant="link"
@@ -140,9 +144,9 @@
 						goto("/contact");
 						isMenuOpen = false;
 					}}
-					aria-label="Get In Touch"
+					aria-label="Go to get in touch page"
 				>
-					Get In Touch
+					Get in touch
 				</HotkeyButton>
 				<HotkeyButton
 					variant="link"
@@ -150,7 +154,7 @@
 						goto("/pricing");
 						isMenuOpen = false;
 					}}
-					aria-label="Get In Touch"
+					aria-label="Go to pricing page"
 				>
 					Pricing
 				</HotkeyButton>
@@ -162,7 +166,7 @@
 							"_blank",
 							"noopener,noreferrer",
 						)}
-					aria-label="Login"
+					aria-label="Go to login page"
 				>
 					Login
 				</HotkeyButton>

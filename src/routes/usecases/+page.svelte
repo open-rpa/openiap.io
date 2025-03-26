@@ -1,9 +1,8 @@
 <script>
-    import logo1 from "$lib/images/usecases/rectangle.svg";
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
+    import logo1 from "$lib/images/usecases/rectangle.svg";
 
     $effect(() => {
-        window.scrollTo(0, 0);
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -23,6 +22,10 @@
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
+
+<svelte:head>
+    <title>Use Cases | OpenIAP</title>
+</svelte:head>
 
 <section class="lg;py-20 lg:px-4 gradient-bg text-bw50">
     <div class="container mx-auto">

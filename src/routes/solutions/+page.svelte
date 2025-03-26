@@ -33,7 +33,7 @@
     "flex flex-col items-center justify-center space-y-2 cursor-pointer animate-fade-in";
 
   $effect(() => {
-    window.scrollTo(0, 0);
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

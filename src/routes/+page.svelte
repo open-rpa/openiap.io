@@ -12,11 +12,16 @@
         Increased,
         Contactus,
     } from "$lib/home";
-
-    $effect(() => {
-        window.scrollTo(0, 0);
-    });
 </script>
+
+<svelte:head>
+    <title>OpenCore | A scalable and secure
+        automation platform</title>
+    <!-- <meta
+        name="description"
+        content="OpenIAP is a platform that helps you to manage your business operations."
+    /> -->
+</svelte:head>
 
 <!-- <div
     class="bg-pink-800 sm:bg-red-800 md:bg-blue-800 lg:bg-green-800 xl:bg-yellow-800"

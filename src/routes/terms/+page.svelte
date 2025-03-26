@@ -3,6 +3,10 @@
     import { base } from "$app/paths";
 </script>
 
+<svelte:head>
+    <title>Terms and Conditions | OpenIAP</title>
+</svelte:head>
+
 <div class="px-4 pt-20 gradient-bg flex items-center">
     <div class="container mx-auto text-start">
         <div class="mb-10">

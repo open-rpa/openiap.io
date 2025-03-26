@@ -32,6 +32,10 @@
   });
 </script>
 
+<svelte:head>
+    <title>Privacy Details | OpenIAP</title>
+</svelte:head>
+
 <section class="py-20 px-4 gradient-bg md:h-screen">
   <div
     class="hidden md:block text-sm font-medium text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mx-20"

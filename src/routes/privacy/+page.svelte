@@ -1,8 +1,6 @@
-<script>
-    $effect(() => {
-        window.scrollTo(0, 0);
-    });
-</script>
+<svelte:head>
+    <title>Privacy Policy | OpenIAP</title>
+</svelte:head>
 
 <div class="px-4 pt-20 h-screen gradient-bg">
     <div class="container mx-auto text-start mb-10">

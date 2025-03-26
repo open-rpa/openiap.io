@@ -2,7 +2,6 @@
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
 
     $effect(() => {
-        window.scrollTo(0, 0);
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -20,6 +19,10 @@
         return () => observer.disconnect();
     });
 </script>
+
+<svelte:head>
+    <title>Partners | OpenIAP</title>
+</svelte:head>
 
 <div
     class="px-4 gradient-bg h-screen flex flex-col items-center justify-center"

@@ -37,6 +37,10 @@
     " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
 </script>
 
+<svelte:head>
+    <title>Pricing | OpenIAP</title>
+</svelte:head>
+
 <section
   class="pt-32 md:h-screen px-4 gradient-bg flex justify-center items-center md:mb-48"
 >
