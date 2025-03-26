@@ -1,6 +1,6 @@
 {
-    "name": "opencore-web",
-    "version": "0.0.44",
+    "name": "openiap-io",
+    "version": "0.0.43",
     "type": "module",
     "main": "build/index.js",
     "scripts": {
