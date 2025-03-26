@@ -42,7 +42,7 @@
 </svelte:head>
 
 <section
-  class="pt-32 md:h-screen px-4 gradient-bg flex justify-center items-center md:mb-48"
+  class="pt-32 md:h-screen px-4 gradient-bg flex justify-center items-center md:mb-[700px]"
 >
   <img
     src={pricing_grid}
