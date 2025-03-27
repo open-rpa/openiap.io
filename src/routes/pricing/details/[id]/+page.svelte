@@ -207,10 +207,6 @@
           gets turned off after 4 hours. If you create a workspace for your
           user, you can add multiple users and roles.
         </div>
-        <div class="text-gray-400 mb-10">
-          To avoid these restrictions, you can run OpenIAP Flow on-premise or at
-          your own cloud free of any charge.
-        </div>
       </div>
     {/if}
     {#if active == "3"}
