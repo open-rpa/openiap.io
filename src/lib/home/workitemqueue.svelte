@@ -87,7 +87,7 @@
         <div class="mb-10">
             <div class="flex items-end justify-between gap-8">
                 <p
-                    class={"text-[24px] lg:text-[50px] font-semibold" +
+                    class={"text-[50px] font-semibold" +
                         gradienttext}
                 >
                     Workitem Queues
@@ -97,7 +97,7 @@
                     <Carousel.Next />
                 </div>
             </div>
-            <p class="text-bw300 font-semibold lg:text-[14px]">
+            <p class="text-bw300 font-semibold text-[14px]">
                 Workitem queues let your automation handle tasks in a scalable
                 way — distributing work, <br /> tracking progress, and ensuring no
                 task gets lost

@@ -36,15 +36,14 @@
     class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 xl:flex xl:justify-center"
 >
     <div class="xl:w-[1700px]">
-        <div class="mb-16">
+        <div class="mb-10">
             <p
-                class={"text-[24px] lg:text-[50px] lg:text-[64px] py-6 leading-none font-semibold" +
+                class={"text-[50px] font-semibold max-w-[900px] leading-none mb-4" +
                     gradienttext}
             >
-                Industry leaders deliver winning <br />
-                solutions with OpenCore
+                Industry leaders deliver winning solutions with OpenCore
             </p>
-            <p class="text-bw300 font-semibold lg:text-[16px]">
+            <p class="text-bw300 font-semibold text-[14px]">
                 OpenCore allows different types of developers to work together
                 via one common framework
             </p>

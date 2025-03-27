@@ -12,7 +12,7 @@
         class="xl:absolute xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center"
     >
         <h1
-            class={"text-[30px] xl:text-hero font-bold mb-6 animate-fade-in tracking-widest" +
+            class={"text-[30px] lg:text-hero font-bold mb-6 animate-fade-in tracking-widest" +
                 gradienttext}
         >
             A scalable and secure <br />

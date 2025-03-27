@@ -109,7 +109,7 @@
             <li>
               Access to monitoring using OpenTelemetry. Collection of both
               performance data for monitoring and spans for detailed logging of
-              all events. Custom grafana dashboards on any (un)structured data
+              all events. Custom grafana dashboards on any unstructured data
               saved in the openflow database. Easy design custom reports and
               dashboard, using same security model as in OpenFlow. Kubernetes
               agent driver (with limited OpenShift support)
@@ -158,14 +158,8 @@
         <div class="text-gray-400 mb-10">
           OpenIAP offers access to OpenIAP Flow at app.openiap.io. You get 25MB
           of disk space for free, and you can start a RAM-limited agent that
-          gets turned off after 4 hours. If you enable multi-tenancy for your
+          gets turned off after 4 hours. If you create a workspace for your
           user, you can add multiple users and roles.
-        </div>
-        <div class="text-gray-400 mb-10">
-          After enabling multi-tenancy, on your customer page, you can purchase
-          additional disk space at 3 DKK per 50MB a month (Approx. 0.43 USD as
-          of November 6, 2023), dedicated agent(s) that do not get turned off;
-          see prices below.
         </div>
         <div class="text-gray-400 mb-10">
           To avoid these restrictions, you can run OpenIAP Flow on-premise or at
@@ -186,10 +180,10 @@
           customer page. Buying packages will offer a discount on the hourly
           rate.
         </div>
-        <div class="text-customGreen mb-4 text-xl">Price: 1530 DKK/hour</div>
-        <div class="text-gray-400 mb-10">
+        <div class="text-customGreen mb-4 text-xl">Price: 255 USD/hour</div>
+        <!-- <div class="text-gray-400 mb-10">
           (Approx. 216 USD as of November 22, 2024)
-        </div>
+        </div> -->
       </div>
     {/if}
   </div>

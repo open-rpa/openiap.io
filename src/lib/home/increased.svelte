@@ -19,12 +19,12 @@
                 <div class="flex flex-col xl:justify-between px-10 xl:py-10 space-y-10 xl:space-y-0">
                     <div class="pt-10 xl:pt-0">
                         <p
-                            class={"text-[24px] xl:text-[50px] leading-none font-semibold" +
+                            class={"text-[50px] leading-none font-semibold mb-4" +
                                 gradienttext}
                         >
                             Increased Integration Efficiency by 25x
                         </p>
-                        <p class="text-bw300 lg:text-[14px]">
+                        <p class="text-bw300 text-[14px]">
                             Kuehne + Nagel increased their integration
                             efficiency <br /> by 25x using OpenCore
                         </p>

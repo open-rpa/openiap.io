@@ -48,13 +48,13 @@
         class="text-center border-2 border-bw500/70 rounded-[20px] p-10 w-full max-w-[1700px]"
     >
         <p
-            class={"text-[24px] lg:text-[50px] lg:text-[64px] py-6 leading-none font-semibold mb-16" +
+            class={"text-[50px] py-6 leading-none font-semibold mb-16" +
                 gradienttext}
         >
             Join the community
         </p>
         <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-20 xl:flex items-center justify-center xl:flex-row xl:justify-between"
+            class="grid grid-cols-1 md:grid-cols-2 gap-20 xl:flex items-center justify-center xl:flex-row xl:justify-center py-6"
         >
             {#each community as item, index}
                 <div

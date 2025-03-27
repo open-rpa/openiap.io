@@ -38,7 +38,7 @@
 </script>
 
 <svelte:head>
-    <title>Pricing | OpenIAP</title>
+  <title>Pricing | OpenIAP</title>
 </svelte:head>
 
 <section
@@ -53,11 +53,11 @@
     <div class="text-center">
       <div class="mb-10">
         <div class="text-center">
-          <p class={"text-[24px] lg:text-[50px] font-semibold" + gradienttext}>
+          <p class={"text-[50px] font-semibold" + gradienttext}>
             Plans and Pricing
           </p>
         </div>
-        <p class="text-bw300 font-semibold lg:text-[14px]">
+        <p class="text-bw300 font-semibold text-[14px]">
           Explore our different pricing plans tailored to your needs
         </p>
       </div>
@@ -223,6 +223,10 @@
                         <Check class="mr-2 h-4 w-4 text-greentick " />
                         Access to Dev Team
                       </li>
+                      <li class="flex items-center">
+                        <Check class="mr-2 h-4 w-4 text-greentick " />
+                        Discount on support
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -250,8 +254,25 @@
               <Card.Description>Perfect for getting started</Card.Description>
             </Card.Header>
 
-            <div class="flex px-6 items-end text-bw50 my-6">
+            <!-- <div class="flex px-6 items-end text-bw50 my-6">
               <span class="text-[30px] font-bold text-center">Free</span>
+            </div> -->
+
+            <div class="pt-5">
+              <div class="flex px-6 items-end text-bw50">
+                <span class="text-[30px] font-bold text-center"
+                  >Free
+                  <!-- <span
+                    class="font-bold text-center justify-end text-bw500 text-[14px]"
+                    >/Month</span
+                  > -->
+                </span>
+              </div>
+              <!-- <div class="flex px-6 pb-6 items-end text-[14px]">
+                <span class="font-bold text-center text-bw200"
+                  >Approx. 39 <span class="text-bw200">USD</span></span
+                >
+              </div> -->
             </div>
 
             <!-- <div class="pt-5">
@@ -315,18 +336,18 @@
             <div class="pt-5">
               <div class="flex px-6 items-end text-bw50">
                 <span class="text-[30px] font-bold text-center"
-                  >DKK 277
+                  >USD 44
                   <span
-                    class="ms-1 font-bold text-center justify-end text-bw500 text-[14px]"
+                    class="font-bold text-center justify-end text-bw500 text-[14px]"
                     >/Month</span
                   >
                 </span>
               </div>
-              <div class="flex px-6 pb-6 items-end text-[14px]">
+              <!-- <div class="flex px-6 pb-6 items-end text-[14px]">
                 <span class="font-bold text-center text-bw200"
                   >Approx. 39 <span class="text-bw200">USD</span></span
                 >
-              </div>
+              </div> -->
             </div>
 
             <div class="px-6">
@@ -376,18 +397,18 @@
             <div class="pt-5">
               <div class="flex px-6 items-end text-bw50">
                 <span class="text-[30px] font-bold text-center"
-                  >DKK 915
+                  >USD 144
                   <span
-                    class="ms-1 font-bold text-center justify-end text-bw500 text-[14px]"
+                    class="font-bold text-center justify-end text-bw500 text-[14px]"
                     >/Month</span
                   >
                 </span>
               </div>
-              <div class="flex px-6 pb-6 items-end text-[14px]">
+              <!-- <div class="flex px-6 pb-6 items-end text-[14px]">
                 <span class="font-bold text-center text-bw200"
                   >Approx. 129 <span class="text-bw200">USD</span></span
                 >
-              </div>
+              </div> -->
             </div>
 
             <div class="px-6">
@@ -434,18 +455,18 @@
             <div class="pt-5">
               <div class="flex px-6 items-end text-bw50">
                 <span class="text-[30px] font-bold text-center"
-                  >DKK 1699
+                  >USD 165
                   <span
-                    class="ms-1 font-bold text-center justify-end text-bw500 text-[14px]"
+                    class="font-bold text-center justify-end text-bw500 text-[14px]"
                     >/Month</span
                   >
                 </span>
               </div>
-              <div class="flex px-6 pb-6 items-end text-[14px]">
+              <!-- <div class="flex px-6 pb-6 items-end text-[14px]">
                 <span class="font-bold text-center text-bw200"
                   >Approx. 239 <span class="text-bw200">USD</span></span
                 >
-              </div>
+              </div> -->
             </div>
 
             <div class="px-6">
@@ -498,18 +519,18 @@
             <div class="pt-5">
               <div class="flex px-6 items-end text-bw50">
                 <span class="text-[30px] font-bold text-center"
-                  >DKK 1530
+                  >USD 255
                   <span
-                    class="ms-1 font-bold text-center justify-end text-bw500 text-[14px]"
+                    class="font-bold text-center justify-end text-bw500 text-[14px]"
                     >/Hour</span
                   >
                 </span>
               </div>
-              <div class="flex px-6 pb-6 items-end text-[14px]">
+              <!-- <div class="flex px-6 pb-6 items-end text-[14px]">
                 <span class="font-bold text-center text-bw200"
                   >Approx. 216 <span class="text-bw200">USD</span></span
                 >
-              </div>
+              </div> -->
             </div>
 
             <div class="px-6">

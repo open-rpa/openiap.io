@@ -143,18 +143,17 @@ for (clienttestcli.Entity item : results) {
     >
         <div class="mb-10">
             <div class="flex items-end justify-between gap-8">
-                <p
-                    class={"text-[24px] lg:text-[50px] font-semibold" +
-                        gradienttext}
-                >
+                <p class={"text-[50px] font-semibold" + gradienttext}>
                     Multi-language support
                 </p>
-                <div class="block flex space-x-5 items-center lg:pe-10 hidden md:block">
+                <div
+                    class="block flex space-x-5 items-center lg:pe-10 hidden md:block"
+                >
                     <Carousel.Previous />
                     <Carousel.Next />
                 </div>
             </div>
-            <p class="text-bw300 lg:text-[14px]">
+            <p class="text-bw300 text-[14px]">
                 OpenCore allows different types of developers to work together
                 in one common framework
             </p>
@@ -242,9 +241,9 @@ for (clienttestcli.Entity item : results) {
             {#each carouselItem as item, index}
                 <Carousel.Item class={"md:basis-1/2 lg:basis-1/3"}>
                     <div
-                        class="border-2 rounded-[20px] border-bw500/70 h-[420px] xl:h-[450px] overflow-hidden grayscale-0 group"
+                        class="border-2 rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-8 xl:p-12 pb-0 mb-4 lg:mb-0">
+                        <div class="p-8 xl:p-12 pb-0 xl:pb-2 mb-4 lg:mb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
