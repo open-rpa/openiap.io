@@ -519,7 +519,7 @@
             <div class="pt-5">
               <div class="flex px-6 items-end text-bw50">
                 <span class="text-[30px] font-bold text-center"
-                  >USD 255
+                  >USD 225
                   <span
                     class="font-bold text-center justify-end text-bw500 text-[14px]"
                     >/Hour</span

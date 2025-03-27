@@ -33,16 +33,17 @@
 </script>
 
 <svelte:head>
-    <title>Privacy Details | OpenIAP</title>
+  <title>Privacy Details | OpenIAP</title>
 </svelte:head>
 
-<section class="py-20 px-4 gradient-bg md:h-screen">
+<section class="py-20 px-4 gradient-bg">
   <div
     class="hidden md:block text-sm font-medium text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mx-20"
   >
     <ul class="flex flex-wrap -mb-px">
       <li>
         <a
+          href=""
           onclick={() => (active = "1")}
           class={`${tabClass} ${active === "1" ? "text-customGreen border-customGreen" : "border-transparent"}`}
           >Premium license</a
@@ -50,6 +51,7 @@
       </li>
       <li>
         <a
+          href=""
           onclick={() => (active = "2")}
           class={`${tabClass} ${active === "2" ? "text-customGreen border-customGreen" : "border-transparent"}`}
           >Cloud Offering</a
@@ -57,6 +59,7 @@
       </li>
       <li>
         <a
+          href=""
           onclick={() => (active = "3")}
           class={`${tabClass} ${active === "3" ? "text-customGreen border-customGreen" : "border-transparent"}`}
           >Consulting</a
@@ -67,6 +70,7 @@
   <div class="flex flex-row block md:hidden">
     <div>
       <a
+        href=""
         onclick={() => (active = "1")}
         class={`${tabClass1} ${active === "1" ? "text-customGreen border-customGreen" : "border-transparent"}`}
         >Premium license</a
@@ -74,6 +78,7 @@
     </div>
     <div>
       <a
+        href=""
         onclick={() => (active = "2")}
         class={`${tabClass1} ${active === "2" ? "text-customGreen border-customGreen" : "border-transparent"}`}
         >Cloud Offering</a
@@ -81,6 +86,7 @@
     </div>
     <div>
       <a
+        href=""
         onclick={() => (active = "3")}
         class={`${tabClass1} ${active === "3" ? "text-customGreen border-customGreen" : "border-transparent"}`}
         >Consulting</a
@@ -91,16 +97,56 @@
     {#if active == "1"}
       <div class="mt-10">
         <div class="text-customGreen mb-4 text-xl">
-          Enable enterprise tooling for scaling
+          Enterprise-Grade Scaling with OpenCore
         </div>
         <div class="text-gray-400 mb-10">
-          When you want to deploy on premise, your local hosting center or using
-          your own cloud provider ( like Azure, AWS, Google, IBM, Alibaba etc. )
-          you can buy one or more license keys. Deploying openflow on premise is
-          easy using docker compose for docker or our helm chart for kubernetes.
-          Once updated in our system you can get your license on your customer
-          page A license does not come with any support, but you can buy
-          consulting hours as needed.
+          Deploying OpenCore on-premise, in your local hosting center, or with
+          your preferred cloud provider (Azure, AWS, Google Cloud, IBM, Alibaba,
+          etc.) is seamless with our enterprise licensing model. Connect with
+          our sales team to purchase a license keys that is tailored to your
+          needs, and get started.
+        </div>
+
+        <div class="text-customGreen mb-4 text-xl">Easy Deployment</div>
+        <div class="text-gray-400 mb-10">
+          <ul class="list-disc ms-4">
+            <li class="mb-4">
+              Deploy OpenCore effortlessly using Docker Compose or our Helm
+              chart for Kubernetes.
+            </li>
+            <li class="mb-4">
+              A license does not include support, but consulting hours are
+              available at a reduced rate for licensed customers.
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-customGreen mb-4 text-xl">
+          Closed Source Features Unlock advanced enterprise features designed
+          for scalability, monitoring, and AI-driven insights:
+        </div>
+        <div class="text-gray-400 mb-10">
+          <ul class="list-disc ms-4">
+            <li class="mb-4">
+              Reporting & Dashboards: Design custom reports and dashboards on
+              both regular and time-series data, using the same security model
+              as in OpenCore.
+            </li>
+            <li class="mb-4">
+              Observability: Capture all automation activity to troubleshoot
+              efficiently with OpenTelemetry. Use Grafana to display data, logs
+              with Loki, performance data from Victory Metric and traces from
+              Jaeger.
+            </li>
+            <li class="mb-4">
+              AI Chat to Interact with Your Data: Interact with your data using
+              AI-driven insights and conversational analysis.
+            </li>
+            <li class="mb-4">
+              Kubernetes Integration: Includes a Kubernetes agent driver, that
+              also supports OpenShift.
+            </li>
+          </ul>
         </div>
 
         <div class="text-customGreen mb-4 text-xl">Product elements</div>
@@ -180,7 +226,7 @@
           customer page. Buying packages will offer a discount on the hourly
           rate.
         </div>
-        <div class="text-customGreen mb-4 text-xl">Price: 255 USD/hour</div>
+        <div class="text-customGreen mb-4 text-xl">Price: 225 USD/hour</div>
         <!-- <div class="text-gray-400 mb-10">
           (Approx. 216 USD as of November 22, 2024)
         </div> -->
