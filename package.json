@@ -1,6 +1,6 @@
 {
     "name": "openiap-io",
-    "version": "0.0.48",
+    "version": "0.0.50",
     "type": "module",
     "main": "build/index.js",
     "scripts": {

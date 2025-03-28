@@ -249,7 +249,7 @@
           >
             <Card.Header>
               <Card.Title class={"font-normal" + gradienttextnew}
-                >Open Source</Card.Title
+                >Free</Card.Title
               >
               <Card.Description>Perfect for getting started</Card.Description>
             </Card.Header>
@@ -304,7 +304,7 @@
                 </li>
                 <li class="flex items-center">
                   <Check class="mr-2 h-4 w-4 text-greentick" />
-                  Limited disk space (25 MB)
+                  Limited disk space
                 </li>
                 <li class="flex items-center">
                   <X class="mr-2 h-4 w-4 text-red-500" />
