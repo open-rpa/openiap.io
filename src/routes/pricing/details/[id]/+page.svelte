@@ -203,7 +203,7 @@
         </div>
         <div class="text-gray-400 mb-10">
           OpenIAP offers access to OpenIAP Flow at app.openiap.io. You get a
-          limited amount of disk space for free (Subject to a fair usage policy), and you can start a RAM-limited
+          limited amount of disk space for free (subject to a fair usage policy), and you can start a RAM-limited
           agent that gets turned off after 4 hours. If you create a workspace
           for your user, you can add multiple users and roles.
         </div>
