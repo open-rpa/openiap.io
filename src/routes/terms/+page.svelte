@@ -178,7 +178,7 @@
                         class="text-customGreen cursor-pointer hover:text-white"
                         onclick={() =>
                             window.open(
-                                "https://app.openiap.io/ui/#/Customer",
+                                "https://app.openiap.io/ui/workspace",
                                 "_blank",
                                 "noopener,noreferrer",
                             )}
@@ -193,7 +193,7 @@
                         class="text-customGreen cursor-pointer hover:text-white"
                         onclick={() =>
                             window.open(
-                                "https://app.openiap.io/ui/#/Customer",
+                                "https://app.openiap.io/ui/workspace",
                                 "_blank",
                                 "noopener,noreferrer",
                             )}
@@ -220,7 +220,7 @@
                         class="text-customGreen cursor-pointer hover:text-white"
                         onclick={() =>
                             window.open(
-                                "https://app.openiap.io/ui/#/Customer",
+                                "https://app.openiap.io/ui/workspace",
                                 "_blank",
                                 "noopener,noreferrer",
                             )}
@@ -334,7 +334,7 @@
                         class="text-customGreen cursor-pointer hover:text-white"
                         onclick={() =>
                             window.open(
-                                "https://app.openiap.io/ui/#/Customer",
+                                "https://app.openiap.io/ui/workspace",
                                 "_blank",
                                 "noopener,noreferrer",
                             )}

@@ -373,7 +373,7 @@
                 variant="success"
                 onclick={() =>
                   window.open(
-                    "https://app.openiap.io/ui/#/Customer",
+                    "https://app.openiap.io/ui/workspace",
                     "_blank",
                     "noopener,noreferrer",
                   )}
@@ -433,7 +433,7 @@
                 variant="success"
                 onclick={() =>
                   window.open(
-                    "https://app.openiap.io/ui/#/Customer",
+                    "https://app.openiap.io/ui/workspace",
                     "_blank",
                     "noopener,noreferrer",
                   )}
@@ -492,7 +492,7 @@
                 variant="success"
                 onclick={() =>
                   window.open(
-                    "https://app.openiap.io/ui/#/Customer",
+                    "https://app.openiap.io/ui/workspace",
                     "_blank",
                     "noopener,noreferrer",
                   )}

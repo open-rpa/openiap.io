@@ -91,7 +91,7 @@
 				class="hover-lift"
 				onclick={() =>
 					window.open(
-						"https://app.openiap.io/",
+						"https://app.openiap.io/ui/login",
 						"_blank",
 						"noopener,noreferrer",
 					)}
@@ -162,7 +162,7 @@
 					variant="link"
 					onclick={() =>
 						window.open(
-							"https://app.openiap.io/",
+							"https://app.openiap.io/ui/login",
 							"_blank",
 							"noopener,noreferrer",
 						)}

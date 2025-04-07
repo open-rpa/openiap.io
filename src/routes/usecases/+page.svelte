@@ -245,7 +245,7 @@
             <HotkeyButton
                 variant="success"
                 onclick={() =>
-                    window.open("https://app.openiap.io/ui/#/Login", "_blank")}
+                    window.open("https://app.openiap.io/ui/login", "_blank")}
             >
                 Try OpenCore
             </HotkeyButton>

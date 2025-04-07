@@ -33,7 +33,7 @@
                 variant="success"
                 onclick={() =>
                     window.open(
-                        "https://app.openiap.io/ui/#/Login",
+                        "https://app.openiap.io/ui/login",
                         "_blank",
                         "noopener,noreferrer",
                     )}
