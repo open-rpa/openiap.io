@@ -1,13 +1,31 @@
 <script>
     import { goto } from "$app/navigation";
     import { base } from "$app/paths";
+
+    $effect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            { threshold: 0.1 },
+        );
+
+        const elements = document.querySelectorAll(".scroll-fade-in");
+        elements.forEach((el) => observer.observe(el));
+
+        return () => observer.disconnect();
+    });
 </script>
 
 <svelte:head>
     <title>Terms and Conditions | OpenIAP</title>
 </svelte:head>
 
-<div class="px-4 pt-20 gradient-bg flex items-center">
+<div class="px-4 pt-20 gradient-bg flex items-center scroll-fade-in">
     <div class="container mx-auto text-start">
         <div class="mb-10">
             <div class="text-customGreen mb-4 text-3xl">Terms of Use</div>

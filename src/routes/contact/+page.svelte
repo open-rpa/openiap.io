@@ -58,6 +58,24 @@
         },
     });
     const { form: formData, enhance, message } = form;
+
+    $effect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            { threshold: 0.1 },
+        );
+
+        const elements = document.querySelectorAll(".scroll-fade-in");
+        elements.forEach((el) => observer.observe(el));
+
+        return () => observer.disconnect();
+    });
 </script>
 
 <svelte:head>
@@ -69,7 +87,7 @@
     ></script>
 </svelte:head>
 
-<div>
+<div class="scroll-fade-in">
     <section
         class="py-20 px-4 mt-10 flex items-center justify-center gradient-bg"
     >

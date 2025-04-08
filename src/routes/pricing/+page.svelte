@@ -11,6 +11,7 @@
   import pricing_grid from "$lib/images/pricing_grid.png";
 
   let screen = $state(1);
+
   $effect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,9 +24,7 @@
       { threshold: 0.1 },
     );
 
-    const elements = document.querySelectorAll(
-      ".scroll-fade-in, .scroll-zoom-in, .scroll-rotate-in, .scroll-bounce",
-    );
+    const elements = document.querySelectorAll(".scroll-fade-in");
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -42,7 +41,7 @@
 </svelte:head>
 
 <section
-  class="pt-32 md:h-screen px-4 gradient-bg flex justify-center items-center md:mb-[700px]"
+  class="pt-32 md:h-screen px-4 gradient-bg flex justify-center items-center md:mb-[700px] scroll-fade-in"
 >
   <img
     src={pricing_grid}
@@ -87,7 +86,7 @@
       </div>
       <Tabs.Content value="1">
         <div
-          class="grid grid-cols-1 gap-8 md:flex md:justify-center animate-fade-in"
+          class="grid grid-cols-1 gap-8 md:flex md:justify-center scroll-fade-in"
         >
           <Card.Root
             class="md:col-span-3 lg:col-start-2 lg:col-span-2  transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-full lg:w-[510px] lg:h-[530px] px-[26px] py-1.5 border-bw500/70"
