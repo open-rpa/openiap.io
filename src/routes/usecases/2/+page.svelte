@@ -87,6 +87,25 @@
                     systems with OpenCore that can stand up to highest security
                     requirements that are enforced in the financial industry.
                 </p>
+
+                <div
+                    class="border rounded-[20px] border-bw600 my-4 md:my-10 md:mx-10 lg:mx-20 p-10"
+                >
+                    <p class="mb-4">
+                        “OpenIAP allows us to build Out the Box and Repeatable
+                        Integrations between our Clients ERP and HCM Products
+                        and any other best of breed system allowing a level of
+                        automation that was difficult to achieve before OpenIAP.
+                        The low code solution helps us build these integrations
+                        in Record time and then reuse them at our clients with
+                        the same need.”
+                    </p>
+                    <p>
+                        — Brennan Fritz, <span class="text-bw600">
+                            Head of ITS & HCM
+                        </span>
+                    </p>
+                </div>
             </div>
 
             <div class="mb-10 lg:mb-16">
