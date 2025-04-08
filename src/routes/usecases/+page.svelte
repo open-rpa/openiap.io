@@ -71,7 +71,7 @@
 
 <section class="lg:px-4 gradient-bg text-bw50">
     <div class="container mx-auto">
-        <div class="mt-32 scroll-fade-in opacity-0 transition-opacity">
+        <div class="mt-32 mb-10 scroll-fade-in opacity-0 transition-opacity">
             <p
                 class={"text-[50px] max-w-[1000px] text-start font-bold mb-2" +
                     gradienttext}
@@ -79,11 +79,11 @@
                 Uncover the details
             </p>
 
-            <div class="xl:max-w-[1700px] h-[400px]">
+            <div class="xl:max-w-[1700px]">
                 <div
                     class="border-2 border-bw500/70 rounded-[20px] flex flex-col justify-between overflow-hidden"
                 >
-                    <div class="flex flex-col lg:flex-row justify-between">
+                    <div class="flex flex-col xl:flex-row justify-between">
                         <div
                             class="flex flex-col justify-center px-10 xl:py-10 space-y-10 xl:space-y-0"
                         >
@@ -95,7 +95,7 @@
                                     Increased Integration Efficiency by 25x
                                 </p>
                             </div>
-                            <div class="pb-4 lg:pb-0">
+                            <div class="pb-4 xl:pb-0">
                                 <HotkeyButton
                                     aria-label="Learn more"
                                     onclick={() => {
@@ -117,7 +117,7 @@
             <p class={"text-[50px] font-bold mb-2" + gradienttext}>
                 Quick reads
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {#each usecases as usecase}
                     <div
                         class="  duration-500 rounded-[20px] border-2 border-bw500/70 overflow-hidden"
@@ -148,36 +148,3 @@
         </div>
     </div>
 </section>
-
-<style>
-    .container-rectangle {
-        position: relative;
-        color: white;
-    }
-
-    /* Top left text */
-    .container {
-        position: relative;
-        color: white;
-    }
-
-    /* Top left text */
-    .top-left {
-        position: absolute;
-        top: 10px;
-    }
-
-    /* Top right text */
-    .top-right {
-        position: absolute;
-        top: 10px;
-    }
-
-    /* Centered text */
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-</style>

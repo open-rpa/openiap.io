@@ -1,13 +1,11 @@
 <script>
-    import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
-    import logo1 from "$lib/images/usecases/rectangle.svg";
-    import header from "$lib/images/usecases/header/kl.svg";
     import { goto } from "$app/navigation";
-    import { base } from "$app/paths";
-    import { ChevronLeft } from "lucide-svelte";
+    import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
     import Separator from "$lib/components/ui/separator/separator.svelte";
-    import next from "$lib/images/usecases/next.svg";
     import footersvg from "$lib/images/usecases/footer.svg";
+    import header from "$lib/images/usecases/header/kl.svg";
+    import next from "$lib/images/usecases/next.svg";
+    import { ChevronLeft } from "lucide-svelte";
 
     $effect(() => {
         const observer = new IntersectionObserver(
@@ -35,9 +33,9 @@
 </svelte:head>
 
 <section class="lg:px-4 gradient-bg text-bw50">
-    <div class="container mt-32 scroll-fade-in">
+    <div class="container mt-24 lg:mt-32 scroll-fade-in">
         <div
-            class="grid grid-cols-2 md:flex px-4 lg:px-32 items-center space-x-4 mb-6"
+            class="grid grid-cols-2 md:flex px-4 lg:px-14 xl:px-32 items-center gap-4 mb-6"
         >
             <HotkeyButton
                 variant="ghostfull"
@@ -45,16 +43,18 @@
                 onclick={() => {
                     goto("/usecases");
                 }}
-                class="flex"
+                class="flex w-fit"
             >
                 <ChevronLeft />
                 Back</HotkeyButton
             >
-            <p class="rounded-full border-2 border-bw500 p-1 px-2">Use Case</p>
+            <p class="rounded-full border-2 border-bw500 p-1 px-2 w-fit">
+                Use Cases
+            </p>
             <p>March 28, 2025</p>
             <p>5 minute read</p>
         </div>
-        <div class="px-4 lg:px-56 text-start">
+        <div class="px-4 md:px-20 lg:px-40 xl:px-56 text-start">
             <div class="mb-10">
                 <p
                     class={"text-[20px] lg:text-[40px] max-w-[1000px] font-bold animate-fade-in leading-none " +
@@ -219,34 +219,42 @@
                         <p>Synergy</p>
                     </div>
                 </div> -->
-                <div
-                    class="flex space-x-4 items-center text-end cursor-pointer"
+                <HotkeyButton
+                    variant="ghostfull"
                     onclick={() => {
                         goto("/usecases/2");
                     }}
                 >
-                    <div class="flex flex-col justify-center text-xs">
-                        <p class="text-bw400">Next</p>
-                        <p>SynergyERP</p>
+                    <div
+                        class="flex space-x-4 items-center text-end cursor-pointer"
+                    >
+                        <div class="flex flex-col justify-center text-xs">
+                            <p class="text-bw400">Next</p>
+                            <p>SynergyERP</p>
+                        </div>
+                        <img src={next} alt="logo1" />
                     </div>
-                    <img src={next} alt="logo1" />
-                </div>
+                </HotkeyButton>
             </div>
 
-            <div class="mb-20 md:mb-10 lg:mb-16 text-center w-fit h-40 md:h-full md:overflow-hidden">
-                <div class="container-rectangle h-14 w-72 md:w-full md:h-full ">
-                    <img src={footersvg} alt="logo1" class="h-fit"/>
+            <div
+                class="mb-20 md:mb-10 lg:mb-16 text-center w-fit h-40 md:h-full flex justify-center items-center mx-auto"
+            >
+                <div class="container-rectangle md:w-full md:h-full">
+                    <img src={footersvg} alt="logo1" class="hidden lg:block" />
 
-                    <div class="absolute top-0 left-0 w-full mt-0 md:mt-10">
+                    <div
+                        class="lg:absolute lg:top-0 lg:left-0 w-full mt-0 mt-2 md:mt-4 xl:mt-10"
+                    >
                         <div class="text-center">
                             <h1
-                                class={"md:text-[24] lg:text-[50px] text-center font-bold mb-6 animate-fade-in mb-10" +
+                                class={"md:text-[24px] xl:text-[50px] text-center font-bold animate-fade-in mb-2 xl:mb-10" +
                                     gradienttext}
                             >
                                 Ready to get started?
                             </h1>
                         </div>
-                        <p class="mb-10 text-[10px] lg:text-[16px]">
+                        <p class="mb-4 xl:mb-10 text-[10px] lg:text-[16px]">
                             Try OpenCore now for free
                         </p>
                         <HotkeyButton

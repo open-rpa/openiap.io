@@ -3,7 +3,7 @@
 	import { base } from "$app/paths";
 	import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
 	import Logo from "$lib/images/logo.svg";
-	import { Icon, MenuIcon, Moon, Sun, X } from "lucide-svelte";
+	import { Github, Icon, Info, MenuIcon, Moon, Sun, X } from "lucide-svelte";
 	import { toggleMode } from "mode-watcher";
 
 	let isMenuOpen = $state(false);
@@ -26,7 +26,7 @@
 			</div>
 		</HotkeyButton>
 
-		<nav class="hidden md:block me-20">
+		<nav class="hidden md:block me-12">
 			<HotkeyButton
 				variant="link"
 				onclick={() => goto(base + "/usecases")}
@@ -84,7 +84,20 @@
 			</HotkeyButton>
 		</div> -->
 
-		<div class="hidden md:flex">
+		<div class="hidden md:flex items-center">
+			<HotkeyButton
+				variant="ghostfull"
+				size="icon"
+				aria-label="Github"
+				onclick={() =>
+					window.open(
+						"https://github.com/open-rpa",
+						"_blank",
+						"noopener,noreferrer",
+					)}
+			>
+				<Github class="h-4 w-4" />
+			</HotkeyButton>
 			<HotkeyButton
 				aria-label="Login"
 				variant="link"
@@ -157,6 +170,19 @@
 					aria-label="Go to pricing page"
 				>
 					Pricing
+				</HotkeyButton>
+				<HotkeyButton
+					variant="ghostfull"
+					size="icon"
+					aria-label="Github"
+					onclick={() =>
+						window.open(
+							"https://github.com/open-rpa",
+							"_blank",
+							"noopener,noreferrer",
+						)}
+				>
+					<Github class="h-4 w-4" />
 				</HotkeyButton>
 				<HotkeyButton
 					variant="link"
