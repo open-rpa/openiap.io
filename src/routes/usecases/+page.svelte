@@ -35,7 +35,7 @@
             description: "Reduced errors and manual tasks",
             image: synergy,
             link: "/usecases/2",
-            industry: "Integration",
+            industry: "Finance",
             bgcolor: "bg-[#6D589F]",
         },
         {
@@ -43,7 +43,7 @@
             description: "Removed bottlenecks, Improved accuracy",
             image: alpha,
             link: "/usecases/3",
-            industry: "Integration",
+            industry: "Public Sector",
             bgcolor: "bg-[#58899F]",
         },
         {
@@ -59,7 +59,7 @@
             description: "IoT-driven alerts for life-saving care",
             image: access,
             link: "/usecases/5",
-            industry: "Medical",
+            industry: "Healthcare",
             bgcolor: "bg-[#9F5858]",
         },
     ];
@@ -113,7 +113,7 @@
             </div>
         </div>
 
-        <div class="scroll-fade-in opacity-0 transition-opacity">
+        <div class="scroll-fade-in opacity-0 transition-opacity mb-10">
             <p class={"text-[50px] font-bold mb-2" + gradienttext}>
                 Quick reads
             </p>
@@ -127,7 +127,7 @@
                             class="py-10 px-10 pe-2"
                         >
                             <p
-                                class={`mb-5 text-xs rounded-full w-fit py-1 px-2 ` +
+                                class={`mb-5 text-xs rounded-full w-fit p-2 ` +
                                     usecase.bgcolor}
                             >
                                 {usecase.industry}
