@@ -81,7 +81,7 @@
 
             <div class="xl:max-w-[1700px]">
                 <div
-                    class="border-2 border-bw500/70 rounded-[20px] flex flex-col justify-between overflow-hidden"
+                    class="border border-bw500/70 rounded-[20px] flex flex-col justify-between overflow-hidden"
                 >
                     <div class="flex flex-col xl:flex-row justify-between">
                         <div
@@ -89,7 +89,7 @@
                         >
                             <div class="pt-10 xl:pt-0">
                                 <p
-                                    class={"text-[50px] leading-none  mb-4" +
+                                    class={"text-[44px] leading-none  mb-4" +
                                         gradienttext}
                                 >
                                     Increased Integration Efficiency by 25x
@@ -120,20 +120,23 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {#each usecases as usecase}
                     <div
-                        class="  duration-500 rounded-[20px] border-2 border-bw500/70 overflow-hidden"
+                        class="  duration-500 rounded-[20px] border border-bw500/70 overflow-hidden"
                     >
                         <img src={usecase.image} alt="coverSvg" />
-                        <div class="py-12 ps-12 pe-2">
+                        <div
+                            class="py-10 px-10 pe-2"
+                        >
                             <p
                                 class={`mb-5 text-xs rounded-full w-fit py-1 px-2 ` +
                                     usecase.bgcolor}
                             >
                                 {usecase.industry}
                             </p>
-                            <p class="mb-7 text-[40px] leading-none">
+                            <p class="mb-7 text-[32px] leading-none">
                                 {usecase.description}
                             </p>
                             <HotkeyButton
+                                class="w-fit"
                                 aria-label="Learn more"
                                 onclick={() => {
                                     goto(base + usecase.link);

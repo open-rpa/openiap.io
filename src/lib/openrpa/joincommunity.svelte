@@ -45,7 +45,7 @@
     class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 xl:flex xl:justify-center"
 >
     <div
-        class="text-center border-2 border-bw500/70 rounded-[20px] p-10 w-full max-w-[1700px]"
+        class="text-center border border-bw500/70 rounded-[20px] p-10 w-full max-w-[1700px]"
     >
         <p
             class={"text-[50px] py-6 leading-none font-semibold mb-16" +

@@ -12,7 +12,7 @@
 <div
     class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 xl:flex xl:justify-center"
 >
-    <div class="border-2 rounded-[20px] border-bw500/70 w-full max-w-[1700px]">
+    <div class="border rounded-[20px] border-bw500/70 w-full max-w-[1700px]">
         <div class="container">
             <img
                 src={coverSvg}

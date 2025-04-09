@@ -35,11 +35,10 @@
 <section class="lg:px-4 gradient-bg text-bw50">
     <div class="container mt-32 scroll-fade-in">
         <div
-            class="grid grid-cols-2 md:flex px-4 lg:px-14 xl:px-32 items-center gap-4 mb-6"
+            class="grid grid-cols-2 md:flex px-4 lg:px-14 xl:px-32 items-center gap-4 mb-6 text-sm"
         >
             <HotkeyButton
                 variant="ghostfull"
-                href=""
                 onclick={() => {
                     goto("/usecases");
                 }}
@@ -48,7 +47,7 @@
                 <ChevronLeft />
                 Back</HotkeyButton
             >
-            <p class="rounded-full border-2 border-bw500 p-1 px-2 w-fit">
+            <p class="rounded-full border border-bw500 p-1 px-2 w-fit">
                 Use Cases
             </p>
             <p>March 28, 2025</p>
@@ -106,6 +105,7 @@
             <div class="flex justify-between items-center mb-10">
                 <HotkeyButton
                     variant="ghostfull"
+                    class="px-0"
                     onclick={() => {
                         goto("/usecases/3");
                     }}
@@ -127,6 +127,7 @@
 
                 <HotkeyButton
                     variant="ghostfull"
+                    class="px-0"
                     onclick={() => {
                         goto("/usecases/5");
                     }}

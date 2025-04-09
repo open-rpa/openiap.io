@@ -13,7 +13,7 @@
 >
     <div class="xl:max-w-[1700px]">
         <div
-            class="border-2 border-bw500/70 rounded-[20px] flex flex-col justify-between overflow-hidden"
+            class="border border-bw500/70 rounded-[20px] flex flex-col justify-between overflow-hidden"
         >
             <div class="flex flex-col lg:flex-row justify-between">
                 <div class="flex flex-col xl:justify-between px-10 xl:py-10 space-y-10 xl:space-y-0">

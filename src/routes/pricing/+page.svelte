@@ -89,7 +89,7 @@
           class="grid grid-cols-1 gap-8 md:flex md:justify-center scroll-fade-in"
         >
           <Card.Root
-            class="md:col-span-3 lg:col-start-2 lg:col-span-2  transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-full lg:w-[510px] lg:h-[530px] px-[26px] py-1.5 border-bw500/70"
+            class="md:col-span-3 lg:col-start-2 lg:col-span-2  transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border bg-cardbgdark dark:bg-cardbgdark w-full lg:w-[510px] lg:h-[530px] px-[26px] py-1.5 border-bw500/70"
           >
             <Card.Header class="mb-0">
               <Card.Title class={"font-normal mb-2" + gradienttextnew}
@@ -145,7 +145,7 @@
           </Card.Root>
 
           <Card.Root
-            class="md:col-span-3 lg:col-start-4 lg:col-span-2 transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark w-full lg:w-[510px] px-[26px] py-1.5 border-bw500/70"
+            class="md:col-span-3 lg:col-start-4 lg:col-span-2 transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border bg-cardbgdark dark:bg-cardbgdark w-full lg:w-[510px] px-[26px] py-1.5 border-bw500/70"
           >
             <Card.Header>
               <Card.Title class={"font-normal mb-2" + gradienttextnew}
@@ -244,7 +244,7 @@
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-4 xl:gap-4 xl:flex xl:justify-center animate-fade-in"
         >
           <Card.Root
-            class=" hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark xl:w-[335px] xl:h-[452px] px-[26px] py-1.5 border-bw500/70"
+            class=" hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border bg-cardbgdark dark:bg-cardbgdark xl:w-[335px] xl:h-[452px] px-[26px] py-1.5 border-bw500/70"
           >
             <Card.Header>
               <Card.Title class={"font-normal" + gradienttextnew}
@@ -323,7 +323,7 @@
           </Card.Root>
 
           <Card.Root
-            class=" hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark xl:w-[335px] px-[26px] py-1.5 border-bw500/70"
+            class=" hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border bg-cardbgdark dark:bg-cardbgdark xl:w-[335px] px-[26px] py-1.5 border-bw500/70"
           >
             <Card.Header>
               <Card.Title class={"font-normal" + gradienttextnew}
@@ -382,7 +382,7 @@
           </Card.Root>
 
           <Card.Root
-            class="transition-all duration-300 hover:shadow-lg border-customGreen flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark xl:w-[335px] px-[26px] py-1.5 border-bw500/70"
+            class="transition-all duration-300 hover:shadow-lg border-customGreen flex flex-col justify-between rounded-[20px] border bg-cardbgdark dark:bg-cardbgdark xl:w-[335px] px-[26px] py-1.5 border-bw500/70"
           >
             <Card.Header>
               <Card.Title class={"font-normal" + gradienttextnew}
@@ -442,7 +442,7 @@
           </Card.Root>
 
           <Card.Root
-            class=" hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark xl:w-[335px] px-[26px] py-1.5 border-bw500/70"
+            class=" hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border bg-cardbgdark dark:bg-cardbgdark xl:w-[335px] px-[26px] py-1.5 border-bw500/70"
           >
             <Card.Header>
               <Card.Title class={"font-normal" + gradienttextnew}
@@ -504,7 +504,7 @@
       <Tabs.Content value="3">
         <div class="flex justify-center animate-fade-in">
           <Card.Root
-            class="md:col-start-2 md:col-span-3 lg:md:col-span-1 lg:col-start-2 hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border-2 bg-cardbgdark dark:bg-cardbgdark lg:w-[400px] px-[26px] py-1.5 border-bw500/70"
+            class="md:col-start-2 md:col-span-3 lg:md:col-span-1 lg:col-start-2 hover:transition-all duration-300 hover:shadow-lg flex flex-col justify-between rounded-[20px] border bg-cardbgdark dark:bg-cardbgdark lg:w-[400px] px-[26px] py-1.5 border-bw500/70"
           >
             <Card.Header>
               <Card.Title class={"font-normal" + gradienttextnew}
