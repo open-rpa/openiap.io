@@ -13,7 +13,7 @@
         {
             title: "Built-in reports ",
             description:
-                "We supply generic reports for the most common dashboards.",
+                "Easy access to reports for deeper insights to your data.",
             image: builtinSvg,
             imageDark: builtinDarkSvg,
         },
