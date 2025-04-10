@@ -38,7 +38,7 @@
         {
             title: "Least privileges",
             description:
-                "The platform encourages the use of least privileges over service accounts, minimizing the risk of data leaks. By running  within the context of the user who initiated the request, access is tightly controlled and more secure",
+                "The platform encourages the use of least privileges over service accounts, minimizing the risk of data leaks. By running  within the context of the user who initiated the request, access is tightly controlled and more secure.",
             image: leastprivSvg,
             imageDark: leastprivDarkSvg,
         },

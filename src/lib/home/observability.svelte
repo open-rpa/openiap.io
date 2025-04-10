@@ -22,7 +22,7 @@
         {
             title: "Customize Your Performance Data",
             description:
-                "Choose the performance metrics that matter most to you and tailor your insights for a personalised experience",
+                "Choose the performance metrics that matter most to you and tailor your insights for a personalised experience.",
             imageDark: customizeDarkSvg,
             image: customizeSvg,
         },
