@@ -11,22 +11,23 @@
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
     let carouselItem = [
         {
-            title: "Modulization",
+            title: "Built-in reports ",
             description:
-                "Divide your processes into smaller parts for easier testing, troubleshooting and reporting.",
+                "We supply generic reports for the most common dashboards.",
             image: builtinSvg,
             imageDark: builtinDarkSvg,
         },
         {
             title: "Create your own dashboards",
-            description: "Create personalised dashboards to display the data that matters most to you.",
+            description:
+                "Create personalised dashboards to display the data that matters most to you.",
             image: createdashSvg,
             imageDark: createdashDarkSvg,
         },
         {
             title: "Connect to other data sources",
             description:
-                "We give you the option to create reports in the platforms of your choice",
+                "We give you the option to create reports in the platforms of your choice.",
             image: connectdataSvg,
             imageDark: connectdataDarkSvg,
         },
@@ -60,13 +61,12 @@
     >
         <div class="mb-10">
             <div class="flex items-end justify-between gap-8">
-                <p
-                    class={"text-[50px] font-semibold" +
-                        gradienttext}
-                >
+                <p class={"text-[50px] font-semibold" + gradienttext}>
                     Reports
                 </p>
-                <div class="block flex space-x-5 items-center lg:pe-10 hidden md:block">
+                <div
+                    class="block flex space-x-5 items-center lg:pe-10 hidden md:block"
+                >
                     <Carousel.Previous />
                     <Carousel.Next />
                 </div>

@@ -48,10 +48,10 @@
         },
         {
             title: "Sloif",
-            description: "Easy integration and scalability",
+            description: "Easy integration with AI and scalability",
             image: sloif,
             link: "/usecases/4",
-            industry: "Integration",
+            industry: "Business Intelligence",
             bgcolor: "bg-[#9F7958]",
         },
         {
@@ -123,9 +123,7 @@
                         class="  duration-500 rounded-[20px] border border-bw500/70 overflow-hidden"
                     >
                         <img src={usecase.image} alt="coverSvg" />
-                        <div
-                            class="py-10 px-10 pe-2"
-                        >
+                        <div class="py-10 px-10 pe-2">
                             <p
                                 class={`mb-5 text-xs rounded-full w-fit p-2 ` +
                                     usecase.bgcolor}

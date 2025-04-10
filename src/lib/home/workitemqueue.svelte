@@ -49,7 +49,7 @@
             title: "Gain insights over your process",
             // description: "By splitting your process up into multiple units that work across multiple parts of the process, we can now easily gain better insights to how our process is performing and where there are bottle-necks.",
             description:
-                " By dividing your process into multiple units that operate across different stages, we can easily gain deeper insights into its performance and identify bottlenecks more effectively",
+                " By dividing your process into multiple units that operate across different stages, we can easily gain deeper insights into its performance and identify bottlenecks more effectively.",
             image: insightSvg,
             imageDark: insightDarkSvg,
         },
