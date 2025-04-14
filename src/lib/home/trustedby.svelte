@@ -28,7 +28,7 @@
         const calculateScrollSpeed = () => {
             // Adjust scroll speed based on screen width
             const screenWidth = window.innerWidth;
-            return 0.5; // Faster speed for larger screens
+            return screenWidth > 1024 ? 1 : 0.5; // Faster speed for larger screens
         };
 
         const startScrolling = () => {
