@@ -164,7 +164,7 @@ for (clienttestcli.Entity item : results) {
                     class="border rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                 >
                     <div
-                        class="pt-8 px-8 pb-2 xl:pt-12 xl:px-12 xl:pb-8 mb-2 md:mb-4"
+                        class="pt-8 px-8 pb-2 xl:pt-10 xl:px-10 xl:pb-8 mb-2 md:mb-4"
                     >
                         <p class="text-xl font-medium mb-2 text-bw50">
                             Choose your favourite coding language
@@ -243,7 +243,7 @@ for (clienttestcli.Entity item : results) {
                     <div
                         class="border rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-8 xl:p-12 pb-0 xl:pb-2 mb-4 lg:mb-0">
+                        <div class="p-8 xl:p-10 pb-0 xl:pb-2 mb-4 lg:mb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>

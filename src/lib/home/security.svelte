@@ -107,7 +107,7 @@
                     <div
                         class="border rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
-                        <div class="p-8 xl:p-12 pb-0">
+                        <div class="p-8 xl:p-10 pb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
                                 {item.title}
                             </p>
