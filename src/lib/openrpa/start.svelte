@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Hotkeybutton from "$lib/components/ui/hotkeybutton/hotkeybutton.svelte";
+    import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
@@ -24,7 +24,18 @@
             Download OpenRPA for free
         </p>
         <div>
-            <Hotkeybutton>Download OpenRPA</Hotkeybutton>
+            <HotkeyButton
+                class="tracking-wider"
+                aria-label="Download OpenRPA for Free"
+                onclick={() =>
+                    window.open(
+                        "https://github.com/open-rpa/openrpa/releases/latest/download/OpenRPA.msi",
+                        "_blank",
+                        "noopener,noreferrer",
+                    )}
+            >
+                Download OpenRPA
+            </HotkeyButton>
         </div>
     </div>
 </div>
