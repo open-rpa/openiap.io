@@ -1,22 +1,11 @@
 <script>
-    import {
-        Hero,
-        Joincommunity,
-        // MultiLanguage,
-        // Observability,
-        // Reports,
-        // Security,
-        // Testimonials,
-        TrustedBy,
-        // Workitemqueue,
-        // Increased,
-        Contactus,
-    } from "$lib/openrpa";
+    import { Hero, Joincommunity, TrustedBy, Contactus } from "$lib/openrpa";
+    import Features from "$lib/openrpa/features.svelte";
+    import Start from "$lib/openrpa/start.svelte";
 </script>
 
 <svelte:head>
-    <title>OpenRPA | A scalable and secure
-        automation platform</title>
+    <title>OpenRPA | A scalable and secure automation platform</title>
     <!-- <meta
         name="description"
         content="OpenIAP is a platform that helps you to manage your business operations."
@@ -29,13 +18,8 @@
 <div>
     <Hero />
     <TrustedBy />
-    <!-- <MultiLanguage />
-    <Observability />
-    <Workitemqueue />
-    <Reports />
-    <Security />
-    <Increased />
-    <Testimonials /> -->
+    <Features />
     <Joincommunity />
-    <Contactus />
+    <Start />
+    <!-- <Contactus /> -->
 </div>

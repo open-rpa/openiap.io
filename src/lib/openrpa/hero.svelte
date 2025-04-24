@@ -9,43 +9,42 @@
 
 <div class="xl:pb-16">
     <div
-        class=" xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center"
+        class="xl:absolute xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center"
     >
         <h1
             class={"text-[30px] lg:text-hero font-bold mb-6 animate-fade-in tracking-widest" +
                 gradienttext}
         >
-            Open-Source RPA built <br />
+            Open-Source RPA built<br />
             for scale
         </h1>
         <p
             class="xl:text-[16px] text-bw500 mb-[52px] mx-auto animate-fade-in tracking-widest"
         >
             Automate workflows with OpenRPA, the powerful open-source robotic
-            process automation <br /> tool
+            process automation <br />tool
         </p>
         <div
             class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in"
         >
             <HotkeyButton
                 class="tracking-wider"
-                aria-label="Try OpenCore"
-                variant="success"
+                aria-label="Download OpenRPA for Free"
                 onclick={() =>
                     window.open(
-                        "https://app.openiap.io/ui/login",
+                        "https://github.com/open-rpa/openrpa/releases/latest/download/OpenRPA.msi",
                         "_blank",
                         "noopener,noreferrer",
                     )}
             >
-                Try OpenCore for Free
+                Download OpenRPA for Free
             </HotkeyButton>
             <HotkeyButton
                 aria-label="Get Started"
                 class="tracking-wider"
                 onclick={() =>
                     window.open(
-                        "https://docs.openiap.io/docs/Accessing-for-the-First-Time.html",
+                        "https://docs.openiap.io/docs/openrpa/",
                         "_blank",
                         "noopener,noreferrer",
                     )}
@@ -54,7 +53,7 @@
             </HotkeyButton>
         </div>
     </div>
-    <!-- <div class="flex items-end justify-center flex-grow">
+    <div class="flex items-end justify-center flex-grow">
         <img src={hero} alt="hero" class="xl:w-full xl:h-auto" />
-    </div> -->
+    </div>
 </div>
