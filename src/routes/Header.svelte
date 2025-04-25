@@ -29,6 +29,20 @@
 		<nav class="hidden md:block me-12">
 			<HotkeyButton
 				variant="link"
+				onclick={() => goto(base + "/")}
+				aria-label="Go to OpenCore page"
+			>
+				OpenCore
+			</HotkeyButton>
+			<HotkeyButton
+				variant="link"
+				onclick={() => goto(base + "/openrpa")}
+				aria-label="Go to OpenRPA page"
+			>
+				OpenRPA
+			</HotkeyButton>
+			<HotkeyButton
+				variant="link"
 				onclick={() => goto(base + "/usecases")}
 				aria-label="Go to use cases page"
 			>
@@ -134,6 +148,20 @@
 			<nav class="container mx-auto px-4 py-4 flex flex-col space-y-4">
 				<HotkeyButton
 					variant="link"
+					onclick={() => goto(base + "/")}
+					aria-label="Go to OpenCore page"
+				>
+					OpenCore
+				</HotkeyButton>
+				<HotkeyButton
+					variant="link"
+					onclick={() => goto(base + "/openrpa")}
+					aria-label="Go to OpenRPA page"
+				>
+					OpenRPA
+				</HotkeyButton>
+				<HotkeyButton
+					variant="link"
 					onclick={() => goto(base + "/usecases")}
 					aria-label="Go to use cases page"
 				>
@@ -173,7 +201,6 @@
 				</HotkeyButton>
 				<HotkeyButton
 					variant="ghostfull"
-					size="icon"
 					aria-label="Github"
 					onclick={() =>
 						window.open(
