@@ -2,7 +2,9 @@
 	import { goto } from "$app/navigation";
 	import { base } from "$app/paths";
 	import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
-	import Logo from "$lib/images/logo.svg";
+	import Logo1 from "$lib/images/footer/linkedin.svg";
+	import Logo2 from "$lib/images/footer/youtube.svg";
+	import Logo3 from "$lib/images/footer/git.svg";
 
 	let isScreenSmall = $state();
 	let isScreenSmallTab = $state();
@@ -36,12 +38,12 @@
 </script>
 
 <section
-	class="pt-10 pb-16 mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:flex xl:justify-center"
+	class="pt-10 pb-16 mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:flex xl:flex-col xl:justify-center"
 >
 	<div
 		class={`w-full lg:max-w-[1700px] ${isScreenSmall && "grid grid-cols-2 mt-4 space-y-2 text-center items-center "} ${isScreenSmallTab && "grid grid-cols-4 mt-4 space-y-2 text-center items-center "} ${isScreenMedium && "grid grid-cols-5 space-y-2 text-center items-center"}  ${isScreenLarge && "flex flex-row justify-between"} `}
 	>
-		<div
+		<!-- <div
 			class={`${isScreenSmall && "col-span-2 "} ${
 				isScreenSmallTab && "col-span-4 "
 			} ${isScreenMedium && "col-span-5"}  ${isScreenLarge && ""}`}
@@ -57,20 +59,37 @@
 					</div>
 				</div>
 			</HotkeyButton>
+		</div> -->
+		<div class="flex flex-col justify-start items-start">
+			<HotkeyButton
+				variant="link"
+				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				aria-label="Products"
+			>
+				Products
+			</HotkeyButton>
+			<HotkeyButton
+				variant="link"
+				onclick={() => goto(base + "/")}
+				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				aria-label="Go to Home"
+			>
+				OpenCore
+			</HotkeyButton>
+			<HotkeyButton
+				variant="link"
+				onclick={() => goto(base + "/openrpa")}
+				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				aria-label="Go to Home"
+			>
+				OpenRPA
+			</HotkeyButton>
 		</div>
-		<HotkeyButton
-			variant="link"
-			onclick={() => goto(base + "/")}
-			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-			aria-label="Go to Home"
-		>
-			Home
-		</HotkeyButton>
 		<!-- <div class="flex flex-col justify-start items-start">
 			<HotkeyButton
 				variant="link"
 				onclick={() => goto(base + "/")}
-				class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 				aria-label="Go to Home"
 			>
 				Solutions
@@ -78,7 +97,7 @@
 			<HotkeyButton
 				variant="link"
 				onclick={() => goto(base + "/")}
-				class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 				aria-label="Go to Home"
 			>
 				OpenCores
@@ -86,7 +105,7 @@
 			<HotkeyButton
 				variant="link"
 				onclick={() => goto(base + "/")}
-				class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 				aria-label="Go to Home"
 			>
 				OpenRPA
@@ -95,7 +114,7 @@
 		<HotkeyButton
 			variant="link"
 			onclick={() => goto(base + "/usecases")}
-			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 			aria-label="Go to Use Cases"
 		>
 			Use Cases
@@ -103,7 +122,7 @@
 		<HotkeyButton
 			variant="link"
 			onclick={() => goto(base + "/pricing")}
-			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 			aria-label="Go to Pricing"
 		>
 			Pricing
@@ -111,7 +130,7 @@
 		<HotkeyButton
 			variant="link"
 			onclick={() => goto(base + "/partners")}
-			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 			aria-label="Go to Partners"
 		>
 			Partners
@@ -119,7 +138,7 @@
 		<HotkeyButton
 			variant="link"
 			onclick={() => goto(base + "/contact")}
-			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 			aria-label="Go to Contact"
 		>
 			Contact
@@ -127,7 +146,7 @@
 		<HotkeyButton
 			variant="link"
 			onclick={() => goto(base + "/telemetry")}
-			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 			aria-label="Go to Telemetry"
 		>
 			Telemetry
@@ -135,7 +154,7 @@
 		<HotkeyButton
 			variant="link"
 			onclick={() => goto(base + "/terms")}
-			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 			aria-label="Go to Terms & Conditions"
 		>
 			Terms & Conditions
@@ -143,10 +162,63 @@
 		<HotkeyButton
 			variant="link"
 			onclick={() => goto(base + "/privacy")}
-			class="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+			class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
 			aria-label="Go to Privacy Policy"
 		>
 			Privacy Policy
+		</HotkeyButton>
+	</div>
+	<div
+		class="w-full lg:max-w-[1700px] flex flex-row justify-between items-center mt-32"
+	>
+		<div class="flex flex-row items-center">
+			<HotkeyButton
+				variant="link"
+				onclick={() =>
+					window.open(
+						"https://www.linkedin.com/company/openiap/",
+						"_blank",
+						"noopener,noreferrer",
+					)}
+				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				aria-label="Go to linkedin"
+			>
+				<img src={Logo1} alt="Logo" class="w-5 h-5" />
+			</HotkeyButton>
+			<HotkeyButton
+				variant="link"
+				onclick={() =>
+					window.open(
+						"https://www.youtube.com/@AllanZimmermann/videos",
+						"_blank",
+						"noopener,noreferrer",
+					)}
+				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				aria-label="Go to Youtube"
+			>
+				<img src={Logo2} alt="Logo" class="w-5 h-5" />
+			</HotkeyButton>
+			<HotkeyButton
+				variant="link"
+				onclick={() =>
+					window.open(
+						"https://github.com/open-rpa",
+						"_blank",
+						"noopener,noreferrer",
+					)}
+				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
+				aria-label="Go to Github"
+			>
+				<img src={Logo3} alt="Logo" class="w-5 h-5" />
+			</HotkeyButton>
+		</div>
+
+		<HotkeyButton
+			variant="link"
+			class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline cursor-default"
+			aria-label="© 2025 OpenIAP"
+		>
+			© 2025 OpenIAP
 		</HotkeyButton>
 	</div>
 </section>
