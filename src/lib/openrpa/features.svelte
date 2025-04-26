@@ -15,31 +15,31 @@
             title: "Robust Multi-Platform Automation",
             text: "Automate Windows, SAP, Java, browsers, mainframes, images, and Microsoft Office with native integration.",
             icon: "1",
-            colspan: "col-span-1",
+            colspan: "xl:col-span-1",
         },
         {
             title: "Multi-Language Scripting Support",
             text: "Embed inline code in C#, VB, Python, PowerShell, or AutoHotKey—directly within workflows.",
             icon: "2",
-            colspan: "col-span-1",
+            colspan: "xl:col-span-1",
         },
         {
             title: "Reactive Robot Triggers",
             text: "Enable dynamic responses to events like file changes, keyboard input, Outlook OOO and more.",
             icon: "3",
-            colspan: "col-span-1",
+            colspan: "xl:col-span-1",
         },
         {
             title: "Assisted & Unattended Robots",
             text: "Build interactive forms with Forge Forms or run self-healing, high-density robots via RDP - managed by OpenCore.",
             icon: "4",
-            colspan: "col-span-1",
+            colspan: "xl:col-span-1",
         },
         {
             title: "Picture-in-Picture Automation",
             text: "Run robots in the corner of your screen via RDP - automate without interfering with your main desktop. ",
             icon: "5",
-            colspan: "col-span-2",
+            colspan: "xl:col-span-2",
         },
     ];
 </script>
@@ -47,17 +47,17 @@
 <div
     class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 xl:flex xl:justify-center"
 >
-    <div class="p-20 px-40 w-full max-w-[1700px]">
+    <div class="md:p-20 md:px-40 w-full max-w-[1700px]">
         <p
             class={"text-[50px] py-6 leading-none font-semibold mb-10" +
                 gradienttext}
         >
             Features
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-5">
             {#each community as item, index}
                 <div
-                    class={"p-6 flex justify-center items-center xl:justify-start xl:items-start border border-bw500/70 rounded-[15px] " +
+                    class={"w-full p-6 flex justify-start items-center xl:justify-start xl:items-start border border-bw500/70 rounded-[15px] " +
                         item.colspan}
                 >
                     <div class="flex flex-col justify-center w-fit">
