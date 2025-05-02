@@ -83,7 +83,7 @@
                         : "md:basis-1/2 lg:basis-1/3"}
                 >
                     <div
-                        class="border rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
+                        class="border rounded-[20px] border-bw700 bg-bw900 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-8 xl:p-10 pb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">

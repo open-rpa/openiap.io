@@ -5,7 +5,7 @@
 	import Logo1 from "$lib/images/footer/linkedin.svg";
 	import Logo2 from "$lib/images/footer/youtube.svg";
 	import Logo3 from "$lib/images/footer/git.svg";
-	import footerSvg from "$lib/images/footer/footer3.svg";
+	import footerSvg from "$lib/images/footer/footer.svg";
 
 	let isScreenSmall = $state();
 	let isScreenSmallTab = $state();

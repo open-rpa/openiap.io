@@ -1,6 +1,7 @@
 <script lang="ts">
     import lineSvg from "$lib/images/home/community/line.svg";
     import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
+    import joincomunitySvg from "$lib/images/home/joincomunity.svg";
 
     let gradienttext =
         " inline-block bg-[linear-gradient(to_right,#ffffff80_0%,#ffffff_15%,#ffffff_85%,#ffffff80_100%)] bg-clip-text text-transparent ";
@@ -42,25 +43,25 @@
 </script>
 
 <div
-    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 xl:flex xl:justify-center"
+    class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 flex flex-col xl:flex-row justify-center"
 >
     <div
-        class="text-center border border-bw500/70 rounded-[20px] p-10 w-full max-w-[1700px]"
+        class="text-center w-full max-w-[1700px]"
     >
         <p
-            class={"text-[50px] py-6 leading-none font-semibold mb-16" +
+            class={"text-[60px] py-6 leading-none mb-6" +
                 gradienttext}
         >
             Join the community
         </p>
         <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-20 xl:flex items-center justify-center xl:flex-row xl:justify-center py-6"
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-6 px-32"
         >
             {#each community as item, index}
                 <div
-                    class="flex justify-center items-center xl:justify-start xl:items-start"
+                    class="flex justify-center items-center  xl:items-start"
                 >
-                    {#if index != 0}
+                    <!-- {#if index != 0}
                         <div class="flex items-start justify-start">
                             <img
                                 src={lineSvg}
@@ -68,13 +69,13 @@
                                 class="me-10 px-4 w-full h-[82px] hidden xl:block"
                             />
                         </div>
-                    {/if}
+                    {/if} -->
 
                     <div
                         class="flex flex-col items-center justify-center w-fit"
                     >
                         <p
-                            class={"text-[24px] lg:text-[50px] lg:text-[64px] font-semibold" +
+                            class={"text-[40px] font-semibold" +
                                 gradienttext}
                         >
                             {item.number}
@@ -90,4 +91,6 @@
             {/each}
         </div>
     </div>
+    <img src={joincomunitySvg} alt="joincomunitySvg" />
+
 </div>

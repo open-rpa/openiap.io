@@ -161,7 +161,7 @@ for (clienttestcli.Entity item : results) {
         <Carousel.Content class="gap-5">
             <Carousel.Item class="lg:basis-3/5">
                 <div
-                    class="border rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
+                    class="border rounded-[20px] border-bw700 bg-bw900 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                 >
                     <div
                         class="pt-8 px-8 pb-2 xl:pt-10 xl:px-10 xl:pb-8 mb-2 md:mb-4"
@@ -177,10 +177,10 @@ for (clienttestcli.Entity item : results) {
                         </p>
                     </div>
                     <div
-                        class="ms-4 sm:ms-8 md:ms-10 lg:ms-8 xl:ms-12 h-[387px] border rounded-[20px] border-bw500/70 w-full"
+                        class="ms-4 sm:ms-8 md:ms-10 lg:ms-8 xl:ms-12 h-[387px] border rounded-[20px] border-bw600 w-full"
                     >
                         <div
-                            class="py-1 px-2.5 border-b-2 border-bw500/70 w-full"
+                            class="py-1 px-2.5 border-b-2 border-bw600 w-full"
                         >
                             <Globe class="h-4 w-4" />
                         </div>
@@ -241,7 +241,7 @@ for (clienttestcli.Entity item : results) {
             {#each carouselItem as item, index}
                 <Carousel.Item class={"md:basis-1/2 lg:basis-1/3"}>
                     <div
-                        class="border rounded-[20px] border-bw500/70 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
+                        class="border rounded-[20px] border-bw700 bg-bw900 h-[380px] xl:h-[450px] overflow-hidden grayscale-0 group"
                     >
                         <div class="p-8 xl:p-10 pb-0 xl:pb-2 mb-4 lg:mb-0">
                             <p class="text-xl font-medium mb-2 text-bw50">
