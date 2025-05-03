@@ -8,6 +8,7 @@ import Reports from "./reports.svelte";
 import Security from "./security.svelte";
 import Testimonials from "./testimonials.svelte";
 import TrustedBy from "./trustedby.svelte";
+import Contactus2 from "./contactus2.svelte";
 import Workitemqueue from "./workitemqueue.svelte";
-export { Contactus, Hero, Increased, Joincommunity, MultiLanguage, Observability, Reports, Security, Testimonials, TrustedBy, Workitemqueue };
+export { Contactus, Hero, Increased, Joincommunity, MultiLanguage, Observability, Reports, Security, Testimonials, TrustedBy, Workitemqueue, Contactus2 };
 

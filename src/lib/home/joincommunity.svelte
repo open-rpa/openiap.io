@@ -46,22 +46,20 @@
     class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 flex flex-col xl:flex-row justify-center"
 >
     <div
-        class="text-center w-full max-w-[1700px]"
+        class="xl:w-[1700px] flex flex-col xl:flex-row justify-between items-center"
     >
-        <p
-            class={"text-[60px] py-6 leading-none mb-6" +
-                gradienttext}
-        >
-            Join the community
-        </p>
-        <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-6 px-32"
-        >
-            {#each community as item, index}
-                <div
-                    class="flex justify-center items-center  xl:items-start"
-                >
-                    <!-- {#if index != 0}
+        <div class="text-center w-full max-w-[1700px]">
+            <p class={"text-[60px] py-6 leading-none mb-6" + gradienttext}>
+                Join the community
+            </p>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-6 px-32"
+            >
+                {#each community as item, index}
+                    <div
+                        class="flex justify-center items-center xl:items-start"
+                    >
+                        <!-- {#if index != 0}
                         <div class="flex items-start justify-start">
                             <img
                                 src={lineSvg}
@@ -71,26 +69,26 @@
                         </div>
                     {/if} -->
 
-                    <div
-                        class="flex flex-col items-center justify-center w-fit"
-                    >
-                        <p
-                            class={"text-[40px] font-semibold" +
-                                gradienttext}
+                        <div
+                            class="flex flex-col items-center justify-center w-fit"
                         >
-                            {item.number}
-                        </p>
-                        <p class="mt-2 mb-5">{item.text}</p>
-                        <HotkeyButton
-                            onclick={() => {
-                                window.open(item.button.link, "_blank");
-                            }}>{item.button.title}</HotkeyButton
-                        >
+                            <p
+                                class={"text-[40px] font-semibold" +
+                                    gradienttext}
+                            >
+                                {item.number}
+                            </p>
+                            <p class="mt-2 mb-5">{item.text}</p>
+                            <HotkeyButton
+                                onclick={() => {
+                                    window.open(item.button.link, "_blank");
+                                }}>{item.button.title}</HotkeyButton
+                            >
+                        </div>
                     </div>
-                </div>
-            {/each}
+                {/each}
+            </div>
         </div>
+        <img src={joincomunitySvg} alt="joincomunitySvg" />
     </div>
-    <img src={joincomunitySvg} alt="joincomunitySvg" />
-
 </div>

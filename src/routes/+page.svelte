@@ -11,6 +11,7 @@
         Workitemqueue,
         Increased,
         Contactus,
+        Contactus2,
     } from "$lib/home";
 
     $effect(() => {
@@ -54,5 +55,5 @@
     <Increased />
     <Testimonials />
     <Joincommunity />
-    <Contactus />
+    <Contactus2 />
 </div>
