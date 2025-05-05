@@ -53,11 +53,11 @@
                 Join the community
             </p>
             <div
-                class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-6 px-32"
+                class="grid grid-cols-1 md:grid-cols-2 items-center py-6 mx-24"
             >
                 {#each community as item, index}
                     <div
-                        class="flex justify-center items-center xl:items-start"
+                        class="flex justify-center items-center xl:items-start mt-4"
                     >
                         <!-- {#if index != 0}
                         <div class="flex items-start justify-start">
