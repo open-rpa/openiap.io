@@ -33,11 +33,21 @@
 <!-- <div
     class="bg-pink-800 sm:bg-red-800 md:bg-blue-800 lg:bg-green-800 xl:bg-yellow-800"
 > -->
-<div class="scroll-fade-in">
-    <Hero />
-    <TrustedBy />
-    <Features />
-    <Joincommunity />
-    <Start />
+<div>
+    <div class="scroll-fade-in">
+        <Hero />
+    </div>
+    <div class="scroll-fade-in">
+        <TrustedBy />
+    </div>
+    <div class="scroll-fade-in">
+        <Features />
+    </div>
+    <div class="scroll-fade-in">
+        <Joincommunity />
+    </div>
+    <div class="scroll-fade-in">
+        <Start />
+    </div>
     <!-- <Contactus /> -->
 </div>

@@ -44,16 +44,38 @@
 <!-- <div
     class="bg-pink-800 sm:bg-red-800 md:bg-blue-800 lg:bg-green-800 xl:bg-yellow-800"
 > -->
-<div class="scroll-fade-in">
-    <Hero />
-    <TrustedBy />
-    <MultiLanguage />
-    <Observability />
-    <Workitemqueue />
-    <Reports />
-    <Security />
-    <Increased />
-    <Testimonials />
-    <Joincommunity />
-    <Contactus2 />
+<div>
+    <div class="scroll-fade-in">
+        <Hero />
+    </div>
+    <div class="scroll-fade-in">
+        <TrustedBy />
+    </div>
+    <div class="scroll-fade-in">
+        <MultiLanguage />
+    </div>
+    <div class="scroll-fade-in">
+        <Observability />
+    </div>
+    <div class="scroll-fade-in">
+        <Workitemqueue />
+    </div>
+    <div class="scroll-fade-in">
+        <Reports />
+    </div>
+    <div class="scroll-fade-in">
+        <Security />
+    </div>
+    <div class="scroll-fade-in">
+        <Increased />
+    </div>
+    <div class="scroll-fade-in">
+        <Testimonials />
+    </div>
+    <div class="scroll-fade-in">
+        <Joincommunity />
+    </div>
+    <div class="scroll-fade-in">
+        <Contactus2 />
+    </div>
 </div>
