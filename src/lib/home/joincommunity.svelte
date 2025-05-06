@@ -46,7 +46,7 @@
     class="mx-6 mb-10 md:mx-10 lg:mx-20 xl:mx-auto xl:px-32 xl:mb-24 flex flex-col xl:flex-row justify-center"
 >
     <div
-        class="xl:w-[1700px] flex flex-col xl:flex-row justify-between items-center"
+        class="xl:w-[1700px] flex flex-col xl:flex-row justify-around items-end"
     >
         <div class="text-center w-full max-w-[1700px]">
             <p class={"text-[60px] py-6 leading-none mb-6" + gradienttext}>
