@@ -15,7 +15,7 @@
             class={"text-[30px] lg:text-hero font-bold mb-6 animate-fade-in tracking-widest" +
                 gradienttext}
         >
-            Open-Source RPA built<br />
+            Open Source RPA built<br />
             for scale
         </h1>
         <p

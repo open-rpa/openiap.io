@@ -162,7 +162,7 @@
 }
 
 .scroll-fade-in {
-  transform: translateY(20px);
+  transform: translateY(40px);
 }
 
 .scroll-slide-left.visible,
