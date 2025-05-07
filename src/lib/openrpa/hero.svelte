@@ -8,9 +8,7 @@
 </script>
 
 <div class="xl:pb-16">
-    <div
-        class="xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center"
-    >
+    <div class="xl:absolute xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center">
         <h1
             class={"text-[30px] lg:text-hero font-bold mb-6 animate-fade-in tracking-widest" +
                 gradienttext}
@@ -54,9 +52,11 @@
             </HotkeyButton>
         </div>
     </div>
-    <!-- <div class="flex items-end justify-center flex-grow"> -->
-    <div>
-        <!-- <img src={hero} alt="hero" class="xl:w-full xl:h-auto" /> -->
+    <div class="flex items-end justify-center flex-grow">
+        <img src={hero} alt="hero" class="xl:w-full xl:h-auto" />
+    </div>
+    <!-- Rotating cube -->
+    <!-- <div>
         <script
             type="module"
             src="https://unpkg.com/@splinetool/viewer@1.9.90/build/spline-viewer.js"
@@ -64,5 +64,5 @@
         <spline-viewer
             url="https://prod.spline.design/NbOkKVgYnnaE7KuQ/scene.splinecode"
         ></spline-viewer>
-    </div>
+    </div> -->
 </div>
