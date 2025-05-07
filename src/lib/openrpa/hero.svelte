@@ -9,7 +9,7 @@
 
 <div class="xl:pb-16">
     <div
-        class="xl:absolute xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center"
+        class="xl:w-full xl:object-cover mt-32 xl:mt-36 p-4 text-center"
     >
         <h1
             class={"text-[30px] lg:text-hero font-bold mb-6 animate-fade-in tracking-widest" +
@@ -24,6 +24,7 @@
             Automate workflows with OpenRPA, the powerful open-source robotic
             process automation <br />tool
         </p>
+
         <div
             class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in"
         >
@@ -53,7 +54,15 @@
             </HotkeyButton>
         </div>
     </div>
-    <div class="flex items-end justify-center flex-grow">
-        <img src={hero} alt="hero" class="xl:w-full xl:h-auto" />
+    <!-- <div class="flex items-end justify-center flex-grow"> -->
+    <div>
+        <!-- <img src={hero} alt="hero" class="xl:w-full xl:h-auto" /> -->
+        <script
+            type="module"
+            src="https://unpkg.com/@splinetool/viewer@1.9.90/build/spline-viewer.js"
+        ></script>
+        <spline-viewer
+            url="https://prod.spline.design/NbOkKVgYnnaE7KuQ/scene.splinecode"
+        ></spline-viewer>
     </div>
 </div>
