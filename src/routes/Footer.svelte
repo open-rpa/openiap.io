@@ -42,7 +42,7 @@
 	class="pt-10 pb-16 mx-6 md:mx-10 lg:mx-20 xl:mx-32 xl:flex xl:flex-col xl:justify-center xl:items-center"
 >
 	<div class="w-full lg:max-w-[1700px]">
-		<img src={footerSvg} alt="Logo" loading="lazy" class="w-full" />
+		<!-- <img src={footerSvg} alt="Logo" loading="lazy" class="w-full" /> -->
 		<div
 			class={` ${isScreenSmall && "grid grid-cols-2 mt-4 space-y-2 text-center items-center "} ${isScreenSmallTab && "grid grid-cols-4 mt-4 space-y-2 text-center items-center "} ${isScreenMedium && "grid grid-cols-5 space-y-2 text-center items-center"}  ${isScreenLarge && "flex flex-row justify-between"} `}
 		>
