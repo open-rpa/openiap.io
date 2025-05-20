@@ -139,7 +139,7 @@
 				class="hover-lift"
 				onclick={() =>
 					window.open(
-						"https://app.openiap.io/ui",
+						"https://app.openiap.io/ui/loginverify",
 						"_blank",
 						"noopener,noreferrer",
 					)}
