@@ -65,11 +65,11 @@
 		</div> -->
 			<div class="flex flex-col justify-start items-start">
 				<HotkeyButton
-					variant="link"
-					class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline"
+					variant="ghostfull"
+					class="text-bw300 text-base cursor-default"
 					aria-label="Products"
 				>
-					Products
+					Products:
 				</HotkeyButton>
 				<HotkeyButton
 					variant="link"

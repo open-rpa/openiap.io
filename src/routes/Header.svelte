@@ -1,12 +1,33 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 	import { base } from "$app/paths";
+	import { page } from "$app/state";
 	import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
 	import Logo from "$lib/images/logo.svg";
 	import { Github, Icon, Info, MenuIcon, Moon, Sun, X } from "lucide-svelte";
 	import { toggleMode } from "mode-watcher";
+	import { check } from "valibot";
 
 	let isMenuOpen = $state(false);
+	let currentPath = page.url.pathname;
+
+	function checkPage(path: any) {
+		currentPath = page.url.pathname;
+		console.log("=> currentPath", currentPath);
+		console.log("path", path);
+		console.log("currentPath", currentPath);
+
+		if (currentPath === "/") {
+			currentPath = "/home";
+		}
+
+		if (currentPath.includes(path)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	checkPage("sa");
 </script>
 
 <header class="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-sm">
@@ -31,6 +52,7 @@
 				variant="link"
 				onclick={() => goto(base + "/")}
 				aria-label="Go to OpenCore page"
+				class={`${checkPage("/home") && "underline decoration-2 underline-offset-4"}`}
 			>
 				OpenCore
 			</HotkeyButton>
@@ -38,6 +60,7 @@
 				variant="link"
 				onclick={() => goto(base + "/openrpa")}
 				aria-label="Go to OpenRPA page"
+				class={`${checkPage("/openrpa") && "underline decoration-2 underline-offset-4"}`}
 			>
 				OpenRPA
 			</HotkeyButton>
@@ -45,6 +68,7 @@
 				variant="link"
 				onclick={() => goto(base + "/usecases")}
 				aria-label="Go to use cases page"
+				class={`${checkPage("/usecases") && "underline decoration-2 underline-offset-4"}`}
 			>
 				Use cases
 			</HotkeyButton>
@@ -67,6 +91,7 @@
 					isMenuOpen = false;
 				}}
 				aria-label="Go to get in touch page"
+				class={`${checkPage("/contact") && "underline decoration-2 underline-offset-4"}`}
 			>
 				Get in touch
 			</HotkeyButton>
@@ -77,6 +102,7 @@
 					isMenuOpen = false;
 				}}
 				aria-label="Go to pricing page"
+				class={`${checkPage("/pricing") && "underline decoration-2 underline-offset-4"}`}
 			>
 				Pricing
 			</HotkeyButton>
