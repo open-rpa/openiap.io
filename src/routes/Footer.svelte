@@ -66,7 +66,7 @@
 			<div class="flex flex-col justify-start items-start">
 				<HotkeyButton
 					variant="ghostfull"
-					class="text-bw300 text-base cursor-default"
+					class="text-bw50 text-base cursor-default"
 					aria-label="Products"
 				>
 					Products:
