@@ -4,18 +4,13 @@
 	import { page } from "$app/state";
 	import { HotkeyButton } from "$lib/components/ui/hotkeybutton";
 	import Logo from "$lib/images/logo.svg";
-	import { Github, Icon, Info, MenuIcon, Moon, Sun, X } from "lucide-svelte";
-	import { toggleMode } from "mode-watcher";
-	import { check } from "valibot";
+	import { Github, MenuIcon, X } from "lucide-svelte";
 
 	let isMenuOpen = $state(false);
 	let currentPath = page.url.pathname;
 
 	function checkPage(path: any) {
 		currentPath = page.url.pathname;
-		console.log("=> currentPath", currentPath);
-		console.log("path", path);
-		console.log("currentPath", currentPath);
 
 		if (currentPath === "/") {
 			currentPath = "/home";
