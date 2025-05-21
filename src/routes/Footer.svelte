@@ -217,8 +217,8 @@
 			</div>
 
 			<HotkeyButton
-				variant="link"
-				class="text-bw300 hover:text-white transition-colors underline-offset-4 hover:underline cursor-default"
+				variant="ghostfull"
+				class="text-bw300 cursor-default"
 				aria-label="© 2025 OpenIAP"
 			>
 				© 2025 OpenIAP
