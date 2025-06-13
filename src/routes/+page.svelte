@@ -34,7 +34,7 @@
 </script>
 
 <svelte:head>
-    <title>OpenCore | A scalable and secure automation platform</title>
+    <title>OpenCore | Removing DevOps Complexity</title>
     <!-- <meta
         name="description"
         content="OpenIAP is a platform that helps you to manage your business operations."

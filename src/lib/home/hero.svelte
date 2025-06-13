@@ -15,14 +15,14 @@
             class={"text-[30px] lg:text-hero font-bold mb-6 animate-fade-in tracking-widest" +
                 gradienttext}
         >
-            A scalable and secure <br />
-            automation platform
+        Abstracting Away  <br />DevOps Complexity
         </h1>
         <p
             class="xl:text-[16px] text-bw500 mb-[52px] mx-auto animate-fade-in tracking-widest"
         >
-            An opinionated platform that gives you the complete infrastructure
-            for deploying, monitoring <br /> and troubleshooting automation
+        <!-- We abstract away the complexity of backend infrastructure and DevOps. <br /> -->
+        With OpenCore, you can deploy secure, scalable code and applications across cloud, <br />
+        edge, and on-prem environments without managing multiple configuration files
         </p>
         <div
             class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in"
