@@ -57,14 +57,14 @@
     <div class="scroll-fade-in">
         <Observability />
     </div>
-    <div class="scroll-fade-in">
-        <Workitemqueue />
+      <div class="scroll-fade-in">
+        <Security />
     </div>
     <div class="scroll-fade-in">
         <Reports />
     </div>
-    <div class="scroll-fade-in">
-        <Security />
+     <div class="scroll-fade-in">
+        <Workitemqueue />
     </div>
     <div class="scroll-fade-in">
         <Increased />

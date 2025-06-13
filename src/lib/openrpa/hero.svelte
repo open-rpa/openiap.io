@@ -13,14 +13,14 @@
             class={"text-[30px] lg:text-hero font-bold mb-6 animate-fade-in tracking-widest" +
                 gradienttext}
         >
-            Open Source RPA built<br />
-            for scale
+            Open Source RPA <br />
+            built to scale
         </h1>
         <p
             class="xl:text-[16px] text-bw500 mb-[52px] mx-auto animate-fade-in tracking-widest"
         >
-            Automate workflows with OpenRPA, the powerful open-source robotic
-            process automation <br />tool
+            Automate workflows with OpenRPA, orchestrate your robots with OpenCore<br />
+            The most powerful open-source Robotic Process Automation platform
         </p>
 
         <div

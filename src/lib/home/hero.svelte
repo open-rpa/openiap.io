@@ -18,11 +18,11 @@
         Abstracting Away  <br />DevOps Complexity
         </h1>
         <p
-            class="xl:text-[16px] text-bw500 mb-[52px] mx-auto animate-fade-in tracking-widest"
+            class="xl:text-[16px] text-bw500 mb-[48px] mx-auto animate-fade-in tracking-widest"
         >
         <!-- We abstract away the complexity of backend infrastructure and DevOps. <br /> -->
-        With OpenCore, you can deploy secure, scalable code and applications across cloud, <br />
-        edge, and on-prem environments without managing multiple configuration files
+        With OpenCore, you can deploy secure, scalable code and applications across cloud, edge, <br />
+        and on-prem environments without the operational complexity of traditional DevOps
         </p>
         <div
             class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in"
